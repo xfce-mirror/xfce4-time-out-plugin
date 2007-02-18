@@ -98,7 +98,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   xfce_panel_plugin_block_menu (plugin);
 
   /* Create the dialog */
-  dialog = xfce_titled_dialog_new_with_buttons (_("TimeOut Plugin"),
+  dialog = xfce_titled_dialog_new_with_buttons (_("Time Out"),
                                                 GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
                                                 GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
                                                 GTK_STOCK_HELP, GTK_RESPONSE_HELP,

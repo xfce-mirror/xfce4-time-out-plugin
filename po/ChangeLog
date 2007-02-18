@@ -1,3 +1,5 @@
-YYYY-MM-DD	John Doo <john@foo.org>
+2007-02-18	Jannis Pohlmann <jannis@xfce.org>
 
-	* be.po: Update translations
+	* xfce4-time-out-plugin.pot: Add this file with initially 
+	  extracted strings.
+	* LINGUAS, de.po: Update German translations.
