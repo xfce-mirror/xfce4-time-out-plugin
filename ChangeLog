@@ -1,3 +1,10 @@
+2008-02-18	Jannis Pohlmann <jannis@xfce.org>
+
+	* icons/48x48/xfce4-time-out-plugin.png, 
+	  icons/scalable/xfce4-time-out-plugin.svg: Replace dummy icon 
+	  with a modified version of the Tango "appointment-new" icon.
+	* TODO: Add tasks to be done before the first release.
+
 2007-02-18	Jannis Pohlmann <jannis@xfce.org>
 
 	* panel-plugin/time-out-dialogs.c,
