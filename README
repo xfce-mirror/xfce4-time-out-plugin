@@ -1,0 +1,26 @@
+What is it?
+===========
+
+xfce4-time-out-plugin is a plugin for the Xfce panel. It's a 
+comfortable tool for taking a break from computer work every now 
+and then. You can define a working interval and whenever time
+of this interval has passed your screen is locked for a configurable
+amount of time - which gives you enough time to grab a cup of 
+coffee, drink a cigarette or even do something healthy like eating, 
+exercising, cleaning up or whatever.
+
+
+Installation
+============
+
+The file 'INSTALL' contains generic installation instructions. For more
+detailed information, visit the time out plugin website at
+http://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin
+
+
+How to report bugs?
+===================
+
+Bugs should be reported to the Xfce bug tracking system
+(http://bugzilla.xfce.org, product 'Xfce Panel Plugins', Component
+'Time out plugin'). You will need to create an account for yourself.
