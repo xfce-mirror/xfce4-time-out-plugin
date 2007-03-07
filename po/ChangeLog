@@ -1,4 +1,9 @@
-2007-02-18	Jannis Pohlmann <jannis@xfce.org>
+2007-03-07  Hydonsingore Cia <hydonsingore@educities.edu.tw>
+
+	* zh_TW.po: zh_TW.po: Added traditional Chinese translations by
+	  ChiChi Chen <missmomo0911@gmail.com>.
+
+2007-02-18  Jannis Pohlmann <jannis@xfce.org>
 
 	* xfce4-time-out-plugin.pot: Add this file with initially 
 	  extracted strings.
