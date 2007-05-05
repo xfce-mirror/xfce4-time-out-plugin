@@ -1,6 +1,7 @@
-# $Id$
+# $Id: Makefile.am 2499 2007-02-18 20:59:26Z jannis $
 
 INCLUDES =								\
+	-DDATADIR=\"$(datadir)\"					\
 	-I$(top_srcdir)							\
 	-DG_LOG_DOMAIN=\"xfce4-time-out-plugin\"			\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
@@ -16,12 +17,13 @@ plugindir =								\
 	$(libexecdir)/xfce4/panel-plugins
 
 xfce4_time_out_plugin_SOURCES =						\
-	time-out.c							\
-	time-out.h							\
-	time-out-dialogs.h						\
-	time-out-dialogs.c						\
+	time-out-countdown.h						\
+	time-out-countdown.c						\
+	time-out-lock-screen.h						\
+	time-out-lock-screen.c						\
 	time-out-fadeout.h						\
-	time-out-fadeout.c						
+	time-out-fadeout.c						\
+	time-out.c							
 
 xfce4_time_out_plugin_CFLAGS =						\
 	$(LIBXFCE4UTIL_CFLAGS)						\

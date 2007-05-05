@@ -1,10 +1,28 @@
-2007-03-07  Hydonsingore Cia <hydonsingore@educities.edu.tw>
+2007-02-18	Jannis Pohlmann <jannis@xfce.org>
 
-	* zh_TW.po: zh_TW.po: Added traditional Chinese translations by
-	  ChiChi Chen <missmomo0911@gmail.com>.
+	* README: Prevent geeks all over the world from trying to drink
+	  cigarettes. This is not good for you! Neither is smoking them,
+	  anyway ...
 
-2007-02-18  Jannis Pohlmann <jannis@xfce.org>
+2007-02-18	Jannis Pohlmann <jannis@xfce.org>
 
-	* xfce4-time-out-plugin.pot: Add this file with initially 
-	  extracted strings.
-	* LINGUAS, de.po: Update German translations.
+	* icons/48x48/xfce4-time-out-plugin.png, 
+	  icons/scalable/xfce4-time-out-plugin.svg: Replace dummy icon 
+	  with a modified version of the Tango "appointment-new" icon.
+	* TODO: Add tasks to be done before the first release.
+
+2007-02-18	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/time-out-dialogs.c,
+	  panel-plugin/xfce4-time-out-plugin.desktop: Update strings.
+
+2007-02-18	Jannis Pohlmann <jannis@xfce.org>
+
+	* icons/scalable/xfce4-time-out-plugin.svg: Add missing dummy 
+	  icon from the sample plugin.
+	* panel-plugin/xfce4-time-out-plugin.desktop.in.in: Add missing 
+	  desktop entry template.
+
+2007-02-18	Jannis Pohlmann <jannis@xfce.org>
+
+	* Initial import.

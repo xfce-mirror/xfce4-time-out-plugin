@@ -1,4 +1,4 @@
-dnl $Id$
+dnl $Id: configure.in.in 2499 2007-02-18 20:59:26Z jannis $
 dnl
 dnl xfce4-time-out-plugin - A panel plugin for breaks during work.
 dnl
@@ -19,7 +19,7 @@ dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2007
-        The Xfce development team. All rights reserved.])
+        Jannis Pohlmann <jannis@xfce.org>. All rights reserved.])
 AC_INIT([xfce4-time-out-plugin], [time_out_version()], [http://bugzilla.xfce.org/], [xfce4-time-out-plugin])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
@@ -39,6 +39,7 @@ AC_PROG_CC()
 AC_PROG_LD()
 AC_PROG_INSTALL()
 AC_PROG_INTLTOOL()
+AC_PROG_CC_C_O()
 
 dnl **********************************
 dnl *** Check for standard headers ***

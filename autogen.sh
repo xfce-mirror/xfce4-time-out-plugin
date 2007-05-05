@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Id$
+# $Id: autogen.sh 2499 2007-02-18 20:59:26Z jannis $
 #
 # Copyright (c) 2002-2007
 #         The Xfce development team. All rights reserved.
