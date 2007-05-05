@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-06 01:18+0200\n"
+"POT-Creation-Date: 2007-05-06 01:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -70,6 +70,50 @@ msgstr ""
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:432
 msgid "Display seconds"
+msgstr ""
+
+#. Create postpone button
+#: ../panel-plugin/time-out-lock-screen.c:185
+msgid "_Postpone"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:390
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:392
+#, c-format
+msgid "%02d:%02d"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:401
+#, c-format
+msgid "Time left: %d seconds"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:403
+msgid "Time left: 1 minute"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:408
+#, c-format
+msgid "Time left: %d minutes %d seconds"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:410
+#, c-format
+msgid "Time left: %d minutes"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:416
+#, c-format
+msgid "Time left: %d hours %d minutes %d seconds"
+msgstr ""
+
+#: ../panel-plugin/time-out-countdown.c:418
+#, c-format
+msgid "Time left: %d hours %d minutes"
 msgstr ""
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1

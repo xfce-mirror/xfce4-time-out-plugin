@@ -182,7 +182,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   gtk_widget_show (lock_screen->time_label);
 
   /* Create postpone button */
-  lock_screen->postpone_button = gtk_button_new_with_mnemonic ("_Postpone");
+  lock_screen->postpone_button = gtk_button_new_with_mnemonic (_("_Postpone"));
   gtk_misc_set_alignment (GTK_MISC (lock_screen->postpone_button), 0.5, 0.5);
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->postpone_button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (lock_screen->postpone_button), "clicked", G_CALLBACK (time_out_lock_screen_postpone), lock_screen);
@@ -282,8 +282,6 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
   g_string_prepend (time_string, "<span size=\"x-large\">");
   g_string_append (time_string, "</span>");
   
-  g_debug (time_string->str);
-
   /* Update widgets */
   gtk_label_set_markup (GTK_LABEL (lock_screen->time_label), time_string->str);
 
