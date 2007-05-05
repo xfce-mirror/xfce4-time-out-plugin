@@ -19,7 +19,7 @@
 
 GETTEXT_PACKAGE = xfce4-time-out-plugin
 PACKAGE = xfce4-time-out-plugin
-VERSION = 0.0.1svn-r
+VERSION = 0.0.1svn-r2711
 
 SHELL = /bin/sh
 
@@ -36,7 +36,7 @@ libdir = ${exec_prefix}/lib
 DATADIRNAME = share
 itlocaledir = $(prefix)/$(DATADIRNAME)/locale
 subdir = po
-install_sh = $(SHELL) /home/jannis/devel/xfce/svn/goodies/xfce4-time-out-plugin/branches/rewrite/install-sh
+install_sh = $(SHELL) /home/jannis/devel/xfce/svn/goodies/xfce4-time-out-plugin/trunk/install-sh
 # Automake >= 1.8 provides /bin/mkdir -p.
 # Until it can be supposed, use the safe fallback:
 mkdir_p = $(install_sh) -d
