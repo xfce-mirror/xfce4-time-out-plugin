@@ -1,5 +1,11 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* panel-plugin/Makefile.am: Update Makefile to fix make 
+	  distcheck.
+	* panel-plugin/time-out.h: Fix copyright year.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* panel-plugin/time-out-lock-screen.c: Remove debug statement
 	  and add a new translatable string.
 
