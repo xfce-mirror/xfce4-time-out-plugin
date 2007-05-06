@@ -57,11 +57,14 @@ struct _TimeOutLockScreen
   /* Remaining seconds */
   gint            remaining_seconds;
 
+  /* Whether to allow postpone */
+  guint           allow_postpone : 1;
+
   /* Whether to display seconds */
   guint           display_seconds : 1;
 
-  /* Whether to allow postpone */
-  guint           allow_postpone : 1;
+  /* Whether to display hours */
+  guint           display_hours : 1;
 
   /* Widgets */
   GtkWidget      *window;
@@ -141,8 +144,9 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   GtkWidget *vbox;
   GtkWidget *image;
 
-  lock_screen->display_seconds = FALSE;
+  lock_screen->display_seconds = TRUE;
   lock_screen->allow_postpone = TRUE;
+  lock_screen->display_hours = FALSE;
   lock_screen->fadeout = NULL;
 
   /* Create information window */
@@ -275,7 +279,7 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
   lock_screen->remaining_seconds = seconds;
 
   /* Get long string representation of the remaining time */
-  time_string = time_out_countdown_seconds_to_string (seconds, TRUE, TRUE, FALSE);
+  time_string = time_out_countdown_seconds_to_string (seconds, lock_screen->display_seconds, lock_screen->display_hours, FALSE);
   
   /* Add markup */
   g_string_prepend (time_string, "<span size=\"x-large\">");
@@ -304,6 +308,30 @@ time_out_lock_screen_set_allow_postpone (TimeOutLockScreen *lock_screen,
     gtk_widget_show (lock_screen->postpone_button);
   else
     gtk_widget_hide (lock_screen->postpone_button);
+}
+
+
+
+void
+time_out_lock_screen_set_display_seconds (TimeOutLockScreen *lock_screen,
+                                          gboolean           display_seconds)
+{
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+
+  /* Set display seconds attribute */
+  lock_screen->display_seconds = display_seconds;
+}
+
+
+
+void
+time_out_lock_screen_set_display_hours (TimeOutLockScreen *lock_screen,
+                                        gboolean           display_hours)
+{
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+
+  /* Set display hours attribute */
+  lock_screen->display_hours = display_hours;
 }
 
 

@@ -43,6 +43,10 @@ void               time_out_lock_screen_show                (TimeOutLockScreen *
 void               time_out_lock_screen_hide                (TimeOutLockScreen *lock_screen);
 void               time_out_lock_screen_set_remaining       (TimeOutLockScreen *lock_screen,
                                                              gint               seconds);
+void               time_out_lock_screen_set_display_seconds (TimeOutLockScreen *lock_screen,
+                                                             gboolean           display_seconds);
+void               time_out_lock_screen_set_display_hours   (TimeOutLockScreen *lock_screen,
+                                                             gboolean           display_hours);
 void               time_out_lock_screen_set_allow_postpone  (TimeOutLockScreen *lock_screen,
                                                              gboolean           allow_postpone);
 

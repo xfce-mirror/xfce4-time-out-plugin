@@ -865,6 +865,8 @@ time_out_lock_countdown_update (TimeOutCountdown *countdown,
   g_return_if_fail (time_out != NULL);
 
   /* Update lock screen */
+  time_out_lock_screen_set_display_seconds (time_out->lock_screen, time_out->display_seconds);
+  time_out_lock_screen_set_display_hours (time_out->lock_screen, time_out->display_hours);
   time_out_lock_screen_set_remaining (time_out->lock_screen, seconds_remaining);
 }
 

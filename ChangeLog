@@ -1,5 +1,14 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* panel-plugin/time-out-countdown.c: Make seconds to string
+	  conversion even better. Introduce new strings. Maybe I should
+	  switch to using ngettext ...
+	* panel-plugin/time-out.c, 
+	  panel-plugin/time-out-lock-screen.{c,h}: Make it possible to
+	  hide hours, seconds in the lock screen.
+	* 
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* configure.in.in: Check for --as-needed support for the 
 	  linker.
 	* panel-plugin/time-out.c: Only restart the break countdown

@@ -387,57 +387,204 @@ time_out_countdown_seconds_to_string (gint     seconds,
 
   if (compressed)
     {
-      if (G_UNLIKELY (display_seconds))
+      if (display_hours)
         {
-          if (display_hours)
+          if (display_seconds)
             {
               /* Hours:minutes:seconds */
               g_string_printf (str, _("%02d:%02d:%02d"), hours, minutes, seconds);
             }
           else
             {
-              /* Minutes:seconds */
-              g_string_printf (str, _("%02d:%02d"), minutes, seconds);
+              /* Hours:minutes */
+              g_string_printf (str, _("%02d:%02d"), hours, minutes + 1);
             }
         }
       else
         {
-          if (display_hours)
+          if (display_seconds)
             {
-              /* Hours:minutes */
-              g_string_printf (str, _("%02d:%02d"), hours, minutes + 1);
+              /* Minutes:seconds */
+              g_string_printf (str, _("%02d:%02d"), hours * 60 + minutes, seconds);
             }
           else
             {
-              g_string_printf (str, "%02d", minutes + 1);
+              /* Minutes */
+              g_string_printf (str, "%02d", hours * 60 + minutes + 1);
             }
         }
     }
   else
     {
-      if (hours <= 0)
+      if (display_hours)
         {
-          if (minutes <= 1) 
+          if (display_seconds)
             {
-              if (G_UNLIKELY (display_seconds))
-                g_string_printf (str, _("Time left: %d seconds"), seconds);
-              else
-                g_string_printf (str, _("Time left: 1 minute"));
+              if (hours <= 0)
+                {
+                  if (minutes <= 0)
+                    {
+                      if (seconds <= 1) 
+                        g_string_printf (str, _("Time left: 1 second"));
+                      else
+                        g_string_printf (str, _("Time left: %d seconds"), seconds);
+                    }
+                  else if (minutes == 1)
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: 1 minute"));
+                      else if (seconds == 1)
+                        g_string_printf (str, _("Time left: 1 minute 1 second"));
+                      else
+                        g_string_printf (str, _("Time left: 1 minute %d seconds"), seconds);
+                    }
+                  else
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: %d minutes"), minutes);
+                      else if (seconds == 1)
+                        g_string_printf (str, _("Time left: %d minutes 1 second"), minutes);
+                      else
+                        g_string_printf (str, _("Time left: %d minutes %d seconds"), minutes, seconds);
+                    }
+                }
+              else if (hours == 1)
+                {
+                  if (minutes <= 0)
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: 1 hour"));
+                      if (seconds == 1) 
+                        g_string_printf (str, _("Time left: 1 hour 1 second"));
+                      else
+                        g_string_printf (str, _("Time left: 1 hour %d seconds"), seconds);
+                    }
+                  else if (minutes == 1)
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: 1 hour 1 minute"));
+                      else if (seconds == 1)
+                        g_string_printf (str, _("Time left: 1 hour 1 minute 1 second"));
+                      else
+                        g_string_printf (str, _("Time left: 1 hour 1 minute %d seconds"), seconds);
+                    }
+                  else
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes);
+                      if (seconds == 1)
+                        g_string_printf (str, _("Time left: 1 hour %d minutes 1 second"), minutes);
+                      else
+                        g_string_printf (str, _("Time left: 1 hour %d minutes %d seconds"), minutes, seconds);
+                    }
+                }
+              else 
+                {
+                  if (minutes <= 0)
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: %d hours"), hours);
+                      else if (seconds == 1) 
+                        g_string_printf (str, _("Time left: %d hours 1 second"), hours);
+                      else
+                        g_string_printf (str, _("Time left: %d hours %d seconds"), hours, seconds);
+                    }
+                  else if (minutes == 1)
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: %d hours 1 minute"), hours);
+                      else if (seconds == 1)
+                        g_string_printf (str, _("Time left: %d hours 1 minute 1 second"), hours);
+                      else
+                        g_string_printf (str, _("Time left: %d hours 1 minute %d seconds"), hours, seconds);
+                    }
+                  else
+                    {
+                      if (seconds <= 0)
+                        g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes);
+                      else if (seconds == 1)
+                        g_string_printf (str, _("Time left: %d hours %d minutes 1 second"), hours, minutes);
+                      else
+                        g_string_printf (str, _("Time left: %d hours %d minutes %d seconds"), hours, minutes, seconds);
+                    }
+                }
             }
           else
             {
-              if (G_UNLIKELY (display_seconds))
-                g_string_printf (str, _("Time left: %d minutes %d seconds"), minutes, seconds);
-              else
-                g_string_printf (str, _("Time left: %d minutes"), minutes);
+              if (hours <= 0)
+                {
+                  if (minutes < 1)
+                    {
+                      g_string_printf (str, _("Time left: 1 minute"));
+                    }
+                  else 
+                    {
+                      g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
+                    }
+                }
+              else if (hours == 1)
+                {
+                  if (minutes < 1)
+                    {
+                      g_string_printf (str, _("Time left: 1 hour 1 minute"));
+                    }
+                  else
+                    {
+                      g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes + 1);
+                    }
+                }
+              else 
+                {
+                  if (minutes < 1)
+                    {
+                      g_string_printf (str, _("Time left: %d hours 1 minute"), hours);
+                    }
+                  else
+                    {
+                      g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes + 1);
+                    }
+                }
             }
         }
       else
         {
-          if (G_UNLIKELY (display_seconds))
-            g_string_printf (str, _("Time left: %d hours %d minutes %d seconds"), hours, minutes, seconds);
+          minutes = hours * 60 + minutes;
+
+          if (display_seconds)
+            {
+              if (minutes <= 0)
+                {
+                  if (seconds <= 1)
+                    g_string_printf (str, _("Time left: 1 second"));
+                  else
+                    g_string_printf (str, _("Time left: %d seconds"), seconds);
+                }
+              else if (minutes == 1)
+                {
+                  if (seconds <= 0)
+                    g_string_printf (str, _("Time left: 1 minute"));
+                  else if (seconds == 1)
+                    g_string_printf (str, _("Time left: 1 minute 1 second"));
+                  else
+                    g_string_printf (str, _("Time left: 1 minute %d seconds"), seconds);
+                }
+              else
+                {
+                  if (seconds <= 0)
+                    g_string_printf (str, _("Time left: %d minutes"), minutes);
+                  else if (seconds == 1)
+                    g_string_printf (str, _("Time left: %d minutes 1 second"), minutes);
+                  else
+                    g_string_printf (str, _("Time left: %d minutes %d seconds"), minutes, seconds);
+                }
+            }
           else
-            g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes);
+            {
+              if (minutes < 1)
+                g_string_printf (str, _("Time left: 1 minute"));
+              else
+                g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
+            }
         }
     }
 
