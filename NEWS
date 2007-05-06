@@ -1,0 +1,8 @@
+0.1.0
+=====
+- First release.
+- Includes most features I had in mind: Flexible time settings, option
+  to take breaks whenever you like, easy way to deactivate the plugin
+  without removing it from the panel, postpone feature and locking
+  of all screens during breaks.
+- Languages available: English, German.

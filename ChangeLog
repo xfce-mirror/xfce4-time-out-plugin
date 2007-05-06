@@ -1,5 +1,11 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* == Released 0.1.0 ===
+	* NEWS, configure.in.in: Bump version.
+	* po/*.po: Update Project-Id-Version.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* panel-plugin/time-out-countdown.{c,h}: Enhance seconds to 
 	  string conversion. It's now able to not include hours.
 	* panel-plugin/time-out.c: Add options to show/hide hours and
