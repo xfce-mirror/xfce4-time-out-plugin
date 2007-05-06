@@ -1,5 +1,16 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* panel-plugin/time-out-countdown.{c,h}: Enhance seconds to 
+	  string conversion. It's now able to not include hours.
+	* panel-plugin/time-out.c: Add options to show/hide hours and
+	  the time in general. Tooltip added to the event box. Small
+	  icon is now visible in the panel. Time can be hidden now.
+	  Properly handle size and orientation changes.
+	* panel-plugin/time-out-lock-screen.c: Update to new seconds
+	  to string conversion.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* panel-plugin/time-out-lock-screen.c: Remove invalid cast from
 	  GtkButton to GtkMisc.
 

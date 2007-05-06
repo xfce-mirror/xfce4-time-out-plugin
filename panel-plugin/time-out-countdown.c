@@ -365,6 +365,7 @@ time_out_countdown_get_remaining (TimeOutCountdown *countdown)
 GString*
 time_out_countdown_seconds_to_string (gint     seconds,
                                       gboolean display_seconds,
+                                      gboolean display_hours,
                                       gboolean compressed)
 {
   GString *str;
@@ -387,15 +388,36 @@ time_out_countdown_seconds_to_string (gint     seconds,
   if (compressed)
     {
       if (G_UNLIKELY (display_seconds))
-        g_string_printf (str, _("%02d:%02d:%02d"), hours, minutes, seconds);
+        {
+          if (display_hours)
+            {
+              /* Hours:minutes:seconds */
+              g_string_printf (str, _("%02d:%02d:%02d"), hours, minutes, seconds);
+            }
+          else
+            {
+              /* Minutes:seconds */
+              g_string_printf (str, _("%02d:%02d"), minutes, seconds);
+            }
+        }
       else
-        g_string_printf (str, _("%02d:%02d"), hours, minutes);
+        {
+          if (display_hours)
+            {
+              /* Hours:minutes */
+              g_string_printf (str, _("%02d:%02d"), hours, minutes + 1);
+            }
+          else
+            {
+              g_string_printf (str, "%02d", minutes + 1);
+            }
+        }
     }
   else
     {
       if (hours <= 0)
         {
-          if (minutes <= 0) 
+          if (minutes <= 1) 
             {
               if (G_UNLIKELY (display_seconds))
                 g_string_printf (str, _("Time left: %d seconds"), seconds);

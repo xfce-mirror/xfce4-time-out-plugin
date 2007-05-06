@@ -275,7 +275,7 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
   lock_screen->remaining_seconds = seconds;
 
   /* Get long string representation of the remaining time */
-  time_string = time_out_countdown_seconds_to_string (seconds, TRUE, FALSE);
+  time_string = time_out_countdown_seconds_to_string (seconds, TRUE, TRUE, FALSE);
   
   /* Add markup */
   g_string_prepend (time_string, "<span size=\"x-large\">");

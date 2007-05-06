@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-06 01:25+0200\n"
+"POT-Creation-Date: 2007-05-06 15:40+0200\n"
 "PO-Revision-Date: 2007-05-06 01:25++0200\n"
 "Last-Translator: Jannis Pohlmann <jannis@xfce.org>\n"
 "Language-Team: German <de@li.org>\n"
@@ -16,58 +16,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:225
+#: ../panel-plugin/time-out.c:247
 msgid "Take a break"
 msgstr "Eine Pause machen"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:233
+#: ../panel-plugin/time-out.c:255
 msgid "Enabled"
 msgstr "Aktiviert"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:344
+#: ../panel-plugin/time-out.c:388
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
 msgstr "Auszeit"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:361
+#: ../panel-plugin/time-out.c:405
 msgid "Time settings"
 msgstr "Zeiten"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:374
+#: ../panel-plugin/time-out.c:418
 msgid "Time between breaks (minutes):"
 msgstr "Zeit zwischen den Pausen (in Minuten):"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:387
+#: ../panel-plugin/time-out.c:431
 msgid "Break length (minutes):"
 msgstr "Dauer der Pausen (in Minuten):"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:400
+#: ../panel-plugin/time-out.c:444
 msgid "Postpone length (minutes):"
 msgstr "Dauer des Verschiebens (in Minuten):"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:413
+#: ../panel-plugin/time-out.c:457
 msgid "Behaviour"
 msgstr "Verhalten"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:419
+#: ../panel-plugin/time-out.c:463
 msgid "Allow postpone"
 msgstr "Erlaube es Pausen zu verschieben"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:426
+#: ../panel-plugin/time-out.c:470
 msgid "Appearance"
 msgstr "Aussehen"
 
+#. Create display time check button
+#: ../panel-plugin/time-out.c:481
+msgid "Display remaining time in the panel"
+msgstr "Zeige verbleibende Zeit in der Leiste an"
+
+#. Create display hours check button
+#: ../panel-plugin/time-out.c:488
+msgid "Display hours"
+msgstr "Zeige Stunden an"
+
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:432
+#: ../panel-plugin/time-out.c:495
 msgid "Display seconds"
 msgstr "Zeige Sekunden an"
 
@@ -76,41 +86,45 @@ msgstr "Zeige Sekunden an"
 msgid "_Postpone"
 msgstr "_Pause verschieben"
 
-#: ../panel-plugin/time-out-countdown.c:390
+#. Hours:minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:395
 #, c-format
 msgid "%02d:%02d:%02d"
 msgstr "%02d:%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:392
+#. Minutes:seconds
+#. Hours:minutes
+#: ../panel-plugin/time-out-countdown.c:400
+#: ../panel-plugin/time-out-countdown.c:408
 #, c-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:401
+#: ../panel-plugin/time-out-countdown.c:423
 #, c-format
 msgid "Time left: %d seconds"
 msgstr "Verbleibend: %d Sekunden"
 
-#: ../panel-plugin/time-out-countdown.c:403
+#: ../panel-plugin/time-out-countdown.c:425
 msgid "Time left: 1 minute"
 msgstr "Verbleibend: 1 Minute"
 
-#: ../panel-plugin/time-out-countdown.c:408
+#: ../panel-plugin/time-out-countdown.c:430
 #, c-format
 msgid "Time left: %d minutes %d seconds"
 msgstr "Verbleibend: %d Minuten %d Sekunden"
 
-#: ../panel-plugin/time-out-countdown.c:410
+#: ../panel-plugin/time-out-countdown.c:432
 #, c-format
 msgid "Time left: %d minutes"
 msgstr "Verbleibend: %d Minuten"
 
-#: ../panel-plugin/time-out-countdown.c:416
+#: ../panel-plugin/time-out-countdown.c:438
 #, c-format
 msgid "Time left: %d hours %d minutes %d seconds"
 msgstr "Verbleibend: %d Stunden %d Minuten %d Sekunden"
 
-#: ../panel-plugin/time-out-countdown.c:418
+#: ../panel-plugin/time-out-countdown.c:440
 #, c-format
 msgid "Time left: %d hours %d minutes"
 msgstr "Verbleibend: %d Stunden %d Minuten"
