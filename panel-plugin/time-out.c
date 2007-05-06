@@ -38,7 +38,9 @@
 /* Default settings */
 #define DEFAULT_ENABLED                    TRUE
 #define DEFAULT_ALLOW_POSTPONE             TRUE
-#define DEFAULT_DISPLAY_SECONDS            FALSE
+#define DEFAULT_DISPLAY_SECONDS            TRUE
+#define DEFAULT_DISPLAY_HOURS              FALSE
+#define DEFAULT_DISPLAY_TIME               TRUE
 #define DEFAULT_BREAK_COUNTDOWN_SECONDS    1800 /* 30 minutes */ 
 #define DEFAULT_LOCK_COUNTDOWN_SECONDS      300 /*  5 minutes */
 #define DEFAULT_POSTPONE_COUNTDOWN_SECONDS  120 /*  2 minutes */
@@ -62,7 +64,9 @@ struct _TimeOutPlugin
   gint               postpone_countdown_seconds;
   guint              enabled : 1;
   guint              display_seconds : 1;              
+  guint              display_hours : 1;              
   guint              allow_postpone : 1;
+  guint              display_time : 1;
 
   /* Lock screen to be shown during breaks */
   TimeOutLockScreen *lock_screen;
@@ -71,6 +75,8 @@ struct _TimeOutPlugin
   GtkWidget         *ebox;
   GtkWidget         *hvbox;
   GtkWidget         *time_label;
+  GtkWidget         *panel_icon;
+  GtkTooltips       *tooltips;
 };
 
 
@@ -82,6 +88,9 @@ static void           time_out_free                               (XfcePanelPlug
                                                                    TimeOutPlugin     *time_out);
 static gboolean       time_out_size_changed                       (XfcePanelPlugin   *plugin,
                                                                    gint               size,
+                                                                   TimeOutPlugin     *time_out);
+static void           time_out_orientation_changed                (XfcePanelPlugin   *plugin,
+                                                                   GtkOrientation     orientation,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_configure                          (XfcePanelPlugin   *plugin,
                                                                    TimeOutPlugin     *time_out);
@@ -96,7 +105,11 @@ static void           time_out_postpone_countdown_seconds_changed (GtkSpinButton
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_allow_postpone_toggled             (GtkToggleButton   *toggle_button,
                                                                    TimeOutPlugin     *time_out);
+static void           time_out_display_time_toggled               (GtkToggleButton   *toggle_button,
+                                                                   TimeOutPlugin     *time_out);
 static void           time_out_display_seconds_toggled            (GtkToggleButton   *toggle_button,
+                                                                   TimeOutPlugin     *time_out);
+static void           time_out_display_hours_toggled              (GtkToggleButton   *toggle_button,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_load_settings                      (TimeOutPlugin     *time_out);
 static void           time_out_save_settings                      (TimeOutPlugin     *time_out);
@@ -172,11 +185,20 @@ time_out_new (XfcePanelPlugin *plugin)
   gtk_container_add (GTK_CONTAINER (time_out->ebox), time_out->hvbox);
   gtk_widget_show (time_out->hvbox);
 
+  /* Create time out icon */
+  time_out->panel_icon = gtk_image_new_from_icon_name ("xfce4-time-out-plugin", GTK_ICON_SIZE_DIALOG);
+  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), xfce_panel_plugin_get_size (time_out->plugin) - 8);
+  gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->panel_icon, TRUE, TRUE, 0);
+  gtk_widget_show (time_out->panel_icon);
+
   /* Create label for displaying the remaining time until the next break */
   time_out->time_label = gtk_label_new ("Inactive");
   gtk_misc_set_alignment (GTK_MISC (time_out->time_label), 0.5, 0.5);
   gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->time_label, TRUE, TRUE, 0);
   gtk_widget_show (time_out->time_label);
+
+  /* Create tooltips group */
+  time_out->tooltips = gtk_tooltips_new ();
 
   return time_out;
 }
@@ -244,6 +266,7 @@ time_out_construct (XfcePanelPlugin *plugin)
   g_signal_connect (G_OBJECT (plugin), "free-data", G_CALLBACK (time_out_free), time_out);
   g_signal_connect (G_OBJECT (plugin), "size-changed", G_CALLBACK (time_out_size_changed), time_out);
   g_signal_connect (G_OBJECT (plugin), "configure-plugin", G_CALLBACK (time_out_configure), time_out);
+  g_signal_connect (G_OBJECT (plugin), "orientation-changed", G_CALLBACK (time_out_orientation_changed), time_out);
 
   /* Display the configure menu item */
   xfce_panel_plugin_menu_show_configure (plugin);
@@ -301,8 +324,14 @@ time_out_size_changed (XfcePanelPlugin *plugin,
 {
   GtkOrientation orientation;
 
+  g_return_val_if_fail (plugin != NULL, FALSE);
+  g_return_val_if_fail (time_out != NULL, FALSE);
+
   /* Get the orientation of the panel */
   orientation = xfce_panel_plugin_get_orientation (plugin);
+
+  /* Update icon size */
+  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), size - 8);
 
   /* Update widget size */
   if (orientation == GTK_ORIENTATION_HORIZONTAL)
@@ -317,6 +346,20 @@ time_out_size_changed (XfcePanelPlugin *plugin,
 
 
 static void
+time_out_orientation_changed (XfcePanelPlugin *plugin,
+                              GtkOrientation  orientation,
+                              TimeOutPlugin   *time_out)
+{
+  g_return_if_fail (plugin != NULL);
+  g_return_if_fail (time_out != NULL);
+
+  /* Apply orientation to hvbox */
+  xfce_hvbox_set_orientation (XFCE_HVBOX (time_out->hvbox), orientation);
+}
+
+
+
+static void
 time_out_configure (XfcePanelPlugin *plugin,
                     TimeOutPlugin   *time_out)
 {
@@ -326,6 +369,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   GtkWidget *behaviourbin;
   GtkWidget *appearancebin;
   GtkWidget *table;
+  GtkWidget *vbox;
   GtkWidget *label;
   GtkWidget *spin;
   GtkWidget *checkbutton;
@@ -428,11 +472,30 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
 
+  /* Create appearance box */
+  vbox = gtk_vbox_new (FALSE, 6);
+  gtk_container_add (GTK_CONTAINER (appearancebin), vbox);
+  gtk_widget_show (vbox);
+
+  /* Create display time check button */
+  checkbutton = gtk_check_button_new_with_label (_("Display remaining time in the panel"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbutton), time_out->display_time);
+  g_signal_connect (checkbutton, "toggled", G_CALLBACK (time_out_display_time_toggled), time_out);
+  gtk_container_add (GTK_CONTAINER (vbox), checkbutton);
+  gtk_widget_show (checkbutton);
+
+  /* Create display hours check button */
+  checkbutton = gtk_check_button_new_with_label (_("Display hours"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbutton), time_out->display_hours);
+  g_signal_connect (checkbutton, "toggled", G_CALLBACK (time_out_display_hours_toggled), time_out);
+  gtk_container_add (GTK_CONTAINER (vbox), checkbutton);
+  gtk_widget_show (checkbutton);
+
   /* Create display seconds check button */
   checkbutton = gtk_check_button_new_with_label (_("Display seconds"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbutton), time_out->display_seconds);
   g_signal_connect (checkbutton, "toggled", G_CALLBACK (time_out_display_seconds_toggled), time_out);
-  gtk_container_add (GTK_CONTAINER (appearancebin), checkbutton);
+  gtk_container_add (GTK_CONTAINER (vbox), checkbutton);
   gtk_widget_show (checkbutton);
 
   /* Show the entire dialog */
@@ -518,6 +581,25 @@ time_out_allow_postpone_toggled (GtkToggleButton *toggle_button,
 
 
 static void 
+time_out_display_time_toggled (GtkToggleButton *toggle_button,
+                               TimeOutPlugin   *time_out)
+{
+  g_return_if_fail (GTK_IS_TOGGLE_BUTTON (toggle_button));
+  g_return_if_fail (time_out != NULL);
+
+  /* Set display time attribute */
+  time_out->display_time = gtk_toggle_button_get_active (toggle_button);
+
+  /* Hide or display the time label */
+  if (time_out->display_time) 
+    gtk_widget_show (time_out->time_label);
+  else
+    gtk_widget_hide (time_out->time_label);
+}
+
+
+
+static void 
 time_out_display_seconds_toggled (GtkToggleButton *toggle_button,
                                   TimeOutPlugin   *time_out)
 {
@@ -526,6 +608,19 @@ time_out_display_seconds_toggled (GtkToggleButton *toggle_button,
 
   /* Set display seconds attribute */
   time_out->display_seconds = gtk_toggle_button_get_active (toggle_button);
+}
+
+
+
+static void 
+time_out_display_hours_toggled (GtkToggleButton *toggle_button,
+                                TimeOutPlugin   *time_out)
+{
+  g_return_if_fail (GTK_IS_TOGGLE_BUTTON (toggle_button));
+  g_return_if_fail (time_out != NULL);
+
+  /* Set display hours attribute */
+  time_out->display_hours = gtk_toggle_button_get_active (toggle_button);
 }
 
 
@@ -542,6 +637,8 @@ time_out_load_settings (TimeOutPlugin *time_out)
   gint     postpone_countdown_seconds = DEFAULT_POSTPONE_COUNTDOWN_SECONDS;
   gboolean enabled = DEFAULT_ENABLED;
   gboolean display_seconds = DEFAULT_DISPLAY_SECONDS;
+  gboolean display_hours = DEFAULT_DISPLAY_HOURS;
+  gboolean display_time = DEFAULT_DISPLAY_TIME;
   gboolean allow_postpone = DEFAULT_ALLOW_POSTPONE;
 
   g_return_if_fail (time_out != NULL);
@@ -564,6 +661,8 @@ time_out_load_settings (TimeOutPlugin *time_out)
           postpone_countdown_seconds = xfce_rc_read_int_entry (rc, "postpone-countdown-seconds", postpone_countdown_seconds);
           enabled = xfce_rc_read_bool_entry (rc, "enabled", enabled);
           display_seconds = xfce_rc_read_bool_entry (rc, "display-seconds", display_seconds);
+          display_hours = xfce_rc_read_bool_entry (rc, "display-hours", display_hours);
+          display_time = xfce_rc_read_bool_entry (rc, "display-time", display_time);
           allow_postpone = xfce_rc_read_bool_entry (rc, "allow-postpone", allow_postpone);
 
           /* Close file handle */
@@ -580,6 +679,8 @@ time_out_load_settings (TimeOutPlugin *time_out)
   time_out->postpone_countdown_seconds = postpone_countdown_seconds;
   time_out->enabled = enabled;
   time_out->display_seconds = display_seconds;
+  time_out->display_hours = display_hours;
+  time_out->display_time = display_time;
   time_out->allow_postpone = allow_postpone;
 }
 
@@ -611,6 +712,8 @@ time_out_save_settings (TimeOutPlugin *time_out)
           xfce_rc_write_int_entry (rc, "postpone-countdown-seconds", time_out->postpone_countdown_seconds);
           xfce_rc_write_bool_entry (rc, "enabled", time_out->enabled);
           xfce_rc_write_bool_entry (rc, "display-seconds", time_out->display_seconds);
+          xfce_rc_write_bool_entry (rc, "display-hours", time_out->display_hours);
+          xfce_rc_write_bool_entry (rc, "display-time", time_out->display_time);
 
           /* Close file handle */
           xfce_rc_close (rc);
@@ -707,19 +810,25 @@ time_out_break_countdown_update (TimeOutCountdown *countdown,
                                  gint              seconds_remaining,
                                  TimeOutPlugin    *time_out)
 {
-  GString *time_string;
+  GString *short_time_string;
+  GString *long_time_string;
 
   g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
 
-  /* Get short version of the time string */
-  time_string = time_out_countdown_seconds_to_string (seconds_remaining, time_out->display_seconds, TRUE);
+  /* Get time strings */
+  short_time_string = time_out_countdown_seconds_to_string (seconds_remaining, time_out->display_seconds, time_out->display_hours, TRUE);
+  long_time_string = time_out_countdown_seconds_to_string (seconds_remaining, TRUE, TRUE, FALSE);
 
   /* Set label text */
-  gtk_label_set_text (GTK_LABEL (time_out->time_label), time_string->str);
+  gtk_label_set_text (GTK_LABEL (time_out->time_label), short_time_string->str);
 
-  /* Free time string */
-  g_string_free (time_string, TRUE);
+  /* Update tooltips */
+  gtk_tooltips_set_tip (GTK_TOOLTIPS (time_out->tooltips), time_out->ebox, long_time_string->str, long_time_string->str);
+
+  /* Free time strings */
+  g_string_free (short_time_string, TRUE);
+  g_string_free (long_time_string, TRUE);
 }
 
 

@@ -1,5 +1,33 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* == Released 0.1.0 ===
+	* NEWS, configure.in.in: Bump version.
+	* po/*.po: Update Project-Id-Version.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/time-out-countdown.{c,h}: Enhance seconds to 
+	  string conversion. It's now able to not include hours.
+	* panel-plugin/time-out.c: Add options to show/hide hours and
+	  the time in general. Tooltip added to the event box. Small
+	  icon is now visible in the panel. Time can be hidden now.
+	  Properly handle size and orientation changes.
+	* panel-plugin/time-out-lock-screen.c: Update to new seconds
+	  to string conversion.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/time-out-lock-screen.c: Remove invalid cast from
+	  GtkButton to GtkMisc.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/Makefile.am: Update Makefile to fix make 
+	  distcheck.
+	* panel-plugin/time-out.h: Fix copyright year.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* panel-plugin/time-out-lock-screen.c: Remove debug statement
 	  and add a new translatable string.
 

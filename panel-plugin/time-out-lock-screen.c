@@ -183,7 +183,6 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   /* Create postpone button */
   lock_screen->postpone_button = gtk_button_new_with_mnemonic (_("_Postpone"));
-  gtk_misc_set_alignment (GTK_MISC (lock_screen->postpone_button), 0.5, 0.5);
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->postpone_button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (lock_screen->postpone_button), "clicked", G_CALLBACK (time_out_lock_screen_postpone), lock_screen);
   gtk_widget_show (lock_screen->postpone_button);
@@ -276,7 +275,7 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
   lock_screen->remaining_seconds = seconds;
 
   /* Get long string representation of the remaining time */
-  time_string = time_out_countdown_seconds_to_string (seconds, TRUE, FALSE);
+  time_string = time_out_countdown_seconds_to_string (seconds, TRUE, TRUE, FALSE);
   
   /* Add markup */
   g_string_prepend (time_string, "<span size=\"x-large\">");

@@ -50,6 +50,7 @@ gboolean          time_out_countdown_get_stopped       (TimeOutCountdown *countd
 gint              time_out_countdown_get_remaining     (TimeOutCountdown *countdown);
 GString          *time_out_countdown_seconds_to_string (gint              seconds,
                                                         gboolean          display_seconds,
+                                                        gboolean          display_hours,
                                                         gboolean          compressed);
 
 G_END_DECLS;

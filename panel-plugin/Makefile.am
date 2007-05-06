@@ -1,20 +1,13 @@
 # $Id: Makefile.am 2499 2007-02-18 20:59:26Z jannis $
 
-INCLUDES =								\
-	-DDATADIR=\"$(datadir)\"					\
-	-I$(top_srcdir)							\
-	-DG_LOG_DOMAIN=\"xfce4-time-out-plugin\"			\
-	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
-	$(PLATFORM_CPPFLAGS)
+plugindir =								\
+	$(libexecdir)/xfce4/panel-plugins
 
 #
-# Withdrawal plugin
+# xfce4-time-out-plugin 
 #
 plugin_PROGRAMS =							\
 	xfce4-time-out-plugin
-
-plugindir =								\
-	$(libexecdir)/xfce4/panel-plugins
 
 xfce4_time_out_plugin_SOURCES =						\
 	time-out-countdown.h						\
@@ -23,15 +16,21 @@ xfce4_time_out_plugin_SOURCES =						\
 	time-out-lock-screen.c						\
 	time-out-fadeout.h						\
 	time-out-fadeout.c						\
+	time-out.h							\
 	time-out.c							
 
 xfce4_time_out_plugin_CFLAGS =						\
+	-DDATADIR=\"$(datadir)\"					\
+	-I$(top_srcdir)							\
+	-I$(top_builddir)						\
+	-DG_LOG_DOMAIN=\"xfce4-time-out-plugin\"			\
+	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(LIBXFCEGUI4_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
-xfce4_time_out_plugin_LDADD =						\
+xfce4_time_out_plugin_LDFLAGS =						\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCEGUI4_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
