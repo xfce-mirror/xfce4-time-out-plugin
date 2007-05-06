@@ -1,5 +1,12 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* configure.in.in: Check for --as-needed support for the 
+	  linker.
+	* panel-plugin/time-out.c: Only restart the break countdown
+	  timer when the break countdown seconds have changed. 
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* configure.in.in: Post-release version bump.
 
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>

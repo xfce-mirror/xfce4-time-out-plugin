@@ -97,8 +97,6 @@ static void           time_out_configure                          (XfcePanelPlug
 static void           time_out_end_configure                      (GtkDialog         *dialog,
                                                                    gint               response_id,
                                                                    TimeOutPlugin     *time_out);
-static void           time_out_break_countdown_seconds_changed    (GtkSpinButton     *spin_button,
-                                                                   TimeOutPlugin     *time_out);
 static void           time_out_lock_countdown_seconds_changed     (GtkSpinButton     *spin_button,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_postpone_countdown_seconds_changed (GtkSpinButton     *spin_button,
@@ -273,6 +271,10 @@ time_out_construct (XfcePanelPlugin *plugin)
 
   /* Display the about menu item */
   xfce_panel_plugin_menu_show_about (plugin);
+
+  /* Start break countdown if the plugin is active */
+  if (G_LIKELY (time_out->enabled)) 
+    time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
 }
 
 
@@ -423,9 +425,11 @@ time_out_configure (XfcePanelPlugin *plugin,
   /* Create break countdown time spin */
   spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->break_countdown_seconds / 60);
-  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_break_countdown_seconds_changed), time_out);
   gtk_table_attach_defaults (GTK_TABLE (table), spin, 1, 2, 0, 1);
   gtk_widget_show (spin);
+
+  /* Store reference on the spin button in the plugin */
+  g_object_set_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin", spin);
 
   /* Create lock countdown time label */
   label = gtk_label_new (_("Break length (minutes):"));
@@ -509,34 +513,41 @@ time_out_end_configure (GtkDialog     *dialog,
                         gint           response_id,
                         TimeOutPlugin *time_out)
 {
+  GtkWidget *spin;
+  gint       value;
+  gboolean   restart = FALSE;
+
   /* Remove the dialog data from the plugin */
   g_object_set_data (G_OBJECT (time_out->plugin), "dialog", NULL);
 
   /* Unlock the panel menu */
   xfce_panel_plugin_unblock_menu (time_out->plugin);
 
+  /* Get spin button value for the break countdown settings */
+  spin = g_object_get_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin");
+  value = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (spin)) * 60;
+  g_object_set_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin", NULL);
+
+  /* Check if the break countdown seconds have changed */
+  restart = value != time_out->break_countdown_seconds;
+
+  /* Apply new break countdown seconds */
+  time_out->break_countdown_seconds = value;
+
   /* Save plugin configuration */
   time_out_save_settings (time_out);
 
-  /* Restart break countdown */
-  time_out_stop_break_countdown (time_out);
-  time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
+  /* Restart or resume break countdown */
+  if (G_UNLIKELY (restart))
+    {
+      time_out_stop_break_countdown (time_out);
+      time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
+    }
+  else
+    time_out_countdown_resume (time_out->break_countdown);
 
   /* Destroy the properties dialog */
   gtk_widget_destroy (GTK_WIDGET (dialog));
-}
-
-
-
-static void
-time_out_break_countdown_seconds_changed (GtkSpinButton *spin_button,
-                                          TimeOutPlugin *time_out)
-{
-  g_return_if_fail (GTK_IS_SPIN_BUTTON (spin_button));
-  g_return_if_fail (time_out != NULL);
-
-  /* Set plugin attribute */
-  time_out->break_countdown_seconds = gtk_spin_button_get_value_as_int (spin_button) * 60;
 }
 
 
