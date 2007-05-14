@@ -1,5 +1,12 @@
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
+	* panel-plugin/time-out.c: Fix XfceRc being opened read-only
+	  in time_out_save_settings() as reported by Nick. Don't 
+	  restart the timer after closing the config dialog when
+	  the plugin is not active.
+
+2007-05-06	Jannis Pohlmann <jannis@xfce.org>
+
 	* panel-plugin/time-out-countdown.c: Make seconds to string
 	  conversion even better. Introduce new strings. Maybe I should
 	  switch to using ngettext ...

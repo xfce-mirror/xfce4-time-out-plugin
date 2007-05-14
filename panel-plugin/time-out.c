@@ -538,7 +538,7 @@ time_out_end_configure (GtkDialog     *dialog,
   time_out_save_settings (time_out);
 
   /* Restart or resume break countdown */
-  if (G_UNLIKELY (restart))
+  if (G_UNLIKELY (restart && time_out->enabled))
     {
       time_out_stop_break_countdown (time_out);
       time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
@@ -712,7 +712,7 @@ time_out_save_settings (TimeOutPlugin *time_out)
   if (G_LIKELY (filename != NULL))
     {
       /* Open file handle */
-      rc = xfce_rc_simple_open (filename, TRUE);
+      rc = xfce_rc_simple_open (filename, FALSE);
 
       /* Check if the file could be opened */
       if (G_LIKELY (rc != NULL))
