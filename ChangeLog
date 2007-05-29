@@ -1,3 +1,8 @@
+2007-05-29	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/time-out.c: Save settings when the 'Enabled'
+	  checkbox in the panel menu has been toggled.
+
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
 	* panel-plugin/time-out.c: Fix XfceRc being opened read-only

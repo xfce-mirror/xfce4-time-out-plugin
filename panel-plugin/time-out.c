@@ -315,6 +315,9 @@ time_out_enabled_toggled (GtkCheckMenuItem *menu_item,
       /* Pause break countdown */
       time_out_countdown_pause (time_out->break_countdown);
     }
+
+  /* Save plugin configuration */
+  time_out_save_settings (time_out);
 }
 
 
