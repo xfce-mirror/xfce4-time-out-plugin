@@ -1,3 +1,8 @@
+2007-07-06	Nick Schermer <nick@xfce.org>
+
+	* panel-plugin/Makefile.am: Change LDFLAGS to LDADD to fix
+	  compilation with as-needed.
+
 2007-05-29	Jannis Pohlmann <jannis@xfce.org>
 
 	* panel-plugin/time-out.c: Save settings when the 'Enabled'

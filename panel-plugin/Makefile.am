@@ -30,7 +30,7 @@ xfce4_time_out_plugin_CFLAGS =						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
-xfce4_time_out_plugin_LDFLAGS =						\
+xfce4_time_out_plugin_LDADD =						\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCEGUI4_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
