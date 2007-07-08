@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-time-out-plugin\n"
+"Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-06 23:27+0200\n"
 "PO-Revision-Date: 2007-05-07 03:36+0100\n"

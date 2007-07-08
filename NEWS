@@ -1,3 +1,16 @@
+0.1.1
+=====
+- Properly display remaining minutes when seconds are not displayed 
+  (bug #3221).
+- Fix license headers. Source is GPL, not LGPL! (bug #3366).
+- Change LDFLAGS to LDADD in Makefile.am to fix compilation with 
+  --as-needed.
+- Save settings properly (bug #3224).
+- Make it possible to hide hours and seconds in the lock screen.
+- After closing the properties dialog, only restart the countdown 
+  if the countdown time has changed.
+- New languages available: French, Hungarian.
+
 0.1.0
 =====
 - First release.

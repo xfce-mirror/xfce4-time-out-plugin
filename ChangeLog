@@ -1,5 +1,11 @@
 2007-07-08	Jannis Pohlmann <jannis@xfce.org>
 
+	* === Released 0.1.1 ===
+	* NEWS, configure.in.in: Bump version. Update news.
+	* po/*.po: Update Project-Id-Version.
+
+2007-07-08	Jannis Pohlmann <jannis@xfce.org>
+
 	* panel-plugin/time-out-countdown.c: Properly display remaining
 	  minutes when seconds are not displayed. Fixes bug #3221.
 
@@ -47,7 +53,7 @@
 
 2007-05-06	Jannis Pohlmann <jannis@xfce.org>
 
-	* == Released 0.1.0 ===
+	* === Released 0.1.0 ===
 	* NEWS, configure.in.in: Bump version.
 	* po/*.po: Update Project-Id-Version.
 
