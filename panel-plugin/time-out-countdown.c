@@ -519,30 +519,31 @@ time_out_countdown_seconds_to_string (gint     seconds,
                     }
                   else 
                     {
-                      g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
+                      if (seconds == 0)
+                        g_string_printf (str, _("Time left: %d minutes"), minutes);
+                      else
+                        g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
                     }
                 }
               else if (hours == 1)
                 {
                   if (minutes < 1)
-                    {
-                      g_string_printf (str, _("Time left: 1 hour 1 minute"));
-                    }
+                    g_string_printf (str, _("Time left: 1 hour 1 minute"));
                   else
-                    {
+                    if (seconds == 0)
+                      g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes);
+                    else
                       g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes + 1);
-                    }
                 }
               else 
                 {
                   if (minutes < 1)
-                    {
-                      g_string_printf (str, _("Time left: %d hours 1 minute"), hours);
-                    }
+                    g_string_printf (str, _("Time left: %d hours 1 minute"), hours);
                   else
-                    {
+                    if (seconds == 0)
+                      g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes);
+                    else
                       g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes + 1);
-                    }
                 }
             }
         }
@@ -583,7 +584,10 @@ time_out_countdown_seconds_to_string (gint     seconds,
               if (minutes < 1)
                 g_string_printf (str, _("Time left: 1 minute"));
               else
-                g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
+                if (seconds == 0)
+                  g_string_printf (str, _("Time left: %d minutes"), minutes);
+                else
+                  g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
             }
         }
     }
