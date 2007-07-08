@@ -1,3 +1,8 @@
+2007-07-08	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/*.{c,h}: Fix license headers. The source
+	  is under GPL, not LGPL. Fixes bug #3366.
+
 2007-07-06	Nick Schermer <nick@xfce.org>
 
 	* panel-plugin/Makefile.am: Change LDFLAGS to LDADD to fix
