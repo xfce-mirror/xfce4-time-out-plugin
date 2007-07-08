@@ -1,5 +1,9 @@
 2007-07-08	Jannis Pohlmann <jannis@xfce.org>
 
+	* configure.in.in: Post-release version bump.
+
+2007-07-08	Jannis Pohlmann <jannis@xfce.org>
+
 	* === Released 0.1.1 ===
 	* NEWS, configure.in.in: Bump version. Update news.
 	* po/*.po: Update Project-Id-Version.
