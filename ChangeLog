@@ -1,5 +1,11 @@
 2007-07-08	Jannis Pohlmann <jannis@xfce.org>
 
+	* panel-plugin/time-out.c: Change the way labels and spin 
+	  buttons are attached to the properties dialog table. This
+	  fixes bug #3310.
+
+2007-07-08	Jannis Pohlmann <jannis@xfce.org>
+
 	* configure.in.in: Post-release version bump.
 
 2007-07-08	Jannis Pohlmann <jannis@xfce.org>

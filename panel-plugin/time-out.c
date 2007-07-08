@@ -422,13 +422,13 @@ time_out_configure (XfcePanelPlugin *plugin,
   /* Create break countdown time label */
   label = gtk_label_new (_("Time between breaks (minutes):"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach_defaults (GTK_TABLE (table), label, 0, 1, 0, 1);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
   /* Create break countdown time spin */
   spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->break_countdown_seconds / 60);
-  gtk_table_attach_defaults (GTK_TABLE (table), spin, 1, 2, 0, 1);
+  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
   gtk_widget_show (spin);
 
   /* Store reference on the spin button in the plugin */
@@ -437,27 +437,27 @@ time_out_configure (XfcePanelPlugin *plugin,
   /* Create lock countdown time label */
   label = gtk_label_new (_("Break length (minutes):"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach_defaults (GTK_TABLE (table), label, 0, 1, 1, 2);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
   /* Create lock countdown time spin */
   spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->lock_countdown_seconds / 60);
   g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_lock_countdown_seconds_changed), time_out);
-  gtk_table_attach_defaults (GTK_TABLE (table), spin, 1, 2, 1, 2);
+  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
   gtk_widget_show (spin);
 
   /* Create postpone countdown time label */
   label = gtk_label_new (_("Postpone length (minutes):"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach_defaults (GTK_TABLE (table), label, 0, 1, 2, 3);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
   /* Create postpone countdown time spin */
   spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->postpone_countdown_seconds / 60);
   g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_postpone_countdown_seconds_changed), time_out);
-  gtk_table_attach_defaults (GTK_TABLE (table), spin, 1, 2, 2, 3);
+  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
   gtk_widget_show (spin);
 
   /* Create behaviour section */
