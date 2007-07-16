@@ -1,3 +1,8 @@
+2007-07-16	Jannis Pohlmann <jannis@xfce.org>
+
+	* panel-plugin/time-out-countdown.{c,h}: Fix LGPL header. Must
+	  have missed these files last time.
+
 2007-07-08	Jannis Pohlmann <jannis@xfce.org>
 
 	* panel-plugin/time-out.c: Change the way labels and spin 
