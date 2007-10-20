@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce4-Time-out-plugin 0.1.1\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2007-05-07 08:28+0100\n"
+"PO-Revision-Date: 2007-10-20 10:11+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
 "MIME-Version: 1.0\n"
@@ -64,13 +64,12 @@ msgstr "Megjelenés"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:485
 msgid "Display remaining time in the panel"
-msgstr ""
+msgstr "Hátralévő idő mutatása a panelon"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:492
-#, fuzzy
 msgid "Display hours"
-msgstr "Másodpercek mutatása"
+msgstr "Órák mutatása"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:499
@@ -119,9 +118,9 @@ msgstr "Hátralévő idő: 1 perc"
 #: ../panel-plugin/time-out-countdown.c:433
 #: ../panel-plugin/time-out-countdown.c:505
 #: ../panel-plugin/time-out-countdown.c:635
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: 1 minute %d seconds"
-msgstr "Hátralévő idő: %d perc %d másodperc"
+msgstr "Hátralévő idő: 1 perc %d másodperc"
 
 #: ../panel-plugin/time-out-countdown.c:439
 #: ../panel-plugin/time-out-countdown.c:514
