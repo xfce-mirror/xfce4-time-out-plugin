@@ -20,7 +20,7 @@ dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2007
         Jannis Pohlmann <jannis@xfce.org>. All rights reserved.])
-AC_INIT([xfce4-time-out-plugin], [time_out_version()], [http://bugzilla.xfce.org/], [xfce4-time-out-plugin])
+AC_INIT([xfce4-time-out-plugin], [time_out_version], [http://bugzilla.xfce.org/], [xfce4-time-out-plugin])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 AC_REVISION([$Id])
