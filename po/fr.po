@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-06 23:27+0200\n"
-"PO-Revision-Date: 2007-05-07 03:36+0100\n"
+"PO-Revision-Date: 2007-10-24 11:47+0100\n"
 "Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
 "Language-Team: Xfce <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -93,7 +93,7 @@ msgstr "_Repousser"
 #: ../panel-plugin/time-out-countdown.c:461
 #, c-format
 msgid "%02d:%02d:%02d"
-msgstr ""
+msgstr "%02d:%02d:%02d"
 
 #. Minutes:seconds
 #. Hours:minutes
@@ -104,7 +104,7 @@ msgstr ""
 #: ../panel-plugin/time-out-countdown.c:474
 #, c-format
 msgid "%02d:%02d"
-msgstr ""
+msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
 #: ../panel-plugin/time-out-countdown.c:431
