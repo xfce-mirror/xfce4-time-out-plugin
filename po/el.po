@@ -1,0 +1,258 @@
+# translation of el.po to Greek
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: el\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-05-06 23:27+0200\n"
+"PO-Revision-Date: 2008-04-28 18:45+0300\n"
+"Last-Translator: Evaggelos Balaskas <ebalaskas@ebalaskas.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. Create menu item for taking an instant break
+#: ../panel-plugin/time-out.c:245
+msgid "Take a break"
+msgstr "Κάνε διάλειμμα"
+
+#. Create menu item for enabling/disabling the countdown
+#: ../panel-plugin/time-out.c:253
+msgid "Enabled"
+msgstr "Ενεργοποίηση"
+
+#. Create properties dialog
+#: ../panel-plugin/time-out.c:390
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+msgid "Time Out"
+msgstr "Χρονική ανάπαυλα"
+
+#. Create time settings section
+#: ../panel-plugin/time-out.c:407
+msgid "Time settings"
+msgstr "Ρυθμίσεις ώρας"
+
+#. Create break countdown time label
+#: ../panel-plugin/time-out.c:420
+msgid "Time between breaks (minutes):"
+msgstr "Χρόνος μεταξύ των διαλειμμάτων (λεπτά):"
+
+#. Create lock countdown time label
+#: ../panel-plugin/time-out.c:435
+msgid "Break length (minutes):"
+msgstr "Διάρκεια διαλείμματος (λεπτά):"
+
+#. Create postpone countdown time label
+#: ../panel-plugin/time-out.c:448
+msgid "Postpone length (minutes):"
+msgstr "Διάρκεια αναβολής (λεπτά):"
+
+#. Create behaviour section
+#: ../panel-plugin/time-out.c:461
+msgid "Behaviour"
+msgstr "Συμπεριφορά"
+
+#. Create postpone check button
+#: ../panel-plugin/time-out.c:467
+msgid "Allow postpone"
+msgstr "Να επιτρέπονται οι αναβολές"
+
+#. Create appearance section
+#: ../panel-plugin/time-out.c:474
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#. Create display time check button
+#: ../panel-plugin/time-out.c:485
+msgid "Display remaining time in the panel"
+msgstr "Εμφάνιση χρόνου που απομένει στο ταμπλό"
+
+#. Create display hours check button
+#: ../panel-plugin/time-out.c:492
+msgid "Display hours"
+msgstr "Να εμφανίζονται οι ώρες"
+
+#. Create display seconds check button
+#: ../panel-plugin/time-out.c:499
+msgid "Display seconds"
+msgstr "Να εμφανίζονται τα δευτερόλεπτα"
+
+#. Create postpone button
+#: ../panel-plugin/time-out-lock-screen.c:185
+msgid "_Postpone"
+msgstr "Αν_αβολή"
+
+#. Hours:minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:396
+#: ../panel-plugin/time-out-countdown.c:461
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
+
+#. Minutes:seconds
+#. Hours:minutes
+#. Minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:401
+#: ../panel-plugin/time-out-countdown.c:409
+#: ../panel-plugin/time-out-countdown.c:466
+#: ../panel-plugin/time-out-countdown.c:474
+#, c-format
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
+
+#: ../panel-plugin/time-out-countdown.c:424
+#: ../panel-plugin/time-out-countdown.c:431
+#: ../panel-plugin/time-out-countdown.c:496
+#: ../panel-plugin/time-out-countdown.c:626
+#, c-format
+msgid "Time left: %d seconds"
+msgstr "Χρόνος που απομένει σε %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:426
+#: ../panel-plugin/time-out-countdown.c:501
+#: ../panel-plugin/time-out-countdown.c:584
+#: ../panel-plugin/time-out-countdown.c:631
+#: ../panel-plugin/time-out-countdown.c:650
+msgid "Time left: 1 minute"
+msgstr "Χρόνος που απομένει: 1 λεπτό"
+
+#: ../panel-plugin/time-out-countdown.c:433
+#: ../panel-plugin/time-out-countdown.c:505
+#: ../panel-plugin/time-out-countdown.c:635
+#, c-format
+msgid "Time left: 1 minute %d seconds"
+msgstr "Χρόνος που απομένει: 1 λεπτό και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:439
+#: ../panel-plugin/time-out-countdown.c:514
+#: ../panel-plugin/time-out-countdown.c:644
+#, c-format
+msgid "Time left: %d minutes %d seconds"
+msgstr "Χρόνος που απομένει:%d λεπτά και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:441
+#: ../panel-plugin/time-out-countdown.c:510
+#: ../panel-plugin/time-out-countdown.c:588
+#: ../panel-plugin/time-out-countdown.c:640
+#: ../panel-plugin/time-out-countdown.c:652
+#, c-format
+msgid "Time left: %d minutes"
+msgstr "Χρόνος που απομένει: %d λεπτά"
+
+#: ../panel-plugin/time-out-countdown.c:447
+#: ../panel-plugin/time-out-countdown.c:574
+#, c-format
+msgid "Time left: %d hours %d minutes %d seconds"
+msgstr "Χρόνος που απομένει: %d ώρες %d λεπτά και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:449
+#: ../panel-plugin/time-out-countdown.c:570
+#: ../panel-plugin/time-out-countdown.c:610
+#, c-format
+msgid "Time left: %d hours %d minutes"
+msgstr "Χρόνος που απομένει: %d ωρες και %d λεπτά"
+
+#: ../panel-plugin/time-out-countdown.c:494
+#: ../panel-plugin/time-out-countdown.c:624
+msgid "Time left: 1 second"
+msgstr "Χρόνος που απομένει: 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:503
+#: ../panel-plugin/time-out-countdown.c:633
+msgid "Time left: 1 minute 1 second"
+msgstr "Χρόνος που απομένει: 1 λεπτό και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:512
+#: ../panel-plugin/time-out-countdown.c:642
+#, c-format
+msgid "Time left: %d minutes 1 second"
+msgstr "Χρόνος που απομένει:%d λεπτά και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:522
+msgid "Time left: 1 hour"
+msgstr "Χρόνος που απομένει: 1 ώρα"
+
+#: ../panel-plugin/time-out-countdown.c:524
+msgid "Time left: 1 hour 1 second"
+msgstr "Χρόνος που απομένει:1 ώρα και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:526
+#, c-format
+msgid "Time left: 1 hour %d seconds"
+msgstr "Χρόνος που απομένει:1 ώρα και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:531
+#: ../panel-plugin/time-out-countdown.c:595
+msgid "Time left: 1 hour 1 minute"
+msgstr "Χρόνος που απομένει: 1 ώρα και 1 λεπτό"
+
+#: ../panel-plugin/time-out-countdown.c:533
+msgid "Time left: 1 hour 1 minute 1 second"
+msgstr "Χρόνος που απομένει: 1 ώρα 1 λεπτό και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:535
+#, c-format
+msgid "Time left: 1 hour 1 minute %d seconds"
+msgstr "Χρόνος που απομένει: 1 ώρα 1 λεπτό και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:540
+#: ../panel-plugin/time-out-countdown.c:599
+#, c-format
+msgid "Time left: 1 hour %d minutes"
+msgstr "Χρόνος που απομένει: 1 ώρα και %d λεπτά"
+
+#: ../panel-plugin/time-out-countdown.c:542
+#, c-format
+msgid "Time left: 1 hour %d minutes 1 second"
+msgstr "Χρόνος που απομένει: 1 ώρα %d λεπτά και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:544
+#, c-format
+msgid "Time left: 1 hour %d minutes %d seconds"
+msgstr "Χρόνος που απομένει: 1 ώρα %d λεπτά και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:552
+#, c-format
+msgid "Time left: %d hours"
+msgstr "Χρόνος που απομένει: %d ώρες"
+
+#: ../panel-plugin/time-out-countdown.c:554
+#, c-format
+msgid "Time left: %d hours 1 second"
+msgstr "Χρόνος που απομένει: %d ώρες και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:556
+#, c-format
+msgid "Time left: %d hours %d seconds"
+msgstr "Χρόνος που απομένει: %d ώρες και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:561
+#: ../panel-plugin/time-out-countdown.c:606
+#, c-format
+msgid "Time left: %d hours 1 minute"
+msgstr "Χρόνος που απομένει: %d ώρες και 1 λεπτό"
+
+#: ../panel-plugin/time-out-countdown.c:563
+#, c-format
+msgid "Time left: %d hours 1 minute 1 second"
+msgstr "Χρόνος που απομένει: %d ώρες 1 λεπτό και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/time-out-countdown.c:565
+#, c-format
+msgid "Time left: %d hours 1 minute %d seconds"
+msgstr "Χρόνος που απομένει: %d ώρες 1 λεπτό και %d δευτερόλεπτα"
+
+#: ../panel-plugin/time-out-countdown.c:572
+#, c-format
+msgid "Time left: %d hours %d minutes 1 second"
+msgstr "Χρόνος που απομένει: %d ώρες %d λεπτά και 1 δευτερόλεπτο"
+
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
+msgid "Automatically controlled time outs and breaks"
+msgstr "Αυτόματα ελεγχόμενες χρονικές ανάπαυλες και διαλείμματα"
+
