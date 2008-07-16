@@ -250,4 +250,3 @@ msgstr ""
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr ""
-
