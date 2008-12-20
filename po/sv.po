@@ -1,0 +1,256 @@
+# Swedish translation for xfce4-time-out-plugin.
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the xfce4-time-out-plugin package.
+# Daniel Nylander <po@danielnylander.se>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce4-time-out-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-14 16:17+0100\n"
+"PO-Revision-Date: 2008-12-14 21:06+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Create menu item for taking an instant break
+#: ../panel-plugin/time-out.c:245
+msgid "Take a break"
+msgstr "Ta en paus"
+
+#. Create menu item for enabling/disabling the countdown
+#: ../panel-plugin/time-out.c:253
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#. Create properties dialog
+#: ../panel-plugin/time-out.c:393
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+msgid "Time Out"
+msgstr "Rast"
+
+#. Create time settings section
+#: ../panel-plugin/time-out.c:410
+msgid "Time settings"
+msgstr "Tidsinställningar"
+
+#. Create break countdown time label
+#: ../panel-plugin/time-out.c:423
+msgid "Time between breaks (minutes):"
+msgstr "Tid mellan pauser (minuter):"
+
+#. Create lock countdown time label
+#: ../panel-plugin/time-out.c:438
+msgid "Break length (minutes):"
+msgstr "Tidslängd (minuter):"
+
+#. Create postpone countdown time label
+#: ../panel-plugin/time-out.c:451
+msgid "Postpone length (minutes):"
+msgstr "Tidslängd på framflyttning (minuter):"
+
+#. Create behaviour section
+#: ../panel-plugin/time-out.c:464
+msgid "Behaviour"
+msgstr "Beteende"
+
+#. Create postpone check button
+#: ../panel-plugin/time-out.c:470
+msgid "Allow postpone"
+msgstr "Tillåt framflyttning"
+
+#. Create appearance section
+#: ../panel-plugin/time-out.c:477
+msgid "Appearance"
+msgstr "Utseende"
+
+#. Create display time check button
+#: ../panel-plugin/time-out.c:488
+msgid "Display remaining time in the panel"
+msgstr "Visa återstående tid i panelen"
+
+#. Create display hours check button
+#: ../panel-plugin/time-out.c:495
+msgid "Display hours"
+msgstr "Visa timmar"
+
+#. Create display seconds check button
+#: ../panel-plugin/time-out.c:502
+msgid "Display seconds"
+msgstr "Visa sekunder"
+
+#. Create postpone button
+#: ../panel-plugin/time-out-lock-screen.c:189
+msgid "_Postpone"
+msgstr "_Flytta fram"
+
+#. Hours:minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:395
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
+
+#. Hours:minutes
+#. Minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:400
+#: ../panel-plugin/time-out-countdown.c:408
+#, c-format
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
+
+#: ../panel-plugin/time-out-countdown.c:428
+#: ../panel-plugin/time-out-countdown.c:559
+#, c-format
+msgid "Time left: 1 second"
+msgstr "Tid kvar: 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:430
+#: ../panel-plugin/time-out-countdown.c:561
+#, c-format
+msgid "Time left: %d seconds"
+msgstr "Tid kvar: %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:435
+#: ../panel-plugin/time-out-countdown.c:518
+#: ../panel-plugin/time-out-countdown.c:566
+#: ../panel-plugin/time-out-countdown.c:585
+#, c-format
+msgid "Time left: 1 minute"
+msgstr "Tid kvar: 1 minut"
+
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:568
+#, c-format
+msgid "Time left: 1 minute 1 second"
+msgstr "Tid kvar: 1 minut 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:439
+#: ../panel-plugin/time-out-countdown.c:570
+#, c-format
+msgid "Time left: 1 minute %d seconds"
+msgstr "Tid kvar: 1 minut %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:444
+#: ../panel-plugin/time-out-countdown.c:523
+#: ../panel-plugin/time-out-countdown.c:525
+#: ../panel-plugin/time-out-countdown.c:575
+#: ../panel-plugin/time-out-countdown.c:588
+#: ../panel-plugin/time-out-countdown.c:590
+#, c-format
+msgid "Time left: %d minutes"
+msgstr "Tid kvar: %d minuter"
+
+#: ../panel-plugin/time-out-countdown.c:446
+#: ../panel-plugin/time-out-countdown.c:577
+#, c-format
+msgid "Time left: %d minutes 1 second"
+msgstr "Tid kvar: %d minuter 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:448
+#: ../panel-plugin/time-out-countdown.c:579
+#, c-format
+msgid "Time left: %d minutes %d seconds"
+msgstr "Tid kvar: %d minuter %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:456
+#, c-format
+msgid "Time left: 1 hour"
+msgstr "Tid kvar: 1 timme"
+
+#: ../panel-plugin/time-out-countdown.c:458
+#, c-format
+msgid "Time left: 1 hour 1 second"
+msgstr "Tid kvar: 1 timme 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:460
+#, c-format
+msgid "Time left: 1 hour %d seconds"
+msgstr "Tid kvar: 1 timme %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:465
+#: ../panel-plugin/time-out-countdown.c:531
+#, c-format
+msgid "Time left: 1 hour 1 minute"
+msgstr "Tid kvar: 1 timme 1 minut"
+
+#: ../panel-plugin/time-out-countdown.c:467
+#, c-format
+msgid "Time left: 1 hour 1 minute 1 second"
+msgstr "Tid kvar: 1 timme 1 minut 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:469
+#, c-format
+msgid "Time left: 1 hour 1 minute %d seconds"
+msgstr "Tid kvar: 1 timme 1 minut %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:474
+#: ../panel-plugin/time-out-countdown.c:534
+#: ../panel-plugin/time-out-countdown.c:536
+#, c-format
+msgid "Time left: 1 hour %d minutes"
+msgstr "Tid kvar: 1 timme %d minuter"
+
+#: ../panel-plugin/time-out-countdown.c:476
+#, c-format
+msgid "Time left: 1 hour %d minutes 1 second"
+msgstr "Tid kvar: 1 timme %d minuter 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:478
+#, c-format
+msgid "Time left: 1 hour %d minutes %d seconds"
+msgstr "Tid kvar: 1 timme %d minuter %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:486
+#, c-format
+msgid "Time left: %d hours"
+msgstr "Tid kvar: %d timmar"
+
+#: ../panel-plugin/time-out-countdown.c:488
+#, c-format
+msgid "Time left: %d hours 1 second"
+msgstr "Tid kvar: %d timmar 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:490
+#, c-format
+msgid "Time left: %d hours %d seconds"
+msgstr "Tid kvar: %d timmar %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:495
+#: ../panel-plugin/time-out-countdown.c:541
+#, c-format
+msgid "Time left: %d hours 1 minute"
+msgstr "Tid kvar: %d timmar 1 minut"
+
+#: ../panel-plugin/time-out-countdown.c:497
+#, c-format
+msgid "Time left: %d hours 1 minute 1 second"
+msgstr "Tid kvar: %d timmar 1 minut 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:499
+#, c-format
+msgid "Time left: %d hours 1 minute %d seconds"
+msgstr "Tid kvar: %d timmar 1 minut %d sekunder"
+
+#: ../panel-plugin/time-out-countdown.c:504
+#: ../panel-plugin/time-out-countdown.c:544
+#: ../panel-plugin/time-out-countdown.c:546
+#, c-format
+msgid "Time left: %d hours %d minutes"
+msgstr "Tid kvar: %d timmar %d minuter"
+
+#: ../panel-plugin/time-out-countdown.c:506
+#, c-format
+msgid "Time left: %d hours %d minutes 1 second"
+msgstr "Tid kvar: %d timmar %d minuter 1 sekund"
+
+#: ../panel-plugin/time-out-countdown.c:508
+#, c-format
+msgid "Time left: %d hours %d minutes %d seconds"
+msgstr "Tid kvar: %d timmar %d minuter %d sekunder"
+
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
+msgid "Automatically controlled time outs and breaks"
+msgstr "Automatiskt kontrollerade pauser och raster"
+
