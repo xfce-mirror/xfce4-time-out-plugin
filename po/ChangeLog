@@ -1,3 +1,7 @@
+2009-01-18  Maximilian Schleiss <maximilian@xfce.org>
+
+	* ja.po, LINGUAS: Japanese translation added (Nobuhiro Iwamatsu)
+
 2008-12-20  Alexander Toresson <eulex@xfce.org>
 
 	* sv.po, LINGUAS: Swedish translation added (Daniel Nylander)
@@ -8,7 +12,7 @@
 
 2008-11-17  Eren Türkay <erenturkay@xfce.org>
 
-        * tr.po: Turkish translation update (Turkish translation team)
+	* tr.po: Turkish translation update (Turkish translation team)
 
 2008-10-14 Lars Nielsen <lars@mit-web.dk>
 
@@ -20,7 +24,7 @@
 
 2008-07-15 Mohamed Magdy <alnokta@xfce.org>
 
-        * ar.po: Add Arabic translation
+	* ar.po: Add Arabic translation
 
 2008-06-26  Maximilian Schleiss <maximilian@xfce.org>
 
