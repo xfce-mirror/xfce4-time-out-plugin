@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-06 23:27+0200\n"
-"PO-Revision-Date: 2008-06-24 20:17+0100\n"
+"PO-Revision-Date: 2009-02-11 16:37+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -22,24 +22,26 @@ msgstr ""
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:245
+#, fuzzy
 msgid "Take a break"
-msgstr ""
+msgstr "Romper o camiño"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:253
 msgid "Enabled"
-msgstr ""
+msgstr "Activado"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:390
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+#, fuzzy
 msgid "Time Out"
-msgstr ""
+msgstr "<b>Esvaecer:</b>"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:407
 msgid "Time settings"
-msgstr ""
+msgstr "Configuración de tempo"
 
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:420
@@ -48,13 +50,15 @@ msgstr ""
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:435
+#, fuzzy
 msgid "Break length (minutes):"
-msgstr ""
+msgstr "Intervalo (en minutos):"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:448
+#, fuzzy
 msgid "Postpone length (minutes):"
-msgstr ""
+msgstr "Intervalo (en minutos):"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:461
@@ -64,7 +68,7 @@ msgstr "Comportamento"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:467
 msgid "Allow postpone"
-msgstr ""
+msgstr "Permitir pospoñer"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:474
@@ -88,8 +92,9 @@ msgstr "Mostrar os segundos"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:185
+#, fuzzy
 msgid "_Postpone"
-msgstr ""
+msgstr "_Pospoñer"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:396
@@ -113,17 +118,18 @@ msgstr "%02d:%02d"
 #: ../panel-plugin/time-out-countdown.c:431
 #: ../panel-plugin/time-out-countdown.c:496
 #: ../panel-plugin/time-out-countdown.c:626
-#, c-format
+#, fuzzy, c-format
 msgid "Time left: %d seconds"
-msgstr ""
+msgstr "Aliñar as liñas á esqueda"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #: ../panel-plugin/time-out-countdown.c:501
 #: ../panel-plugin/time-out-countdown.c:584
 #: ../panel-plugin/time-out-countdown.c:631
 #: ../panel-plugin/time-out-countdown.c:650
+#, fuzzy
 msgid "Time left: 1 minute"
-msgstr ""
+msgstr "Aliñar as liñas á esqueda"
 
 #: ../panel-plugin/time-out-countdown.c:433
 #: ../panel-plugin/time-out-countdown.c:505
@@ -144,9 +150,9 @@ msgstr ""
 #: ../panel-plugin/time-out-countdown.c:588
 #: ../panel-plugin/time-out-countdown.c:640
 #: ../panel-plugin/time-out-countdown.c:652
-#, c-format
+#, fuzzy, c-format
 msgid "Time left: %d minutes"
-msgstr ""
+msgstr "Intervalo (en minutos):"
 
 #: ../panel-plugin/time-out-countdown.c:447
 #: ../panel-plugin/time-out-countdown.c:574
@@ -163,8 +169,9 @@ msgstr ""
 
 #: ../panel-plugin/time-out-countdown.c:494
 #: ../panel-plugin/time-out-countdown.c:624
+#, fuzzy
 msgid "Time left: 1 second"
-msgstr ""
+msgstr "(o tempo de espera é de %d segundo)"
 
 #: ../panel-plugin/time-out-countdown.c:503
 #: ../panel-plugin/time-out-countdown.c:633
@@ -178,8 +185,9 @@ msgid "Time left: %d minutes 1 second"
 msgstr ""
 
 #: ../panel-plugin/time-out-countdown.c:522
+#, fuzzy
 msgid "Time left: 1 hour"
-msgstr ""
+msgstr "Aliñar as liñas á esqueda"
 
 #: ../panel-plugin/time-out-countdown.c:524
 msgid "Time left: 1 hour 1 second"
@@ -221,9 +229,9 @@ msgid "Time left: 1 hour %d minutes %d seconds"
 msgstr ""
 
 #: ../panel-plugin/time-out-countdown.c:552
-#, c-format
+#, fuzzy, c-format
 msgid "Time left: %d hours"
-msgstr ""
+msgstr "Aliñar as liñas á esqueda"
 
 #: ../panel-plugin/time-out-countdown.c:554
 #, c-format
