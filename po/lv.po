@@ -1,35 +1,39 @@
 # Latvian translations for xfce package.
 # Copyright (C) 2007 xfce4-time-out-plugin COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce4-time-out-plugin package.
-# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
 #
+# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
+# Rihards Prieditis <rprieditis@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-05-06 23:27+0200\n"
-"PO-Revision-Date: 2007-11-16 20:49+0300\n"
-"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
-"Language-Team: Latvian <rprieditis@inbox.lv>\n"
+"PO-Revision-Date: 2009-09-18 23:22+0100\n"
+"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:245
 msgid "Take a break"
-msgstr "Pārtraukums"
+msgstr "Laiks pārtraukumam"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:253
 msgid "Enabled"
-msgstr "Iespējots"
+msgstr "Ieslēgt"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:390
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
-msgstr "Taimouts"
+msgstr "Laiks iztecējis"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:407
@@ -79,7 +83,7 @@ msgstr "Rādīt stundas"
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:499
 msgid "Display seconds"
-msgstr "Rādit sekundes"
+msgstr "Rādīt sekundes"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:185
@@ -253,5 +257,5 @@ msgstr "Atlikušas: %d stundas %d minūtes 1 sekunde"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "Automātiski kontrolē taimoutus un pārtraukumus"
+msgstr "Automātiski kontrolē laika iztecējumu un pārtraukumus"
 
