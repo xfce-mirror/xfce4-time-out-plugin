@@ -2,7 +2,7 @@
 # Copyright (C) 2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the xfce4-time-out package.
 # Jannis Pohlmann <jannis@xfce.org>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
@@ -59,7 +59,7 @@ msgstr "Verhalten"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:467
 msgid "Allow postpone"
-msgstr "Erlaube es Pausen zu verschieben"
+msgstr "Erlaube das Verschieben von Pausen"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:474
