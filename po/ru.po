@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -51,7 +51,7 @@ msgstr "Время перерыва (в минутах):"
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:448
 msgid "Postpone length (minutes):"
-msgstr ""
+msgstr "Отложить на (минут)"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:461
@@ -61,7 +61,7 @@ msgstr "Поведение"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:467
 msgid "Allow postpone"
-msgstr ""
+msgstr "Разрешить откладывание"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:474
@@ -86,7 +86,7 @@ msgstr "Показывать секунды"
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:185
 msgid "_Postpone"
-msgstr ""
+msgstr "Отложить"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:396
@@ -112,7 +112,7 @@ msgstr "%02d:%02d"
 #: ../panel-plugin/time-out-countdown.c:626
 #, c-format
 msgid "Time left: %d seconds"
-msgstr "Остальось времени: %d секунд"
+msgstr "Осталось времени: %d секунд"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #: ../panel-plugin/time-out-countdown.c:501
@@ -256,4 +256,3 @@ msgstr "Осталось времени: %d часов %d минут и 1 сек
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Автоматически контролировать перерывы"
-
