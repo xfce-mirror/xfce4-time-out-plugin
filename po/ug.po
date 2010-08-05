@@ -18,7 +18,7 @@ msgstr ""
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:245
 msgid "Take a break"
-msgstr ""
+msgstr "ئارام ئال"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:253
@@ -29,27 +29,27 @@ msgstr "ئىناۋەتلىك"
 #: ../panel-plugin/time-out.c:393
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
-msgstr ""
+msgstr "ۋاقىت ئېشىپ كەتتى"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:410
 msgid "Time settings"
-msgstr ""
+msgstr "ۋاقىت تەڭشىكى"
 
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:423
 msgid "Time between breaks (minutes):"
-msgstr ""
+msgstr "ئاراملار ئارىسىدىكى ۋاقىت (مىنۇت):"
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:438
 msgid "Break length (minutes):"
-msgstr ""
+msgstr "ئارام ۋاقتى (مىنۇت):"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:451
 msgid "Postpone length (minutes):"
-msgstr ""
+msgstr "ئۇزارتىش ۋاقتى (مىنۇت):"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:464
@@ -59,7 +59,7 @@ msgstr "قىلمىش"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:470
 msgid "Allow postpone"
-msgstr ""
+msgstr "يول قويغان ئۇزارتىش ۋاقتى"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:477
@@ -69,28 +69,28 @@ msgstr "كۆرۈنۈشى"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:488
 msgid "Display remaining time in the panel"
-msgstr ""
+msgstr "panel دا قالغان ۋاقىتنى كۆرسەتسۇن"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:495
 msgid "Display hours"
-msgstr ""
+msgstr "سائەتنى كۆرسەت"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:502
 msgid "Display seconds"
-msgstr ""
+msgstr "مىنۇتنى كۆرسەت"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:189
 msgid "_Postpone"
-msgstr ""
+msgstr "ۋاقىتنى ئۇزارت(_P)"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:395
 #, c-format
 msgid "%02d:%02d:%02d"
-msgstr ""
+msgstr "%02d:%02d:%02d"
 
 #. Hours:minutes
 #. Minutes:seconds
@@ -98,19 +98,19 @@ msgstr ""
 #: ../panel-plugin/time-out-countdown.c:408
 #, c-format
 msgid "%02d:%02d"
-msgstr ""
+msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:428
 #: ../panel-plugin/time-out-countdown.c:559
 #, c-format
 msgid "Time left: 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:430
 #: ../panel-plugin/time-out-countdown.c:561
 #, c-format
 msgid "Time left: %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:435
 #: ../panel-plugin/time-out-countdown.c:518
@@ -118,19 +118,19 @@ msgstr ""
 #: ../panel-plugin/time-out-countdown.c:585
 #, c-format
 msgid "Time left: 1 minute"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:437
 #: ../panel-plugin/time-out-countdown.c:568
 #, c-format
 msgid "Time left: 1 minute 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1مىنۇت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:439
 #: ../panel-plugin/time-out-countdown.c:570
 #, c-format
 msgid "Time left: 1 minute %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:444
 #: ../panel-plugin/time-out-countdown.c:523
@@ -140,116 +140,116 @@ msgstr ""
 #: ../panel-plugin/time-out-countdown.c:590
 #, c-format
 msgid "Time left: %d minutes"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:446
 #: ../panel-plugin/time-out-countdown.c:577
 #, c-format
 msgid "Time left: %d minutes 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d مىنۇت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:448
 #: ../panel-plugin/time-out-countdown.c:579
 #, c-format
 msgid "Time left: %d minutes %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:456
 #, c-format
 msgid "Time left: 1 hour"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت"
 
 #: ../panel-plugin/time-out-countdown.c:458
 #, c-format
 msgid "Time left: 1 hour 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:460
 #, c-format
 msgid "Time left: 1 hour %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:465
 #: ../panel-plugin/time-out-countdown.c:531
 #, c-format
 msgid "Time left: 1 hour 1 minute"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت 1 مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:467
 #, c-format
 msgid "Time left: 1 hour 1 minute 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت 1 مىنۇت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:469
 #, c-format
 msgid "Time left: 1 hour 1 minute %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت 1 مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:474
 #: ../panel-plugin/time-out-countdown.c:534
 #: ../panel-plugin/time-out-countdown.c:536
 #, c-format
 msgid "Time left: 1 hour %d minutes"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت %d مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:476
 #, c-format
 msgid "Time left: 1 hour %d minutes 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت %d مىنۇت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:478
 #, c-format
 msgid "Time left: 1 hour %d minutes %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: 1 سائەت %d مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:486
 #, c-format
 msgid "Time left: %d hours"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت"
 
 #: ../panel-plugin/time-out-countdown.c:488
 #, c-format
 msgid "Time left: %d hours 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:490
 #, c-format
 msgid "Time left: %d hours %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:495
 #: ../panel-plugin/time-out-countdown.c:541
 #, c-format
 msgid "Time left: %d hours 1 minute"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت 1 مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:497
 #, c-format
 msgid "Time left: %d hours 1 minute 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت 1 مىنۇت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:499
 #, c-format
 msgid "Time left: %d hours 1 minute %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت 1 مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:504
 #: ../panel-plugin/time-out-countdown.c:544
 #: ../panel-plugin/time-out-countdown.c:546
 #, c-format
 msgid "Time left: %d hours %d minutes"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت %d مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:506
 #, c-format
 msgid "Time left: %d hours %d minutes 1 second"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت %d مىنۇت 1 سېكۇنت"
 
 #: ../panel-plugin/time-out-countdown.c:508
 #, c-format
 msgid "Time left: %d hours %d minutes %d seconds"
-msgstr ""
+msgstr "قالغان ۋاقىت: %d سائەت %d مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr ""
+msgstr "自動的に管理されたタイムアウトと休憩"
