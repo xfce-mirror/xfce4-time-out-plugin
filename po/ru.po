@@ -20,7 +20,7 @@ msgstr ""
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:245
 msgid "Take a break"
-msgstr "Время перекусить"
+msgstr "Время отдохнуть"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:253
@@ -31,27 +31,27 @@ msgstr "Включен"
 #: ../panel-plugin/time-out.c:390
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
-msgstr "Время вышло"
+msgstr "Перерыв"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:407
 msgid "Time settings"
-msgstr "Установка времени"
+msgstr "Установка временных промежутков"
 
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:420
 msgid "Time between breaks (minutes):"
-msgstr "Время между перерывами (в минутах):"
+msgstr "Длительность рабочего времени (в минутах):"
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:435
 msgid "Break length (minutes):"
-msgstr "Время перерыва (в минутах):"
+msgstr "Длительность перерыва (в минутах):"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:448
 msgid "Postpone length (minutes):"
-msgstr "Отложить на (минут)"
+msgstr "Откладывание (в минутах)"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:461
@@ -76,12 +76,12 @@ msgstr "Отображать оставшееся время на панели"
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:492
 msgid "Display hours"
-msgstr "Показывать часы"
+msgstr "Отображать часы"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:499
 msgid "Display seconds"
-msgstr "Показывать секунды"
+msgstr "Отображать секунды"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:185
