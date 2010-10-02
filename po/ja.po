@@ -124,7 +124,7 @@ msgstr "残り時間: 1分"
 #: ../panel-plugin/time-out-countdown.c:568
 #, c-format
 msgid "Time left: 1 minute 1 second"
-msgstr "残り時間: 1分 １秒"
+msgstr "残り時間: 1分 1秒"
 
 #: ../panel-plugin/time-out-countdown.c:439
 #: ../panel-plugin/time-out-countdown.c:570
