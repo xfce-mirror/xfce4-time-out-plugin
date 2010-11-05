@@ -238,6 +238,10 @@ time_out_construct (XfcePanelPlugin *plugin)
   /* Load the settings */
   time_out_load_settings (time_out);
 
+  /* Hide the time label if settings says so */
+  if (!time_out->display_time) 
+    gtk_widget_hide (time_out->time_label);
+
   /* Add the event box to the panel */
   gtk_container_add (GTK_CONTAINER (plugin), time_out->ebox);
 
