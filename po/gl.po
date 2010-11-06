@@ -11,252 +11,262 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-05-06 23:27+0200\n"
+"POT-Creation-Date: 2010-11-06 16:27+0900\n"
 "PO-Revision-Date: 2009-07-15 18:13+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:245
+#: ../panel-plugin/time-out.c:253
 msgid "Take a break"
 msgstr "Tome un descanso"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:253
+#: ../panel-plugin/time-out.c:261
 msgid "Enabled"
 msgstr "Activado"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:390
+#: ../panel-plugin/time-out.c:401
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
 msgstr "Tempo de espera"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:407
+#: ../panel-plugin/time-out.c:418
 msgid "Time settings"
 msgstr "Configuración de tempo"
 
+#. Create the labels for the minutes and seconds spins
+#: ../panel-plugin/time-out.c:431
+#, fuzzy
+msgid "Minutes"
+msgstr "Minutos"
+
+#: ../panel-plugin/time-out.c:436
+#, fuzzy
+msgid "Seconds"
+msgstr "Segundos"
+
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:420
-msgid "Time between breaks (minutes):"
-msgstr "Tempo entre descansos (minutos):"
+#: ../panel-plugin/time-out.c:442
+msgid "Time between breaks:"
+msgstr "Tempo entre descansos:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:435
-msgid "Break length (minutes):"
-msgstr "Duración do descanso (minutos):"
+#: ../panel-plugin/time-out.c:466
+msgid "Break length:"
+msgstr "Duración do descanso:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:448
-msgid "Postpone length (minutes):"
-msgstr "Duración da posposición (minutos):"
+#: ../panel-plugin/time-out.c:484
+msgid "Postpone length:"
+msgstr "Duración da posposición:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:461
+#: ../panel-plugin/time-out.c:502
 msgid "Behaviour"
 msgstr "Comportamento"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:467
+#: ../panel-plugin/time-out.c:508
 msgid "Allow postpone"
 msgstr "Permitir pospoñer"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:474
+#: ../panel-plugin/time-out.c:515
 msgid "Appearance"
 msgstr "Aparencia"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:485
+#: ../panel-plugin/time-out.c:526
 msgid "Display remaining time in the panel"
 msgstr "Mostrar o tempo restante no panel"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:492
+#: ../panel-plugin/time-out.c:533
 msgid "Display hours"
 msgstr "Mostrar as horas"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:540
 msgid "Display seconds"
 msgstr "Mostrar os segundos"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:185
+#: ../panel-plugin/time-out-lock-screen.c:189
 msgid "_Postpone"
 msgstr "_Pospor"
 
 #. Hours:minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:396
-#: ../panel-plugin/time-out-countdown.c:461
+#: ../panel-plugin/time-out-countdown.c:395
 #, c-format
 msgid "%02d:%02d:%02d"
 msgstr "%02d:%02d:%02d"
 
-#. Minutes:seconds
 #. Hours:minutes
 #. Minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:401
-#: ../panel-plugin/time-out-countdown.c:409
-#: ../panel-plugin/time-out-countdown.c:466
-#: ../panel-plugin/time-out-countdown.c:474
+#: ../panel-plugin/time-out-countdown.c:400
+#: ../panel-plugin/time-out-countdown.c:408
 #, c-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:424
-#: ../panel-plugin/time-out-countdown.c:431
-#: ../panel-plugin/time-out-countdown.c:496
-#: ../panel-plugin/time-out-countdown.c:626
+#: ../panel-plugin/time-out-countdown.c:428
+#: ../panel-plugin/time-out-countdown.c:559
+#, c-format
+msgid "Time left: 1 second"
+msgstr "Tempo restante: 1 segundo"
+
+#: ../panel-plugin/time-out-countdown.c:430
+#: ../panel-plugin/time-out-countdown.c:561
 #, c-format
 msgid "Time left: %d seconds"
 msgstr "Tempo restante: %d segundos"
 
-#: ../panel-plugin/time-out-countdown.c:426
-#: ../panel-plugin/time-out-countdown.c:501
-#: ../panel-plugin/time-out-countdown.c:584
-#: ../panel-plugin/time-out-countdown.c:631
-#: ../panel-plugin/time-out-countdown.c:650
+#: ../panel-plugin/time-out-countdown.c:435
+#: ../panel-plugin/time-out-countdown.c:518
+#: ../panel-plugin/time-out-countdown.c:566
+#: ../panel-plugin/time-out-countdown.c:585
+#, c-format
 msgid "Time left: 1 minute"
 msgstr "Tempo restante: 1 minuto"
 
-#: ../panel-plugin/time-out-countdown.c:433
-#: ../panel-plugin/time-out-countdown.c:505
-#: ../panel-plugin/time-out-countdown.c:635
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:568
+#, c-format
+msgid "Time left: 1 minute 1 second"
+msgstr "Tempo restante: 1 minuto e 1 segundo"
+
+#: ../panel-plugin/time-out-countdown.c:439
+#: ../panel-plugin/time-out-countdown.c:570
 #, c-format
 msgid "Time left: 1 minute %d seconds"
 msgstr "Tempo restante: 1 minuto e %d segundos"
 
-#: ../panel-plugin/time-out-countdown.c:439
-#: ../panel-plugin/time-out-countdown.c:514
-#: ../panel-plugin/time-out-countdown.c:644
-#, c-format
-msgid "Time left: %d minutes %d seconds"
-msgstr "Tempo restante: %d minutos e %d segundos"
-
-#: ../panel-plugin/time-out-countdown.c:441
-#: ../panel-plugin/time-out-countdown.c:510
+#: ../panel-plugin/time-out-countdown.c:444
+#: ../panel-plugin/time-out-countdown.c:523
+#: ../panel-plugin/time-out-countdown.c:525
+#: ../panel-plugin/time-out-countdown.c:575
 #: ../panel-plugin/time-out-countdown.c:588
-#: ../panel-plugin/time-out-countdown.c:640
-#: ../panel-plugin/time-out-countdown.c:652
+#: ../panel-plugin/time-out-countdown.c:590
 #, c-format
 msgid "Time left: %d minutes"
 msgstr "Tempo restante: %d minutos"
 
-#: ../panel-plugin/time-out-countdown.c:447
-#: ../panel-plugin/time-out-countdown.c:574
-#, c-format
-msgid "Time left: %d hours %d minutes %d seconds"
-msgstr "Tempo restante: %d horas %d minutos e %d segundos"
-
-#: ../panel-plugin/time-out-countdown.c:449
-#: ../panel-plugin/time-out-countdown.c:570
-#: ../panel-plugin/time-out-countdown.c:610
-#, c-format
-msgid "Time left: %d hours %d minutes"
-msgstr "Tempo restante: %d horas e %d minutos"
-
-#: ../panel-plugin/time-out-countdown.c:494
-#: ../panel-plugin/time-out-countdown.c:624
-msgid "Time left: 1 second"
-msgstr "Tempo restante: 1 segundo"
-
-#: ../panel-plugin/time-out-countdown.c:503
-#: ../panel-plugin/time-out-countdown.c:633
-msgid "Time left: 1 minute 1 second"
-msgstr "Tempo restante: 1 minuto e 1 segundo"
-
-#: ../panel-plugin/time-out-countdown.c:512
-#: ../panel-plugin/time-out-countdown.c:642
+#: ../panel-plugin/time-out-countdown.c:446
+#: ../panel-plugin/time-out-countdown.c:577
 #, c-format
 msgid "Time left: %d minutes 1 second"
 msgstr "Tempo restante: %d minutos e 1 segundo"
 
-#: ../panel-plugin/time-out-countdown.c:522
+#: ../panel-plugin/time-out-countdown.c:448
+#: ../panel-plugin/time-out-countdown.c:579
+#, c-format
+msgid "Time left: %d minutes %d seconds"
+msgstr "Tempo restante: %d minutos e %d segundos"
+
+#: ../panel-plugin/time-out-countdown.c:456
+#, c-format
 msgid "Time left: 1 hour"
 msgstr "Tempo restante: 1 hora"
 
-#: ../panel-plugin/time-out-countdown.c:524
+#: ../panel-plugin/time-out-countdown.c:458
+#, c-format
 msgid "Time left: 1 hour 1 second"
 msgstr "Tempo restante: 1 hora e 1 segundo"
 
-#: ../panel-plugin/time-out-countdown.c:526
+#: ../panel-plugin/time-out-countdown.c:460
 #, c-format
 msgid "Time left: 1 hour %d seconds"
 msgstr "Tempo restante: 1 hora e %d segundos"
 
+#: ../panel-plugin/time-out-countdown.c:465
 #: ../panel-plugin/time-out-countdown.c:531
-#: ../panel-plugin/time-out-countdown.c:595
+#, c-format
 msgid "Time left: 1 hour 1 minute"
 msgstr "Tempo restante: 1 hora e 1 minuto"
 
-#: ../panel-plugin/time-out-countdown.c:533
+#: ../panel-plugin/time-out-countdown.c:467
+#, c-format
 msgid "Time left: 1 hour 1 minute 1 second"
 msgstr "Tempo restante: 1 hora 1 minuto e 1 segundo"
 
-#: ../panel-plugin/time-out-countdown.c:535
+#: ../panel-plugin/time-out-countdown.c:469
 #, c-format
 msgid "Time left: 1 hour 1 minute %d seconds"
 msgstr "Tempo restante: 1 hora 1 minuto e %d segundos"
 
-#: ../panel-plugin/time-out-countdown.c:540
-#: ../panel-plugin/time-out-countdown.c:599
+#: ../panel-plugin/time-out-countdown.c:474
+#: ../panel-plugin/time-out-countdown.c:534
+#: ../panel-plugin/time-out-countdown.c:536
 #, c-format
 msgid "Time left: 1 hour %d minutes"
 msgstr "Tempo restante: 1 hora e %d minutos"
 
-#: ../panel-plugin/time-out-countdown.c:542
+#: ../panel-plugin/time-out-countdown.c:476
 #, c-format
 msgid "Time left: 1 hour %d minutes 1 second"
 msgstr "Tempo restante: 1 hora %d minutos e 1 segundo"
 
-#: ../panel-plugin/time-out-countdown.c:544
+#: ../panel-plugin/time-out-countdown.c:478
 #, c-format
 msgid "Time left: 1 hour %d minutes %d seconds"
 msgstr "Tempo restante: 1 hora %d minutos e %d segundos"
 
-#: ../panel-plugin/time-out-countdown.c:552
+#: ../panel-plugin/time-out-countdown.c:486
 #, c-format
 msgid "Time left: %d hours"
 msgstr "Tempo restante: %d horas"
 
-#: ../panel-plugin/time-out-countdown.c:554
+#: ../panel-plugin/time-out-countdown.c:488
 #, c-format
 msgid "Time left: %d hours 1 second"
 msgstr "Tempo restante: %d horas e 1 segundo"
 
-#: ../panel-plugin/time-out-countdown.c:556
+#: ../panel-plugin/time-out-countdown.c:490
 #, c-format
 msgid "Time left: %d hours %d seconds"
 msgstr "Tempo restante: %d horas e %d segundos"
 
-#: ../panel-plugin/time-out-countdown.c:561
-#: ../panel-plugin/time-out-countdown.c:606
+#: ../panel-plugin/time-out-countdown.c:495
+#: ../panel-plugin/time-out-countdown.c:541
 #, c-format
 msgid "Time left: %d hours 1 minute"
 msgstr "Tempo restante: %d horas e 1 minuto"
 
-#: ../panel-plugin/time-out-countdown.c:563
+#: ../panel-plugin/time-out-countdown.c:497
 #, c-format
 msgid "Time left: %d hours 1 minute 1 second"
 msgstr "Tempo restante: %d horas 1 minuto e 1 segundo"
 
-#: ../panel-plugin/time-out-countdown.c:565
+#: ../panel-plugin/time-out-countdown.c:499
 #, c-format
 msgid "Time left: %d hours 1 minute %d seconds"
 msgstr "Tempo restante: %d horas 1 minuto e %d segundos"
 
-#: ../panel-plugin/time-out-countdown.c:572
+#: ../panel-plugin/time-out-countdown.c:504
+#: ../panel-plugin/time-out-countdown.c:544
+#: ../panel-plugin/time-out-countdown.c:546
+#, c-format
+msgid "Time left: %d hours %d minutes"
+msgstr "Tempo restante: %d horas e %d minutos"
+
+#: ../panel-plugin/time-out-countdown.c:506
 #, c-format
 msgid "Time left: %d hours %d minutes 1 second"
 msgstr "Tempo restante: %d horas %d minutos e 1 segundo"
 
+#: ../panel-plugin/time-out-countdown.c:508
+#, c-format
+msgid "Time left: %d hours %d minutes %d seconds"
+msgstr "Tempo restante: %d horas %d minutos e %d segundos"
+
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Tempos de espera e descansos controlados automaticamente"
-

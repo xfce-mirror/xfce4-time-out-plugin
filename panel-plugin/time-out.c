@@ -97,7 +97,11 @@ static void           time_out_configure                          (XfcePanelPlug
 static void           time_out_end_configure                      (GtkDialog         *dialog,
                                                                    gint               response_id,
                                                                    TimeOutPlugin     *time_out);
+static void           time_out_lock_countdown_minutes_changed     (GtkSpinButton     *spin_button,
+                                                                   TimeOutPlugin     *time_out);
 static void           time_out_lock_countdown_seconds_changed     (GtkSpinButton     *spin_button,
+                                                                   TimeOutPlugin     *time_out);
+static void           time_out_postpone_countdown_minutes_changed (GtkSpinButton     *spin_button,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_postpone_countdown_seconds_changed (GtkSpinButton     *spin_button,
                                                                    TimeOutPlugin     *time_out);
@@ -417,51 +421,81 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_widget_show (framebox);
 
   /* Create time settings table */
-  table = gtk_table_new (2, 2, FALSE);
+  table = gtk_table_new (3, 3, FALSE);
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
   gtk_table_set_col_spacings (GTK_TABLE (table), 12);
   gtk_container_add (GTK_CONTAINER (timebin), table);
   gtk_widget_show (table);
 
-  /* Create break countdown time label */
-  label = gtk_label_new (_("Time between breaks (minutes):"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  /* Create the labels for the minutes and seconds spins */
+  label = gtk_label_new (_("Minutes"));
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 0, 1, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
-  /* Create break countdown time spin */
+  label = gtk_label_new (_("Seconds"));
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 2, 3, 0, 1, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_widget_show (label);
+
+  /* Create break countdown time label */
+  label = gtk_label_new (_("Time between breaks:"));
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_widget_show (label);
+
+  /* Create break countdown time minute spin */
   spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->break_countdown_seconds / 60);
-  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_widget_show (spin);
+
+  /* Store reference on the spin button in the plugin */
+  g_object_set_data (G_OBJECT (time_out->plugin), "break-countdown-minutes-spin", spin);
+
+  /* Create break countdown time minute spin */
+  spin = gtk_spin_button_new_with_range (0, 59, 1);
+  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->break_countdown_seconds % 60);
+  gtk_table_attach (GTK_TABLE (table), spin, 2, 3, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
   gtk_widget_show (spin);
 
   /* Store reference on the spin button in the plugin */
   g_object_set_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin", spin);
 
   /* Create lock countdown time label */
-  label = gtk_label_new (_("Break length (minutes):"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
-  gtk_widget_show (label);
-
-  /* Create lock countdown time spin */
-  spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
-  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->lock_countdown_seconds / 60);
-  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_lock_countdown_seconds_changed), time_out);
-  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
-  gtk_widget_show (spin);
-
-  /* Create postpone countdown time label */
-  label = gtk_label_new (_("Postpone length (minutes):"));
+  label = gtk_label_new (_("Break length:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
   gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
-  /* Create postpone countdown time spin */
-  spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
-  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->postpone_countdown_seconds / 60);
-  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_postpone_countdown_seconds_changed), time_out);
+  /* Create lock countdown time spins */
+  spin = gtk_spin_button_new_with_range (0, 24 * 60, 1);
+  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->lock_countdown_seconds / 60);
+  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_lock_countdown_minutes_changed), time_out);
   gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_widget_show (spin);
+  spin = gtk_spin_button_new_with_range (0, 59, 1);
+  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->lock_countdown_seconds % 60);
+  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_lock_countdown_seconds_changed), time_out);
+  gtk_table_attach (GTK_TABLE (table), spin, 2, 3, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_widget_show (spin);
+
+  /* Create postpone countdown time label */
+  label = gtk_label_new (_("Postpone length:"));
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 3, 4, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_widget_show (label);
+
+  /* Create postpone countdown time spins */
+  spin = gtk_spin_button_new_with_range (0, 24 * 60, 1);
+  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->postpone_countdown_seconds / 60);
+  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_postpone_countdown_minutes_changed), time_out);
+  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 3, 4, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_widget_show (spin);
+  spin = gtk_spin_button_new_with_range (0, 59, 1);
+  gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->postpone_countdown_seconds % 60);
+  g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_postpone_countdown_seconds_changed), time_out);
+  gtk_table_attach (GTK_TABLE (table), spin, 2, 3, 3, 4, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
   gtk_widget_show (spin);
 
   /* Create behaviour section */
@@ -531,8 +565,12 @@ time_out_end_configure (GtkDialog     *dialog,
   xfce_panel_plugin_unblock_menu (time_out->plugin);
 
   /* Get spin button value for the break countdown settings */
-  spin = g_object_get_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin");
+  spin = g_object_get_data (G_OBJECT (time_out->plugin), "break-countdown-minutes-spin");
   value = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (spin)) * 60;
+  g_object_set_data (G_OBJECT (time_out->plugin), "break-countdown-minutes-spin", NULL);
+
+  spin = g_object_get_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin");
+  value += gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (spin));
   g_object_set_data (G_OBJECT (time_out->plugin), "break-countdown-seconds-spin", NULL);
 
   /* Check if the break countdown seconds have changed */
@@ -540,6 +578,13 @@ time_out_end_configure (GtkDialog     *dialog,
 
   /* Apply new break countdown seconds */
   time_out->break_countdown_seconds = value;
+
+  /* prevent 0 seconds values */
+  if (!time_out->lock_countdown_seconds)
+    time_out->lock_countdown_seconds = 1;
+
+  if (!time_out->postpone_countdown_seconds)
+    time_out->postpone_countdown_seconds = 1;
 
   /* Save plugin configuration */
   time_out_save_settings (time_out);
@@ -560,6 +605,17 @@ time_out_end_configure (GtkDialog     *dialog,
 
 
 static void
+time_out_lock_countdown_minutes_changed (GtkSpinButton *spin_button,
+                                         TimeOutPlugin *time_out)
+{
+  g_return_if_fail (GTK_IS_SPIN_BUTTON (spin_button));
+  g_return_if_fail (time_out != NULL);
+
+  /* Set plugin attribute */
+  time_out->lock_countdown_seconds = gtk_spin_button_get_value_as_int (spin_button) * 60 + time_out->lock_countdown_seconds % 60;
+}
+
+static void
 time_out_lock_countdown_seconds_changed (GtkSpinButton *spin_button,
                                          TimeOutPlugin *time_out)
 {
@@ -567,10 +623,20 @@ time_out_lock_countdown_seconds_changed (GtkSpinButton *spin_button,
   g_return_if_fail (time_out != NULL);
 
   /* Set plugin attribute */
-  time_out->lock_countdown_seconds = gtk_spin_button_get_value_as_int (spin_button) * 60;
+  time_out->lock_countdown_seconds = time_out->lock_countdown_seconds / 60 * 60 + gtk_spin_button_get_value_as_int (spin_button);
 }
 
 
+static void
+time_out_postpone_countdown_minutes_changed (GtkSpinButton *spin_button,
+                                             TimeOutPlugin *time_out)
+{
+  g_return_if_fail (GTK_IS_SPIN_BUTTON (spin_button));
+  g_return_if_fail (time_out != NULL);
+
+  /* Set plugin attribute */
+  time_out->postpone_countdown_seconds = gtk_spin_button_get_value_as_int (spin_button) * 60 + time_out->postpone_countdown_seconds % 60;
+}
 
 static void
 time_out_postpone_countdown_seconds_changed (GtkSpinButton *spin_button,
@@ -580,7 +646,7 @@ time_out_postpone_countdown_seconds_changed (GtkSpinButton *spin_button,
   g_return_if_fail (time_out != NULL);
 
   /* Set plugin attribute */
-  time_out->postpone_countdown_seconds = gtk_spin_button_get_value_as_int (spin_button) * 60;
+  time_out->postpone_countdown_seconds = time_out->postpone_countdown_seconds / 60 * 60 +gtk_spin_button_get_value_as_int (spin_button);
 }
 
 

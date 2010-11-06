@@ -7,77 +7,89 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-14 16:17+0100\n"
+"POT-Creation-Date: 2010-11-06 16:27+0900\n"
 "PO-Revision-Date: 2008-12-14 21:06+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:245
+#: ../panel-plugin/time-out.c:253
 msgid "Take a break"
 msgstr "Ta en paus"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:253
+#: ../panel-plugin/time-out.c:261
 msgid "Enabled"
 msgstr "Aktiverad"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:393
+#: ../panel-plugin/time-out.c:401
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
 msgstr "Rast"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:410
+#: ../panel-plugin/time-out.c:418
 msgid "Time settings"
 msgstr "Tidsinställningar"
 
+#. Create the labels for the minutes and seconds spins
+#: ../panel-plugin/time-out.c:431
+#, fuzzy
+msgid "Minutes"
+msgstr "Minuter"
+
+#: ../panel-plugin/time-out.c:436
+#, fuzzy
+msgid "Seconds"
+msgstr "Sekunder"
+
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:423
-msgid "Time between breaks (minutes):"
-msgstr "Tid mellan pauser (minuter):"
+#: ../panel-plugin/time-out.c:442
+msgid "Time between breaks:"
+msgstr "Tid mellan pauser:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:438
-msgid "Break length (minutes):"
-msgstr "Tidslängd (minuter):"
+#: ../panel-plugin/time-out.c:466
+msgid "Break length:"
+msgstr "Tidslängd:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:451
-msgid "Postpone length (minutes):"
-msgstr "Tidslängd på framflyttning (minuter):"
+#: ../panel-plugin/time-out.c:484
+msgid "Postpone length:"
+msgstr "Tidslängd på framflyttning:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:464
+#: ../panel-plugin/time-out.c:502
 msgid "Behaviour"
 msgstr "Beteende"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:470
+#: ../panel-plugin/time-out.c:508
 msgid "Allow postpone"
 msgstr "Tillåt framflyttning"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:477
+#: ../panel-plugin/time-out.c:515
 msgid "Appearance"
 msgstr "Utseende"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:488
+#: ../panel-plugin/time-out.c:526
 msgid "Display remaining time in the panel"
 msgstr "Visa återstående tid i panelen"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:495
+#: ../panel-plugin/time-out.c:533
 msgid "Display hours"
 msgstr "Visa timmar"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:502
+#: ../panel-plugin/time-out.c:540
 msgid "Display seconds"
 msgstr "Visa sekunder"
 
@@ -253,4 +265,3 @@ msgstr "Tid kvar: %d timmar %d minuter %d sekunder"
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Automatiskt kontrollerade pauser och raster"
-
