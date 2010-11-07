@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-06 16:27+0900\n"
+"POT-Creation-Date: 2010-11-08 01:10+0900\n"
 "PO-Revision-Date: 2008-10-14 15:10+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -20,79 +20,88 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:253
+#: ../panel-plugin/time-out.c:255
 msgid "Take a break"
 msgstr "Tag en pause"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:261
+#: ../panel-plugin/time-out.c:263
 msgid "Enabled"
 msgstr "Aktiveret"
 
+#: ../panel-plugin/time-out.c:388
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr ""
+
+#: ../panel-plugin/time-out.c:397
+msgid "translator-credits"
+msgstr ""
+
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:401
+#: ../panel-plugin/time-out.c:429
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
 msgstr "Timeout"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:418
+#: ../panel-plugin/time-out.c:446
 msgid "Time settings"
 msgstr "Tidsindstillinger"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:431
+#: ../panel-plugin/time-out.c:459
 #, fuzzy
 msgid "Minutes"
 msgstr "Minutter"
 
-#: ../panel-plugin/time-out.c:436
+#: ../panel-plugin/time-out.c:464
 #, fuzzy
 msgid "Seconds"
 msgstr "Sekunder"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:442
+#: ../panel-plugin/time-out.c:470
 msgid "Time between breaks:"
 msgstr "Tid mellem pauser:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:466
+#: ../panel-plugin/time-out.c:494
 msgid "Break length:"
 msgstr "Pauselængde:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:484
+#: ../panel-plugin/time-out.c:512
 msgid "Postpone length:"
 msgstr "Udsættelseslængde:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:502
+#: ../panel-plugin/time-out.c:530
 msgid "Behaviour"
 msgstr "Opførsel"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:508
+#: ../panel-plugin/time-out.c:536
 msgid "Allow postpone"
 msgstr "Tillad udsættelse"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:515
+#: ../panel-plugin/time-out.c:543
 msgid "Appearance"
 msgstr "Udseende"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:526
+#: ../panel-plugin/time-out.c:554
 msgid "Display remaining time in the panel"
 msgstr "Vis tilbageværende tid i panelet"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:533
+#: ../panel-plugin/time-out.c:561
 msgid "Display hours"
 msgstr "Vis timer"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:540
+#: ../panel-plugin/time-out.c:568
 msgid "Display seconds"
 msgstr "Vis sekunder"
 

@@ -93,6 +93,7 @@ static gboolean       time_out_size_changed                       (XfcePanelPlug
 static void           time_out_orientation_changed                (XfcePanelPlugin   *plugin,
                                                                    GtkOrientation     orientation,
                                                                    TimeOutPlugin     *time_out);
+static void           time_out_about                              (XfcePanelPlugin   *plugin);
 static void           time_out_configure                          (XfcePanelPlugin   *plugin,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_end_configure                      (GtkDialog         *dialog,
@@ -274,6 +275,7 @@ time_out_construct (XfcePanelPlugin *plugin)
   g_signal_connect (G_OBJECT (plugin), "size-changed", G_CALLBACK (time_out_size_changed), time_out);
   g_signal_connect (G_OBJECT (plugin), "configure-plugin", G_CALLBACK (time_out_configure), time_out);
   g_signal_connect (G_OBJECT (plugin), "orientation-changed", G_CALLBACK (time_out_orientation_changed), time_out);
+  g_signal_connect (G_OBJECT (plugin), "about", G_CALLBACK (time_out_about), NULL);
 
   /* Display the configure menu item */
   xfce_panel_plugin_menu_show_configure (plugin);
@@ -371,7 +373,32 @@ time_out_orientation_changed (XfcePanelPlugin *plugin,
   xfce_hvbox_set_orientation (XFCE_HVBOX (time_out->hvbox), orientation);
 }
 
+static void
+time_out_about (XfcePanelPlugin *plugin)
+{
+  static const gchar *authors[] =
+  {
+    "Jannis Pohlmann <jannis@xfce.org>",
+    "Florian Rivoal <frivoal@xfce.org>",
+    NULL
+  };
 
+  gtk_show_about_dialog (GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
+                         "authors", authors,
+                         "comments", _("Xfce Panel plugin for taking a break from computer work every now and then."),
+                         "destroy-with-parent", TRUE,
+                         "logo-icon-name", "xfce4-time-out-plugin",
+#if GTK_CHECK_VERSION (2,12,0)
+                         "program-name", PACKAGE_NAME,
+#else
+                         "name", PACKAGE_NAME,
+#endif
+                         "version", PACKAGE_VERSION,
+                         "translator-credits", _("translator-credits"),
+                         "license", XFCE_LICENSE_GPL,
+                         "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin",
+                         NULL);
+}
 
 static void
 time_out_configure (XfcePanelPlugin *plugin,
