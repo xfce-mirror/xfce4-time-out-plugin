@@ -798,6 +798,7 @@ time_out_save_settings (TimeOutPlugin *time_out)
           xfce_rc_write_bool_entry (rc, "display-seconds", time_out->display_seconds);
           xfce_rc_write_bool_entry (rc, "display-hours", time_out->display_hours);
           xfce_rc_write_bool_entry (rc, "display-time", time_out->display_time);
+          xfce_rc_write_bool_entry (rc, "allow-postpone", time_out->allow_postpone);
 
           /* Close file handle */
           xfce_rc_close (rc);
