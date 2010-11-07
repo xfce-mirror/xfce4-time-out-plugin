@@ -2,6 +2,7 @@
 /* vim:set et ai sw=2 sts=2: */
 /*-
  * Copyright (c) 2007 Jannis Pohlmann <jannis@xfce.org>
+ * Copyright (c) 2010 Florian Rivoal <frivoal@xfce.org>
  * 
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -243,7 +244,7 @@ time_out_construct (XfcePanelPlugin *plugin)
   time_out_load_settings (time_out);
 
   /* Hide the time label if settings says so */
-  if (!time_out->display_time) 
+  if (!time_out->display_time)
     gtk_widget_hide (time_out->time_label);
 
   /* Add the event box to the panel */
