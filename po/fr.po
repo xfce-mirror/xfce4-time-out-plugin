@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-06 16:27+0900\n"
-"PO-Revision-Date: 2007-10-24 11:47+0100\n"
-"Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
+"PO-Revision-Date: 2010-11-07 16:28+0900\n"
+"Last-Translator: Florian Rivoal <frivoal@xfce.org>\n"
 "Language-Team: Xfce <xfce-i18n@xfce.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr "Durée des pauses:"
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:484
 msgid "Postpone length:"
-msgstr "Repousser la durée:"
+msgstr "Durée de remise à plus tard:"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:502
@@ -71,7 +71,7 @@ msgstr "Comportement"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:508
 msgid "Allow postpone"
-msgstr "Autoriser les durées repoussées"
+msgstr "Autoriser à remettre les pauses à plus tard"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:515
@@ -96,7 +96,7 @@ msgstr "Afficher les secondes"
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:189
 msgid "_Postpone"
-msgstr "_Repousser"
+msgstr "_Remettre à plus tard"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:395
@@ -264,4 +264,4 @@ msgstr "Temps restant : %d heures %d minutes %d secondes"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "Temps mort et pause contrôlés automatiquement"
+msgstr "Temps morts et pauses contrôlés automatiquement"

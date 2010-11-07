@@ -264,4 +264,4 @@ msgstr "قالغان ۋاقىت: %d سائەت %d مىنۇت %d سېكۇنت"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "自動的に管理されたタイムアウトと休憩"
+msgstr ""

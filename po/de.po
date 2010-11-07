@@ -134,9 +134,9 @@ msgstr "Verbleibend: 1 Minute"
 
 #: ../panel-plugin/time-out-countdown.c:437
 #: ../panel-plugin/time-out-countdown.c:568
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: 1 minute 1 second"
-msgstr "Verbleibend: 1 Minute %d Sekunden"
+msgstr "Verbleibend: 1 Minute 1 Sekunde"
 
 #: ../panel-plugin/time-out-countdown.c:439
 #: ../panel-plugin/time-out-countdown.c:570
