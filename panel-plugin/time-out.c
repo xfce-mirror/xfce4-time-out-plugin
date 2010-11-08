@@ -913,7 +913,7 @@ time_out_start_lock_countdown (TimeOutPlugin *time_out)
   time_out_lock_screen_show_resume (time_out->lock_screen, FALSE);
 
   /* Display the lock screen */
-  time_out_lock_screen_show (time_out->lock_screen);
+  time_out_lock_screen_show (time_out->lock_screen, time_out->lock_countdown_seconds);
 }
 
 

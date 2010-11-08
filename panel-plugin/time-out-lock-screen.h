@@ -40,7 +40,8 @@ typedef struct _TimeOutLockScreen      TimeOutLockScreen;
 GType              time_out_lock_screen_get_type            (void) G_GNUC_CONST;
 
 TimeOutLockScreen *time_out_lock_screen_new                 (void) G_GNUC_MALLOC;
-void               time_out_lock_screen_show                (TimeOutLockScreen *lock_screen);
+void               time_out_lock_screen_show                (TimeOutLockScreen *lock_screen,
+                                                             gint               max_sec);
 void               time_out_lock_screen_hide                (TimeOutLockScreen *lock_screen);
 void               time_out_lock_screen_set_remaining       (TimeOutLockScreen *lock_screen,
                                                              gint               seconds);

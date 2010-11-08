@@ -59,6 +59,9 @@ struct _TimeOutLockScreen
 {
   GObject         __parent__;
 
+  /* Total seconds */
+  gint            max_seconds;
+
   /* Remaining seconds */
   gint            remaining_seconds;
 
@@ -79,6 +82,7 @@ struct _TimeOutLockScreen
   GtkWidget      *time_label;
   GtkWidget      *postpone_button;
   GtkWidget      *resume_button;
+  GtkWidget      *progress;
 
   /* Fade out */
   TimeOutFadeout *fadeout;
@@ -206,6 +210,12 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->time_label, FALSE, FALSE, 12);
   gtk_widget_show (lock_screen->time_label);
 
+  /* Create a progress bar to visually display the remaining tme */
+  lock_screen->progress = gtk_progress_bar_new ();
+  gtk_progress_bar_set_orientation (GTK_PROGRESS_BAR (lock_screen->progress), GTK_PROGRESS_LEFT_TO_RIGHT);
+  gtk_box_pack_start (GTK_BOX (vbox), lock_screen->progress, FALSE, FALSE, 0);
+  gtk_widget_show (lock_screen->progress);
+
   /* Create postpone button */
   lock_screen->postpone_button = gtk_button_new_with_mnemonic (_("_Postpone"));
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->postpone_button, FALSE, FALSE, 0);
@@ -244,7 +254,7 @@ time_out_lock_screen_new (void)
 
 
 void
-time_out_lock_screen_show (TimeOutLockScreen *lock_screen)
+time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
   GdkScreen *screen;
   gint       monitor;
@@ -267,6 +277,10 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen)
 
   /* Center window on target monitor */
   xfce_gtk_window_center_on_monitor (GTK_WINDOW (lock_screen->window), screen, monitor);
+
+  lock_screen->max_seconds = max_sec;
+
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (lock_screen->progress), 1.0);
 
   /* Display information window */
   gtk_widget_show_now (lock_screen->window);
@@ -313,6 +327,9 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
   
   /* Update widgets */
   gtk_label_set_markup (GTK_LABEL (lock_screen->time_label), time_string->str);
+
+  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (lock_screen->progress),
+                                 ((gdouble)seconds) / ((gdouble)lock_screen->max_seconds));
 
   /* Free time string */
   g_string_free (time_string, TRUE);
