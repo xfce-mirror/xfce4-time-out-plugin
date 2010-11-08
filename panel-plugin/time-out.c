@@ -39,6 +39,7 @@
 /* Default settings */
 #define DEFAULT_ENABLED                    TRUE
 #define DEFAULT_ALLOW_POSTPONE             TRUE
+#define DEFAULT_AUTO_RESUME                FALSE
 #define DEFAULT_DISPLAY_SECONDS            TRUE
 #define DEFAULT_DISPLAY_HOURS              FALSE
 #define DEFAULT_DISPLAY_TIME               TRUE
@@ -68,6 +69,7 @@ struct _TimeOutPlugin
   guint              display_hours : 1;              
   guint              allow_postpone : 1;
   guint              display_time : 1;
+  guint              auto_resume : 1;
 
   /* Lock screen to be shown during breaks */
   TimeOutLockScreen *lock_screen;
@@ -109,6 +111,8 @@ static void           time_out_postpone_countdown_seconds_changed (GtkSpinButton
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_allow_postpone_toggled             (GtkToggleButton   *toggle_button,
                                                                    TimeOutPlugin     *time_out);
+static void           time_out_auto_resume_toggled                (GtkToggleButton   *toggle_button,
+                                                                   TimeOutPlugin     *time_out);
 static void           time_out_display_time_toggled               (GtkToggleButton   *toggle_button,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_display_seconds_toggled            (GtkToggleButton   *toggle_button,
@@ -127,6 +131,8 @@ static void           time_out_stop_break_countdown               (TimeOutPlugin
 static void           time_out_start_lock_countdown               (TimeOutPlugin     *time_out);
 static void           time_out_stop_lock_countdown                (TimeOutPlugin     *time_out);
 static void           time_out_postpone                           (TimeOutLockScreen *lock_screen,
+                                                                   TimeOutPlugin     *time_out);
+static void           time_out_resume                             (TimeOutLockScreen *lock_screen,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_break_countdown_update             (TimeOutCountdown  *countdown,
                                                                    gint               seconds_remaining,
@@ -164,6 +170,9 @@ time_out_new (XfcePanelPlugin *plugin)
 
   /* Connect to 'postpone' signal of the lock screen */
   g_signal_connect (G_OBJECT (time_out->lock_screen), "postpone", G_CALLBACK (time_out_postpone), time_out);
+
+  /* Connect to 'resume' signal of the lock screen */
+  g_signal_connect (G_OBJECT (time_out->lock_screen), "resume", G_CALLBACK (time_out_resume), time_out);
 
   /* Create countdowns */
   time_out->break_countdown = time_out_countdown_new ();
@@ -532,11 +541,23 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
 
+  /* Create behaviour box */
+  vbox = gtk_vbox_new (FALSE, 6);
+  gtk_container_add (GTK_CONTAINER (behaviourbin), vbox);
+  gtk_widget_show (vbox);
+
   /* Create postpone check button */
   checkbutton = gtk_check_button_new_with_label (_("Allow postpone"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbutton), time_out->allow_postpone);
   g_signal_connect (checkbutton, "toggled", G_CALLBACK (time_out_allow_postpone_toggled), time_out);
-  gtk_container_add (GTK_CONTAINER (behaviourbin), checkbutton);
+  gtk_container_add (GTK_CONTAINER (vbox), checkbutton);
+  gtk_widget_show (checkbutton);
+
+  /* Create resume check button */
+  checkbutton = gtk_check_button_new_with_label (_("Resume automatically"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (checkbutton), time_out->auto_resume);
+  g_signal_connect (checkbutton, "toggled", G_CALLBACK (time_out_auto_resume_toggled), time_out);
+  gtk_container_add (GTK_CONTAINER (vbox), checkbutton);
   gtk_widget_show (checkbutton);
 
   /* Create appearance section */
@@ -692,6 +713,19 @@ time_out_allow_postpone_toggled (GtkToggleButton *toggle_button,
 
 
 
+static void
+time_out_auto_resume_toggled (GtkToggleButton *toggle_button,
+                              TimeOutPlugin   *time_out)
+{
+  g_return_if_fail (GTK_IS_TOGGLE_BUTTON (toggle_button));
+  g_return_if_fail (time_out != NULL);
+
+  /* Set resume attribute */
+  time_out->auto_resume = gtk_toggle_button_get_active (toggle_button);
+}
+
+
+
 static void 
 time_out_display_time_toggled (GtkToggleButton *toggle_button,
                                TimeOutPlugin   *time_out)
@@ -752,6 +786,7 @@ time_out_load_settings (TimeOutPlugin *time_out)
   gboolean display_hours = DEFAULT_DISPLAY_HOURS;
   gboolean display_time = DEFAULT_DISPLAY_TIME;
   gboolean allow_postpone = DEFAULT_ALLOW_POSTPONE;
+  gboolean auto_resume = DEFAULT_AUTO_RESUME;;
 
   g_return_if_fail (time_out != NULL);
 
@@ -776,6 +811,7 @@ time_out_load_settings (TimeOutPlugin *time_out)
           display_hours = xfce_rc_read_bool_entry (rc, "display-hours", display_hours);
           display_time = xfce_rc_read_bool_entry (rc, "display-time", display_time);
           allow_postpone = xfce_rc_read_bool_entry (rc, "allow-postpone", allow_postpone);
+          auto_resume = xfce_rc_read_bool_entry (rc, "auto-resume", auto_resume);
 
           /* Close file handle */
           xfce_rc_close (rc);
@@ -794,6 +830,7 @@ time_out_load_settings (TimeOutPlugin *time_out)
   time_out->display_hours = display_hours;
   time_out->display_time = display_time;
   time_out->allow_postpone = allow_postpone;
+  time_out->auto_resume = auto_resume;
 }
 
 
@@ -827,6 +864,7 @@ time_out_save_settings (TimeOutPlugin *time_out)
           xfce_rc_write_bool_entry (rc, "display-hours", time_out->display_hours);
           xfce_rc_write_bool_entry (rc, "display-time", time_out->display_time);
           xfce_rc_write_bool_entry (rc, "allow-postpone", time_out->allow_postpone);
+          xfce_rc_write_bool_entry (rc, "auto-resume", time_out->auto_resume);
 
           /* Close file handle */
           xfce_rc_close (rc);
@@ -871,6 +909,9 @@ time_out_start_lock_countdown (TimeOutPlugin *time_out)
   /* Set whether to allow postpone or not */
   time_out_lock_screen_set_allow_postpone (time_out->lock_screen, time_out->allow_postpone);
 
+  /* Hide the resume button initially */
+  time_out_lock_screen_show_resume (time_out->lock_screen, FALSE);
+
   /* Display the lock screen */
   time_out_lock_screen_show (time_out->lock_screen);
 }
@@ -914,6 +955,22 @@ time_out_postpone (TimeOutLockScreen *lock_screen,
 
   /* Start break countdown with postpone time */
   time_out_start_break_countdown (time_out, time_out->postpone_countdown_seconds);
+}
+
+
+
+static void
+time_out_resume   (TimeOutLockScreen *lock_screen,
+                   TimeOutPlugin     *time_out)
+{
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (time_out != NULL);
+
+  /* Stop lock countdown */
+  time_out_stop_lock_countdown (time_out);
+
+  /* Start break countdown */
+  time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
 }
 
 
@@ -981,9 +1038,18 @@ time_out_lock_countdown_finish (TimeOutCountdown *countdown,
   g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
 
-  /* Stop lock countdown */
-  time_out_stop_lock_countdown (time_out);
+  if (time_out->auto_resume)
+  {
+    /* Stop lock countdown */
+    time_out_stop_lock_countdown (time_out);
 
-  /* Start break countdown */
-  time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
+    /* Start break countdown */
+    time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
+  }
+  else
+  {
+    time_out_lock_screen_set_remaining (time_out->lock_screen, 0);
+    time_out_lock_screen_set_allow_postpone (time_out->lock_screen, FALSE);
+    time_out_lock_screen_show_resume (time_out->lock_screen, TRUE);
+  }
 }

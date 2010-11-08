@@ -2,6 +2,7 @@
 /* vim:set et ai sw=2 sts=2: */
 /*-
  * Copyright (c) 2007 Jannis Pohlmann <jannis@xfce.org>
+ * Copyright (c) 2010 Florian Rivoal <frivoal@xfce.org>
  *
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -36,6 +37,8 @@ static void     time_out_lock_screen_init       (TimeOutLockScreen      *lock_sc
 static void     time_out_lock_screen_finalize   (GObject                *object);
 static void     time_out_lock_screen_postpone   (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_resume     (GtkButton              *button,
+                                                 TimeOutLockScreen      *lock_screen);
 
 
 
@@ -45,9 +48,11 @@ struct _TimeOutLockScreenClass
 
   /* Signals */
   void         (*postpone)  (TimeOutLockScreen *lock_screen);
+  void         (*resume)    (TimeOutLockScreen *lock_screen);
 
   /* Signal identifiers */
   guint        postpone_signal_id;
+  guint        resume_signal_id;
 };
 
 struct _TimeOutLockScreen
@@ -60,6 +65,9 @@ struct _TimeOutLockScreen
   /* Whether to allow postpone */
   guint           allow_postpone : 1;
 
+  /* Whether to show the resume button */
+  guint           show_resume : 1;
+
   /* Whether to display seconds */
   guint           display_seconds : 1;
 
@@ -70,6 +78,7 @@ struct _TimeOutLockScreen
   GtkWidget      *window;
   GtkWidget      *time_label;
   GtkWidget      *postpone_button;
+  GtkWidget      *resume_button;
 
   /* Fade out */
   TimeOutFadeout *fadeout;
@@ -131,6 +140,17 @@ time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
                                             g_cclosure_marshal_VOID__VOID,
                                             G_TYPE_NONE,
                                             0);
+
+  /* Register 'resume' signal */
+  klass->resume_signal_id = g_signal_new ("resume",
+                                          G_TYPE_FROM_CLASS (gobject_class),
+                                          G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                                          G_STRUCT_OFFSET (TimeOutLockScreenClass, resume),
+                                          NULL,
+                                          NULL,
+                                          g_cclosure_marshal_VOID__VOID,
+                                          G_TYPE_NONE,
+                                          0);
 }
 
 
@@ -146,6 +166,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   lock_screen->display_seconds = TRUE;
   lock_screen->allow_postpone = TRUE;
+  lock_screen->show_resume = FALSE;
   lock_screen->display_hours = FALSE;
   lock_screen->fadeout = NULL;
 
@@ -190,6 +211,11 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->postpone_button, FALSE, FALSE, 0);
   g_signal_connect (G_OBJECT (lock_screen->postpone_button), "clicked", G_CALLBACK (time_out_lock_screen_postpone), lock_screen);
   gtk_widget_show (lock_screen->postpone_button);
+
+  /* Create resume button */
+  lock_screen->resume_button = gtk_button_new_with_mnemonic (_("_Resume"));
+  gtk_box_pack_start (GTK_BOX (vbox), lock_screen->resume_button, FALSE, FALSE, 0);
+  g_signal_connect (G_OBJECT (lock_screen->resume_button), "clicked", G_CALLBACK (time_out_lock_screen_resume), lock_screen);
 }
 
 
@@ -313,6 +339,24 @@ time_out_lock_screen_set_allow_postpone (TimeOutLockScreen *lock_screen,
 
 
 void
+time_out_lock_screen_show_resume (TimeOutLockScreen *lock_screen,
+                                  gboolean           show)
+{
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+
+  /* Set auto resume attribute */
+  lock_screen->show_resume = show;
+
+  /* Enable/disable resume button */
+  if (show)
+    gtk_widget_show (lock_screen->resume_button);
+  else
+    gtk_widget_hide (lock_screen->resume_button);
+}
+
+
+
+void
 time_out_lock_screen_set_display_seconds (TimeOutLockScreen *lock_screen,
                                           gboolean           display_seconds)
 {
@@ -345,4 +389,17 @@ time_out_lock_screen_postpone (GtkButton         *button,
 
   /* Emit postpone signal */
   g_signal_emit_by_name (lock_screen, "postpone", NULL);
+}
+
+
+
+static void
+time_out_lock_screen_resume (GtkButton         *button,
+                             TimeOutLockScreen *lock_screen)
+{
+  g_return_if_fail (GTK_IS_BUTTON (button));
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+
+  /* Emit resume signal */
+  g_signal_emit_by_name (lock_screen, "resume", NULL);
 }

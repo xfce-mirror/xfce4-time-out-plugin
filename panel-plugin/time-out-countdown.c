@@ -2,6 +2,7 @@
 /* vim:set et ai sw=2 sts=2: */
 /*-
  * Copyright (c) 2007 Jannis Pohlmann <jannis@xfce.org>
+ * Copyright (c) 2010 Florian Rivoal <frivoal@xfce.org>
  *
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -372,6 +373,10 @@ time_out_countdown_seconds_to_string (gint     seconds,
   gint     hours;
   gint     minutes;
 
+  if (G_UNLIKELY (!seconds))
+  {
+    return g_string_new (_("The break is over."));
+  }
   /* Allocate empty string */
   str = g_string_sized_new (50);
 

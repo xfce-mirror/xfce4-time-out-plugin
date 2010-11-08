@@ -2,6 +2,7 @@
 /* vim:set et ai sw=2 sts=2: */
 /*-
  * Copyright (c) 2006 Jannis Pohlmann <jannis@xfce.org>
+ * Copyright (c) 2010 Florian Rivoal <frivoal@xfce.org>
  *
  * This program is free software; you can redistribute it and/or 
  * modify it under the terms of the GNU General Public License as 
@@ -49,6 +50,8 @@ void               time_out_lock_screen_set_display_hours   (TimeOutLockScreen *
                                                              gboolean           display_hours);
 void               time_out_lock_screen_set_allow_postpone  (TimeOutLockScreen *lock_screen,
                                                              gboolean           allow_postpone);
+void               time_out_lock_screen_show_resume         (TimeOutLockScreen *lock_screen,
+                                                             gboolean           auto_resume);
 
 G_END_DECLS;
 
