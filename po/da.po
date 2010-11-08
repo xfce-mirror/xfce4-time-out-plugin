@@ -11,13 +11,13 @@ msgstr ""
 "PO-Revision-Date: 2008-10-14 15:10+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "X-Poedit-Language: Danish\n"
-"X-Poedit-Country: DENMARK\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: DENMARK\n"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:255
@@ -30,13 +30,20 @@ msgid "Enabled"
 msgstr "Aktiveret"
 
 #: ../panel-plugin/time-out.c:388
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "En udvidelse til panelet Xfce som indfører en pause fra arbejde med computeren fra tid til anden."
 
 #: ../panel-plugin/time-out.c:397
 msgid "translator-credits"
 msgstr ""
+"\r\n"
+"Per Kongstad <p_kongstad@op.pl>\n"
+"\r\n"
+"\n"
+"\r\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"\r\n"
+"Mere info: http://www.dansk-gruppen.dk"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:429
@@ -51,12 +58,10 @@ msgstr "Tidsindstillinger"
 
 #. Create the labels for the minutes and seconds spins
 #: ../panel-plugin/time-out.c:459
-#, fuzzy
 msgid "Minutes"
 msgstr "Minutter"
 
 #: ../panel-plugin/time-out.c:464
-#, fuzzy
 msgid "Seconds"
 msgstr "Sekunder"
 
