@@ -47,12 +47,10 @@ msgstr "Definições de tempo"
 
 #. Create the labels for the minutes and seconds spins
 #: ../panel-plugin/time-out.c:468
-#, fuzzy
 msgid "Minutes"
 msgstr "Minutos"
 
 #: ../panel-plugin/time-out.c:473
-#, fuzzy
 msgid "Seconds"
 msgstr "Segundos"
 
