@@ -1,5 +1,3 @@
-# $Id: Makefile.am 2499 2007-02-18 20:59:26Z jannis $
-
 iconsdir = $(datadir)/icons/hicolor/scalable/apps
 icons_DATA =								\
 	xfce4-time-out-plugin.svg

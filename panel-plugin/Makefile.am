@@ -1,5 +1,3 @@
-# $Id: Makefile.am 2499 2007-02-18 20:59:26Z jannis $
-
 plugindir =								\
 	$(libexecdir)/xfce4/panel-plugins
 

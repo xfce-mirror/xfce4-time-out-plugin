@@ -1,5 +1,3 @@
-# $Id: Makefile.am 2257 2006-12-19 19:49:00Z nick $
-
 SUBDIRS =								\
 	icons								\
 	panel-plugin 							\

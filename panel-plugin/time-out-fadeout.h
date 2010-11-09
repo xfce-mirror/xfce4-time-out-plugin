@@ -1,4 +1,3 @@
-/* $Id$ */
 /* vim:set et ai sw=2 sts=2: */
 /*-
  * Copyright (c) 2007 Jannis Pohlmann <jannis@xfce.org>
