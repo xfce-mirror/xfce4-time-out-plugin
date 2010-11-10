@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2008-10-14 15:10+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
-"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: da\n"
 "X-Poedit-Language: Danish\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Country: DENMARK\n"
@@ -30,11 +30,8 @@ msgid "Enabled"
 msgstr "Aktiveret"
 
 #: ../panel-plugin/time-out.c:397
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
-"En udvidelse til panelet Xfce som indfører en pause fra arbejde med "
-"computeren fra tid til anden."
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "En udvidelse til panelet Xfce som indfører en pause fra arbejde med computeren fra tid til anden."
 
 #: ../panel-plugin/time-out.c:406
 msgid "translator-credits"
@@ -95,7 +92,7 @@ msgstr "Tillad udsættelse"
 #. Create resume check button
 #: ../panel-plugin/time-out.c:557
 msgid "Resume automatically"
-msgstr ""
+msgstr "Genoptag automatisk"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:564
@@ -125,11 +122,11 @@ msgstr "_Udsæt"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:215
 msgid "_Resume"
-msgstr ""
+msgstr "_Genoptag"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr ""
+msgstr "Pausen er afsluttet."
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
