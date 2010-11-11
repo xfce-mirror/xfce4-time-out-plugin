@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4 timeout plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-08 20:02+0900\n"
+"POT-Creation-Date: 2010-11-12 00:07+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
 "Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
@@ -13,103 +13,108 @@ msgstr ""
 "X-Poedit-Country: TURKEY\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:264
+#: ../panel-plugin/time-out.c:265
 msgid "Take a break"
 msgstr "Mola ver"
 
+#. Create menu item for resetting the timer
+#: ../panel-plugin/time-out.c:273
+msgid "Reset timer"
+msgstr ""
+
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:272
+#: ../panel-plugin/time-out.c:281
 msgid "Enabled"
 msgstr "Etkin"
 
-#: ../panel-plugin/time-out.c:397
+#: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
 
-#: ../panel-plugin/time-out.c:406
+#: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
 msgstr ""
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:438
+#: ../panel-plugin/time-out.c:463
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
 msgstr "Zaman Aşımı"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:455
+#: ../panel-plugin/time-out.c:480
 msgid "Time settings"
 msgstr "Süre ayarları"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:468
+#: ../panel-plugin/time-out.c:493
 #, fuzzy
 msgid "Minutes"
 msgstr "Dakika"
 
-#: ../panel-plugin/time-out.c:473
+#: ../panel-plugin/time-out.c:498
 #, fuzzy
 msgid "Seconds"
 msgstr "Saniye"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:479
+#: ../panel-plugin/time-out.c:504
 msgid "Time between breaks:"
 msgstr "Molalar arası süre:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:503
+#: ../panel-plugin/time-out.c:528
 msgid "Break length:"
 msgstr "Mola süresi:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:521
+#: ../panel-plugin/time-out.c:546
 msgid "Postpone length:"
 msgstr "Erteleme süresi:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:539
+#: ../panel-plugin/time-out.c:564
 msgid "Behaviour"
 msgstr "Davranış ayarları"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:550
+#: ../panel-plugin/time-out.c:575
 msgid "Allow postpone"
 msgstr "Ertelemeye izin ver"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:557
+#: ../panel-plugin/time-out.c:582
 msgid "Resume automatically"
 msgstr ""
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:564
+#: ../panel-plugin/time-out.c:589
 msgid "Appearance"
 msgstr "Görünüm"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:600
 msgid "Display remaining time in the panel"
 msgstr "Kalan süreyi panelde görüntüle"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:582
+#: ../panel-plugin/time-out.c:607
 msgid "Display hours"
 msgstr "Saati görüntüle"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:589
+#: ../panel-plugin/time-out.c:614
 msgid "Display seconds"
 msgstr "Saniyeyi görüntüle"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:209
+#: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
 msgstr "_Ertele"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:215
+#: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
 msgstr ""
 

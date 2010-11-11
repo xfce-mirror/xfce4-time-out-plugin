@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-08 20:02+0900\n"
+"POT-Creation-Date: 2010-11-12 00:07+0900\n"
 "PO-Revision-Date: 2009-05-13 11:48+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -17,103 +17,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:264
+#: ../panel-plugin/time-out.c:265
 msgid "Take a break"
 msgstr "休息一下"
 
+#. Create menu item for resetting the timer
+#: ../panel-plugin/time-out.c:273
+msgid "Reset timer"
+msgstr ""
+
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:272
+#: ../panel-plugin/time-out.c:281
 msgid "Enabled"
 msgstr "启动"
 
-#: ../panel-plugin/time-out.c:397
+#: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
 
-#: ../panel-plugin/time-out.c:406
+#: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
 msgstr ""
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:438
+#: ../panel-plugin/time-out.c:463
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
 msgid "Time Out"
 msgstr "超时"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:455
+#: ../panel-plugin/time-out.c:480
 msgid "Time settings"
 msgstr "时间设置"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:468
+#: ../panel-plugin/time-out.c:493
 #, fuzzy
 msgid "Minutes"
 msgstr "分钟"
 
-#: ../panel-plugin/time-out.c:473
+#: ../panel-plugin/time-out.c:498
 #, fuzzy
 msgid "Seconds"
 msgstr "秒"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:479
+#: ../panel-plugin/time-out.c:504
 msgid "Time between breaks:"
 msgstr "每次休息的时间间隔:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:503
+#: ../panel-plugin/time-out.c:528
 msgid "Break length:"
 msgstr "休息时间:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:521
+#: ../panel-plugin/time-out.c:546
 msgid "Postpone length:"
 msgstr "延迟时间:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:539
+#: ../panel-plugin/time-out.c:564
 msgid "Behaviour"
 msgstr "行为"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:550
+#: ../panel-plugin/time-out.c:575
 msgid "Allow postpone"
 msgstr "允许延迟"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:557
+#: ../panel-plugin/time-out.c:582
 msgid "Resume automatically"
 msgstr ""
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:564
+#: ../panel-plugin/time-out.c:589
 msgid "Appearance"
 msgstr "外观"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:600
 msgid "Display remaining time in the panel"
 msgstr "在面板上显示剩余时间"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:582
+#: ../panel-plugin/time-out.c:607
 msgid "Display hours"
 msgstr "显示小时数"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:589
+#: ../panel-plugin/time-out.c:614
 msgid "Display seconds"
 msgstr "显示秒数"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:209
+#: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
 msgstr "延迟(_P)"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:215
+#: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
 msgstr ""
 

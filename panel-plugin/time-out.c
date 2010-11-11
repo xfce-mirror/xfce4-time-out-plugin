@@ -124,6 +124,8 @@ static void           time_out_take_break                         (GtkMenuItem  
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_enabled_toggled                    (GtkCheckMenuItem  *menu_item,
                                                                    TimeOutPlugin     *time_out);
+static void           time_out_reset_timer                        (GtkMenuItem       *menu_item,
+                                                                   TimeOutPlugin     *time_out);
 static void           time_out_start_break_countdown              (TimeOutPlugin     *time_out,
                                                                    gint               seconds);
 static void           time_out_stop_break_countdown               (TimeOutPlugin     *time_out);
@@ -267,6 +269,14 @@ time_out_construct (XfcePanelPlugin *plugin)
   /* Connect to the menu item to react on break requests */
   g_signal_connect (G_OBJECT (menu_item), "activate", G_CALLBACK (time_out_take_break), time_out);
 
+  /* Create menu item for resetting the timer */
+  menu_item = gtk_menu_item_new_with_label (_("Reset timer"));
+  xfce_panel_plugin_menu_insert_item (plugin, GTK_MENU_ITEM (menu_item));
+  gtk_widget_show (GTK_WIDGET (menu_item));
+
+  /* Connect to the menu item to react on reset requests */
+  g_signal_connect (G_OBJECT (menu_item), "activate", G_CALLBACK (time_out_reset_timer), time_out);
+
   /* Create menu item for enabling/disabling the countdown */
   menu_item = gtk_check_menu_item_new_with_label (_("Enabled"));
   xfce_panel_plugin_menu_insert_item (plugin, GTK_MENU_ITEM (menu_item));
@@ -339,7 +349,23 @@ time_out_enabled_toggled (GtkCheckMenuItem *menu_item,
   time_out_save_settings (time_out);
 }
 
+static void 
+time_out_reset_timer(GtkMenuItem *menu_item,
+                    TimeOutPlugin    *time_out)
+{
+  g_return_if_fail (GTK_IS_MENU_ITEM (menu_item));
+  g_return_if_fail (time_out != NULL);
 
+  time_out_countdown_stop (time_out->break_countdown);
+  time_out_countdown_start (time_out->break_countdown, time_out->break_countdown_seconds);
+  /* if we're not enabled, we need to update the timer */
+  if(!time_out->enabled)
+  {
+      time_out_break_countdown_update(time_out->break_countdown, time_out->break_countdown_seconds, time_out);
+      /* keep it paused, however */
+      time_out_countdown_pause (time_out->break_countdown);
+  }
+}
 
 static gboolean
 time_out_size_changed (XfcePanelPlugin *plugin,
