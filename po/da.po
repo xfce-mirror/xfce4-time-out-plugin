@@ -27,7 +27,7 @@ msgstr "Tag en pause"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
 msgid "Reset timer"
-msgstr ""
+msgstr "Nulstil tidstager"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
