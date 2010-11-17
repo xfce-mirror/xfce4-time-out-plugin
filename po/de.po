@@ -37,8 +37,9 @@ msgid "Xfce Panel plugin for taking a break from computer work every now and the
 msgstr ""
 
 #: ../panel-plugin/time-out.c:431
+#, fuzzy
 msgid "translator-credits"
-msgstr ""
+msgstr "Übersetzer"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -89,8 +90,9 @@ msgstr "Erlaube das Verschieben von Pausen"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:582
+#, fuzzy
 msgid "Resume automatically"
-msgstr ""
+msgstr "Automatisch wiederaufnehmen"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:589
