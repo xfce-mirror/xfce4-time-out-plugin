@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-16 00:15+0900\n"
-"PO-Revision-Date: 2010-11-16 00:14+0900\n"
+"POT-Creation-Date: 2010-11-17 20:11+0900\n"
+"PO-Revision-Date: 2010-11-17 20:11+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "Language: ja\n"
@@ -38,7 +38,9 @@ msgstr "コンピュータ作業中に時々ひと休みしてもらう Xfce パ
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr "Masato Hashimoto <hashimo@xfce.org>"
+msgstr ""
+"Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
+"Masato Hashimoto <hashimo@xfce.org>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -63,7 +65,7 @@ msgstr "秒"
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:504
 msgid "Time between breaks:"
-msgstr "休憩と休憩の間:"
+msgstr "休憩までの時間:"
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:528
@@ -73,7 +75,7 @@ msgstr "休憩時間:"
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:546
 msgid "Postpone length:"
-msgstr "延長時間:"
+msgstr "先延ばし時間:"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:564
@@ -113,7 +115,7 @@ msgstr "分を表示する"
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
-msgstr "作業を続けます(_P)"
+msgstr "後で休みます(_P)"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
