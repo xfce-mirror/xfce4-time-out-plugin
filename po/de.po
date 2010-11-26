@@ -23,7 +23,6 @@ msgstr "Eine Pause machen"
 
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
-#, fuzzy
 msgid "Reset timer"
 msgstr "Timer zurücksetzen"
 
@@ -34,12 +33,11 @@ msgstr "Aktiviert"
 
 #: ../panel-plugin/time-out.c:422
 msgid "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgstr "Xfce Leistenprogramm um hin und wieder eine Pause bei der Computerarbeit einzulegen."
 
 #: ../panel-plugin/time-out.c:431
-#, fuzzy
 msgid "translator-credits"
-msgstr "Übersetzer"
+msgstr ""
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -54,12 +52,10 @@ msgstr "Zeiten"
 
 #. Create the labels for the minutes and seconds spins
 #: ../panel-plugin/time-out.c:493
-#, fuzzy
 msgid "Minutes"
 msgstr "Minuten"
 
 #: ../panel-plugin/time-out.c:498
-#, fuzzy
 msgid "Seconds"
 msgstr "Sekunden"
 
@@ -90,7 +86,6 @@ msgstr "Erlaube das Verschieben von Pausen"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:582
-#, fuzzy
 msgid "Resume automatically"
 msgstr "Automatisch wiederaufnehmen"
 
@@ -122,10 +117,9 @@ msgstr "_Pause verschieben"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr ""
+msgstr "_Fortsetzen"
 
 #: ../panel-plugin/time-out-countdown.c:377
-#, fuzzy
 msgid "The break is over."
 msgstr "Die Pause ist vorbei."
 
