@@ -38,6 +38,9 @@ msgstr "Xfce Leistenprogramm um hin und wieder eine Pause bei der Computerarbeit
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
 msgstr ""
+"Jannis Pohlmann <jannis@xfce.org>\n"
+"\r\n"
+"Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
