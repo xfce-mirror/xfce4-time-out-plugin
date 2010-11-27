@@ -1,17 +1,16 @@
-# Chinese translations for xfce package.
-# Copyright (C) 2009 THE xfce'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce package.
-# Hunt Xu <huntxu@live.cn>, 2009.
+# Chinese translations for xfce4-time-out-plugin package.
+# Copyright (C) 2009 THE xfce4-time-out-plugin'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce4-time-out-plugin package.
+# Hunt Xu <huntxu@live.cn>, 2009, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce 4-time-out-plugin\n"
+"Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-11-12 00:07+0900\n"
-"PO-Revision-Date: 2009-05-13 11:48+0800\n"
+"PO-Revision-Date: 2010-11-27 20:50+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (simplified)\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +23,7 @@ msgstr "休息一下"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
 msgid "Reset timer"
-msgstr ""
+msgstr "重置定时器"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
@@ -35,10 +34,12 @@ msgstr "启动"
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
+"用以提醒您注意休息，避免长时间使用电脑工作的 Xfce 面板插件"
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
 msgstr ""
+"Hunt Xu <huntxu@live.cn>, 2010"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -53,12 +54,10 @@ msgstr "时间设置"
 
 #. Create the labels for the minutes and seconds spins
 #: ../panel-plugin/time-out.c:493
-#, fuzzy
 msgid "Minutes"
 msgstr "分钟"
 
 #: ../panel-plugin/time-out.c:498
-#, fuzzy
 msgid "Seconds"
 msgstr "秒"
 
@@ -90,7 +89,7 @@ msgstr "允许延迟"
 #. Create resume check button
 #: ../panel-plugin/time-out.c:582
 msgid "Resume automatically"
-msgstr ""
+msgstr "自动恢复"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:589
@@ -120,11 +119,11 @@ msgstr "延迟(_P)"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr ""
+msgstr "恢复i(_R)"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr ""
+msgstr "休息时间到。"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
