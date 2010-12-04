@@ -2,7 +2,7 @@
 # Copyright (C) 2007 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the xfce4-time-out-plugin package.
 # Jannis Pohlmann <jannis@xfce.org>, 2007.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
@@ -11,10 +11,10 @@ msgstr ""
 "PO-Revision-Date: 2010-11-07 16:28+0900\n"
 "Last-Translator: Florian Rivoal <frivoal@xfce.org>\n"
 "Language-Team: Xfce <xfce-i18n@xfce.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "X-Poedit-Language: French\n"
 "X-Poedit-Country: FRANCE\n"
 
@@ -26,7 +26,7 @@ msgstr "Prendre une pause"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
 msgid "Reset timer"
-msgstr ""
+msgstr "Remettre à zéro le compteur"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
@@ -34,13 +34,13 @@ msgid "Enabled"
 msgstr "Activé"
 
 #: ../panel-plugin/time-out.c:422
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+#, fuzzy
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "Plugin du panneau Xfce pour prendre de temps en temps une pause d'ordinateur."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr ""
+msgstr "Crédits de traduction"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
