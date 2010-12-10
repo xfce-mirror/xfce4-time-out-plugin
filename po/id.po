@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-12 00:07+0900\n"
+"POT-Creation-Date: 2010-12-12 00:01+0900\n"
 "PO-Revision-Date: 2008-06-21 15:09+0700\n"
 "Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -140,155 +140,64 @@ msgstr "%02d:%02d:%02d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:432
-#: ../panel-plugin/time-out-countdown.c:563
-#, c-format
-msgid "Time left: 1 second"
-msgstr "Sisa waktu: 1 detik"
+#: ../panel-plugin/time-out-countdown.c:424
+#, fuzzy, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d jam"
+msgstr[1] "%d jam"
 
-#: ../panel-plugin/time-out-countdown.c:434
-#: ../panel-plugin/time-out-countdown.c:565
-#, c-format
-msgid "Time left: %d seconds"
-msgstr "Sisa waktu: %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:439
-#: ../panel-plugin/time-out-countdown.c:522
-#: ../panel-plugin/time-out-countdown.c:570
-#: ../panel-plugin/time-out-countdown.c:589
-#, c-format
-msgid "Time left: 1 minute"
-msgstr "Sisa waktu: 1 menit"
-
-#: ../panel-plugin/time-out-countdown.c:441
-#: ../panel-plugin/time-out-countdown.c:572
-#, c-format
-msgid "Time left: 1 minute 1 second"
-msgstr "Sisa waktu: 1 menit 1 detik"
-
-#: ../panel-plugin/time-out-countdown.c:443
-#: ../panel-plugin/time-out-countdown.c:574
-#, c-format
-msgid "Time left: 1 minute %d seconds"
-msgstr "Sisa waktu: 1 menit %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:448
-#: ../panel-plugin/time-out-countdown.c:527
-#: ../panel-plugin/time-out-countdown.c:529
-#: ../panel-plugin/time-out-countdown.c:579
-#: ../panel-plugin/time-out-countdown.c:592
-#: ../panel-plugin/time-out-countdown.c:594
-#, c-format
-msgid "Time left: %d minutes"
-msgstr "Sisa waktu: %d menit"
-
-#: ../panel-plugin/time-out-countdown.c:450
-#: ../panel-plugin/time-out-countdown.c:581
-#, c-format
-msgid "Time left: %d minutes 1 second"
-msgstr "Sisa waktu: %d menit 1 detik"
-
-#: ../panel-plugin/time-out-countdown.c:452
-#: ../panel-plugin/time-out-countdown.c:583
-#, c-format
-msgid "Time left: %d minutes %d seconds"
-msgstr "Sisa waktu: %d menit %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:460
-#, c-format
-msgid "Time left: 1 hour"
-msgstr "Sisa waktu: 1 jam"
-
-#: ../panel-plugin/time-out-countdown.c:462
-#, c-format
-msgid "Time left: 1 hour 1 second"
-msgstr "Sisa waktu: 1 jam 1 detik"
-
-#: ../panel-plugin/time-out-countdown.c:464
-#, c-format
-msgid "Time left: 1 hour %d seconds"
-msgstr "Sisa waktu: 1 jam %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:469
-#: ../panel-plugin/time-out-countdown.c:535
-#, c-format
-msgid "Time left: 1 hour 1 minute"
-msgstr "Sisa waktu: 1 jam 1 menit"
-
-#: ../panel-plugin/time-out-countdown.c:471
-#, c-format
-msgid "Time left: 1 hour 1 minute 1 second"
-msgstr "Sisa waktu: 1 jam 1 menit 1 detik"
-
-#: ../panel-plugin/time-out-countdown.c:473
-#, c-format
-msgid "Time left: 1 hour 1 minute %d seconds"
-msgstr "Sisa waktu: 1 jam 1 menit %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:478
-#: ../panel-plugin/time-out-countdown.c:538
-#: ../panel-plugin/time-out-countdown.c:540
-#, c-format
-msgid "Time left: 1 hour %d minutes"
-msgstr "Sisa waktu: 1 jam %d menit"
-
-#: ../panel-plugin/time-out-countdown.c:480
-#, c-format
-msgid "Time left: 1 hour %d minutes 1 second"
-msgstr "Sisa waktu: 1 jam %d menit 1 detik"
-
-#: ../panel-plugin/time-out-countdown.c:482
-#, c-format
-msgid "Time left: 1 hour %d minutes %d seconds"
-msgstr "Sisa waktu: 1 jam %d menit %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:490
-#, c-format
-msgid "Time left: %d hours"
-msgstr "Sisa waktu: %d jam"
-
-#: ../panel-plugin/time-out-countdown.c:492
-#, c-format
-msgid "Time left: %d hours 1 second"
-msgstr "Sisa waktu: %d jam 1 detik"
-
-#: ../panel-plugin/time-out-countdown.c:494
-#, c-format
-msgid "Time left: %d hours %d seconds"
-msgstr "Sisa waktu: %d jam %d detik"
-
-#: ../panel-plugin/time-out-countdown.c:499
-#: ../panel-plugin/time-out-countdown.c:545
-#, c-format
-msgid "Time left: %d hours 1 minute"
-msgstr "Sisa waktu: %d jam 1 menit"
-
-#: ../panel-plugin/time-out-countdown.c:501
-#, c-format
-msgid "Time left: %d hours 1 minute 1 second"
-msgstr "Sisa waktu: %d jam 1 menit 1 detik"
-
+#. Round up the number of minutes
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
-#, c-format
-msgid "Time left: %d hours 1 minute %d seconds"
-msgstr "Sisa waktu: %d jam 1 menit %d detik"
+#: ../panel-plugin/time-out-countdown.c:542
+#, fuzzy, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d menit"
+msgstr[1] "%d menit"
 
-#: ../panel-plugin/time-out-countdown.c:508
-#: ../panel-plugin/time-out-countdown.c:548
-#: ../panel-plugin/time-out-countdown.c:550
-#, c-format
-msgid "Time left: %d hours %d minutes"
-msgstr "Sisa waktu: %d jam %d menit"
+#: ../panel-plugin/time-out-countdown.c:426
+#, fuzzy, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d detik"
+msgstr[1] "%d detik"
 
-#: ../panel-plugin/time-out-countdown.c:510
-#, c-format
-msgid "Time left: %d hours %d minutes 1 second"
-msgstr "Sisa waktu: %d jam %d menit 1 detik"
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:486
+#: ../panel-plugin/time-out-countdown.c:519
+#: ../panel-plugin/time-out-countdown.c:524
+#: ../panel-plugin/time-out-countdown.c:538
+#: ../panel-plugin/time-out-countdown.c:543
+#, fuzzy, c-format
+msgid "Time left: %s"
+msgstr "Sisa waktu: %s"
 
-#: ../panel-plugin/time-out-countdown.c:512
-#, c-format
-msgid "Time left: %d hours %d minutes %d seconds"
-msgstr "Sisa waktu: %d jam %d menit %d detik"
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
+#: ../panel-plugin/time-out-countdown.c:499
+#: ../panel-plugin/time-out-countdown.c:505
+#: ../panel-plugin/time-out-countdown.c:527
+#, fuzzy, c-format
+msgid "Time left: %s %s"
+msgstr "Sisa waktu: %s %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, fuzzy, c-format
+msgid "Time left: %s %s %s"
+msgstr "Sisa waktu: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"

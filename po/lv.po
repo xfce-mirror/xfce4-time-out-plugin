@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-12 00:07+0900\n"
+"POT-Creation-Date: 2010-12-12 00:01+0900\n"
 "PO-Revision-Date: 2009-09-18 23:22+0100\n"
 "Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
 "Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
@@ -144,155 +144,67 @@ msgstr "%02d:%02d:%02d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:432
-#: ../panel-plugin/time-out-countdown.c:563
-#, c-format
-msgid "Time left: 1 second"
-msgstr "Atlikušas: 1 sekunde"
+#: ../panel-plugin/time-out-countdown.c:424
+#, fuzzy, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d stunda"
+msgstr[1] "%d stundas"
+msgstr[2] "%d stundas"
 
-#: ../panel-plugin/time-out-countdown.c:434
-#: ../panel-plugin/time-out-countdown.c:565
-#, c-format
-msgid "Time left: %d seconds"
-msgstr "Atlikušas: %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:439
-#: ../panel-plugin/time-out-countdown.c:522
-#: ../panel-plugin/time-out-countdown.c:570
-#: ../panel-plugin/time-out-countdown.c:589
-#, c-format
-msgid "Time left: 1 minute"
-msgstr "Atlikušas: 1 minūte"
-
-#: ../panel-plugin/time-out-countdown.c:441
-#: ../panel-plugin/time-out-countdown.c:572
-#, c-format
-msgid "Time left: 1 minute 1 second"
-msgstr "Atlikušas: 1 minūte 1 sekunde"
-
-#: ../panel-plugin/time-out-countdown.c:443
-#: ../panel-plugin/time-out-countdown.c:574
-#, c-format
-msgid "Time left: 1 minute %d seconds"
-msgstr "Atlikušas: 1 minūte %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:448
-#: ../panel-plugin/time-out-countdown.c:527
-#: ../panel-plugin/time-out-countdown.c:529
-#: ../panel-plugin/time-out-countdown.c:579
-#: ../panel-plugin/time-out-countdown.c:592
-#: ../panel-plugin/time-out-countdown.c:594
-#, c-format
-msgid "Time left: %d minutes"
-msgstr "Atlikušas: %d minūtes"
-
-#: ../panel-plugin/time-out-countdown.c:450
-#: ../panel-plugin/time-out-countdown.c:581
-#, c-format
-msgid "Time left: %d minutes 1 second"
-msgstr "Atlikušas: %d minūtes 1 sekunde"
-
-#: ../panel-plugin/time-out-countdown.c:452
-#: ../panel-plugin/time-out-countdown.c:583
-#, c-format
-msgid "Time left: %d minutes %d seconds"
-msgstr "Atlikušas: %d minūtes %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:460
-#, c-format
-msgid "Time left: 1 hour"
-msgstr "Atlikušas: 1 stunda"
-
-#: ../panel-plugin/time-out-countdown.c:462
-#, c-format
-msgid "Time left: 1 hour 1 second"
-msgstr "Atlikušas: 1 stunda 1 sekunde"
-
-#: ../panel-plugin/time-out-countdown.c:464
-#, c-format
-msgid "Time left: 1 hour %d seconds"
-msgstr "Atlikušas: 1 stunda %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:469
-#: ../panel-plugin/time-out-countdown.c:535
-#, c-format
-msgid "Time left: 1 hour 1 minute"
-msgstr "Atlikušas: 1 stunda 1 minūte"
-
-#: ../panel-plugin/time-out-countdown.c:471
-#, c-format
-msgid "Time left: 1 hour 1 minute 1 second"
-msgstr "Atlikušas: 1 stunda 1 minūte 1 sekunde"
-
-#: ../panel-plugin/time-out-countdown.c:473
-#, c-format
-msgid "Time left: 1 hour 1 minute %d seconds"
-msgstr "Atlikušas: 1 stunda 1 minūte %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:478
-#: ../panel-plugin/time-out-countdown.c:538
-#: ../panel-plugin/time-out-countdown.c:540
-#, c-format
-msgid "Time left: 1 hour %d minutes"
-msgstr "Atlikušas: 1 stunda %d minūtes"
-
-#: ../panel-plugin/time-out-countdown.c:480
-#, c-format
-msgid "Time left: 1 hour %d minutes 1 second"
-msgstr "Atlikušas: 1 stunda %d minūtes 1 sekunde"
-
-#: ../panel-plugin/time-out-countdown.c:482
-#, c-format
-msgid "Time left: 1 hour %d minutes %d seconds"
-msgstr "Atlikušas: 1 stunda %d minūtes %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:490
-#, c-format
-msgid "Time left: %d hours"
-msgstr "Atlikušas: %d stundas"
-
-#: ../panel-plugin/time-out-countdown.c:492
-#, c-format
-msgid "Time left: %d hours 1 second"
-msgstr "Atlikušas: %d stundas 1 sekunde"
-
-#: ../panel-plugin/time-out-countdown.c:494
-#, c-format
-msgid "Time left: %d hours %d seconds"
-msgstr "Atlikušas: %d stundas %d sekundes"
-
-#: ../panel-plugin/time-out-countdown.c:499
-#: ../panel-plugin/time-out-countdown.c:545
-#, c-format
-msgid "Time left: %d hours 1 minute"
-msgstr "Atlikušas: %d stundas 1 minūte"
-
-#: ../panel-plugin/time-out-countdown.c:501
-#, c-format
-msgid "Time left: %d hours 1 minute 1 second"
-msgstr "Atlikušas: %d stundas 1 minūte 1 sekunde"
-
+#. Round up the number of minutes
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
-#, c-format
-msgid "Time left: %d hours 1 minute %d seconds"
-msgstr "Atlikušas: %d stundas 1 minūte %d sekundes"
+#: ../panel-plugin/time-out-countdown.c:542
+#, fuzzy, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minūte"
+msgstr[1] "%d minūtes"
+msgstr[2] "%d minūtes"
 
-#: ../panel-plugin/time-out-countdown.c:508
-#: ../panel-plugin/time-out-countdown.c:548
-#: ../panel-plugin/time-out-countdown.c:550
-#, c-format
-msgid "Time left: %d hours %d minutes"
-msgstr "Atlikušas: %d stundas %d minūtes"
+#: ../panel-plugin/time-out-countdown.c:426
+#, fuzzy, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekunde"
+msgstr[1] "%d sekundes"
+msgstr[2] "%d sekundes"
 
-#: ../panel-plugin/time-out-countdown.c:510
-#, c-format
-msgid "Time left: %d hours %d minutes 1 second"
-msgstr "Atlikušas: %d stundas %d minūtes 1 sekunde"
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:486
+#: ../panel-plugin/time-out-countdown.c:519
+#: ../panel-plugin/time-out-countdown.c:524
+#: ../panel-plugin/time-out-countdown.c:538
+#: ../panel-plugin/time-out-countdown.c:543
+#, fuzzy, c-format
+msgid "Time left: %s"
+msgstr "Atlikušas: %s"
 
-#: ../panel-plugin/time-out-countdown.c:512
-#, c-format
-msgid "Time left: %d hours %d minutes %d seconds"
-msgstr "Atlikušas: %d stundas %d minūtes %d sekundes"
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
+#: ../panel-plugin/time-out-countdown.c:499
+#: ../panel-plugin/time-out-countdown.c:505
+#: ../panel-plugin/time-out-countdown.c:527
+#, fuzzy, c-format
+msgid "Time left: %s %s"
+msgstr "Atlikušas: %s %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, fuzzy, c-format
+msgid "Time left: %s %s %s"
+msgstr "Atlikušas: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"

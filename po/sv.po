@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-12 00:07+0900\n"
+"POT-Creation-Date: 2010-12-12 00:01+0900\n"
 "PO-Revision-Date: 2008-12-14 21:06+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
@@ -140,156 +140,137 @@ msgstr "%02d:%02d:%02d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:432
-#: ../panel-plugin/time-out-countdown.c:563
-#, c-format
-msgid "Time left: 1 second"
-msgstr "Tid kvar: 1 sekund"
+#: ../panel-plugin/time-out-countdown.c:424
+#, fuzzy, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d timme"
+msgstr[1] "%d timmar"
 
-#: ../panel-plugin/time-out-countdown.c:434
-#: ../panel-plugin/time-out-countdown.c:565
-#, c-format
-msgid "Time left: %d seconds"
-msgstr "Tid kvar: %d sekunder"
+#. Round up the number of minutes
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:485
+#: ../panel-plugin/time-out-countdown.c:503
+#: ../panel-plugin/time-out-countdown.c:542
+#, fuzzy, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minuter"
 
-#: ../panel-plugin/time-out-countdown.c:439
-#: ../panel-plugin/time-out-countdown.c:522
-#: ../panel-plugin/time-out-countdown.c:570
-#: ../panel-plugin/time-out-countdown.c:589
-#, c-format
-msgid "Time left: 1 minute"
-msgstr "Tid kvar: 1 minut"
+#: ../panel-plugin/time-out-countdown.c:426
+#, fuzzy, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
 
-#: ../panel-plugin/time-out-countdown.c:441
-#: ../panel-plugin/time-out-countdown.c:572
-#, c-format
-msgid "Time left: 1 minute 1 second"
-msgstr "Tid kvar: 1 minut 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:443
-#: ../panel-plugin/time-out-countdown.c:574
-#, c-format
-msgid "Time left: 1 minute %d seconds"
-msgstr "Tid kvar: 1 minut %d sekunder"
-
-#: ../panel-plugin/time-out-countdown.c:448
-#: ../panel-plugin/time-out-countdown.c:527
-#: ../panel-plugin/time-out-countdown.c:529
-#: ../panel-plugin/time-out-countdown.c:579
-#: ../panel-plugin/time-out-countdown.c:592
-#: ../panel-plugin/time-out-countdown.c:594
-#, c-format
-msgid "Time left: %d minutes"
-msgstr "Tid kvar: %d minuter"
-
-#: ../panel-plugin/time-out-countdown.c:450
-#: ../panel-plugin/time-out-countdown.c:581
-#, c-format
-msgid "Time left: %d minutes 1 second"
-msgstr "Tid kvar: %d minuter 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:452
-#: ../panel-plugin/time-out-countdown.c:583
-#, c-format
-msgid "Time left: %d minutes %d seconds"
-msgstr "Tid kvar: %d minuter %d sekunder"
-
-#: ../panel-plugin/time-out-countdown.c:460
-#, c-format
-msgid "Time left: 1 hour"
-msgstr "Tid kvar: 1 timme"
-
-#: ../panel-plugin/time-out-countdown.c:462
-#, c-format
-msgid "Time left: 1 hour 1 second"
-msgstr "Tid kvar: 1 timme 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:464
-#, c-format
-msgid "Time left: 1 hour %d seconds"
-msgstr "Tid kvar: 1 timme %d sekunder"
-
-#: ../panel-plugin/time-out-countdown.c:469
-#: ../panel-plugin/time-out-countdown.c:535
-#, c-format
-msgid "Time left: 1 hour 1 minute"
-msgstr "Tid kvar: 1 timme 1 minut"
-
-#: ../panel-plugin/time-out-countdown.c:471
-#, c-format
-msgid "Time left: 1 hour 1 minute 1 second"
-msgstr "Tid kvar: 1 timme 1 minut 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:473
-#, c-format
-msgid "Time left: 1 hour 1 minute %d seconds"
-msgstr "Tid kvar: 1 timme 1 minut %d sekunder"
-
-#: ../panel-plugin/time-out-countdown.c:478
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:486
+#: ../panel-plugin/time-out-countdown.c:519
+#: ../panel-plugin/time-out-countdown.c:524
 #: ../panel-plugin/time-out-countdown.c:538
-#: ../panel-plugin/time-out-countdown.c:540
-#, c-format
-msgid "Time left: 1 hour %d minutes"
-msgstr "Tid kvar: 1 timme %d minuter"
-
-#: ../panel-plugin/time-out-countdown.c:480
-#, c-format
-msgid "Time left: 1 hour %d minutes 1 second"
-msgstr "Tid kvar: 1 timme %d minuter 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:482
-#, c-format
-msgid "Time left: 1 hour %d minutes %d seconds"
-msgstr "Tid kvar: 1 timme %d minuter %d sekunder"
-
-#: ../panel-plugin/time-out-countdown.c:490
-#, c-format
-msgid "Time left: %d hours"
+#: ../panel-plugin/time-out-countdown.c:543
+#, fuzzy, c-format
+msgid "Time left: %s"
 msgstr "Tid kvar: %d timmar"
 
-#: ../panel-plugin/time-out-countdown.c:492
-#, c-format
-msgid "Time left: %d hours 1 second"
-msgstr "Tid kvar: %d timmar 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:494
-#, c-format
-msgid "Time left: %d hours %d seconds"
-msgstr "Tid kvar: %d timmar %d sekunder"
-
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
 #: ../panel-plugin/time-out-countdown.c:499
-#: ../panel-plugin/time-out-countdown.c:545
-#, c-format
-msgid "Time left: %d hours 1 minute"
-msgstr "Tid kvar: %d timmar 1 minut"
+#: ../panel-plugin/time-out-countdown.c:505
+#: ../panel-plugin/time-out-countdown.c:527
+#, fuzzy, c-format
+msgid "Time left: %s %s"
+msgstr "Tid kvar: %d timmar"
 
-#: ../panel-plugin/time-out-countdown.c:501
-#, c-format
-msgid "Time left: %d hours 1 minute 1 second"
-msgstr "Tid kvar: %d timmar 1 minut 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:503
-#, c-format
-msgid "Time left: %d hours 1 minute %d seconds"
-msgstr "Tid kvar: %d timmar 1 minut %d sekunder"
-
-#: ../panel-plugin/time-out-countdown.c:508
-#: ../panel-plugin/time-out-countdown.c:548
-#: ../panel-plugin/time-out-countdown.c:550
-#, c-format
-msgid "Time left: %d hours %d minutes"
-msgstr "Tid kvar: %d timmar %d minuter"
-
-#: ../panel-plugin/time-out-countdown.c:510
-#, c-format
-msgid "Time left: %d hours %d minutes 1 second"
-msgstr "Tid kvar: %d timmar %d minuter 1 sekund"
-
-#: ../panel-plugin/time-out-countdown.c:512
-#, c-format
-msgid "Time left: %d hours %d minutes %d seconds"
-msgstr "Tid kvar: %d timmar %d minuter %d sekunder"
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, fuzzy, c-format
+msgid "Time left: %s %s %s"
+msgstr "Tid kvar: %d sekunder"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Automatiskt kontrollerade pauser och raster"
+
+#~ msgid "Time left: 1 second"
+#~ msgstr "Tid kvar: 1 sekund"
+
+#~ msgid "Time left: 1 minute"
+#~ msgstr "Tid kvar: 1 minut"
+
+#~ msgid "Time left: 1 minute 1 second"
+#~ msgstr "Tid kvar: 1 minut 1 sekund"
+
+#~ msgid "Time left: 1 minute %d seconds"
+#~ msgstr "Tid kvar: 1 minut %d sekunder"
+
+#~ msgid "Time left: %d minutes"
+#~ msgstr "Tid kvar: %d minuter"
+
+#~ msgid "Time left: %d minutes 1 second"
+#~ msgstr "Tid kvar: %d minuter 1 sekund"
+
+#~ msgid "Time left: %d minutes %d seconds"
+#~ msgstr "Tid kvar: %d minuter %d sekunder"
+
+#~ msgid "Time left: 1 hour"
+#~ msgstr "Tid kvar: 1 timme"
+
+#~ msgid "Time left: 1 hour 1 second"
+#~ msgstr "Tid kvar: 1 timme 1 sekund"
+
+#~ msgid "Time left: 1 hour %d seconds"
+#~ msgstr "Tid kvar: 1 timme %d sekunder"
+
+#~ msgid "Time left: 1 hour 1 minute"
+#~ msgstr "Tid kvar: 1 timme 1 minut"
+
+#~ msgid "Time left: 1 hour 1 minute 1 second"
+#~ msgstr "Tid kvar: 1 timme 1 minut 1 sekund"
+
+#~ msgid "Time left: 1 hour 1 minute %d seconds"
+#~ msgstr "Tid kvar: 1 timme 1 minut %d sekunder"
+
+#~ msgid "Time left: 1 hour %d minutes"
+#~ msgstr "Tid kvar: 1 timme %d minuter"
+
+#~ msgid "Time left: 1 hour %d minutes 1 second"
+#~ msgstr "Tid kvar: 1 timme %d minuter 1 sekund"
+
+#~ msgid "Time left: 1 hour %d minutes %d seconds"
+#~ msgstr "Tid kvar: 1 timme %d minuter %d sekunder"
+
+#~ msgid "Time left: %d hours 1 second"
+#~ msgstr "Tid kvar: %d timmar 1 sekund"
+
+#~ msgid "Time left: %d hours %d seconds"
+#~ msgstr "Tid kvar: %d timmar %d sekunder"
+
+#~ msgid "Time left: %d hours 1 minute"
+#~ msgstr "Tid kvar: %d timmar 1 minut"
+
+#~ msgid "Time left: %d hours 1 minute 1 second"
+#~ msgstr "Tid kvar: %d timmar 1 minut 1 sekund"
+
+#~ msgid "Time left: %d hours 1 minute %d seconds"
+#~ msgstr "Tid kvar: %d timmar 1 minut %d sekunder"
+
+#~ msgid "Time left: %d hours %d minutes"
+#~ msgstr "Tid kvar: %d timmar %d minuter"
+
+#~ msgid "Time left: %d hours %d minutes 1 second"
+#~ msgstr "Tid kvar: %d timmar %d minuter 1 sekund"
+
+#~ msgid "Time left: %d hours %d minutes %d seconds"
+#~ msgstr "Tid kvar: %d timmar %d minuter %d sekunder"

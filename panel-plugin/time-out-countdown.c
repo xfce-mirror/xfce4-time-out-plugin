@@ -420,6 +420,11 @@ time_out_countdown_seconds_to_string (gint     seconds,
     }
   else
     {
+
+      gchar * hrs = g_strdup_printf (ngettext ("%d hour", "%d hours", hours), hours);
+      gchar * mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes);
+      gchar * secs = g_strdup_printf (ngettext("%d second", "%d seconds", seconds), seconds);
+
       if (display_hours)
         {
           if (display_seconds)
@@ -428,58 +433,16 @@ time_out_countdown_seconds_to_string (gint     seconds,
                 {
                   if (minutes <= 0)
                     {
-                      if (seconds <= 1) 
-                        g_string_printf (str, _("Time left: 1 second"));
-                      else
-                        g_string_printf (str, _("Time left: %d seconds"), seconds);
-                    }
-                  else if (minutes == 1)
-                    {
-                      if (seconds <= 0)
-                        g_string_printf (str, _("Time left: 1 minute"));
-                      else if (seconds == 1)
-                        g_string_printf (str, _("Time left: 1 minute 1 second"));
-                      else
-                        g_string_printf (str, _("Time left: 1 minute %d seconds"), seconds);
+                      /* Translators: this is %s seconds/minutes/hours */
+                      g_string_printf (str, _("Time left: %s"), secs);
                     }
                   else
                     {
                       if (seconds <= 0)
-                        g_string_printf (str, _("Time left: %d minutes"), minutes);
-                      else if (seconds == 1)
-                        g_string_printf (str, _("Time left: %d minutes 1 second"), minutes);
+                        g_string_printf (str, _("Time left: %s"), mins);
                       else
-                        g_string_printf (str, _("Time left: %d minutes %d seconds"), minutes, seconds);
-                    }
-                }
-              else if (hours == 1)
-                {
-                  if (minutes <= 0)
-                    {
-                      if (seconds <= 0)
-                        g_string_printf (str, _("Time left: 1 hour"));
-                      if (seconds == 1) 
-                        g_string_printf (str, _("Time left: 1 hour 1 second"));
-                      else
-                        g_string_printf (str, _("Time left: 1 hour %d seconds"), seconds);
-                    }
-                  else if (minutes == 1)
-                    {
-                      if (seconds <= 0)
-                        g_string_printf (str, _("Time left: 1 hour 1 minute"));
-                      else if (seconds == 1)
-                        g_string_printf (str, _("Time left: 1 hour 1 minute 1 second"));
-                      else
-                        g_string_printf (str, _("Time left: 1 hour 1 minute %d seconds"), seconds);
-                    }
-                  else
-                    {
-                      if (seconds <= 0)
-                        g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes);
-                      if (seconds == 1)
-                        g_string_printf (str, _("Time left: 1 hour %d minutes 1 second"), minutes);
-                      else
-                        g_string_printf (str, _("Time left: 1 hour %d minutes %d seconds"), minutes, seconds);
+                        /* Translators: this is %s minutes, %s seconds */
+                        g_string_printf (str, _("Time left: %s %s"), mins, secs);
                     }
                 }
               else 
@@ -487,29 +450,21 @@ time_out_countdown_seconds_to_string (gint     seconds,
                   if (minutes <= 0)
                     {
                       if (seconds <= 0)
-                        g_string_printf (str, _("Time left: %d hours"), hours);
-                      else if (seconds == 1) 
-                        g_string_printf (str, _("Time left: %d hours 1 second"), hours);
-                      else
-                        g_string_printf (str, _("Time left: %d hours %d seconds"), hours, seconds);
-                    }
-                  else if (minutes == 1)
-                    {
-                      if (seconds <= 0)
-                        g_string_printf (str, _("Time left: %d hours 1 minute"), hours);
-                      else if (seconds == 1)
-                        g_string_printf (str, _("Time left: %d hours 1 minute 1 second"), hours);
-                      else
-                        g_string_printf (str, _("Time left: %d hours 1 minute %d seconds"), hours, seconds);
+                        g_string_printf (str, _("Time left: %s"), hrs);
+                      else 
+                        {
+                        /* Translators: this is %s hours %s seconds */
+                        g_string_printf (str, _("Time left: %s %s"), hrs, secs);
+                        }
                     }
                   else
                     {
                       if (seconds <= 0)
-                        g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes);
-                      else if (seconds == 1)
-                        g_string_printf (str, _("Time left: %d hours %d minutes 1 second"), hours, minutes);
+                        /* Translators: this is %s hours, %s minutes */
+                        g_string_printf (str, _("Time left: %s %s"), hrs, mins);
                       else
-                        g_string_printf (str, _("Time left: %d hours %d minutes %d seconds"), hours, minutes, seconds);
+                        /* Translators: this is %s hours, %s minutes, %s seconds */
+                        g_string_printf (str, _("Time left: %s %s %s"), hrs, mins, secs);
                     }
                 }
             }
@@ -519,35 +474,37 @@ time_out_countdown_seconds_to_string (gint     seconds,
                 {
                   if (minutes < 1)
                     {
-                      g_string_printf (str, _("Time left: 1 minute"));
+                      /* Do not show 0 minutes */
+                      minutes = 1;
                     }
-                  else 
-                    {
-                      if (seconds == 0)
-                        g_string_printf (str, _("Time left: %d minutes"), minutes);
-                      else
-                        g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
-                    }
-                }
-              else if (hours == 1)
-                {
-                  if (minutes < 1)
-                    g_string_printf (str, _("Time left: 1 hour 1 minute"));
+                  if (seconds == 0)
+                    g_string_printf (str, _("Time left: %s"), mins);
                   else
-                    if (seconds == 0)
-                      g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes);
-                    else
-                      g_string_printf (str, _("Time left: 1 hour %d minutes"), minutes + 1);
+                    {
+                      /* Round up the number of minutes */
+                      mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes + 1);
+                      g_string_printf (str, _("Time left: %s"), mins);
+                      g_free (mins);
+                    }
                 }
               else 
                 {
                   if (minutes < 1)
-                    g_string_printf (str, _("Time left: %d hours 1 minute"), hours);
+                    {
+                    /* Do not show 0 minutes */
+                    minutes = 1;
+                    }
+                  if (seconds == 0)
+                    /* Translators: this is %s hours, %s minutes */
+                    g_string_printf (str, _("Time left: %s %s"), hrs, mins);
                   else
-                    if (seconds == 0)
-                      g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes);
-                    else
-                      g_string_printf (str, _("Time left: %d hours %d minutes"), hours, minutes + 1);
+                    {
+                      /* Round up the number of minutes */
+                      mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes + 1);
+                      /* Translators: this is %s hours, %s minutes */
+                      g_string_printf (str, _("Time left: %s %s"), hrs, mins);
+                      g_free (mins);
+                    }
                 }
             }
         }
@@ -559,43 +516,37 @@ time_out_countdown_seconds_to_string (gint     seconds,
             {
               if (minutes <= 0)
                 {
-                  if (seconds <= 1)
-                    g_string_printf (str, _("Time left: 1 second"));
-                  else
-                    g_string_printf (str, _("Time left: %d seconds"), seconds);
+                  g_string_printf (str, _("Time left: %s"), secs);
                 }
-              else if (minutes == 1)
+              else 
                 {
                   if (seconds <= 0)
-                    g_string_printf (str, _("Time left: 1 minute"));
-                  else if (seconds == 1)
-                    g_string_printf (str, _("Time left: 1 minute 1 second"));
+                    g_string_printf (str, _("Time left: %s"), mins);
                   else
-                    g_string_printf (str, _("Time left: 1 minute %d seconds"), seconds);
-                }
-              else
-                {
-                  if (seconds <= 0)
-                    g_string_printf (str, _("Time left: %d minutes"), minutes);
-                  else if (seconds == 1)
-                    g_string_printf (str, _("Time left: %d minutes 1 second"), minutes);
-                  else
-                    g_string_printf (str, _("Time left: %d minutes %d seconds"), minutes, seconds);
+                    /* Translators: this is %s minutes %s seconds */
+                    g_string_printf (str, _("Time left: %s %s"), mins, secs);
                 }
             }
           else
             {
-              if (minutes < 1)
-                g_string_printf (str, _("Time left: 1 minute"));
+              if (minutes < 1) 
+                {
+                  /* Do not show 0 minutes */
+                  minutes = 1; 
+                }
+              if (seconds == 0)
+                g_string_printf (str, _("Time left: %s"), mins);
               else
-                if (seconds == 0)
-                  g_string_printf (str, _("Time left: %d minutes"), minutes);
-                else
-                  g_string_printf (str, _("Time left: %d minutes"), minutes + 1);
+                {
+                  /* Round up the number of minutes */
+                  mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes + 1);
+                  g_string_printf (str, _("Time left: %s"), mins);
+                  g_free (mins);
+                }
             }
         }
+    g_free (hrs), g_free (mins), g_free (secs);
     }
-
   /* Return generated string */
   return str;
 }

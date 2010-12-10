@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-07 15:01+0200\n"
+"POT-Creation-Date: 2010-12-12 00:01+0900\n"
 "PO-Revision-Date: 2008-12-07 15:25+0200\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <xfce-i18n@xfce.org>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -34,8 +35,7 @@ msgstr "Käynnissä"
 #: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
-"Xfce-paneelin liitännäinen, joka käskee sinut ajoittain tauolle."
+msgstr "Xfce-paneelin liitännäinen, joka käskee sinut ajoittain tauolle."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
@@ -139,156 +139,137 @@ msgstr "%02d:%02d:%02d"
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:432
-#: ../panel-plugin/time-out-countdown.c:563
-#, c-format
-msgid "Time left: 1 second"
-msgstr "Jäljellä: sekunti"
+#: ../panel-plugin/time-out-countdown.c:424
+#, fuzzy, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "tunti"
+msgstr[1] "%d tuntia"
 
-#: ../panel-plugin/time-out-countdown.c:434
-#: ../panel-plugin/time-out-countdown.c:565
-#, c-format
-msgid "Time left: %d seconds"
-msgstr "Jäljellä: %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:439
-#: ../panel-plugin/time-out-countdown.c:522
-#: ../panel-plugin/time-out-countdown.c:570
-#: ../panel-plugin/time-out-countdown.c:589
-#, c-format
-msgid "Time left: 1 minute"
-msgstr "Jäljellä: minuutti"
-
-#: ../panel-plugin/time-out-countdown.c:441
-#: ../panel-plugin/time-out-countdown.c:572
-#, c-format
-msgid "Time left: 1 minute 1 second"
-msgstr "Jäljellä: minuutti ja 1 sekunti"
-
-#: ../panel-plugin/time-out-countdown.c:443
-#: ../panel-plugin/time-out-countdown.c:574
-#, c-format
-msgid "Time left: 1 minute %d seconds"
-msgstr "Jäljellä: minuutti ja %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:448
-#: ../panel-plugin/time-out-countdown.c:527
-#: ../panel-plugin/time-out-countdown.c:529
-#: ../panel-plugin/time-out-countdown.c:579
-#: ../panel-plugin/time-out-countdown.c:592
-#: ../panel-plugin/time-out-countdown.c:594
-#, c-format
-msgid "Time left: %d minutes"
-msgstr "Jäljellä: %d minuuttia"
-
-#: ../panel-plugin/time-out-countdown.c:450
-#: ../panel-plugin/time-out-countdown.c:581
-#, c-format
-msgid "Time left: %d minutes 1 second"
-msgstr "Jäljellä: %d minuuttia ja 1 sekunti"
-
-#: ../panel-plugin/time-out-countdown.c:452
-#: ../panel-plugin/time-out-countdown.c:583
-#, c-format
-msgid "Time left: %d minutes %d seconds"
-msgstr "Jäljellä: %d minuuttia ja %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:460
-#, c-format
-msgid "Time left: 1 hour"
-msgstr "Jäljellä: tunti"
-
-#: ../panel-plugin/time-out-countdown.c:462
-#, c-format
-msgid "Time left: 1 hour 1 second"
-msgstr "Jäljellä: tunti ja 1 sekunti"
-
-#: ../panel-plugin/time-out-countdown.c:464
-#, c-format
-msgid "Time left: 1 hour %d seconds"
-msgstr "Jäljellä: tunti ja %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:469
-#: ../panel-plugin/time-out-countdown.c:535
-#, c-format
-msgid "Time left: 1 hour 1 minute"
-msgstr "Jäljellä: tunti ja 1 minuutti"
-
-#: ../panel-plugin/time-out-countdown.c:471
-#, c-format
-msgid "Time left: 1 hour 1 minute 1 second"
-msgstr "Jäljellä: tunti, 1 minuutti ja 1 sekunti"
-
-#: ../panel-plugin/time-out-countdown.c:473
-#, c-format
-msgid "Time left: 1 hour 1 minute %d seconds"
-msgstr "Jäljellä: tunti, 1 minuutti ja %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:478
-#: ../panel-plugin/time-out-countdown.c:538
-#: ../panel-plugin/time-out-countdown.c:540
-#, c-format
-msgid "Time left: 1 hour %d minutes"
-msgstr "Jäljellä: tunti ja %d minuuttia"
-
-#: ../panel-plugin/time-out-countdown.c:480
-#, c-format
-msgid "Time left: 1 hour %d minutes 1 second"
-msgstr "Jäljellä: tunti, %d minuuttia ja 1 sekunti"
-
-#: ../panel-plugin/time-out-countdown.c:482
-#, c-format
-msgid "Time left: 1 hour %d minutes %d seconds"
-msgstr "Jäljellä: tunti, %d minuuttia ja %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:490
-#, c-format
-msgid "Time left: %d hours"
-msgstr "Jäljellä: %d tuntia"
-
-#: ../panel-plugin/time-out-countdown.c:492
-#, c-format
-msgid "Time left: %d hours 1 second"
-msgstr "Jäljellä: %d tuntia ja 1 sekunti"
-
-#: ../panel-plugin/time-out-countdown.c:494
-#, c-format
-msgid "Time left: %d hours %d seconds"
-msgstr "Jäljellä: %d tuntia ja %d sekuntia"
-
-#: ../panel-plugin/time-out-countdown.c:499
-#: ../panel-plugin/time-out-countdown.c:545
-#, c-format
-msgid "Time left: %d hours 1 minute"
-msgstr "Jäljellä: %d tuntia ja 1 minuutti"
-
-#: ../panel-plugin/time-out-countdown.c:501
-#, c-format
-msgid "Time left: %d hours 1 minute 1 second"
-msgstr "Jäljellä: %d tuntia, 1 minuutti ja 1 sekunti"
-
+#. Round up the number of minutes
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
-#, c-format
-msgid "Time left: %d hours 1 minute %d seconds"
-msgstr "Jäljellä: %d tuntia, 1 minuutti ja %d sekuntia"
+#: ../panel-plugin/time-out-countdown.c:542
+#, fuzzy, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "minuutti"
+msgstr[1] "%d minuuttia"
 
-#: ../panel-plugin/time-out-countdown.c:508
-#: ../panel-plugin/time-out-countdown.c:548
-#: ../panel-plugin/time-out-countdown.c:550
-#, c-format
-msgid "Time left: %d hours %d minutes"
-msgstr "Jäljellä: %d tuntia ja %d minuuttia"
+#: ../panel-plugin/time-out-countdown.c:426
+#, fuzzy, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "sekunti"
+msgstr[1] "%d sekuntia"
 
-#: ../panel-plugin/time-out-countdown.c:510
-#, c-format
-msgid "Time left: %d hours %d minutes 1 second"
-msgstr "Jäljellä: %d tuntia, %d minuuttia ja 1 sekunti"
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:486
+#: ../panel-plugin/time-out-countdown.c:519
+#: ../panel-plugin/time-out-countdown.c:524
+#: ../panel-plugin/time-out-countdown.c:538
+#: ../panel-plugin/time-out-countdown.c:543
+#, fuzzy, c-format
+msgid "Time left: %s"
+msgstr "Jäljellä: %s"
 
-#: ../panel-plugin/time-out-countdown.c:512
-#, c-format
-msgid "Time left: %d hours %d minutes %d seconds"
-msgstr "Jäljellä: %d tuntia, %d minuuttia ja %d sekuntia"
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
+#: ../panel-plugin/time-out-countdown.c:499
+#: ../panel-plugin/time-out-countdown.c:505
+#: ../panel-plugin/time-out-countdown.c:527
+#, fuzzy, c-format
+msgid "Time left: %s %s"
+msgstr "Jäljellä: %s ja %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, fuzzy, c-format
+msgid "Time left: %s %s %s"
+msgstr "Jäljellä: %s, %s ja %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Näytön lukitus säännöllisten taukojen ajaksi"
+
+#~ msgid "Time left: 1 second"
+#~ msgstr "Jäljellä: sekunti"
+
+#~ msgid "Time left: 1 minute"
+#~ msgstr "Jäljellä: minuutti"
+
+#~ msgid "Time left: 1 minute 1 second"
+#~ msgstr "Jäljellä: minuutti ja 1 sekunti"
+
+#~ msgid "Time left: 1 minute %d seconds"
+#~ msgstr "Jäljellä: minuutti ja %d sekuntia"
+
+#~ msgid "Time left: %d minutes"
+#~ msgstr "Jäljellä: %d minuuttia"
+
+#~ msgid "Time left: %d minutes 1 second"
+#~ msgstr "Jäljellä: %d minuuttia ja 1 sekunti"
+
+#~ msgid "Time left: %d minutes %d seconds"
+#~ msgstr "Jäljellä: %d minuuttia ja %d sekuntia"
+
+#~ msgid "Time left: 1 hour"
+#~ msgstr "Jäljellä: tunti"
+
+#~ msgid "Time left: 1 hour 1 second"
+#~ msgstr "Jäljellä: tunti ja 1 sekunti"
+
+#~ msgid "Time left: 1 hour %d seconds"
+#~ msgstr "Jäljellä: tunti ja %d sekuntia"
+
+#~ msgid "Time left: 1 hour 1 minute"
+#~ msgstr "Jäljellä: tunti ja 1 minuutti"
+
+#~ msgid "Time left: 1 hour 1 minute 1 second"
+#~ msgstr "Jäljellä: tunti, 1 minuutti ja 1 sekunti"
+
+#~ msgid "Time left: 1 hour 1 minute %d seconds"
+#~ msgstr "Jäljellä: tunti, 1 minuutti ja %d sekuntia"
+
+#~ msgid "Time left: 1 hour %d minutes"
+#~ msgstr "Jäljellä: tunti ja %d minuuttia"
+
+#~ msgid "Time left: 1 hour %d minutes 1 second"
+#~ msgstr "Jäljellä: tunti, %d minuuttia ja 1 sekunti"
+
+#~ msgid "Time left: 1 hour %d minutes %d seconds"
+#~ msgstr "Jäljellä: tunti, %d minuuttia ja %d sekuntia"
+
+#~ msgid "Time left: %d hours 1 second"
+#~ msgstr "Jäljellä: %d tuntia ja 1 sekunti"
+
+#~ msgid "Time left: %d hours %d seconds"
+#~ msgstr "Jäljellä: %d tuntia ja %d sekuntia"
+
+#~ msgid "Time left: %d hours 1 minute"
+#~ msgstr "Jäljellä: %d tuntia ja 1 minuutti"
+
+#~ msgid "Time left: %d hours 1 minute 1 second"
+#~ msgstr "Jäljellä: %d tuntia, 1 minuutti ja 1 sekunti"
+
+#~ msgid "Time left: %d hours 1 minute %d seconds"
+#~ msgstr "Jäljellä: %d tuntia, 1 minuutti ja %d sekuntia"
+
+#~ msgid "Time left: %d hours %d minutes"
+#~ msgstr "Jäljellä: %d tuntia ja %d minuuttia"
+
+#~ msgid "Time left: %d hours %d minutes 1 second"
+#~ msgstr "Jäljellä: %d tuntia, %d minuuttia ja 1 sekunti"
+
+#~ msgid "Time left: %d hours %d minutes %d seconds"
+#~ msgstr "Jäljellä: %d tuntia, %d minuuttia ja %d sekuntia"
