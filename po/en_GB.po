@@ -26,7 +26,7 @@ msgstr "Take a break"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
 msgid "Reset timer"
-msgstr ""
+msgstr "Reset timer"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
@@ -37,10 +37,11 @@ msgstr "Enabled"
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr ""
+msgstr "Jeff Bailes <thepizzaking@gmail.com>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
