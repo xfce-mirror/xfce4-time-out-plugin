@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 00:01+0900\n"
-"PO-Revision-Date: 2009-01-31 15:10+0100\n"
+"POT-Creation-Date: 2010-12-11 17:12+0000\n"
+"PO-Revision-Date: 2010-12-11 18:55+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian <xfce-it-translators@googlegroups.com>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: it\n"
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 # glossario
 # break = pausa
@@ -39,11 +41,8 @@ msgid "Enabled"
 msgstr "Abilitato"
 
 #: ../panel-plugin/time-out.c:422
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
-"Plugin del pannello di Xfce che ricorda di fare una pausa dal computer ogni "
-"tanto"
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "Plugin del pannello di Xfce che ricorda di fare una pausa dal computer ogni tanto"
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
@@ -148,7 +147,7 @@ msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d ora"
@@ -159,14 +158,14 @@ msgstr[1] "%d ore"
 #: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
 #: ../panel-plugin/time-out-countdown.c:542
-#, fuzzy, c-format
+#, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minuto"
 msgstr[1] "%d minuti"
 
 #: ../panel-plugin/time-out-countdown.c:426
-#, fuzzy, c-format
+#, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d secondo"
@@ -182,7 +181,7 @@ msgstr[1] "%d secondi"
 #: ../panel-plugin/time-out-countdown.c:524
 #: ../panel-plugin/time-out-countdown.c:538
 #: ../panel-plugin/time-out-countdown.c:543
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s"
 msgstr "Tempo restante: %s"
 
@@ -196,13 +195,13 @@ msgstr "Tempo restante: %s"
 #: ../panel-plugin/time-out-countdown.c:499
 #: ../panel-plugin/time-out-countdown.c:505
 #: ../panel-plugin/time-out-countdown.c:527
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s"
 msgstr "Tempo restante: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s %s"
 msgstr "Tempo restante: %s %s %s"
 
@@ -212,72 +211,50 @@ msgstr "Interruzioni e pause controllate automaticamente"
 
 #~ msgid "Time left: 1 second"
 #~ msgstr "Tempo restante: 1 secondo"
-
 #~ msgid "Time left: 1 minute"
 #~ msgstr "Tempo restante: 1 minuto"
-
 #~ msgid "Time left: 1 minute 1 second"
 #~ msgstr "Tempo restante: 1 minuto 1 secondo"
-
 #~ msgid "Time left: 1 minute %d seconds"
 #~ msgstr "Tempo restante: 1 minuto %d secondi"
-
 #~ msgid "Time left: %d minutes"
 #~ msgstr "Tempo restante: %d minuti"
-
 #~ msgid "Time left: %d minutes 1 second"
 #~ msgstr "Tempo restante: %d minuti 1 secondo"
-
 #~ msgid "Time left: %d minutes %d seconds"
 #~ msgstr "Tempo restante: %d minuti %d secondi"
-
 #~ msgid "Time left: 1 hour"
 #~ msgstr "Tempo restante: 1 ora"
-
 #~ msgid "Time left: 1 hour 1 second"
 #~ msgstr "Tempo restante: 1 ora 1 secondo"
-
 #~ msgid "Time left: 1 hour %d seconds"
 #~ msgstr "Tempo restante: 1 ora %d secondi"
-
 #~ msgid "Time left: 1 hour 1 minute"
 #~ msgstr "Tempo restante: 1 ora 1 minuto"
-
 #~ msgid "Time left: 1 hour 1 minute 1 second"
 #~ msgstr "Tempo restante: 1 ora 1 minuto 1 secondo"
-
 #~ msgid "Time left: 1 hour 1 minute %d seconds"
 #~ msgstr "Tempo restante: 1 ora 1 minuto %d secondi"
-
 #~ msgid "Time left: 1 hour %d minutes"
 #~ msgstr "Tempo restante: 1 ora %d minuti"
-
 #~ msgid "Time left: 1 hour %d minutes 1 second"
 #~ msgstr "Tempo restante: 1 ora %d minuti 1 secondo"
-
 #~ msgid "Time left: 1 hour %d minutes %d seconds"
 #~ msgstr "Tempo restante: 1 ora %d minuti %d secondi"
-
 #~ msgid "Time left: %d hours 1 second"
 #~ msgstr "Tempo restante: %d ore 1 secondo"
-
 #~ msgid "Time left: %d hours %d seconds"
 #~ msgstr "Tempo restante: %d ore %d secondi"
-
 #~ msgid "Time left: %d hours 1 minute"
 #~ msgstr "Tempo restante: %d ore 1 minuto"
-
 #~ msgid "Time left: %d hours 1 minute 1 second"
 #~ msgstr "Tempo restante: %d ore 1 minuto 1 secondo"
-
 #~ msgid "Time left: %d hours 1 minute %d seconds"
 #~ msgstr "Tempo restante: %d ore 1 minuto %d secondi"
-
 #~ msgid "Time left: %d hours %d minutes"
 #~ msgstr "Tempo restante: %d ore %d minuti"
-
 #~ msgid "Time left: %d hours %d minutes 1 second"
 #~ msgstr "Tempo restante: %d ore %d minuti 1 secondo"
-
 #~ msgid "Time left: %d hours %d minutes %d seconds"
 #~ msgstr "Tempo restante: %d ore %d minuti %d secondi"
+
