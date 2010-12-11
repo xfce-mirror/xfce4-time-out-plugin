@@ -152,13 +152,13 @@ msgstr[0] "%d時間"
 #: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
 #: ../panel-plugin/time-out-countdown.c:542
-#, fuzzy, c-format
+#, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d分"
 
 #: ../panel-plugin/time-out-countdown.c:426
-#, fuzzy, c-format
+#, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d秒"
@@ -173,7 +173,7 @@ msgstr[0] "%d秒"
 #: ../panel-plugin/time-out-countdown.c:524
 #: ../panel-plugin/time-out-countdown.c:538
 #: ../panel-plugin/time-out-countdown.c:543
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s"
 msgstr "残り時間：%s"
 
@@ -187,13 +187,13 @@ msgstr "残り時間：%s"
 #: ../panel-plugin/time-out-countdown.c:499
 #: ../panel-plugin/time-out-countdown.c:505
 #: ../panel-plugin/time-out-countdown.c:527
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s"
 msgstr "残り時間：%s%s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s %s"
 msgstr "残り時間：%s%s%s"
 

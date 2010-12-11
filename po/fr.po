@@ -34,7 +34,6 @@ msgid "Enabled"
 msgstr "Activé"
 
 #: ../panel-plugin/time-out.c:422
-#, fuzzy
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
