@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 00:01+0900\n"
-"PO-Revision-Date: 2010-09-01 14:31+0600\n"
+"POT-Creation-Date: 2010-12-21 05:13+0000\n"
+"PO-Revision-Date: 2010-12-21 16:11+0600\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
-"Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: kk\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Language: Kazakh\n"
 "X-Poedit-Country: KAZAKHSTAN\n"
@@ -35,8 +35,7 @@ msgid "Enabled"
 msgstr "Қосулы"
 
 #: ../panel-plugin/time-out.c:422
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Компьютерден демалу үшін үзілістерді жасайтын Xfce панелінің плагині."
 
 #: ../panel-plugin/time-out.c:431
@@ -142,7 +141,7 @@ msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d сағат"
@@ -152,13 +151,13 @@ msgstr[0] "%d сағат"
 #: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
 #: ../panel-plugin/time-out-countdown.c:542
-#, fuzzy, c-format
+#, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d минут"
 
 #: ../panel-plugin/time-out-countdown.c:426
-#, fuzzy, c-format
+#, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d секунд"
@@ -173,7 +172,7 @@ msgstr[0] "%d секунд"
 #: ../panel-plugin/time-out-countdown.c:524
 #: ../panel-plugin/time-out-countdown.c:538
 #: ../panel-plugin/time-out-countdown.c:543
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s"
 msgstr "Қалған уақыты: %s"
 
@@ -187,13 +186,13 @@ msgstr "Қалған уақыты: %s"
 #: ../panel-plugin/time-out-countdown.c:499
 #: ../panel-plugin/time-out-countdown.c:505
 #: ../panel-plugin/time-out-countdown.c:527
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s"
 msgstr "Қалған уақыты: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s %s"
 msgstr "Қалған уақыты: %s %s %s"
 
