@@ -1,3 +1,14 @@
+1.0.0
+=====
+- Translated into a total of 31 languages, with 15 at 100%
+- Fix bug #3310
+- Fix bug #4699
+- Fix bug #3224
+- Allow setting the time with a precision in seconds, rather than minutes
+- Added an about dialog
+- New optional resume button to be pushed at the end of the pause
+- New progress bar in the lock screen
+
 0.1.1
 =====
 - Properly display remaining minutes when seconds are not displayed 
