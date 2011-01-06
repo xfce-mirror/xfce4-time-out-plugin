@@ -1,13 +1,13 @@
 # translation of el.po to Greek
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Evaggelos Balaskas <ebalaskas@ebalaskas.gr>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-03 17:13+0000\n"
+"POT-Creation-Date: 2011-01-06 05:13+0000\n"
 "PO-Revision-Date: 2011-01-04 01:07+0200\n"
 "Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
@@ -15,10 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: el\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:265
@@ -41,7 +41,7 @@ msgstr "Xfce Panel plugin για να κάνετε διάλειμμα από τ�
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr ""
+msgstr "George Vasilakos <forfolias@gmail.com>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -203,4 +203,3 @@ msgstr "Χρόνος που απομένει: %s %s %s"
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Αυτόματα ελεγχόμενες χρονικές ανάπαυλες και διαλείμματα"
-
