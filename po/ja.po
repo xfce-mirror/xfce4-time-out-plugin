@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 00:01+0900\n"
-"PO-Revision-Date: 2010-11-17 20:11+0900\n"
+"POT-Creation-Date: 2011-01-16 00:44+0900\n"
+"PO-Revision-Date: 2011-01-16 00:44+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "Language: ja\n"
@@ -145,7 +145,7 @@ msgstr "%02d:%02d"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d時間"
+msgstr[0] "%d 時間"
 
 #. Round up the number of minutes
 #: ../panel-plugin/time-out-countdown.c:425
@@ -155,13 +155,13 @@ msgstr[0] "%d時間"
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d分"
+msgstr[0] "%d 分"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d秒"
+msgstr[0] "%d 秒"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
@@ -175,7 +175,7 @@ msgstr[0] "%d秒"
 #: ../panel-plugin/time-out-countdown.c:543
 #, c-format
 msgid "Time left: %s"
-msgstr "残り時間：%s"
+msgstr "残り時間: %s"
 
 #. Translators: this is %s minutes, %s seconds
 #. Translators: this is %s hours %s seconds
@@ -189,13 +189,13 @@ msgstr "残り時間：%s"
 #: ../panel-plugin/time-out-countdown.c:527
 #, c-format
 msgid "Time left: %s %s"
-msgstr "残り時間：%s%s"
+msgstr "残り時間: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
 #, c-format
 msgid "Time left: %s %s %s"
-msgstr "残り時間：%s%s%s"
+msgstr "残り時間: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
