@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-21 05:13+0000\n"
+"POT-Creation-Date: 2011-02-24 11:14+0000\n"
 "PO-Revision-Date: 2008-11-27 21:02+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
 "X-Generator: KBabel 1.11.4\n"
-
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:265
 msgid "Take a break"
@@ -33,7 +33,8 @@ msgid "Enabled"
 msgstr "Активно"
 
 #: ../panel-plugin/time-out.c:422
-msgid "Xfce Panel plugin for taking a break from computer work every now and then."
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Плагін панелі Xfce для організації часу роботи з комп’ютером"
 
 #: ../panel-plugin/time-out.c:431
@@ -139,29 +140,32 @@ msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d година"
-msgstr[1] "%d годин"
+msgstr[1] "%d години"
+msgstr[2] "%d годин"
 
 #. Round up the number of minutes
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
 #: ../panel-plugin/time-out-countdown.c:542
-#, fuzzy, c-format
+#, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d хвилина"
-msgstr[1] "%d Хвилини"
+msgstr[1] "%d хвилини"
+msgstr[2] "%d хвилин"
 
 #: ../panel-plugin/time-out-countdown.c:426
-#, fuzzy, c-format
+#, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунди"
+msgstr[2] "%d секунд"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
