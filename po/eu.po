@@ -1,20 +1,20 @@
 # translation of xfce4-time-out-plugin.po to Euskara
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Piarres Beobide <pi@beobide.net>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 00:01+0900\n"
+"POT-Creation-Date: 2011-05-14 22:16+0000\n"
 "PO-Revision-Date: 2008-11-05 13:57+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
-"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 1.2.0\n"
 
@@ -34,13 +34,12 @@ msgid "Enabled"
 msgstr "Gaituta"
 
 #: ../panel-plugin/time-out.c:422
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr ""
+msgstr "Piarres Beobide <pi+xfce@beobide.net>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -55,14 +54,12 @@ msgstr "Ordu ezarpenak"
 
 #. Create the labels for the minutes and seconds spins
 #: ../panel-plugin/time-out.c:493
-#, fuzzy
 msgid "Minutes"
 msgstr "Minutu"
 
 #: ../panel-plugin/time-out.c:498
-#, fuzzy
 msgid "Seconds"
-msgstr "Segundu"
+msgstr "Segundo"
 
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:504
@@ -143,7 +140,7 @@ msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "ordu bat"
