@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-14 17:15+0000\n"
+"POT-Creation-Date: 2011-07-19 16:17+0000\n"
 "PO-Revision-Date: 2009-02-11 21:46+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -38,9 +38,8 @@ msgid "Xfce Panel plugin for taking a break from computer work every now and the
 msgstr "Complemento del panel de Xfce para tomarse un descanso cuando desee."
 
 #: ../panel-plugin/time-out.c:431
-#, fuzzy
 msgid "translator-credits"
-msgstr "translator-credits"
+msgstr "créditos-traductor"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
