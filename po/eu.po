@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-14 22:16+0000\n"
+"POT-Creation-Date: 2011-07-25 10:17+0000\n"
 "PO-Revision-Date: 2008-11-05 13:57+0200\n"
 "Last-Translator: Piarres Beobide <pi@beobide.net>\n"
 "Language-Team: Euskara <debian-l10n-basque@lists.debian.org>\n"
@@ -26,7 +26,7 @@ msgstr "Atseden bat hartu"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
 msgid "Reset timer"
-msgstr ""
+msgstr "Berrezarri kronometroa"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
@@ -35,7 +35,7 @@ msgstr "Gaituta"
 
 #: ../panel-plugin/time-out.c:422
 msgid "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgstr "Ordenagailu lanean orain eta betik geldiune bat behartzeko Xfce panelerako plugina"
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
@@ -89,7 +89,7 @@ msgstr "Gaitu atzeratzea"
 #. Create resume check button
 #: ../panel-plugin/time-out.c:582
 msgid "Resume automatically"
-msgstr ""
+msgstr "Automatikoki berrabiarazi"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:589
@@ -119,11 +119,11 @@ msgstr "A_tzeratu"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr ""
+msgstr "Be_rrabiarazi"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr ""
+msgstr "Geldiune hau amaitu da:"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
