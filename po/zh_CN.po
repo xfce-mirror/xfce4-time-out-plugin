@@ -1,15 +1,16 @@
 # Chinese translations for xfce4-time-out-plugin package.
 # Copyright (C) 2009 THE xfce4-time-out-plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-time-out-plugin package.
+# This file is distributed under the same license as 
+# the xfce4-time-out-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2009, 2010.
-#
+# Chipong Luo <chipong_l@yahoo.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 00:01+0900\n"
+"POT-Creation-Date: 2011-10-09 04:09+0000\n"
 "PO-Revision-Date: 2010-11-27 20:50+0800\n"
-"Last-Translator: Hunt Xu <huntxu@live.cn>\n"
+"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -35,11 +36,13 @@ msgstr "启动"
 #: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "用以提醒您注意休息，避免长时间使用电脑工作的 Xfce 面板插件"
+msgstr "偶尔提醒您离开计算机工作休息一下的 Xfce 面板插件。"
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr "Hunt Xu <huntxu@live.cn>, 2010"
+msgstr ""
+"Hunt Xu <huntxu@live.cn>, 2009, 2010.\n"
+"Chipong Luo <chipong_l@yahoo.com>, 2011."
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -64,17 +67,17 @@ msgstr "秒"
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:504
 msgid "Time between breaks:"
-msgstr "每次休息的时间间隔:"
+msgstr "两次休息间的时间间隔："
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:528
 msgid "Break length:"
-msgstr "休息时间:"
+msgstr "休息时间："
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:546
 msgid "Postpone length:"
-msgstr "延迟时间:"
+msgstr "延迟时间："
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:564
@@ -119,11 +122,11 @@ msgstr "延迟(_P)"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr "恢复i(_R)"
+msgstr "恢复(_R)"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr "休息时间到。"
+msgstr "休息时间结束。"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
@@ -173,7 +176,7 @@ msgstr[0] "%d 秒"
 #: ../panel-plugin/time-out-countdown.c:543
 #, c-format
 msgid "Time left: %s"
-msgstr "剩余时间: %s"
+msgstr "剩余时间：%s"
 
 #. Translators: this is %s minutes, %s seconds
 #. Translators: this is %s hours %s seconds
@@ -187,14 +190,14 @@ msgstr "剩余时间: %s"
 #: ../panel-plugin/time-out-countdown.c:527
 #, c-format
 msgid "Time left: %s %s"
-msgstr "剩余时间: %s %s"
+msgstr "剩余时间：%s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
 #, c-format
 msgid "Time left: %s %s %s"
-msgstr "剩余时间: %s %s %s"
+msgstr "剩余时间：%s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "自动控制超时与休息"
+msgstr "自动控制的超时与休息"
