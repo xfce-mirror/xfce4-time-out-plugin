@@ -35,7 +35,7 @@ msgstr "Habilitado"
 #: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Plugin do Xfce Panel para fazer uma pausa do computador do trabalho de vez em quando."
+msgstr "Plugin do Painel do Xfce para fazer uma pausa do computador do trabalho de vez em quando."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
@@ -200,7 +200,7 @@ msgstr "Tempo restante: %s, %s e %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "Controlar automaticamente as interrupções e intervalos"
+msgstr "Controlar automaticamente as interrupções e pausas"
 
 #~ msgid "Time left: 1 second"
 #~ msgstr "Tempo estimado: 1 segundo"
