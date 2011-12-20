@@ -20,7 +20,7 @@ msgstr ""
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:265
 msgid "Take a break"
-msgstr "Pausar"
+msgstr "Dê uma Pausa"
 
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:273
@@ -64,12 +64,12 @@ msgstr "Segundos"
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:504
 msgid "Time between breaks:"
-msgstr "Tempo entre os intervalos:"
+msgstr "Tempo entre as pausas:"
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:528
 msgid "Break length:"
-msgstr "Duração do intervalo:"
+msgstr "Duração da pausa:"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:546
@@ -84,7 +84,7 @@ msgstr "Comportamento"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:575
 msgid "Allow postpone"
-msgstr "Habilitar adiamento"
+msgstr "Permitir adiamento"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:582
