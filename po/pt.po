@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-12-12 11:13+0000\n"
-"PO-Revision-Date: 2010-12-12 14:34-0000\n"
+"PO-Revision-Date: 2012-01-09 16:05-0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Repor temporizador"
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
 msgid "Enabled"
-msgstr "Activo"
+msgstr "Ativo"
 
 #: ../panel-plugin/time-out.c:422
 msgid "Xfce Panel plugin for taking a break from computer work every now and then."
@@ -84,7 +84,7 @@ msgstr "Comportamento"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:575
 msgid "Allow postpone"
-msgstr "Permitir o  adiamento"
+msgstr "Permitir adiamento"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:582
@@ -123,7 +123,7 @@ msgstr "_Retomar"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr "Esta pausa terminou"
+msgstr "Esta pausa terminou."
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
