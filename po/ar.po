@@ -10,12 +10,11 @@ msgstr ""
 "PO-Revision-Date: 2012-02-04 19:21+0000\n"
 "Last-Translator: كريم اولاد الشلحة <herr.linux88@gmail.com>\n"
 "Language-Team: Arabic Xfce Translation Team\n"
-"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Virtaal 0.7.0\n"
 
 #. Create menu item for taking an instant break
@@ -36,7 +35,7 @@ msgstr "مُمكّن"
 #: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgstr "ملحق شريط إكسفسي لاخذ إستراحة من العمل في الحاسوب من حين لأخر."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
