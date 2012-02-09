@@ -3,15 +3,15 @@
 # This file is distributed under the same license as
 # the xfce4-time-out-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2009, 2010.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-09 04:09+0000\n"
+"POT-Creation-Date: 2012-02-09 00:54+0000\n"
 "PO-Revision-Date: 2010-11-27 20:50+0800\n"
-"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -31,18 +31,20 @@ msgstr "重置定时器"
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:281
 msgid "Enabled"
-msgstr "启动"
+msgstr "已启用"
 
 #: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "偶尔提醒您离开计算机工作休息一下的 Xfce 面板插件。"
+msgstr ""
+"偶尔提醒您离开计算机工作休息一下的 Xfce "
+"面板插件。"
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
 msgstr ""
 "Hunt Xu <huntxu@live.cn>, 2009, 2010.\n"
-"Chipong Luo <chipong_l@yahoo.com>, 2011."
+"Chipong Luo <chipong.luo@yahoo.com>, 2011."
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
@@ -67,7 +69,7 @@ msgstr "秒"
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:504
 msgid "Time between breaks:"
-msgstr "两次休息间的时间间隔："
+msgstr "两次休息间的时间："
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:528
