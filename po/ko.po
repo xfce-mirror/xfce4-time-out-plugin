@@ -1,21 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
+# Korean translation for xfce4-time-out-plugin.master
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the xfce4-time-out-plugin.master package.
+# Seong-ho, Cho <darkcircle.0426@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4.time-out-plugin.master\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "POT-Creation-Date: 2011-11-15 12:08+0000\n"
-"PO-Revision-Date: 2011-11-16 01:42+0900\n"
+"PO-Revision-Date: 2012-02-21 14:44+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1;plural=0;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Language: Korean\n"
 "X-Poedit-Country: KOREA, REPUBLIC OF\n"
 
@@ -36,7 +36,7 @@ msgstr "활성화"
 
 #: ../panel-plugin/time-out.c:422
 msgid "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "언제나 컴퓨터 작업의 휴식을 위한 Xfce 패널 플러그인"
+msgstr "언제나 컴퓨터 작업의 휴식을 위한 Xfce 패널 플러그인 입니다."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
@@ -95,7 +95,7 @@ msgstr "자동으로 재개"
 #. Create appearance section
 #: ../panel-plugin/time-out.c:589
 msgid "Appearance"
-msgstr "외형"
+msgstr "모양새"
 
 #. Create display time check button
 #: ../panel-plugin/time-out.c:600
@@ -198,5 +198,5 @@ msgstr "남은 시간: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "휴식과 시간 초과가 자동으로 관리됩니다"
+msgstr "휴식과 시간초과 사항이 자동으로 관리됩니다"
 
