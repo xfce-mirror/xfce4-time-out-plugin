@@ -1,5 +1,5 @@
 # Korean translation for xfce4-time-out-plugin.master
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2007-2012 Jannis Pohlmann et al.
 # This file is distributed under the same license as the xfce4-time-out-plugin.master package.
 # Seong-ho, Cho <darkcircle.0426@gmail.com>
 #
@@ -40,7 +40,7 @@ msgstr "언제나 컴퓨터 작업의 휴식을 위한 Xfce 패널 플러그인 
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
-msgstr "Seong-ho, Cho <darkcircle.0426@gmail.com>"
+msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:463
