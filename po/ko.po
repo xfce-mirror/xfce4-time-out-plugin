@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4.time-out-plugin.master\n"
-"Report-Msgid-Bugs-To: xfce4-users-kr-i18n <xfce4-users-kr-i18n@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: xfce-i18n <xfce-i18n@xfce.org>\n"
 "POT-Creation-Date: 2011-11-15 12:08+0000\n"
 "PO-Revision-Date: 2012-02-21 14:44+0900\n"
 "Last-Translator: Seong-ho, Cho <darkcircle.0426@gmail.com>\n"
