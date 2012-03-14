@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-09 00:54+0000\n"
+"POT-Creation-Date: 2012-03-14 12:12+0000\n"
 "PO-Revision-Date: 2010-11-27 20:50+0800\n"
 "Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:265
@@ -36,9 +37,7 @@ msgstr "已启用"
 #: ../panel-plugin/time-out.c:422
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
-"偶尔提醒您离开计算机工作休息一下的 Xfce "
-"面板插件。"
+msgstr "偶尔提醒您离开计算机工作休息一下的 Xfce 面板插件。"
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
