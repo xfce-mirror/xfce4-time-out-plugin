@@ -121,12 +121,12 @@ msgstr "초 표시"
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
-msgstr "연기 (_P)"
+msgstr "연기(_P)"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr "재개 (_R)"
+msgstr "재개(_R)"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
