@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-08 10:17+0000\n"
+"POT-Creation-Date: 2012-03-29 23:24+0000\n"
 "PO-Revision-Date: 2010-01-04 18:55+0300\n"
 "Last-Translator: dima <info@cnc-parts.info>\n"
 "Language-Team: xfce _ru_ <arch@cnc-parts.info>\n"
@@ -34,8 +34,10 @@ msgid "Enabled"
 msgstr "Включен"
 
 #: ../panel-plugin/time-out.c:422
-msgid "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Позволяет делать перерывы в работе через определенные промежутки времени."
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr ""
+"Позволяет делать перерывы в работе через определенные промежутки времени."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
@@ -142,7 +144,7 @@ msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d час"
@@ -153,14 +155,14 @@ msgstr[1] "%d ч."
 #: ../panel-plugin/time-out-countdown.c:485
 #: ../panel-plugin/time-out-countdown.c:503
 #: ../panel-plugin/time-out-countdown.c:542
-#, fuzzy, c-format
+#, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d мин."
 msgstr[1] "%d мин."
 
 #: ../panel-plugin/time-out-countdown.c:426
-#, fuzzy, c-format
+#, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d с."
@@ -176,9 +178,9 @@ msgstr[1] "%d с."
 #: ../panel-plugin/time-out-countdown.c:524
 #: ../panel-plugin/time-out-countdown.c:538
 #: ../panel-plugin/time-out-countdown.c:543
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s"
-msgstr "Осталось времени: %s"
+msgstr "Осталось: %s"
 
 #. Translators: this is %s minutes, %s seconds
 #. Translators: this is %s hours %s seconds
@@ -190,15 +192,15 @@ msgstr "Осталось времени: %s"
 #: ../panel-plugin/time-out-countdown.c:499
 #: ../panel-plugin/time-out-countdown.c:505
 #: ../panel-plugin/time-out-countdown.c:527
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s"
-msgstr "Осталось времени: %s %s"
+msgstr "Осталось: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s %s"
-msgstr "Осталось времени: %s %s %s"
+msgstr "Осталось: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
