@@ -204,5 +204,5 @@ msgstr "남은 시간: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
 msgid "Automatically controlled time outs and breaks"
-msgstr "휴식과 시간초과 사항이 자동으로 관리됩니다"
+msgstr "휴식과 시간초과 사항을 자동으로 관리합니다"
 
