@@ -1,13 +1,11 @@
-plugindir =								\
-	$(libexecdir)/xfce4/panel-plugins
+plugindir = $(libdir)/xfce4/panel/plugins
 
 #
 # xfce4-time-out-plugin 
 #
-plugin_PROGRAMS =							\
-	xfce4-time-out-plugin
+plugin_LTLIBRARIES = libtime-out.la
 
-xfce4_time_out_plugin_SOURCES =						\
+libtime_out_la_SOURCES =						\
 	time-out-countdown.h						\
 	time-out-countdown.c						\
 	time-out-lock-screen.h						\
@@ -17,7 +15,7 @@ xfce4_time_out_plugin_SOURCES =						\
 	time-out.h							\
 	time-out.c							
 
-xfce4_time_out_plugin_CFLAGS =						\
+libtime_out_la_CFLAGS =							\
 	-DDATADIR=\"$(datadir)\"					\
 	-I$(top_srcdir)							\
 	-I$(top_builddir)						\
@@ -28,36 +26,32 @@ xfce4_time_out_plugin_CFLAGS =						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
-xfce4_time_out_plugin_LDADD =						\
+libtime_out_la_LIBADD =							\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCE4UI_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
 
+libtime_out_la_LDFLAGS = \
+	-avoid-version \
+	-module \
+	-no-undefined \
+	-export-symbols-regex '^xfce_panel_module_(preinit|init|construct)' \
+	$(PLATFORM_LDFLAGS)
+
 #
 # Desktop file
 #
-desktopdir =								\
-	$(datadir)/xfce4/panel-plugins
+desktopdir = $(datadir)/xfce4/panel/plugins
 
-desktop_in_in_files =							\
-	xfce4-time-out-plugin.desktop.in.in
-
-desktop_in_files =							\
-	$(desktop_in_in_files:.desktop.in.in=.desktop.in)
-
-%.desktop.in: %.desktop.in.in
-	sed -e "s,\@libexecdir\@,$(libexecdir),g" < $< > $@
+desktop_in_files = xfce4-time-out-plugin.desktop.in
 
 desktop_DATA =								\
 	$(desktop_in_files:.desktop.in=.desktop)
 
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST =								\
-	$(desktop_in_in_files)
+EXTRA_DIST = $(desktop_in_files)
 
-CLEANFILES =								\
-	$(desktop_in_files)						\
-	$(desktop_DATA)
+CLEANFILES = $(desktop_DATA)
 
 # vi:set ts=8 sw=8 noet ai nocindent syntax=automake:

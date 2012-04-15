@@ -148,7 +148,7 @@ static void           time_out_lock_countdown_finish              (TimeOutCountd
 
 
 /* Register the plugin */
-XFCE_PANEL_PLUGIN_REGISTER_EXTERNAL (time_out_construct);
+XFCE_PANEL_PLUGIN_REGISTER (time_out_construct);
 
 
 
