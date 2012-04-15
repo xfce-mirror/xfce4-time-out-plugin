@@ -7,110 +7,110 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4 time out plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-31 05:13+0000\n"
+"POT-Creation-Date: 2012-04-15 22:57+0200\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <xfce-i18n@xfce.org>\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2;\n"
-"Language: he\n"
 "X-Poedit-Language: Hebrew\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:265
+#: ../panel-plugin/time-out.c:264
 msgid "Take a break"
 msgstr "נא לצאת להפסקה"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:273
+#: ../panel-plugin/time-out.c:272
 msgid "Reset timer"
 msgstr "איפוס שעון"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:281
+#: ../panel-plugin/time-out.c:280
 msgid "Enabled"
 msgstr "פעיל"
 
-#: ../panel-plugin/time-out.c:422
+#: ../panel-plugin/time-out.c:421
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "תוסף ללוח של Xfce ליציאה להפסקות מעבודה מול המחשב מדי פעם."
 
-#: ../panel-plugin/time-out.c:431
+#: ../panel-plugin/time-out.c:430
 msgid "translator-credits"
 msgstr ""
 "Hezy Amiel <open@hezyamiel.com>\n"
 "Yaron Shahrabani <sh.yaron@gmail.com>"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:463
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+#: ../panel-plugin/time-out.c:492
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "פסק זמן"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:480
+#: ../panel-plugin/time-out.c:509
 msgid "Time settings"
 msgstr "הגדרות זמן"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:493
+#: ../panel-plugin/time-out.c:522
 msgid "Minutes"
 msgstr "דקות"
 
-#: ../panel-plugin/time-out.c:498
+#: ../panel-plugin/time-out.c:527
 msgid "Seconds"
 msgstr "שניות"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:504
+#: ../panel-plugin/time-out.c:533
 msgid "Time between breaks:"
 msgstr "משך זמן בין הפסקות:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:528
+#: ../panel-plugin/time-out.c:557
 msgid "Break length:"
 msgstr "משך ההפסקה:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:546
+#: ../panel-plugin/time-out.c:575
 msgid "Postpone length:"
 msgstr "משך הדחייה:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:564
+#: ../panel-plugin/time-out.c:593
 msgid "Behaviour"
 msgstr "התנהגות"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:604
 msgid "Allow postpone"
 msgstr "אפשור דחייה"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:582
+#: ../panel-plugin/time-out.c:611
 msgid "Resume automatically"
 msgstr "המשך אוטומטי"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:589
+#: ../panel-plugin/time-out.c:618
 msgid "Appearance"
 msgstr "מראה"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:600
+#: ../panel-plugin/time-out.c:629
 msgid "Display remaining time in the panel"
 msgstr "הצגת הזמן הנותר על גבי הלוח"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:607
+#: ../panel-plugin/time-out.c:636
 msgid "Display hours"
 msgstr "הצגת שעות"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:614
+#: ../panel-plugin/time-out.c:643
 msgid "Display seconds"
 msgstr "הצגת שניות"
 
@@ -204,6 +204,6 @@ msgstr "הזמן שנותר: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "הזמן שנותר: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
 msgstr "שליטה אוטומטית על פרקי ה\"פסק זמן\" והפסקות"

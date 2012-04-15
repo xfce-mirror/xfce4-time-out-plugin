@@ -7,109 +7,112 @@ msgid ""
 msgstr ""
 "Project-Id-Version: el\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-06 05:13+0000\n"
+"POT-Creation-Date: 2012-04-15 22:57+0200\n"
 "PO-Revision-Date: 2011-01-07 18:36+0200\n"
 "Last-Translator: Spiros Georgaras <sng@hellug.gr>\n"
 "Language-Team: Greek <nls@tux.hellug.gr>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Greek\n"
 "X-Poedit-Country: GREECE\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:265
+#: ../panel-plugin/time-out.c:264
 msgid "Take a break"
 msgstr "Κάνε διάλειμμα"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:273
+#: ../panel-plugin/time-out.c:272
 msgid "Reset timer"
 msgstr "Επαναφορά χρονομέτρου"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:281
+#: ../panel-plugin/time-out.c:280
 msgid "Enabled"
 msgstr "Ενεργοποίηση"
 
-#: ../panel-plugin/time-out.c:422
-msgid "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Xfce Panel plugin για να κάνετε διάλειμμα από την εργασία στον υπολογιστή κάθε λίγο και λιγάκι."
+#: ../panel-plugin/time-out.c:421
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr ""
+"Xfce Panel plugin για να κάνετε διάλειμμα από την εργασία στον υπολογιστή "
+"κάθε λίγο και λιγάκι."
 
-#: ../panel-plugin/time-out.c:431
+#: ../panel-plugin/time-out.c:430
 msgid "translator-credits"
 msgstr "George Vasilakos <forfolias@gmail.com>"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:463
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+#: ../panel-plugin/time-out.c:492
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Χρονική ανάπαυλα"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:480
+#: ../panel-plugin/time-out.c:509
 msgid "Time settings"
 msgstr "Ρυθμίσεις ώρας"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:493
+#: ../panel-plugin/time-out.c:522
 msgid "Minutes"
 msgstr "Λεπτά "
 
-#: ../panel-plugin/time-out.c:498
+#: ../panel-plugin/time-out.c:527
 msgid "Seconds"
 msgstr "Δευτερόλεπτα"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:504
+#: ../panel-plugin/time-out.c:533
 msgid "Time between breaks:"
 msgstr "Χρόνος μεταξύ των διαλειμμάτων:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:528
+#: ../panel-plugin/time-out.c:557
 msgid "Break length:"
 msgstr "Διάρκεια διαλείμματος:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:546
+#: ../panel-plugin/time-out.c:575
 msgid "Postpone length:"
 msgstr "Διάρκεια αναβολής:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:564
+#: ../panel-plugin/time-out.c:593
 msgid "Behaviour"
 msgstr "Συμπεριφορά"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:604
 msgid "Allow postpone"
 msgstr "Να επιτρέπονται οι αναβολές"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:582
+#: ../panel-plugin/time-out.c:611
 msgid "Resume automatically"
 msgstr "Αυτόματη συνέχεια"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:589
+#: ../panel-plugin/time-out.c:618
 msgid "Appearance"
 msgstr "Εμφάνιση"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:600
+#: ../panel-plugin/time-out.c:629
 msgid "Display remaining time in the panel"
 msgstr "Εμφάνιση χρόνου που απομένει στο ταμπλό"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:607
+#: ../panel-plugin/time-out.c:636
 msgid "Display hours"
 msgstr "Να εμφανίζονται οι ώρες"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:614
+#: ../panel-plugin/time-out.c:643
 msgid "Display seconds"
 msgstr "Να εμφανίζονται τα δευτερόλεπτα"
 
@@ -200,7 +203,6 @@ msgstr "Χρόνος που απομένει: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "Χρόνος που απομένει: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
 msgstr "Αυτόματα ελεγχόμενες χρονικές ανάπαυλες και διαλείμματα"
-

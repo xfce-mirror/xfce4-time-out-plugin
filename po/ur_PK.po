@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-12 00:01+0900\n"
+"POT-Creation-Date: 2012-04-15 22:57+0200\n"
 "PO-Revision-Date: 2009-05-14 03:23+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -21,98 +21,98 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:265
+#: ../panel-plugin/time-out.c:264
 msgid "Take a break"
 msgstr "وقفہ لیں"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:273
+#: ../panel-plugin/time-out.c:272
 msgid "Reset timer"
 msgstr ""
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:281
+#: ../panel-plugin/time-out.c:280
 msgid "Enabled"
 msgstr "فعال"
 
-#: ../panel-plugin/time-out.c:422
+#: ../panel-plugin/time-out.c:421
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
 
-#: ../panel-plugin/time-out.c:431
+#: ../panel-plugin/time-out.c:430
 msgid "translator-credits"
 msgstr ""
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:463
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+#: ../panel-plugin/time-out.c:492
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "وقت تمام"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:480
+#: ../panel-plugin/time-out.c:509
 msgid "Time settings"
 msgstr "وقت ترتیبات"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:493
+#: ../panel-plugin/time-out.c:522
 #, fuzzy
 msgid "Minutes"
 msgstr "ﻢﻧٹ"
 
-#: ../panel-plugin/time-out.c:498
+#: ../panel-plugin/time-out.c:527
 #, fuzzy
 msgid "Seconds"
 msgstr "ﺱیکﻥڈ"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:504
+#: ../panel-plugin/time-out.c:533
 msgid "Time between breaks:"
 msgstr "وقفوں کا درمیانی وقت:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:528
+#: ../panel-plugin/time-out.c:557
 msgid "Break length:"
 msgstr "وقفہ طول:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:546
+#: ../panel-plugin/time-out.c:575
 msgid "Postpone length:"
 msgstr "مؤخر طول:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:564
+#: ../panel-plugin/time-out.c:593
 msgid "Behaviour"
 msgstr "سلوک"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:604
 msgid "Allow postpone"
 msgstr "مؤخر کی اجازت"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:582
+#: ../panel-plugin/time-out.c:611
 msgid "Resume automatically"
 msgstr ""
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:589
+#: ../panel-plugin/time-out.c:618
 msgid "Appearance"
 msgstr "مظہر"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:600
+#: ../panel-plugin/time-out.c:629
 msgid "Display remaining time in the panel"
 msgstr "باقی وقت پینل میں ظاہر کریں"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:607
+#: ../panel-plugin/time-out.c:636
 msgid "Display hours"
 msgstr "گھنٹے ظاہر کریں"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:614
+#: ../panel-plugin/time-out.c:643
 msgid "Display seconds"
 msgstr "سیکنڈ ظاہر کریں"
 
@@ -203,6 +203,6 @@ msgstr "بقیہ وقت: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "بقیہ وقت: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
 msgstr "وقت تمام اور وقفے خودکار کنٹرول شدہ"

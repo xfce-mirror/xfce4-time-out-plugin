@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-16 00:44+0900\n"
+"POT-Creation-Date: 2012-04-15 22:57+0200\n"
 "PO-Revision-Date: 2011-01-16 00:44+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
@@ -18,98 +18,98 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:265
+#: ../panel-plugin/time-out.c:264
 msgid "Take a break"
 msgstr "ひと休みする"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:273
+#: ../panel-plugin/time-out.c:272
 msgid "Reset timer"
 msgstr "タイマのリセット"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:281
+#: ../panel-plugin/time-out.c:280
 msgid "Enabled"
 msgstr "有効"
 
-#: ../panel-plugin/time-out.c:422
+#: ../panel-plugin/time-out.c:421
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "コンピュータ作業中に時々ひと休みしてもらう Xfce パネルプラグインです。"
 
-#: ../panel-plugin/time-out.c:431
+#: ../panel-plugin/time-out.c:430
 msgid "translator-credits"
 msgstr ""
 "Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\n"
 "Masato Hashimoto <hashimo@xfce.org>"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:463
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:2
+#: ../panel-plugin/time-out.c:492
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "ひと休み"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:480
+#: ../panel-plugin/time-out.c:509
 msgid "Time settings"
 msgstr "時間設定"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:493
+#: ../panel-plugin/time-out.c:522
 msgid "Minutes"
 msgstr "分"
 
-#: ../panel-plugin/time-out.c:498
+#: ../panel-plugin/time-out.c:527
 msgid "Seconds"
 msgstr "秒"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:504
+#: ../panel-plugin/time-out.c:533
 msgid "Time between breaks:"
 msgstr "休憩までの時間:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:528
+#: ../panel-plugin/time-out.c:557
 msgid "Break length:"
 msgstr "休憩時間:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:546
+#: ../panel-plugin/time-out.c:575
 msgid "Postpone length:"
 msgstr "先延ばし時間:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:564
+#: ../panel-plugin/time-out.c:593
 msgid "Behaviour"
 msgstr "振る舞い"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:604
 msgid "Allow postpone"
 msgstr "休憩の先延ばしを許可する"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:582
+#: ../panel-plugin/time-out.c:611
 msgid "Resume automatically"
 msgstr "自動的に休憩を終わる"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:589
+#: ../panel-plugin/time-out.c:618
 msgid "Appearance"
 msgstr "外観"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:600
+#: ../panel-plugin/time-out.c:629
 msgid "Display remaining time in the panel"
 msgstr "パネルに残り時間を表示する"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:607
+#: ../panel-plugin/time-out.c:636
 msgid "Display hours"
 msgstr "時間を表示する"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:614
+#: ../panel-plugin/time-out.c:643
 msgid "Display seconds"
 msgstr "分を表示する"
 
@@ -197,6 +197,6 @@ msgstr "残り時間: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "残り時間: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
 msgstr "休憩と休憩時間を管理します"
