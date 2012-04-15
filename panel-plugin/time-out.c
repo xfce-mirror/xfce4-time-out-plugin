@@ -25,9 +25,8 @@
 
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
-#include <libxfcegui4/libxfcegui4.h>
+#include <libxfce4ui/libxfce4ui.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
-#include <libxfce4panel/xfce-hvbox.h>
 
 #include "time-out.h"
 #include "time-out-countdown.h"
@@ -434,6 +433,36 @@ time_out_about (XfcePanelPlugin *plugin)
                          NULL);
 }
 
+GtkWidget *
+_xfce_create_framebox(const gchar *title, GtkWidget **frame_bin)
+{
+  GtkWidget *framebox;
+
+  g_return_val_if_fail(frame_bin, NULL);
+
+  framebox = gtk_frame_new(NULL);
+  gtk_frame_set_shadow_type(GTK_FRAME(framebox), GTK_SHADOW_NONE);
+  gtk_frame_set_label_align(GTK_FRAME(framebox), 0.0, 1.0);
+  gtk_widget_show(framebox);
+
+  if(title) {
+    gchar *tmp = g_strdup_printf("<b>%s</b>", title);
+    GtkWidget *label = gtk_label_new(tmp);
+    gtk_label_set_use_markup(GTK_LABEL(label), TRUE);
+    gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.5);
+    gtk_widget_show(label);
+    gtk_frame_set_label_widget(GTK_FRAME(framebox), label);
+    g_free(tmp);
+  }
+
+  *frame_bin = gtk_alignment_new(0.0, 0.0, 1.0, 1.0);
+  gtk_alignment_set_padding(GTK_ALIGNMENT(*frame_bin), 5, 5, 21, 5);
+  gtk_widget_show(*frame_bin);
+  gtk_container_add(GTK_CONTAINER(framebox), *frame_bin);
+
+  return framebox;
+}
+
 static void
 time_out_configure (XfcePanelPlugin *plugin,
                     TimeOutPlugin   *time_out)
@@ -477,7 +506,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_window_set_position (GTK_WINDOW (dialog), GTK_WIN_POS_CENTER);
 
   /* Create time settings section */
-  framebox = xfce_create_framebox (_("Time settings"), &timebin);
+  framebox = _xfce_create_framebox (_("Time settings"), &timebin);
   gtk_container_set_border_width (GTK_CONTAINER (framebox), 6);
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
@@ -561,7 +590,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_widget_show (spin);
 
   /* Create behaviour section */
-  framebox = xfce_create_framebox (_("Behaviour"), &behaviourbin);
+  framebox = _xfce_create_framebox (_("Behaviour"), &behaviourbin);
   gtk_container_set_border_width (GTK_CONTAINER (framebox), 6);
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
@@ -586,7 +615,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_widget_show (checkbutton);
 
   /* Create appearance section */
-  framebox = xfce_create_framebox (_("Appearance"), &appearancebin);
+  framebox = _xfce_create_framebox (_("Appearance"), &appearancebin);
   gtk_container_set_border_width (GTK_CONTAINER (framebox), 6);
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);

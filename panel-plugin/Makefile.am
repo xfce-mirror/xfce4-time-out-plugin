@@ -24,13 +24,13 @@ xfce4_time_out_plugin_CFLAGS =						\
 	-DG_LOG_DOMAIN=\"xfce4-time-out-plugin\"			\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(LIBXFCE4UTIL_CFLAGS)						\
-	$(LIBXFCEGUI4_CFLAGS)						\
+	$(LIBXFCE4UI_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
 xfce4_time_out_plugin_LDADD =						\
 	$(LIBXFCE4UTIL_LIBS)						\
-	$(LIBXFCEGUI4_LIBS)						\
+	$(LIBXFCE4UI_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
 
 #

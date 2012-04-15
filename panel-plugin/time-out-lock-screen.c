@@ -23,7 +23,7 @@
 #include <config.h>
 #endif
 
-#include <libxfcegui4/libxfcegui4.h>
+#include <libxfce4ui/libxfce4ui.h>
 
 #include "time-out-lock-screen.h"
 #include "time-out-countdown.h"
@@ -256,7 +256,6 @@ void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
   GdkScreen *screen;
-  gint       monitor;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
@@ -271,11 +270,8 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
   /* Push out changes */
   gdk_flush ();
 
-  /* Determine screen on which the pointer currently is */
-  screen = xfce_gdk_display_locate_monitor_with_pointer (NULL, &monitor);
-
   /* Center window on target monitor */
-  xfce_gtk_window_center_on_monitor (GTK_WINDOW (lock_screen->window), screen, monitor);
+  xfce_gtk_window_center_on_active_screen (GTK_WINDOW (lock_screen->window));
 
   lock_screen->max_seconds = max_sec;
 
