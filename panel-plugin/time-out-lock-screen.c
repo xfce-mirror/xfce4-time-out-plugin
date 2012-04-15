@@ -323,9 +323,11 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
   /* Update widgets */
   gtk_label_set_markup (GTK_LABEL (lock_screen->time_label), time_string->str);
 
-  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (lock_screen->progress),
+  if ((0 < lock_screen->max_seconds) && (0 <= seconds) && (seconds <= lock_screen->max_seconds))
+  {
+    gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (lock_screen->progress),
                                  ((gdouble)seconds) / ((gdouble)lock_screen->max_seconds));
-
+  }
   /* Free time string */
   g_string_free (time_string, TRUE);
 }
