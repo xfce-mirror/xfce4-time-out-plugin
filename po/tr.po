@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4 timeout plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 13:30+0000\n"
+"POT-Creation-Date: 2012-04-15 19:15+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Samed Beyribey <ras0ir@eventualis.org>\n"
 "Language-Team: Xfce-TR <xfce-tr@googlegroups.com>\n"
@@ -29,9 +29,10 @@ msgid "Enabled"
 msgstr "Etkin"
 
 #: ../panel-plugin/time-out.c:422
+#, fuzzy
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgstr "Arada sırada bilgisayar çalışmasına ara vermek için kullanılan Xfce Panel eklentisi."
 
 #: ../panel-plugin/time-out.c:431
 msgid "translator-credits"
