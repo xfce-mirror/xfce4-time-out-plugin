@@ -558,17 +558,20 @@ time_out_countdown_update (TimeOutCountdown *countdown)
 {
   g_return_val_if_fail (IS_TIME_OUT_COUNTDOWN (countdown), FALSE);
 
-  /* Emit a regular 'update' signal */
-  g_signal_emit_by_name (countdown, "update", time_out_countdown_get_remaining (countdown));
-
-  /* If the countdown has passed the requested seconds, emit a 'finish' signal */
-  if (time_out_countdown_get_running (countdown) && time_out_countdown_get_remaining (countdown) <= 0)
+  if (time_out_countdown_get_running (countdown))
     {
-      /* Set state to stopped */
-      time_out_countdown_stop (countdown);
+      /* Emit a regular 'update' signal */
+      g_signal_emit_by_name (countdown, "update", time_out_countdown_get_remaining (countdown));
 
-      /* Emit signal */
-      g_signal_emit_by_name (countdown, "finish");
+      /* If the countdown has passed the requested seconds, emit a 'finish' signal */
+      if (time_out_countdown_get_remaining (countdown) <= 0)
+        {
+          /* Set state to stopped */
+          time_out_countdown_stop (countdown);
+
+          /* Emit signal */
+          g_signal_emit_by_name (countdown, "finish");
+        }
     }
 
   return TRUE;
