@@ -1,3 +1,12 @@
+1.0.1 (17/04/2012)
+=====
+- Port to libxfce4ui
+- Build the plugin as a module
+- Fix double-free when seconds are not displayed (bug #7538)
+- Port to GtkTooltip and fix bug #6157
+- Emit the 'update' signal only if the countdown is running
+- Only call gtk_progress_set_percentage() with valid value (bug #7660)
+
 1.0.0
 =====
 - Translated into a total of 31 languages, with 15 at 100%
