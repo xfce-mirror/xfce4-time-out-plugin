@@ -77,7 +77,6 @@ struct _TimeOutPlugin
   GtkWidget         *hvbox;
   GtkWidget         *time_label;
   GtkWidget         *panel_icon;
-  GtkTooltips       *tooltips;
 };
 
 
@@ -210,9 +209,6 @@ time_out_new (XfcePanelPlugin *plugin)
   gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->time_label, TRUE, TRUE, 0);
   gtk_widget_show (time_out->time_label);
 
-  /* Create tooltips group */
-  time_out->tooltips = gtk_tooltips_new ();
-
   return time_out;
 }
 
@@ -340,6 +336,8 @@ time_out_enabled_toggled (GtkCheckMenuItem *menu_item,
     }
   else
     {
+      /* Update tooltips */
+      gtk_widget_set_tooltip_text(time_out->ebox, _("Paused"));
       /* Pause break countdown */
       time_out_countdown_pause (time_out->break_countdown);
     }
@@ -1048,7 +1046,8 @@ time_out_break_countdown_update (TimeOutCountdown *countdown,
   gtk_label_set_text (GTK_LABEL (time_out->time_label), short_time_string->str);
 
   /* Update tooltips */
-  gtk_tooltips_set_tip (GTK_TOOLTIPS (time_out->tooltips), time_out->ebox, long_time_string->str, long_time_string->str);
+  if (time_out_countdown_get_running (countdown) && time_out->enabled)
+    gtk_widget_set_tooltip_text (time_out->ebox, long_time_string->str);
 
   /* Free time strings */
   g_string_free (short_time_string, TRUE);
@@ -1074,8 +1073,15 @@ time_out_lock_countdown_update (TimeOutCountdown *countdown,
                                 gint              seconds_remaining,
                                 TimeOutPlugin    *time_out)
 {
+  GString *long_time_string;
   g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
+
+
+  /* Update tooltips */
+  long_time_string = time_out_countdown_seconds_to_string (seconds_remaining, TRUE, TRUE, FALSE);
+  if (time_out_countdown_get_running (countdown))
+    gtk_widget_set_tooltip_text (time_out->ebox, long_time_string->str);
 
   /* Update lock screen */
   time_out_lock_screen_set_display_seconds (time_out->lock_screen, time_out->display_seconds);
