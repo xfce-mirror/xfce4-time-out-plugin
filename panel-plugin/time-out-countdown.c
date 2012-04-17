@@ -472,28 +472,18 @@ time_out_countdown_seconds_to_string (gint     seconds,
             {
               if (hours <= 0)
                 {
-                  if (minutes < 1)
-                    {
-                      /* Do not show 0 minutes */
-                      minutes = 1;
-                    }
                   if (seconds == 0)
                     g_string_printf (str, _("Time left: %s"), mins);
                   else
                     {
                       /* Round up the number of minutes */
                       g_free (mins);
-                      mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes + 1);
+                      mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes + 1), minutes + 1);
                       g_string_printf (str, _("Time left: %s"), mins);
                     }
                 }
               else 
                 {
-                  if (minutes < 1)
-                    {
-                    /* Do not show 0 minutes */
-                    minutes = 1;
-                    }
                   if (seconds == 0)
                     /* Translators: this is %s hours, %s minutes */
                     g_string_printf (str, _("Time left: %s %s"), hrs, mins);
@@ -501,7 +491,7 @@ time_out_countdown_seconds_to_string (gint     seconds,
                     {
                       /* Round up the number of minutes */
                       g_free (mins);
-                      mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes + 1);
+                      mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes + 1), minutes + 1);
                       /* Translators: this is %s hours, %s minutes */
                       g_string_printf (str, _("Time left: %s %s"), hrs, mins);
                     }
@@ -529,18 +519,13 @@ time_out_countdown_seconds_to_string (gint     seconds,
             }
           else
             {
-              if (minutes < 1) 
-                {
-                  /* Do not show 0 minutes */
-                  minutes = 1; 
-                }
               if (seconds == 0)
                 g_string_printf (str, _("Time left: %s"), mins);
               else
                 {
                   /* Round up the number of minutes */
                   g_free (mins);
-                  mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes), minutes + 1);
+                  mins = g_strdup_printf (ngettext ("%d minute", "%d minutes", minutes + 1), minutes + 1);
                   g_string_printf (str, _("Time left: %s"), mins);
                 }
             }
