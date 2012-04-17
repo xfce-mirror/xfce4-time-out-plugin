@@ -155,7 +155,6 @@ static TimeOutPlugin*
 time_out_new (XfcePanelPlugin *plugin)
 {
   TimeOutPlugin *time_out;
-  GtkWidget     *label;
   GtkOrientation orientation;
 
   /* Allocate memory for the plugin structure */
@@ -934,6 +933,7 @@ time_out_start_break_countdown (TimeOutPlugin *time_out,
                                 gint           seconds)
 {
   g_return_if_fail (time_out != NULL);
+  DBG("starting break countdown");
 
   if (G_UNLIKELY (!time_out->enabled))
     return;
@@ -951,6 +951,7 @@ static void
 time_out_start_lock_countdown (TimeOutPlugin *time_out)
 {
   g_return_if_fail (time_out != NULL);
+  DBG("starting lock countdown");
 
   /* Resume countdown if it was paused, otherwise start it */
   if (G_UNLIKELY (time_out_countdown_get_paused (time_out->lock_countdown)))
@@ -974,6 +975,7 @@ static void
 time_out_stop_break_countdown (TimeOutPlugin *time_out)
 {
   g_return_if_fail (time_out != NULL);
+  DBG("stopping break countdown");
 
   /* Stop the countdown */
   time_out_countdown_stop (time_out->break_countdown);
@@ -985,6 +987,7 @@ static void
 time_out_stop_lock_countdown (TimeOutPlugin *time_out)
 {
   g_return_if_fail (time_out != NULL);
+  DBG("stopping lock countdown");
 
   /* Stop the countdown */
   time_out_countdown_stop (time_out->lock_countdown);
