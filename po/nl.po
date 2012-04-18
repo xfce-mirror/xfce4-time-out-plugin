@@ -36,7 +36,7 @@ msgstr "Ingeschakeld"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:339
 msgid "Paused"
-msgstr "Puze"
+msgstr ""
 
 #: ../panel-plugin/time-out.c:418
 msgid ""
