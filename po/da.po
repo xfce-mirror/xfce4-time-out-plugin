@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-15 22:57+0200\n"
+"POT-Creation-Date: 2012-04-18 22:46+0200\n"
 "PO-Revision-Date: 2010-12-11 17:45+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -21,28 +21,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\\n\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:264
+#: ../panel-plugin/time-out.c:259
 msgid "Take a break"
 msgstr "Tag en pause"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:272
+#: ../panel-plugin/time-out.c:267
 msgid "Reset timer"
 msgstr "Nulstil tidstager"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:280
+#: ../panel-plugin/time-out.c:275
 msgid "Enabled"
 msgstr "Aktiveret"
 
-#: ../panel-plugin/time-out.c:421
+#. Update tooltips
+#: ../panel-plugin/time-out.c:339
+msgid "Paused"
+msgstr ""
+
+#: ../panel-plugin/time-out.c:418
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
 "En udvidelse til panelet Xfce som indfører en pause fra arbejde med "
 "computeren fra tid til anden."
 
-#: ../panel-plugin/time-out.c:430
+#: ../panel-plugin/time-out.c:427
 msgid "translator-credits"
 msgstr ""
 "Per Kongstad <p_kongstad@op.pl>\n"
@@ -54,72 +59,72 @@ msgstr ""
 "Mere info: http://www.dansk-gruppen.dk"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:492
+#: ../panel-plugin/time-out.c:489
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Timeout"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:509
+#: ../panel-plugin/time-out.c:506
 msgid "Time settings"
 msgstr "Tidsindstillinger"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:522
+#: ../panel-plugin/time-out.c:519
 msgid "Minutes"
 msgstr "Minutter"
 
-#: ../panel-plugin/time-out.c:527
+#: ../panel-plugin/time-out.c:524
 msgid "Seconds"
 msgstr "Sekunder"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:533
+#: ../panel-plugin/time-out.c:530
 msgid "Time between breaks:"
 msgstr "Tid mellem pauser:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:557
+#: ../panel-plugin/time-out.c:554
 msgid "Break length:"
 msgstr "Pauselængde:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:575
+#: ../panel-plugin/time-out.c:572
 msgid "Postpone length:"
 msgstr "Udsættelseslængde:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:593
+#: ../panel-plugin/time-out.c:590
 msgid "Behaviour"
 msgstr "Opførsel"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:604
+#: ../panel-plugin/time-out.c:601
 msgid "Allow postpone"
 msgstr "Tillad udsættelse"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:611
+#: ../panel-plugin/time-out.c:608
 msgid "Resume automatically"
 msgstr "Genoptag automatisk"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:618
+#: ../panel-plugin/time-out.c:615
 msgid "Appearance"
 msgstr "Udseende"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:629
+#: ../panel-plugin/time-out.c:626
 msgid "Display remaining time in the panel"
 msgstr "Vis tilbageværende tid i panelet"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:636
+#: ../panel-plugin/time-out.c:633
 msgid "Display hours"
 msgstr "Vis timer"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:643
+#: ../panel-plugin/time-out.c:640
 msgid "Display seconds"
 msgstr "Vis sekunder"
 
@@ -158,11 +163,10 @@ msgid_plural "%d hours"
 msgstr[0] "%d time"
 msgstr[1] "%d timer"
 
-#. Round up the number of minutes
 #: ../panel-plugin/time-out-countdown.c:425
-#: ../panel-plugin/time-out-countdown.c:485
-#: ../panel-plugin/time-out-countdown.c:503
-#: ../panel-plugin/time-out-countdown.c:542
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:494
+#: ../panel-plugin/time-out-countdown.c:528
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
@@ -180,12 +184,12 @@ msgstr[1] "%d sekunder"
 #: ../panel-plugin/time-out-countdown.c:437
 #: ../panel-plugin/time-out-countdown.c:442
 #: ../panel-plugin/time-out-countdown.c:453
-#: ../panel-plugin/time-out-countdown.c:481
-#: ../panel-plugin/time-out-countdown.c:486
-#: ../panel-plugin/time-out-countdown.c:519
-#: ../panel-plugin/time-out-countdown.c:524
-#: ../panel-plugin/time-out-countdown.c:538
-#: ../panel-plugin/time-out-countdown.c:543
+#: ../panel-plugin/time-out-countdown.c:476
+#: ../panel-plugin/time-out-countdown.c:482
+#: ../panel-plugin/time-out-countdown.c:509
+#: ../panel-plugin/time-out-countdown.c:514
+#: ../panel-plugin/time-out-countdown.c:523
+#: ../panel-plugin/time-out-countdown.c:529
 #, c-format
 msgid "Time left: %s"
 msgstr "Tid tilbage: %s"
@@ -197,9 +201,9 @@ msgstr "Tid tilbage: %s"
 #: ../panel-plugin/time-out-countdown.c:445
 #: ../panel-plugin/time-out-countdown.c:457
 #: ../panel-plugin/time-out-countdown.c:464
-#: ../panel-plugin/time-out-countdown.c:499
-#: ../panel-plugin/time-out-countdown.c:505
-#: ../panel-plugin/time-out-countdown.c:527
+#: ../panel-plugin/time-out-countdown.c:489
+#: ../panel-plugin/time-out-countdown.c:496
+#: ../panel-plugin/time-out-countdown.c:517
 #, c-format
 msgid "Time left: %s %s"
 msgstr "Tid tilbage: %s %s"
