@@ -1,14 +1,15 @@
 # xfce4-time-out-plugin.
-# Copyright (C) 2007 Jannis Pohlmann <jannis@xfce.org>
+# Copyright (C) 2007-2012 Jannis Pohlmann <jannis@xfce.org>
 # This file is distributed under the same license as the xfce4-time-out-plugin package.
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008.
+# Masato Hashimoto <cabezon.hashimoto@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: fce4-time-out-plugin 0.1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 22:46+0200\n"
-"PO-Revision-Date: 2011-01-16 00:44+0900\n"
+"POT-Creation-Date: 2012-04-19 19:46+0900\n"
+"PO-Revision-Date: 2012-04-17 21:21+0900\n"
 "Last-Translator: Masato Hashimoto <cabezon.hashimoto@gmail.com>\n"
 "Language-Team: Japanese <xfce-i18n@xfce.org>\n"
 "Language: ja\n"
@@ -16,6 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:206
+msgid "Inactive"
+msgstr "停止中"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:259
@@ -25,7 +31,7 @@ msgstr "ひと休みする"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:267
 msgid "Reset timer"
-msgstr "タイマのリセット"
+msgstr "タイマーのリセット"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:275
@@ -35,12 +41,13 @@ msgstr "有効"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:339
 msgid "Paused"
-msgstr ""
+msgstr "一時停止"
 
 #: ../panel-plugin/time-out.c:418
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "コンピュータ作業中に時々ひと休みしてもらう Xfce パネルプラグインです。"
+msgstr ""
+"コンピューター作業中に時々ひと休みしてもらう Xfce パネルプラグインです。"
 
 #: ../panel-plugin/time-out.c:427
 msgid "translator-credits"
