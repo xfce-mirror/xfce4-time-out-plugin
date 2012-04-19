@@ -1,19 +1,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Nuno Miguel &lt;nunis@netcabo.pt&gt;, 2008.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 22:46+0200\n"
+"POT-Creation-Date: 2012-04-19 15:15+0000\n"
 "PO-Revision-Date: 2012-01-09 16:05-0000\n"
 "Last-Translator: Sérgio Marques <smarquespt@gmail.com>\n"
 "Language-Team: \n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: Portugal\n"
@@ -36,7 +36,7 @@ msgstr "Ativo"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:339
 msgid "Paused"
-msgstr ""
+msgstr "Pausado"
 
 #: ../panel-plugin/time-out.c:418
 msgid ""
@@ -49,7 +49,7 @@ msgstr "Nuno Miguel<nunis@netcabo.pt>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:489
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Time Out"
 msgstr "Tempo esgotado"
 
@@ -203,6 +203,6 @@ msgstr "Tempo restante: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "Tempo restante: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Controlar automaticamente as interrupções e pausas"
