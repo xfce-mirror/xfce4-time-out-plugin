@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 22:46+0200\n"
-"PO-Revision-Date: 2009-02-11 21:46+0100\n"
-"Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
+"POT-Creation-Date: 2012-04-19 03:45+0000\n"
+"PO-Revision-Date: 2012-04-18 22:34-0600\n"
+"Last-Translator: Sergio <oigres200@gmail.com>\n"
 "Language-Team: Spanish\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -36,11 +36,10 @@ msgstr "Activado"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:339
 msgid "Paused"
-msgstr ""
+msgstr "Pausa"
 
 #: ../panel-plugin/time-out.c:418
-msgid ""
-"Xfce Panel plugin for taking a break from computer work every now and then."
+msgid "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Complemento del panel de Xfce para tomarse un descanso cuando desee."
 
 #: ../panel-plugin/time-out.c:427
@@ -49,7 +48,7 @@ msgstr "créditos-traductor"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:489
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Time Out"
 msgstr "Tiempo de salir"
 
@@ -203,7 +202,7 @@ msgstr "Tiempo restante: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "Tiempo restante: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Controlar automáticamente tiempo de salida y pausas"
 
