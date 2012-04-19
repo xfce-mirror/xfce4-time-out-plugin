@@ -4,19 +4,19 @@
 # the xfce4-time-out-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2009, 2010.
 # Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-19 09:30+0000\n"
+"POT-Creation-Date: 2012-04-17 11:30+0000\n"
 "PO-Revision-Date: 2010-11-27 20:50+0800\n"
 "Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Create menu item for taking an instant break
@@ -48,7 +48,7 @@ msgstr "偶尔提醒您离开计算机工作休息一下的 Xfce 面板插件。
 msgid "translator-credits"
 msgstr ""
 "Hunt Xu <huntxu@live.cn>, 2009, 2010.\n"
-"Chipong Luo <chipong.luo@yahoo.com>, 2011."
+"Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012."
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:489
