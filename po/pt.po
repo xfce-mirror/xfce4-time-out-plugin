@@ -41,11 +41,11 @@ msgstr "Pausado"
 #: ../panel-plugin/time-out.c:418
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "O \"plug-in\" do painel Xfce irá funcionar ocasionalmente."
+msgstr "O \"plugin\" do painel Xfce para fazer uma pausa do trabalho ao computador agora e depois."
 
 #: ../panel-plugin/time-out.c:427
 msgid "translator-credits"
-msgstr "Nuno Miguel<nunis@netcabo.pt>"
+msgstr "Nuno Miguel <nunomgue@gmail.com>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:489
