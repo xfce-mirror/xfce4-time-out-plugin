@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 20:51+0000\n"
+"POT-Creation-Date: 2012-04-19 15:15+0000\n"
 "PO-Revision-Date: 2011-06-15 11:34+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
@@ -36,7 +36,7 @@ msgstr "Ingeschakeld"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:339
 msgid "Paused"
-msgstr ""
+msgstr "Gepauzeerd"
 
 #: ../panel-plugin/time-out.c:418
 msgid ""
