@@ -2,14 +2,14 @@
 # Copyright (C) 2007 Jannis Pohlmann
 # Copyright (C) 2010 Florian Rivoal
 # This file is distributed under the same license as the xfce4-time-out-plugin package.
-# Copyright (C) 2010 Jari Rahkonen.
+# Copyright (C) 2012 Jari Rahkonen.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 22:46+0200\n"
-"PO-Revision-Date: 2010-12-11 21:01+0200\n"
+"POT-Creation-Date: 2012-04-27 08:39+0000\n"
+"PO-Revision-Date: 2012-04-27 15:59+0300\n"
 "Last-Translator: Jari Rahkonen <jari.rahkonen@pp1.inet.fi>\n"
 "Language-Team: Finnish <xfce-i18n@xfce.org>\n"
 "Language: fi\n"
@@ -36,7 +36,7 @@ msgstr "Käynnissä"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:339
 msgid "Paused"
-msgstr ""
+msgstr "Keskeytetty"
 
 #: ../panel-plugin/time-out.c:418
 msgid ""
@@ -49,7 +49,7 @@ msgstr "Jari Rahkonen <jari.rahkonen@pp1.inet.fi>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:489
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Time Out"
 msgstr "Tauko"
 
@@ -203,6 +203,6 @@ msgstr "Jäljellä: %s ja %s"
 msgid "Time left: %s %s %s"
 msgstr "Jäljellä: %s, %s ja %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "Näytön lukitus säännöllisten taukojen ajaksi"
