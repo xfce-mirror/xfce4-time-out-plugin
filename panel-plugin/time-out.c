@@ -189,6 +189,7 @@ time_out_new (XfcePanelPlugin *plugin)
 
   /* Create event box to catch user events */
   time_out->ebox = gtk_event_box_new ();
+  gtk_event_box_set_visible_window(GTK_EVENT_BOX(time_out->ebox), FALSE);
   gtk_widget_show (time_out->ebox);
 
   /* Create flexible box which can do both, horizontal and vertical layout */
