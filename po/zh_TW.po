@@ -6,112 +6,112 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce4-time-out-plugins.master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 22:46+0200\n"
+"POT-Creation-Date: 2012-08-09 14:57+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese-l10n <chinese-l10n@googlegroups.com>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:259
+#: ../panel-plugin/time-out.c:260
 msgid "Take a break"
 msgstr "休息一下"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:267
+#: ../panel-plugin/time-out.c:268
 msgid "Reset timer"
 msgstr "重設計時器"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:275
+#: ../panel-plugin/time-out.c:276
 msgid "Enabled"
 msgstr "啟用"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:339
+#: ../panel-plugin/time-out.c:340
 msgid "Paused"
-msgstr ""
+msgstr "暫停"
 
-#: ../panel-plugin/time-out.c:418
+#: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "偶爾停下電腦工作並休息片刻的 Xfce 面板插件。"
 
-#: ../panel-plugin/time-out.c:427
+#: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
 msgstr "Cheng-Chia Tseng <pswo10680@gmail.com>, 2010."
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:489
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/time-out.c:490
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Time Out"
 msgstr "逾時"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:506
+#: ../panel-plugin/time-out.c:507
 msgid "Time settings"
 msgstr "時間設定值"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:519
+#: ../panel-plugin/time-out.c:520
 msgid "Minutes"
 msgstr "分鐘"
 
-#: ../panel-plugin/time-out.c:524
+#: ../panel-plugin/time-out.c:525
 msgid "Seconds"
 msgstr "秒"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:530
+#: ../panel-plugin/time-out.c:531
 msgid "Time between breaks:"
 msgstr "多久休息一次："
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:554
+#: ../panel-plugin/time-out.c:555
 msgid "Break length:"
 msgstr "休息時間："
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:572
+#: ../panel-plugin/time-out.c:573
 msgid "Postpone length:"
 msgstr "延遲長度："
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:590
+#: ../panel-plugin/time-out.c:591
 msgid "Behaviour"
 msgstr "行為"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:601
+#: ../panel-plugin/time-out.c:602
 msgid "Allow postpone"
 msgstr "允許延遲"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:608
+#: ../panel-plugin/time-out.c:609
 msgid "Resume automatically"
 msgstr "自動繼續"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:615
+#: ../panel-plugin/time-out.c:616
 msgid "Appearance"
 msgstr "外觀"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:626
+#: ../panel-plugin/time-out.c:627
 msgid "Display remaining time in the panel"
 msgstr "於面板內顯示剩餘時間"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:633
+#: ../panel-plugin/time-out.c:634
 msgid "Display hours"
 msgstr "顯示小時數"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:640
+#: ../panel-plugin/time-out.c:641
 msgid "Display seconds"
 msgstr "顯示秒數"
 
@@ -198,6 +198,6 @@ msgstr "剩餘時間：%s %s"
 msgid "Time left: %s %s %s"
 msgstr "剩餘時間：%s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Automatically controlled time outs and breaks"
 msgstr "自動控制的倒數計時與休息"
