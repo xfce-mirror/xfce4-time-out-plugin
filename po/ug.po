@@ -39,7 +39,7 @@ msgstr "ۋاقىتلىق توختىدى"
 #: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgstr "كومپيۇتېر ئىشلەۋاتقاندا بەزىدە ئازراق ئارام ئالدۇرىدىغان Xfce كۆزنەك قىستۇرمىسىدۇر."
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
