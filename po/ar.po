@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# كريم أولاد الشلحة <herr.linux88@gmail.com>, 2012.
+# كريم اولاد الشلحة <herr.linux88@gmail.com>, 2012.
 # محمد الحرقان <malham1@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-18 18:06+0000\n"
-"PO-Revision-Date: 2012-11-18 23:24+0300\n"
+"POT-Creation-Date: 2012-11-19 01:12+0000\n"
+"PO-Revision-Date: 2012-11-19 05:33+0300\n"
 "Last-Translator: محمد الحرقان <malham1@gmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/factory/ar/list/\n"
 "Language: ar\n"
@@ -19,169 +19,203 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Virtaal 0.7.1\n"
 
-#: ../panel-plugin/embed.c:48
-msgid "Embed"
-msgstr "مضمّن"
+#. Create menu item for taking an instant break
+#: ../panel-plugin/time-out.c:260
+msgid "Take a break"
+msgstr "ا_سترِح"
 
-#. pop out menu item, not shown by default
-#: ../panel-plugin/embed.c:244
-msgid "Pop _Out"
-msgstr "قائمة منبثقة"
+#. Create menu item for resetting the timer
+#: ../panel-plugin/time-out.c:268
+msgid "Reset timer"
+msgstr "إعادة تعيين الوقت"
 
-#. embed menu item, shown by default.
-#: ../panel-plugin/embed.c:249
-msgid "_Embed"
-msgstr "_مضمّن"
+#. Create menu item for enabling/disabling the countdown
+#: ../panel-plugin/time-out.c:276
+msgid "Enabled"
+msgstr "مُمكّن"
 
-#. focus menu item, not shown by default
-#: ../panel-plugin/embed.c:255
-msgid "_Focus"
-msgstr "_التركيز"
+#. Update tooltips
+#: ../panel-plugin/time-out.c:340
+msgid "Paused"
+msgstr "موقف مؤقتا"
 
-#: ../panel-plugin/embed-dialogs.c:51
+#: ../panel-plugin/time-out.c:419
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "ملحق شريط إكسفسي لاخذ إستراحة من العمل على الحاسوب من حين لأخر."
+
+#: ../panel-plugin/time-out.c:428
+msgid "translator-credits"
+msgstr "Karim Oulad Chalha محمد الحرقان"
+
+#. Create properties dialog
+#: ../panel-plugin/time-out.c:490
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+msgid "Time Out"
+msgstr "انتهت المهلة"
+
+#. Create time settings section
+#: ../panel-plugin/time-out.c:507
+msgid "Time settings"
+msgstr "إعدادات الوقت"
+
+#. Create the labels for the minutes and seconds spins
+#: ../panel-plugin/time-out.c:520
+msgid "Minutes"
+msgstr "دقائق"
+
+#: ../panel-plugin/time-out.c:525
+msgid "Seconds"
+msgstr "ثوانٍ"
+
+#. Create break countdown time label
+#: ../panel-plugin/time-out.c:531
+msgid "Time between breaks:"
+msgstr "مدة بين الإستراحات:"
+
+#. Create lock countdown time label
+#: ../panel-plugin/time-out.c:555
+msgid "Break length:"
+msgstr "مدة الإستراحة:"
+
+#. Create postpone countdown time label
+#: ../panel-plugin/time-out.c:573
+msgid "Postpone length:"
+msgstr "مدة التأجيل:"
+
+#. Create behaviour section
+#: ../panel-plugin/time-out.c:591
+msgid "Behaviour"
+msgstr "السلوك"
+
+#. Create postpone check button
+#: ../panel-plugin/time-out.c:602
+msgid "Allow postpone"
+msgstr "سماح بالتأجيل"
+
+#. Create resume check button
+#: ../panel-plugin/time-out.c:609
+msgid "Resume automatically"
+msgstr "إستئناف تلقائي"
+
+#. Create appearance section
+#: ../panel-plugin/time-out.c:616
+msgid "Appearance"
+msgstr "مظهر"
+
+#. Create display time check button
+#: ../panel-plugin/time-out.c:627
+msgid "Display remaining time in the panel"
+msgstr "عرض الوقت المتبقي في الشريط"
+
+#. Create display hours check button
+#: ../panel-plugin/time-out.c:634
+msgid "Display hours"
+msgstr "عرض الساعات"
+
+#. Create display seconds check button
+#: ../panel-plugin/time-out.c:641
+msgid "Display seconds"
+msgstr "عرض الثواني"
+
+#. Create postpone button
+#: ../panel-plugin/time-out-lock-screen.c:219
+msgid "_Postpone"
+msgstr "_تأجيل"
+
+#. Create resume button
+#: ../panel-plugin/time-out-lock-screen.c:225
+msgid "_Resume"
+msgstr "_إستئناف"
+
+#: ../panel-plugin/time-out-countdown.c:377
+msgid "The break is over."
+msgstr "إنتهت الإستراحة."
+
+#. Hours:minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:399
 #, c-format
-msgid "Unable to open the following url: %s"
-msgstr "غير قادر على فتح المسار: %s"
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
 
-#: ../panel-plugin/embed-dialogs.c:100
-msgid "Input is valid"
-msgstr "إدخال سليم"
-
-#: ../panel-plugin/embed-dialogs.c:105
-msgid "Input is invalid"
-msgstr "إدخال غير سليم"
-
-#: ../panel-plugin/embed-dialogs.c:317 ../panel-plugin/embed.desktop.in.h:1
-msgid "Embed Plugin"
-msgstr "ملحق التضمّين"
-
-#: ../panel-plugin/embed-dialogs.c:326
-msgid "Application Launching"
-msgstr "غطلاق التطبيق"
-
-#: ../panel-plugin/embed-dialogs.c:328
+#. Hours:minutes
+#. Minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:404
+#: ../panel-plugin/time-out-countdown.c:412
 #, c-format
-msgid ""
-"If a window is not found (or there are no criteria), a command can\n"
-"optionally be launched. The command can either result in a window\n"
-"that matches the below criteria, or it can use the socket ID passed\n"
-"to it (%s) to embed itself automatically."
-msgstr ""
-"إذا لم يتم العثور على نافذة (أو لا توجد معايير)، يمكن إطلاق\n"
-"أمرا اختيارياً. الأمر يمكن أن يكون أما نافذة تطابق معايير\n"
-"الدنيا، أو تستخدم مأخذ المعرف الذي تم تمريره إلى (%s) لتضمن\n"
-"نفسها تلقائياً."
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
 
-#: ../panel-plugin/embed-dialogs.c:336
+#: ../panel-plugin/time-out-countdown.c:424
 #, c-format
-msgid ""
-"Leave blank to not launch anything\n"
-"%s expands to the socket ID"
-msgstr ""
-"أتركه خاليا لعدم إطلاق أي شيء\n"
-"%s توسيع إلى مقود المعرف"
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ساعة"
+msgstr[1] "%d ساعات"
+msgstr[2] "%d ساعات"
+msgstr[3] "%d ساعات"
+msgstr[4] "%d ساعات"
+msgstr[5] "%d ساعات"
 
-#: ../panel-plugin/embed-dialogs.c:339
-msgid "L_aunch command"
-msgstr "أطلق الامر"
-
-#. poll_delay
-#. No UI element. Generally polling is unnecessary, unless you have a very
-#. * strange window that you're trying to match that is not uniquely
-#. * identifiable when it is mapped.
-#: ../panel-plugin/embed-dialogs.c:348
-msgid "Selection Criteria"
-msgstr "حدد المعايير"
-
-#: ../panel-plugin/embed-dialogs.c:350
-msgid ""
-"The window to embed must match all of the non-blank criteria.\n"
-"Leave everything blank to rely on a launch command with socket ID."
-msgstr ""
-"يجب تضمين النافذة لتطابق جميع المعايير غير فارغة.\n"
-"ترك كل شيء فارغة يودي إلى الاعتماد على أمر إطلاق مُعرف المقبس."
-
-#: ../panel-plugin/embed-dialogs.c:354
-msgid "_Process name"
-msgstr "_إسم العملية"
-
-#: ../panel-plugin/embed-dialogs.c:355
-msgid ""
-"Match the window's application's process name\n"
-"Leave blank if it is not a criterion"
-msgstr ""
-"تطابق إسم النوافذ تطبيق الإجراء\n"
-"اتركه خاليا إذا لم يكن معيارا"
-
-#: ../panel-plugin/embed-dialogs.c:361
-msgid "_Window class"
-msgstr "_صنف النافذة"
-
-#: ../panel-plugin/embed-dialogs.c:362
-msgid ""
-"Match the window's class\n"
-"Leave blank if it is not a criterion"
-msgstr ""
-"تطابق صنف النوافذ\n"
-"اتركه خاليا إذا لم يكن معيارا"
-
-#: ../panel-plugin/embed-dialogs.c:368
-msgid "Window _title"
-msgstr "عن_وان النافذة"
-
-#: ../panel-plugin/embed-dialogs.c:369
-msgid ""
-"Match the window's title using a REGEX\n"
-"Leave blank if it is not a criterion"
-msgstr ""
-"تطابق عنوان النوافذ بإستعمال REGEX\n"
-"اتركه خاليا إذا لم يكن معيارا"
-
-#: ../panel-plugin/embed-dialogs.c:373
-msgid "Display"
-msgstr "عرض"
-
-#: ../panel-plugin/embed-dialogs.c:376
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:494
+#: ../panel-plugin/time-out-countdown.c:528
 #, c-format
-msgid ""
-"Leave blank to hide the label\n"
-"%s expands to the embedded window's title"
-msgstr ""
-"اتركه خاليا لإخفاء التسمية\n"
-"%s تتسع لعنوان النوافذ المضمنة"
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d دقيقة"
+msgstr[1] "%d دقائق"
+msgstr[2] "%d دقائق"
+msgstr[3] "%d دقائق"
+msgstr[4] "%d دقائق"
+msgstr[5] "%d دقائق"
 
-#: ../panel-plugin/embed-dialogs.c:379
-msgid "_Label format"
-msgstr "_صيغة التسمية"
+#: ../panel-plugin/time-out-countdown.c:426
+#, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d ثانية"
+msgstr[1] "%d ثوان"
+msgstr[2] "%d ثوان"
+msgstr[3] "%d ثوان"
+msgstr[4] "%d ثوان"
+msgstr[5] "%d ثوان"
 
-#: ../panel-plugin/embed-dialogs.c:384
-msgid "Label _font"
-msgstr "خ_ط التسمية"
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:476
+#: ../panel-plugin/time-out-countdown.c:482
+#: ../panel-plugin/time-out-countdown.c:509
+#: ../panel-plugin/time-out-countdown.c:514
+#: ../panel-plugin/time-out-countdown.c:523
+#: ../panel-plugin/time-out-countdown.c:529
+#, c-format
+msgid "Time left: %s"
+msgstr "الوقت المتبقي: %s"
 
-#: ../panel-plugin/embed-dialogs.c:385
-msgid "Choose the label font"
-msgstr "إختر خط التسمية"
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
+#: ../panel-plugin/time-out-countdown.c:489
+#: ../panel-plugin/time-out-countdown.c:496
+#: ../panel-plugin/time-out-countdown.c:517
+#, c-format
+msgid "Time left: %s %s"
+msgstr "الوقت المتبقي: %s %s"
 
-#: ../panel-plugin/embed-dialogs.c:389
-msgid "Minimum _size (px)"
-msgstr "الح_جم الأقصى (px)"
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, c-format
+msgid "Time left: %s %s %s"
+msgstr "الوقت المتبقي: %s %s %s"
 
-#: ../panel-plugin/embed-dialogs.c:390
-msgid ""
-"Minimum size of the embedded window\n"
-"Set to 0 to keep the original window size"
-msgstr ""
-"الحجم الأصغر للنافذة المضمنة\n"
-"الرقم 0 للحفاظ حجم النافذة الأصلي"
-
-#: ../panel-plugin/embed-dialogs.c:395
-msgid "_Expand"
-msgstr "_توسّع"
-
-#: ../panel-plugin/embed-dialogs.c:396
-msgid "Use up all available panel space"
-msgstr "إستعمل كل المساحة المتوفرة في اللوحة"
-
-#: ../panel-plugin/embed.desktop.in.h:2
-msgid "Embeds an arbitrary window into the panel"
-msgstr "يضمن إجبار النافذة في لوحة"
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+msgid "Automatically controlled time outs and breaks"
+msgstr "التحكم التلقائي في مهلة و مدة الإستراحة"
