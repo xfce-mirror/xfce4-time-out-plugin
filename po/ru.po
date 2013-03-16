@@ -1,22 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
+# Translation of xfce4-time-out-plugin to Russian
+#
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the xfce4-time-out-plugin package.
+#
+# Alex <davian818@gmail.com>, 2010.
+# dima <info@cnc-parts.info>, 2010.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: xfce4-time-out-plugin 1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-27 04:03+0000\n"
-"PO-Revision-Date: 2010-01-04 18:55+0300\n"
-"Last-Translator: dima <info@cnc-parts.info>\n"
-"Language-Team: xfce _ru_ <arch@cnc-parts.info>\n"
+"POT-Creation-Date: 2013-03-16 23:55+0400\n"
+"PO-Revision-Date: 2013-03-17 00:04+0400\n"
+"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
+"Language-Team: Russian <xfce-i18n@xfce.org>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
-"X-Poedit-Language: Russian\n"
-"X-Poedit-Country: LATVIA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:260
@@ -31,7 +34,7 @@ msgstr "Сброс"
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:276
 msgid "Enabled"
-msgstr "Включен"
+msgstr "Включён"
 
 #. Update tooltips
 #: ../panel-plugin/time-out.c:340
@@ -42,81 +45,81 @@ msgstr "Приостановлено"
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
-"Позволяет делать перерывы в работе через определенные промежутки времени."
+"Позволяет делать перерывы в работе через определённые промежутки времени."
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
 msgstr ""
-"??, 2010\n"
-"Alex <davian818@gmail.com>, 2010"
+"Alex <davian818@gmail.com>, 2010\n"
+"dima <info@cnc-parts.info>, 2010"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:490
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+#: ../panel-plugin/time-out.c:460
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Перерыв"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:507
+#: ../panel-plugin/time-out.c:477
 msgid "Time settings"
 msgstr "Установка временных промежутков"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:520
+#: ../panel-plugin/time-out.c:490
 msgid "Minutes"
 msgstr "мин."
 
-#: ../panel-plugin/time-out.c:525
+#: ../panel-plugin/time-out.c:495
 msgid "Seconds"
-msgstr "сек."
+msgstr "с"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:531
+#: ../panel-plugin/time-out.c:501
 msgid "Time between breaks:"
 msgstr "Длительность рабочего времени:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:555
+#: ../panel-plugin/time-out.c:525
 msgid "Break length:"
 msgstr "Длительность перерыва:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:573
+#: ../panel-plugin/time-out.c:543
 msgid "Postpone length:"
 msgstr "Откладывать на:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:591
+#: ../panel-plugin/time-out.c:561
 msgid "Behaviour"
 msgstr "Поведение"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:602
+#: ../panel-plugin/time-out.c:572
 msgid "Allow postpone"
 msgstr "Разрешить откладывание"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:609
+#: ../panel-plugin/time-out.c:579
 msgid "Resume automatically"
 msgstr "Автоматически продолжать работу"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:616
+#: ../panel-plugin/time-out.c:586
 msgid "Appearance"
 msgstr "Внешний вид"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:597
 msgid "Display remaining time in the panel"
 msgstr "Отображать оставшееся время на панели"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:634
+#: ../panel-plugin/time-out.c:604
 msgid "Display hours"
 msgstr "Отображать часы"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:641
+#: ../panel-plugin/time-out.c:611
 msgid "Display seconds"
 msgstr "Отображать секунды"
 
@@ -153,7 +156,8 @@ msgstr "%02d:%02d"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d час"
-msgstr[1] "%d ч."
+msgstr[1] "%d часа"
+msgstr[2] "%d часов"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -162,15 +166,17 @@ msgstr[1] "%d ч."
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d мин."
-msgstr[1] "%d мин."
+msgstr[0] "%d минута"
+msgstr[1] "%d минуты"
+msgstr[2] "%d минут"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d с."
-msgstr[1] "%d с."
+msgstr[0] "%d секунда"
+msgstr[1] "%d секунды"
+msgstr[2] "%d секунд"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
@@ -206,6 +212,6 @@ msgstr "Осталось: %s %s"
 msgid "Time left: %s %s %s"
 msgstr "Осталось: %s %s %s"
 
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
 msgstr "Автоматически контролировать перерывы"
