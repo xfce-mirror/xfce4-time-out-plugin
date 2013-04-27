@@ -26,7 +26,7 @@ msgstr "Neem een pauze"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:267
 msgid "Reset timer"
-msgstr "Zet afteller terug"
+msgstr "Zet tijdmeter terug"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:275
