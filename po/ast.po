@@ -1,116 +1,119 @@
-#
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Tornes Llume <l.lumex03.tornes@gmail.com>, 2014
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-time-out-plugin\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-18 22:46+0200\n"
-"PO-Revision-Date: 2009-07-13 19:55+0100\n"
-"Last-Translator: Marcos Antonio Alvarez Costales <marcoscostales@gmail.com>\n"
-"Language-Team: Asturian <alministradores@softastur.org>\n"
-"Language: ast\n"
+"POT-Creation-Date: 2013-07-03 21:22+0200\n"
+"PO-Revision-Date: 2014-04-14 22:41+0000\n"
+"Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
+"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ast\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:259
+#: ../panel-plugin/time-out.c:260
 msgid "Take a break"
 msgstr "Asele un pocu"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:267
+#: ../panel-plugin/time-out.c:268
 msgid "Reset timer"
-msgstr ""
+msgstr "Temporizador de reaniciu"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:275
+#: ../panel-plugin/time-out.c:276
 msgid "Enabled"
 msgstr "Activáu"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:339
+#: ../panel-plugin/time-out.c:340
 msgid "Paused"
-msgstr ""
+msgstr "Posáu"
 
-#: ../panel-plugin/time-out.c:418
+#: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr ""
 
-#: ../panel-plugin/time-out.c:427
+#: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
-msgstr ""
+msgstr "Softastur www.softastur.org"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:489
+#: ../panel-plugin/time-out.c:460
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Tiempu colar"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:506
+#: ../panel-plugin/time-out.c:477
 msgid "Time settings"
 msgstr "Opciones de tiempu"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:519
-#, fuzzy
+#: ../panel-plugin/time-out.c:490
 msgid "Minutes"
-msgstr "Minutos"
+msgstr "MInutos"
 
-#: ../panel-plugin/time-out.c:524
-#, fuzzy
+#: ../panel-plugin/time-out.c:495
 msgid "Seconds"
 msgstr "Segundos"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:530
+#: ../panel-plugin/time-out.c:501
 msgid "Time between breaks:"
-msgstr "Tiempu ente descansos:"
+msgstr "Tiempu ente poses:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:554
+#: ../panel-plugin/time-out.c:525
 msgid "Break length:"
-msgstr "Duración del descansu:"
+msgstr "Duración de la posa:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:572
+#: ../panel-plugin/time-out.c:543
 msgid "Postpone length:"
 msgstr "Duración de posposición:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:590
+#: ../panel-plugin/time-out.c:561
 msgid "Behaviour"
 msgstr "Comportamientu"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:601
+#: ../panel-plugin/time-out.c:572
 msgid "Allow postpone"
 msgstr "Permitir posponer"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:608
+#: ../panel-plugin/time-out.c:579
 msgid "Resume automatically"
 msgstr ""
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:615
+#: ../panel-plugin/time-out.c:586
 msgid "Appearance"
 msgstr "Aspeutu"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:626
+#: ../panel-plugin/time-out.c:597
 msgid "Display remaining time in the panel"
 msgstr "Amosar tiempu restante nel panel"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:633
+#: ../panel-plugin/time-out.c:604
 msgid "Display hours"
 msgstr "Amosar hores"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:640
+#: ../panel-plugin/time-out.c:611
 msgid "Display seconds"
 msgstr "Amosar segundos"
 
@@ -126,7 +129,7 @@ msgstr ""
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr ""
+msgstr "La posa finó."
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
@@ -143,28 +146,28 @@ msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
 #: ../panel-plugin/time-out-countdown.c:424
-#, fuzzy, c-format
+#, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d hora"
-msgstr[1] "%d horas"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
 #: ../panel-plugin/time-out-countdown.c:494
 #: ../panel-plugin/time-out-countdown.c:528
-#, fuzzy, c-format
+#, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d minutu"
-msgstr[1] "%d minutos"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../panel-plugin/time-out-countdown.c:426
-#, fuzzy, c-format
+#, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d segundu"
-msgstr[1] "%d Segundos"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
@@ -176,9 +179,9 @@ msgstr[1] "%d Segundos"
 #: ../panel-plugin/time-out-countdown.c:514
 #: ../panel-plugin/time-out-countdown.c:523
 #: ../panel-plugin/time-out-countdown.c:529
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s"
-msgstr "Tiempu restante: %s"
+msgstr ""
 
 #. Translators: this is %s minutes, %s seconds
 #. Translators: this is %s hours %s seconds
@@ -190,15 +193,15 @@ msgstr "Tiempu restante: %s"
 #: ../panel-plugin/time-out-countdown.c:489
 #: ../panel-plugin/time-out-countdown.c:496
 #: ../panel-plugin/time-out-countdown.c:517
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s"
-msgstr "Tiempu restante: %s %s"
+msgstr ""
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
-#, fuzzy, c-format
+#, c-format
 msgid "Time left: %s %s %s"
-msgstr "Tiempu restante: %s %s %s"
+msgstr ""
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
