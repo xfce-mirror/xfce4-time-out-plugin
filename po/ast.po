@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2014-04-14 22:41+0000\n"
+"PO-Revision-Date: 2014-04-26 21:49+0000\n"
 "Last-Translator: Tornes Llume <l.lumex03.tornes@gmail.com>\n"
-"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce/language/ast/)\n"
+"Language-Team: Asturian (http://www.transifex.com/projects/p/xfce-panel-plugins/language/ast/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -41,7 +41,7 @@ msgstr "Posáu"
 #: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
+msgstr "Complementu del panel Xfce p'aselecer del trabayu col ordenador agora y dempués."
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
@@ -95,7 +95,7 @@ msgstr "Permitir posponer"
 #. Create resume check button
 #: ../panel-plugin/time-out.c:579
 msgid "Resume automatically"
-msgstr ""
+msgstr "Resumir automáticamente"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:586
@@ -125,7 +125,7 @@ msgstr "_Postponer"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr ""
+msgstr "_Resumir"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
@@ -149,8 +149,8 @@ msgstr "%02d:%02d"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d hora"
+msgstr[1] "%d hores"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -159,15 +159,15 @@ msgstr[1] ""
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d minutu"
+msgstr[1] "%d minutos"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d segundu"
+msgstr[1] "%d segundos"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
@@ -181,7 +181,7 @@ msgstr[1] ""
 #: ../panel-plugin/time-out-countdown.c:529
 #, c-format
 msgid "Time left: %s"
-msgstr ""
+msgstr "Tiempu faltante: %s"
 
 #. Translators: this is %s minutes, %s seconds
 #. Translators: this is %s hours %s seconds
@@ -195,13 +195,13 @@ msgstr ""
 #: ../panel-plugin/time-out-countdown.c:517
 #, c-format
 msgid "Time left: %s %s"
-msgstr ""
+msgstr "Tiempu faltante: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
 #, c-format
 msgid "Time left: %s %s %s"
-msgstr ""
+msgstr "Tiempu faltante: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
