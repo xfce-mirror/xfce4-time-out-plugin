@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# jc1 <jc1.quebecos@gmail.com>, 2013
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2013-07-04 16:40+0000\n"
-"Last-Translator: jc1 <jc1.quebecos@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/xfce/language/fr/)\n"
+"PO-Revision-Date: 2014-07-25 19:03+0000\n"
+"Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/xfce-panel-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +22,7 @@ msgstr ""
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:260
 msgid "Take a break"
-msgstr "Prenez une pause"
+msgstr "Prendre une pause"
 
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:268
@@ -35,27 +37,27 @@ msgstr "Activé"
 #. Update tooltips
 #: ../panel-plugin/time-out.c:340
 msgid "Paused"
-msgstr "En attente"
+msgstr "En pause"
 
 #: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Le Greffon du panneau Xfce pour prendre une pause de l'ordinateur fonctionne de temps en temps."
+msgstr "Greffon du tableau de bord Xfce pour prendre de temps à autre une pause d'ordinateur."
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
-msgstr "Crédits - traducteur"
+msgstr "L’équipe de traduction francophone de Xfce"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:460
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
-msgstr "Fin du délai"
+msgstr "Temps mort"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:477
 msgid "Time settings"
-msgstr "Paramètres de l'heure"
+msgstr "Réglages du temps"
 
 #. Create the labels for the minutes and seconds spins
 #: ../panel-plugin/time-out.c:490
@@ -74,12 +76,12 @@ msgstr "Temps entre les pauses :"
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:525
 msgid "Break length:"
-msgstr "Longueur brisée :"
+msgstr "Durée de la pause :"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:543
 msgid "Postpone length:"
-msgstr "Longueur du report :"
+msgstr "Durée du report :"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:561
@@ -89,7 +91,7 @@ msgstr "Comportement"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:572
 msgid "Allow postpone"
-msgstr "Permettre le report"
+msgstr "Autoriser les reports de pause"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:579
@@ -99,17 +101,17 @@ msgstr "Reprendre automatiquement"
 #. Create appearance section
 #: ../panel-plugin/time-out.c:586
 msgid "Appearance"
-msgstr "Aspect"
+msgstr "Apparence"
 
 #. Create display time check button
 #: ../panel-plugin/time-out.c:597
 msgid "Display remaining time in the panel"
-msgstr "Affichage du temps restant dans le panneau"
+msgstr "Afficher le temps restant dans le tableau de bord"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:604
 msgid "Display hours"
-msgstr "Afficher heures"
+msgstr "Afficher les heures"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:611
@@ -119,7 +121,7 @@ msgstr "Afficher les secondes"
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
-msgstr "Report"
+msgstr "Re_porter"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
@@ -149,7 +151,7 @@ msgstr "%02d : %02d"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d heure"
-msgstr[1] "%d heure"
+msgstr[1] "%d heures"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -159,14 +161,14 @@ msgstr[1] "%d heure"
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minute"
-msgstr[1] "%d minute"
+msgstr[1] "%d minutes"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d seconde"
-msgstr[1] "%d seconde"
+msgstr[1] "%d secondes"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
@@ -204,4 +206,4 @@ msgstr "Temps restant : %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
-msgstr "Temps morts contrôlées automatiquement et les pauses"
+msgstr "Temps morts et pauses contrôlés automatiquement"
