@@ -1,3 +1,12 @@
+1.0.2 (9/3/2015)
+=====
+- Ditch _xfce_create_framebox() and use xfce_gtk_frame_box_new() instead
+- Fix transparency (bug #8747). Set the Gtk.EventBox invisible like other panel plugins do.
+- Updated translations: ar, ast, en_GB, ca, cs, da, de, el, es, eu, fi,
+  fr, he, hu, id, it, ja, kk, ko, nl, pl, pt, pt_BR, tu, sk, sr, sv, ug,
+  uk, zh_CN, zh_TW
+- New translations: bg, en_AU, fr, hr, is, li, ms, nb, oc, tr
+
 1.0.1 (17/04/2012)
 =====
 - Port to libxfce4ui
