@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# GenghisKhan <genghiskhan@gmx.ca>, 2015
 # Hezy Amiel <open@hezyamiel.com>, 2010
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
 msgid ""
@@ -10,9 +11,9 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2014-05-27 10:03+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/projects/p/xfce-panel-plugins/language/he/)\n"
+"PO-Revision-Date: 2015-08-21 18:34+0000\n"
+"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
+"Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,17 +23,17 @@ msgstr ""
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:260
 msgid "Take a break"
-msgstr "נא לצאת להפסקה"
+msgstr "צא להפסקה"
 
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:268
 msgid "Reset timer"
-msgstr "איפוס שעון"
+msgstr "אפס קוצב זמן"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:276
 msgid "Enabled"
-msgstr "פעיל"
+msgstr "מאופשר"
 
 #. Update tooltips
 #: ../panel-plugin/time-out.c:340
@@ -42,7 +43,7 @@ msgstr "מושהה"
 #: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "תוסף ללוח של Xfce ליציאה להפסקות מעבודה מול המחשב מדי פעם."
+msgstr "תוסף לוח Xfce לצורך לקיחת הפסקה מעבודת מחשב מדי פעם בפעם."
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
@@ -71,17 +72,17 @@ msgstr "שניות"
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:501
 msgid "Time between breaks:"
-msgstr "משך זמן בין הפסקות:"
+msgstr "זמן בין הפסקות:"
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:525
 msgid "Break length:"
-msgstr "משך ההפסקה:"
+msgstr "אורך הפסקה:"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:543
 msgid "Postpone length:"
-msgstr "משך הדחייה:"
+msgstr "אורך דחייה:"
 
 #. Create behaviour section
 #: ../panel-plugin/time-out.c:561
@@ -91,7 +92,7 @@ msgstr "התנהגות"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:572
 msgid "Allow postpone"
-msgstr "אפשור דחייה"
+msgstr "התר דחייה"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:579
@@ -106,22 +107,22 @@ msgstr "מראה"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:597
 msgid "Display remaining time in the panel"
-msgstr "הצגת הזמן הנותר על גבי הלוח"
+msgstr "הצג זמן נותר בתוך הלוח"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:604
 msgid "Display hours"
-msgstr "הצגת שעות"
+msgstr "הצג שעות"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:611
 msgid "Display seconds"
-msgstr "הצגת שניות"
+msgstr "הצג שניות"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
-msgstr "_דחיה"
+msgstr "_דחה"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
@@ -182,7 +183,7 @@ msgstr[1] "%d שניות"
 #: ../panel-plugin/time-out-countdown.c:529
 #, c-format
 msgid "Time left: %s"
-msgstr "הזמן שנותר: %s"
+msgstr "זמן נותר: %s"
 
 #. Translators: this is %s minutes, %s seconds
 #. Translators: this is %s hours %s seconds
@@ -196,14 +197,14 @@ msgstr "הזמן שנותר: %s"
 #: ../panel-plugin/time-out-countdown.c:517
 #, c-format
 msgid "Time left: %s %s"
-msgstr "הזמן שנותר: %s %s"
+msgstr "זמן נותר: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
 #: ../panel-plugin/time-out-countdown.c:467
 #, c-format
 msgid "Time left: %s %s %s"
-msgstr "הזמן שנותר: %s %s %s"
+msgstr "זמן נותר: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
-msgstr "שליטה אוטומטית על פרקי ה\"פסק זמן\" והפסקות"
+msgstr "פרקי פסק זמן והפסקות מבוקרות אוטומטית"
