@@ -1,25 +1,23 @@
-# Translation of xfce4-time-out-plugin to Russian
-#
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the xfce4-time-out-plugin package.
-#
-# Alex <davian818@gmail.com>, 2010.
-# dima <info@cnc-parts.info>, 2010.
-#
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Aleksandr P <davian818@gmail.com>, 2010
+# dima <info@cnc-parts.info>, 2010
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-time-out-plugin 1.0.1\n"
+"Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-16 23:55+0400\n"
-"PO-Revision-Date: 2013-03-17 00:04+0400\n"
-"Last-Translator: Sergey Alyoshin <alyoshin.s@gmail.com>\n"
-"Language-Team: Russian <xfce-i18n@xfce.org>\n"
-"Language: ru\n"
+"POT-Creation-Date: 2013-07-03 21:22+0200\n"
+"PO-Revision-Date: 2015-10-10 19:30+0000\n"
+"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"Language-Team: Russian (http://www.transifex.com/xfce/xfce-panel-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:260
@@ -44,14 +42,11 @@ msgstr "Приостановлено"
 #: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr ""
-"Позволяет делать перерывы в работе через определённые промежутки времени."
+msgstr "Позволяет делать перерывы в работе через определённые промежутки времени."
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
-msgstr ""
-"Alex <davian818@gmail.com>, 2010\n"
-"dima <info@cnc-parts.info>, 2010"
+msgstr "Alex <davian818@gmail.com>, 2010\ndima <info@cnc-parts.info>, 2010"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:460
@@ -158,6 +153,7 @@ msgid_plural "%d hours"
 msgstr[0] "%d час"
 msgstr[1] "%d часа"
 msgstr[2] "%d часов"
+msgstr[3] "%d часов"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -169,6 +165,7 @@ msgid_plural "%d minutes"
 msgstr[0] "%d минута"
 msgstr[1] "%d минуты"
 msgstr[2] "%d минут"
+msgstr[3] "%d минут"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
@@ -177,6 +174,7 @@ msgid_plural "%d seconds"
 msgstr[0] "%d секунда"
 msgstr[1] "%d секунды"
 msgstr[2] "%d секунд"
+msgstr[3] "%d секунд"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
