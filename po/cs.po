@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Michal Várady <miko.vaji@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2015-10-29 08:47+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2015-11-28 10:16+0000\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +21,12 @@ msgstr ""
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:260
 msgid "Take a break"
-msgstr "Vzít si přestávku"
+msgstr "Dejte si přestávku"
 
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:268
 msgid "Reset timer"
-msgstr "Vynulovat čítač"
+msgstr "Vynulovat časovač"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:276
@@ -40,7 +41,7 @@ msgstr "Pozastaveno"
 #: ../panel-plugin/time-out.c:419
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Zásuvný modul panelu Xfce k upozornění o občasné přestávce při práci s počítačem"
+msgstr "Zásuvný modul panelu Xfce k upozornění na občasnou přestávku při práci s počítačem"
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
@@ -69,7 +70,7 @@ msgstr "Sekund"
 #. Create break countdown time label
 #: ../panel-plugin/time-out.c:501
 msgid "Time between breaks:"
-msgstr "čas mezi přestávkami:"
+msgstr "Čas mezi přestávkami:"
 
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:525
@@ -94,7 +95,7 @@ msgstr "Povolit odložení"
 #. Create resume check button
 #: ../panel-plugin/time-out.c:579
 msgid "Resume automatically"
-msgstr "Automaticky obnovit"
+msgstr "Pokračovat automaticky"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:586
@@ -104,17 +105,17 @@ msgstr "Vzhled"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:597
 msgid "Display remaining time in the panel"
-msgstr "Zobrazovat zbývající čas v panelu"
+msgstr "Zobrazit zbývající čas v panelu"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:604
 msgid "Display hours"
-msgstr "Zobrazovat hodiny"
+msgstr "Zobrazit hodiny"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:611
 msgid "Display seconds"
-msgstr "Zobrazovat sekundy"
+msgstr "Zobrazit sekundy"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
@@ -124,7 +125,7 @@ msgstr "_Odložit"
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr "_Obnovit"
+msgstr "_Pokračovat"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
