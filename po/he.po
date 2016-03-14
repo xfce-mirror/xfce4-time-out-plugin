@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Elishai Eliyahu <e1907@mm.st>, 2016
 # GenghisKhan <genghiskhan@gmx.ca>, 2015
 # Hezy Amiel <open@hezyamiel.com>, 2010
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2016-02-07 12:21+0000\n"
-"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
+"PO-Revision-Date: 2016-03-14 16:24+0000\n"
+"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +29,7 @@ msgstr "צא להפסקה"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:268
 msgid "Reset timer"
-msgstr "אפס קוצב זמן"
+msgstr "אפס טיימר"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:276
@@ -47,7 +48,7 @@ msgstr "תוסף לוח Xfce לצורך לקיחת הפסקה מעבודת מח�
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
-msgstr "Hezy Amiel <open@hezyamiel.com>\nYaron Shahrabani <sh.yaron@gmail.com>"
+msgstr "שבחים-מתרגמים"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:460
