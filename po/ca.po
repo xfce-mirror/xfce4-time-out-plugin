@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2016-05-02 13:03+0000\n"
+"PO-Revision-Date: 2016-05-03 18:42+0000\n"
 "Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -27,17 +27,17 @@ msgstr "Pren un descans"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:268
 msgid "Reset timer"
-msgstr "Reiniciar el temporitzador"
+msgstr "Restableix el temporitzador"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:276
 msgid "Enabled"
-msgstr "Activat"
+msgstr "Habilitat"
 
 #. Update tooltips
 #: ../panel-plugin/time-out.c:340
 msgid "Paused"
-msgstr "Parat"
+msgstr "En pausa"
 
 #: ../panel-plugin/time-out.c:419
 msgid ""
@@ -46,13 +46,13 @@ msgstr "Connector per al plafó de Xfce per a prendre's un descans de tant en ta
 
 #: ../panel-plugin/time-out.c:428
 msgid "translator-credits"
-msgstr "translator-credits"
+msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:460
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
-msgstr "Pausa"
+msgstr "Temps d'espera"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:477
@@ -91,12 +91,12 @@ msgstr "Comportament"
 #. Create postpone check button
 #: ../panel-plugin/time-out.c:572
 msgid "Allow postpone"
-msgstr "Permetre posposar"
+msgstr "Permet la posposició"
 
 #. Create resume check button
 #: ../panel-plugin/time-out.c:579
 msgid "Resume automatically"
-msgstr "Reiniciar automàticament"
+msgstr "Reprèn automàticament"
 
 #. Create appearance section
 #: ../panel-plugin/time-out.c:586
@@ -106,27 +106,27 @@ msgstr "Aparença"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:597
 msgid "Display remaining time in the panel"
-msgstr "Mostrar el temps restant al plafó"
+msgstr "Mostra el temps restant al plafó"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:604
 msgid "Display hours"
-msgstr "Mostrar hores"
+msgstr "Mostra les hores"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:611
 msgid "Display seconds"
-msgstr "Mostrar segons"
+msgstr "Mostra els segons"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
 msgid "_Postpone"
-msgstr "_Posposar"
+msgstr "_Posposa"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:225
 msgid "_Resume"
-msgstr "_Continuar"
+msgstr "_Reprèn"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
@@ -206,4 +206,4 @@ msgstr "Temps restant: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
-msgstr "Descansos control·lats automàticament"
+msgstr "El descansos i els temps d'espera amb control automàtic"
