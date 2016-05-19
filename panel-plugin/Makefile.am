@@ -21,13 +21,11 @@ libtime_out_la_CFLAGS =							\
 	-I$(top_builddir)						\
 	-DG_LOG_DOMAIN=\"xfce4-time-out-plugin\"			\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
-	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(LIBXFCE4UI_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
 libtime_out_la_LIBADD =							\
-	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCE4UI_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
 
