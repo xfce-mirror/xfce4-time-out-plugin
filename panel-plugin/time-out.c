@@ -197,7 +197,7 @@ time_out_new (XfcePanelPlugin *plugin)
   gtk_widget_show (time_out->ebox);
 
   /* Create flexible box which can do both, horizontal and vertical layout */
-  time_out->hvbox = xfce_hvbox_new (orientation, FALSE, 2);
+  time_out->hvbox = gtk_box_new (orientation, 2);
   gtk_container_add (GTK_CONTAINER (time_out->ebox), time_out->hvbox);
   gtk_widget_show (time_out->hvbox);
 
