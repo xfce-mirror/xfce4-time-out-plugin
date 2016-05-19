@@ -211,7 +211,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   /* Create a progress bar to visually display the remaining tme */
   lock_screen->progress = gtk_progress_bar_new ();
-  gtk_progress_bar_set_orientation (GTK_PROGRESS_BAR (lock_screen->progress), GTK_PROGRESS_LEFT_TO_RIGHT);
+  gtk_orientable_set_orientation(GTK_ORIENTABLE(lock_screen->progress),GTK_ORIENTATION_HORIZONTAL);
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->progress, FALSE, FALSE, 0);
   gtk_widget_show (lock_screen->progress);
 

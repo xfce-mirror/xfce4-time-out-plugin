@@ -414,7 +414,7 @@ time_out_orientation_changed (XfcePanelPlugin *plugin,
   g_return_if_fail (time_out != NULL);
 
   /* Apply orientation to hvbox */
-  xfce_hvbox_set_orientation (XFCE_HVBOX (time_out->hvbox), orientation);
+  gtk_orientable_set_orientation(GTK_ORIENTABLE(global->box), orientation);
 }
 
 static void
