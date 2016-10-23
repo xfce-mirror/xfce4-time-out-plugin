@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Cédric Valmary <cvalmary@yahoo.fr>, 2016
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 21:22+0200\n"
-"PO-Revision-Date: 2016-03-11 15:56+0000\n"
+"POT-Creation-Date: 2016-08-30 18:31+0200\n"
+"PO-Revision-Date: 2016-10-23 14:54+0000\n"
 "Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/xfce/xfce-panel-plugins/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -19,101 +20,106 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:260
+#: ../panel-plugin/time-out.c:264
 msgid "Take a break"
 msgstr "Prenètz una pausa"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:268
+#: ../panel-plugin/time-out.c:272
 msgid "Reset timer"
 msgstr "Reïnicializar lo comptador"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:276
+#: ../panel-plugin/time-out.c:280
 msgid "Enabled"
 msgstr "Activat"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:340
+#: ../panel-plugin/time-out.c:344
 msgid "Paused"
 msgstr "En espèra"
 
-#: ../panel-plugin/time-out.c:419
+#: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Empeuton del panèl Xfce per prene una pausa de l'ordenador de temps en temps."
 
-#: ../panel-plugin/time-out.c:428
+#: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
 msgstr "Cédric Valmary (totenoc.org)"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:460
+#: ../panel-plugin/time-out.c:464
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Tempses mòrts"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:477
+#: ../panel-plugin/time-out.c:481
 msgid "Time settings"
 msgstr "Paramètres de l'ora"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:490
+#: ../panel-plugin/time-out.c:494
 msgid "Minutes"
 msgstr "Minutas"
 
-#: ../panel-plugin/time-out.c:495
+#: ../panel-plugin/time-out.c:499
 msgid "Seconds"
 msgstr "Segondas"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:501
+#: ../panel-plugin/time-out.c:505
 msgid "Time between breaks:"
 msgstr "Temps entre las pausas :"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:525
+#: ../panel-plugin/time-out.c:529
 msgid "Break length:"
 msgstr "Longor de la pausa :"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:543
+#: ../panel-plugin/time-out.c:547
 msgid "Postpone length:"
 msgstr "Longor del repòrt :"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:561
+#: ../panel-plugin/time-out.c:565
 msgid "Behaviour"
 msgstr "Comportament"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:572
+#: ../panel-plugin/time-out.c:576
 msgid "Allow postpone"
 msgstr "Permetre lo repòrt"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:579
+#: ../panel-plugin/time-out.c:583
 msgid "Resume automatically"
 msgstr "Reprene automaticament"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:586
+#: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "Aparéncia"
 
+#. Create display icon check button
+#: ../panel-plugin/time-out.c:606
+msgid "Display icon"
+msgstr "Afichar l'icòna"
+
 #. Create display time check button
-#: ../panel-plugin/time-out.c:597
+#: ../panel-plugin/time-out.c:613
 msgid "Display remaining time in the panel"
 msgstr "Afichatge del temps restant dins lo panèl"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:604
+#: ../panel-plugin/time-out.c:620
 msgid "Display hours"
 msgstr "Afichar las oras"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:611
+#: ../panel-plugin/time-out.c:627
 msgid "Display seconds"
 msgstr "Afichar las segondas"
 
