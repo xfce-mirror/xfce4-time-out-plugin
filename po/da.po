@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-11-01 16:42+0000\n"
+"PO-Revision-Date: 2017-11-01 17:57+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "Tag en pause"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:272
 msgid "Reset timer"
-msgstr "Nulstil tidstager"
+msgstr "Nulstil timer"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:280
@@ -43,7 +43,7 @@ msgstr "Sat på pause"
 #: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Xfce-panel-plugin som indfører en pause fra arbejde med computeren fra tid til anden."
+msgstr "Xfce-panelplugin til at tage en pause fra at arbejde med computeren fra tid til anden."
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
@@ -136,7 +136,7 @@ msgstr "_Genoptag"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr "Pausen er afsluttet."
+msgstr "Pausen er slut."
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
@@ -212,4 +212,4 @@ msgstr "Tid tilbage: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
-msgstr "Automatisk kontrollerede timeout og pauser"
+msgstr "Automatisk styring af timeouter og pauser"
