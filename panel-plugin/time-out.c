@@ -503,8 +503,8 @@ time_out_configure (XfcePanelPlugin *plugin,
 
   /* Create break countdown time label */
   label = gtk_label_new (_("Time between breaks:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
   /* Create break countdown time minute spin */
@@ -527,8 +527,8 @@ time_out_configure (XfcePanelPlugin *plugin,
 
   /* Create lock countdown time label */
   label = gtk_label_new (_("Break length:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
   /* Create lock countdown time spins */
@@ -545,8 +545,8 @@ time_out_configure (XfcePanelPlugin *plugin,
 
   /* Create postpone countdown time label */
   label = gtk_label_new (_("Postpone length:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 1.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 3, 4, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 3, 4, GTK_FILL, GTK_FILL, 1.0, 0.5);
   gtk_widget_show (label);
 
   /* Create postpone countdown time spins */
