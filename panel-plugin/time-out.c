@@ -208,7 +208,7 @@ time_out_new (XfcePanelPlugin *plugin)
   gtk_widget_show (time_out->panel_icon);
 
   /* Create label for displaying the remaining time until the next break */
-  time_out->time_label = gtk_label_new ("Inactive");
+  time_out->time_label = gtk_label_new (_("Inactive"));
   gtk_misc_set_alignment (GTK_MISC (time_out->time_label), 0.5, 0.5);
   gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->time_label, TRUE, TRUE, 0);
   gtk_widget_show (time_out->time_label);
@@ -598,7 +598,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   gtk_widget_show (vbox);
 
   /* Create note label */
-  label = gtk_label_new("Note: Icon and time cannot be hidden simultaneously.");
+  label = gtk_label_new(_("Note: Icon and time cannot be hidden simultaneously."));
   gtk_container_add (GTK_CONTAINER (vbox), label);
   gtk_widget_show(label);
 
