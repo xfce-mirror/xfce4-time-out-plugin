@@ -4,13 +4,14 @@
 # 
 # Translators:
 # jc1 <jc1.quebecos@gmail.com>, 2013
-# Yannick Le Guen <leguen.yannick@gmail.com>, 2014,2016
+# Vinzenz Vietzke <vinz@vinzv.de>, 2017
+# Yannick Le Guen <leguen.yannick@gmail.com>, 2014,2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-09-23 19:03+0000\n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2017-12-17 08:56+0000\n"
 "Last-Translator: Yannick Le Guen <leguen.yannick@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/xfce/xfce-panel-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "Inactif"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -102,6 +108,11 @@ msgstr "Reprendre automatiquement"
 #: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "Apparence"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Remarque : l’icône et le temps ne peuvent pas être masqués simultanément."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
