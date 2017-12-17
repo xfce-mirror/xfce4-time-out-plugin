@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Michal Várady <miko.vaji@gmail.com>, 2015-2016
+# Michal Várady <miko.vaji@gmail.com>, 2015-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2017-12-17 01:07+0000\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "Neaktivní"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -101,6 +106,11 @@ msgstr "Pokračovat automaticky"
 #: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "Vzhled"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Poznámka: Ikonu a čas nelze skrýt současně."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
