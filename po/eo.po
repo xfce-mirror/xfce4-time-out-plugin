@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2017-12-18 20:56+0000\n"
+"PO-Revision-Date: 2017-12-20 05:41+0000\n"
 "Last-Translator: Iris Ilexiris <iris.ilexiris@gmail.com>\n"
 "Language-Team: Esperanto (http://www.transifex.com/xfce/xfce-panel-plugins/language/eo/)\n"
 "MIME-Version: 1.0\n"
@@ -111,7 +111,7 @@ msgstr "Aspekto"
 #. Create note label
 #: ../panel-plugin/time-out.c:601
 msgid "Note: Icon and time cannot be hidden simultaneously."
-msgstr ""
+msgstr "Piktogramo kaj tempo ne povas esti kaŝa samtempe."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
