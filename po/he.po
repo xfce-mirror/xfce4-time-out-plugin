@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Elishai Eliyahu <e1907@mm.st>, 2016
+# Elishai Eliyahu <e1907@mm.st>, 2016-2017
 # GenghisKhan <genghiskhan@gmx.ca>, 2015-2016
 # Hezy Amiel <open@hezyamiel.com>, 2010
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
@@ -11,15 +11,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-09-23 19:03+0000\n"
-"Last-Translator: GenghisKhan <genghiskhan@gmx.ca>\n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2017-12-23 19:49+0000\n"
+"Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "לא פעיל"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -104,6 +109,11 @@ msgstr "המשך אוטומטי"
 #: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "מראה"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "הערה: איקון וזמן לא ניתנים להסתרה בו זמנית."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
