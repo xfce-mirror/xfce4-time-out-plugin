@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2014,2016
+# abuyop <abuyop@gmail.com>, 2014,2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-09-19 21:20+0000\n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2017-12-25 18:11+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/xfce/xfce-panel-plugins/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ms\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "Tidak aktif"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -101,6 +106,11 @@ msgstr "Sambung semula secara automatik"
 #: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "Penampilan"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Perhatian: Ikon dan masa tidak boleh disembunyikan secara serentak."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
