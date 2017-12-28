@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Harald Servat <redcrash@gmail.com>, 2009
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2017-12-28 17:04+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -19,6 +19,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "Inactiu"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -47,7 +52,7 @@ msgstr "Connector per al plafó de Xfce per a prendre's un descans de tant en ta
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
-msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>"
+msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017."
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:464
@@ -103,6 +108,11 @@ msgstr "Reprèn automàticament"
 #: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "Aparença"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Nota: no es poden ocultar simultàniament la icona i el temps."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
