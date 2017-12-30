@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2017-12-28 17:04+0000\n"
+"PO-Revision-Date: 2017-12-30 19:36+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +58,7 @@ msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017."
 #: ../panel-plugin/time-out.c:464
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
-msgstr "Temps d'espera"
+msgstr "Període de descans"
 
 #. Create time settings section
 #: ../panel-plugin/time-out.c:481
@@ -222,4 +222,4 @@ msgstr "Temps restant: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
-msgstr "Els descansos i els temps d'espera amb control automàtic"
+msgstr "Els períodes d'activitat i descans es controlen automàticament"
