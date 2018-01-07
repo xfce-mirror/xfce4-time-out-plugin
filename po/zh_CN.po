@@ -5,14 +5,15 @@
 # Translators:
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
 # Hunt Xu <huntxu@live.cn>, 2009-2010
+# xiaobo zhou <zhouxiaobo.500@gmail.com>, 2018
 # 玉堂白鹤 <yjwork@qq.com>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2017-12-18 06:34+0000\n"
-"Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
+"PO-Revision-Date: 2018-01-07 06:03+0000\n"
+"Last-Translator: xiaobo zhou <zhouxiaobo.500@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/xfce-panel-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 #. Create label for displaying the remaining time until the next break
 #: ../panel-plugin/time-out.c:211
 msgid "Inactive"
-msgstr ""
+msgstr "未激活"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -48,11 +49,11 @@ msgstr "已暂停"
 #: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "偶尔提醒您离开计算机工作休息一下的 Xfce 面板插件。"
+msgstr "偶尔提醒您离开计算机工作，休息一下的 Xfce 面板插件。"
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
-msgstr "Hunt Xu <huntxu@live.cn>, 2009, 2010.\nChipong Luo <chipong.luo@yahoo.com>, 2011, 2012."
+msgstr "Hunt Xu <huntxu@live.cn>, 2009, 2010.\nChipong Luo <chipong.luo@yahoo.com>, 2011, 2012.\nXiaobo Zhou <zhouxiaobo.500@gmail.com>.2018."
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:464
@@ -112,7 +113,7 @@ msgstr "外观"
 #. Create note label
 #: ../panel-plugin/time-out.c:601
 msgid "Note: Icon and time cannot be hidden simultaneously."
-msgstr "注意：图标和时间不能同时隐藏。"
+msgstr "注意：图标和时间不能被同时隐藏。"
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
@@ -146,7 +147,7 @@ msgstr "恢复(_R)"
 
 #: ../panel-plugin/time-out-countdown.c:377
 msgid "The break is over."
-msgstr "休息时间结束。"
+msgstr "休息时间已结束。"
 
 #. Hours:minutes:seconds
 #: ../panel-plugin/time-out-countdown.c:399
