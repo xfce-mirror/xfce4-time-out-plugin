@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2018-07-15 10:32+0000\n"
+"PO-Revision-Date: 2018-07-17 12:04+0000\n"
 "Last-Translator: Emanuele Petriglia <inbox@emanuelepetriglia.me>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/xfce-panel-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -48,11 +48,11 @@ msgstr "In pausa"
 #: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Plugin del pannello di Xfce che ricorda di fare una pausa dal computer ogni tanto"
+msgstr "Componente aggiuntivo del pannello di Xfce che ricorda di fare una pausa dal computer ogni tanto."
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
-msgstr "Cristian Marchi <cri.penta@gmail.com>, 2013"
+msgstr "Emanuele Petriglia <inbox@emanuelepetriglia.me>, 2018\nCristian Marchi <cri.penta@gmail.com>, 2013"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:464
@@ -82,7 +82,7 @@ msgstr "Intervallo fra le pause:"
 #. Create lock countdown time label
 #: ../panel-plugin/time-out.c:529
 msgid "Break length:"
-msgstr "Lunghezza della pausa"
+msgstr "Lunghezza della pausa:"
 
 #. Create postpone countdown time label
 #: ../panel-plugin/time-out.c:547
