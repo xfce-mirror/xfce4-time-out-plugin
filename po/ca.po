@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Harald Servat <redcrash@gmail.com>, 2009
-# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017
+# Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2018
 # Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2018-08-21 20:30+0000\n"
+"PO-Revision-Date: 2018-10-21 08:17+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr "En pausa"
 #: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Connector per al plafó de Xfce per a prendre's un descans de tant en tant de l'ordinador."
+msgstr "Connector per al tauler de Xfce per a prendre's un descans de tant en tant de l'ordinador."
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
@@ -122,7 +122,7 @@ msgstr "Mostra la icona"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:613
 msgid "Display remaining time in the panel"
-msgstr "Mostra el temps restant al plafó"
+msgstr "Mostra el temps restant al tauler"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:620
