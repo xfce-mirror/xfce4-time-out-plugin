@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Sveinn í Felli <sv1@fellsnet.is>, 2013-2014
-# Sveinn í Felli <sveinki@nett.is>, 2013,2016
+# Sveinn í Felli <sveinki@nett.is>, 2013,2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-30 18:31+0200\n"
-"PO-Revision-Date: 2017-09-19 18:06+0000\n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2018-11-05 18:47+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: is\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 != 1 || n % 100 == 11);\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "Óvirkt"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:264
@@ -102,6 +107,11 @@ msgstr "Halda áfram sjálfkrafa"
 #: ../panel-plugin/time-out.c:590
 msgid "Appearance"
 msgstr "Útlit"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Athugaðu: Ekki hægt að fela bæði táknmynd og tíma í einu."
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
