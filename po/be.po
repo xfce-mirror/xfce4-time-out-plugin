@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Zmicer Turok <zmicerturok@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2018-06-23 18:29+0000\n"
+"PO-Revision-Date: 2019-01-16 09:00+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/xfce-panel-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -45,7 +46,7 @@ msgstr "Прыпынена"
 #: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Убудова дае магчымасць кіраваць перапынкамі падчас працы за кампутарам."
+msgstr "Убудова дае магчымасць кіраваць перапынкамі падчас працы за камп'ютарам."
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
