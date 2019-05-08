@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: kk\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Create label for displaying the remaining time until the next break
 #: ../panel-plugin/time-out.c:211
@@ -165,6 +165,7 @@ msgstr "%02d:%02d"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d сағат"
+msgstr[1] "%d сағат"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -174,12 +175,14 @@ msgstr[0] "%d сағат"
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d минут"
+msgstr[1] "%d минут"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d секунд"
+msgstr[1] "%d секунд"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
