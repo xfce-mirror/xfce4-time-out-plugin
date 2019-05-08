@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Aleksandr P <davian818@gmail.com>, 2010
+# Aleksandr P, 2010
 # dima <info@cnc-parts.info>, 2010
 # Igor <f2404@yandex.ru>, 2016-2017
 msgid ""
