@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Sveinn í Felli <sv1@fellsnet.is>, 2013-2014,2016,2018
+# Sveinn í Felli <sv1@fellsnet.is>, 2013-2014,2016,2018-2019
 # Sveinn í Felli <sveinki@nett.is>, 2013,2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2019-05-10 10:23+0000\n"
+"PO-Revision-Date: 2019-05-10 11:27+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic (http://www.transifex.com/xfce/xfce-panel-plugins/language/is/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "XFCE skjástikuviðbót sem minnir á að að taka sér öðru hvoru hv�
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
-msgstr "Sveinn í Felli, sv1@fellsnet.is"
+msgstr "Sveinn í Felli, <sv1@fellsnet.is>"
 
 #. Create properties dialog
 #: ../panel-plugin/time-out.c:464
