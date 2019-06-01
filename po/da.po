@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2019-05-26 13:51+0000\n"
+"PO-Revision-Date: 2019-05-31 22:52+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/xfce-panel-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,7 @@ msgstr "Sat på pause"
 #: ../panel-plugin/time-out.c:423
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Xfce-panelplugin til at tage holde en pause fra computerarbejdet fra tid til anden."
+msgstr "Xfce-panelplugin til periodisk at holde en pause fra computerarbejdet."
 
 #: ../panel-plugin/time-out.c:432
 msgid "translator-credits"
