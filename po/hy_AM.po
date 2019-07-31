@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Real School <translator_students@realschool.am>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-16 18:32+0100\n"
+"PO-Revision-Date: 2019-07-31 06:38+0000\n"
+"Last-Translator: Real School <translator_students@realschool.am>\n"
+"Language-Team: Armenian (Armenia) (http://www.transifex.com/xfce/xfce-panel-plugins/language/hy_AM/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy_AM\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:211
+msgid "Inactive"
+msgstr "Ոչ ակտիւ"
+
+#. Create menu item for taking an instant break
+#: ../panel-plugin/time-out.c:264
+msgid "Take a break"
+msgstr "Ընդմիջել"
+
+#. Create menu item for resetting the timer
+#: ../panel-plugin/time-out.c:272
+msgid "Reset timer"
+msgstr "Վերադրել ժամապահ"
+
+#. Create menu item for enabling/disabling the countdown
+#: ../panel-plugin/time-out.c:280
+msgid "Enabled"
+msgstr "Միացուած"
+
+#. Update tooltips
+#: ../panel-plugin/time-out.c:344
+msgid "Paused"
+msgstr "Դադարեցուած"
+
+#: ../panel-plugin/time-out.c:423
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "Xfce Panel ներդրաւն համակարգչային աշխատանքից ընդմիջում վերցնելու համար։"
+
+#: ../panel-plugin/time-out.c:432
+msgid "translator-credits"
+msgstr "թարգմանչական֊վարկեր"
+
+#. Create properties dialog
+#: ../panel-plugin/time-out.c:464
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+msgid "Time Out"
+msgstr "Ժամանակն լրացաւ"
+
+#. Create time settings section
+#: ../panel-plugin/time-out.c:481
+msgid "Time settings"
+msgstr "Ժամի կարգաւորումներ"
+
+#. Create the labels for the minutes and seconds spins
+#: ../panel-plugin/time-out.c:494
+msgid "Minutes"
+msgstr "Րոպէներ"
+
+#: ../panel-plugin/time-out.c:499
+msgid "Seconds"
+msgstr "Վայրկեաններ"
+
+#. Create break countdown time label
+#: ../panel-plugin/time-out.c:505
+msgid "Time between breaks:"
+msgstr "Ժամանակ ընդմիջումների միջեւ․"
+
+#. Create lock countdown time label
+#: ../panel-plugin/time-out.c:529
+msgid "Break length:"
+msgstr "Ընդմիջման տարածութիւն"
+
+#. Create postpone countdown time label
+#: ../panel-plugin/time-out.c:547
+msgid "Postpone length:"
+msgstr "Յետաձգման տարածութիւն․"
+
+#. Create behaviour section
+#: ../panel-plugin/time-out.c:565
+msgid "Behaviour"
+msgstr "Վարքագիծ"
+
+#. Create postpone check button
+#: ../panel-plugin/time-out.c:576
+msgid "Allow postpone"
+msgstr "Թոյլատրել յետաձգում"
+
+#. Create resume check button
+#: ../panel-plugin/time-out.c:583
+msgid "Resume automatically"
+msgstr "Ինքնուրոյն վերսկսել"
+
+#. Create appearance section
+#: ../panel-plugin/time-out.c:590
+msgid "Appearance"
+msgstr "Տեսք"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:601
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Նշում․ Պատկերակը եւ ժամը չեն կարող թաքցուել միարժամանակ։"
+
+#. Create display icon check button
+#: ../panel-plugin/time-out.c:606
+msgid "Display icon"
+msgstr "Ցուցադրել տարբերանշան"
+
+#. Create display time check button
+#: ../panel-plugin/time-out.c:613
+msgid "Display remaining time in the panel"
+msgstr "Ցուցադրել մնացած ժամանակը վահանակում"
+
+#. Create display hours check button
+#: ../panel-plugin/time-out.c:620
+msgid "Display hours"
+msgstr "Ցուցադրել ժամերը"
+
+#. Create display seconds check button
+#: ../panel-plugin/time-out.c:627
+msgid "Display seconds"
+msgstr "Ցուցադրել վայրկեանները"
+
+#. Create postpone button
+#: ../panel-plugin/time-out-lock-screen.c:219
+msgid "_Postpone"
+msgstr "_Յետաձգում"
+
+#. Create resume button
+#: ../panel-plugin/time-out-lock-screen.c:225
+msgid "_Resume"
+msgstr "_Վերսկսում"
+
+#: ../panel-plugin/time-out-countdown.c:377
+msgid "The break is over."
+msgstr "Ընդմիջումն աւարտուած է։"
+
+#. Hours:minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:399
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
+
+#. Hours:minutes
+#. Minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:404
+#: ../panel-plugin/time-out-countdown.c:412
+#, c-format
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
+
+#: ../panel-plugin/time-out-countdown.c:424
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ժամ"
+msgstr[1] "%d ժամ"
+
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:494
+#: ../panel-plugin/time-out-countdown.c:528
+#, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d րոպէ"
+msgstr[1] "%d րոպէ"
+
+#: ../panel-plugin/time-out-countdown.c:426
+#, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d վայրկեան"
+msgstr[1] "%d վայրկեան"
+
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:476
+#: ../panel-plugin/time-out-countdown.c:482
+#: ../panel-plugin/time-out-countdown.c:509
+#: ../panel-plugin/time-out-countdown.c:514
+#: ../panel-plugin/time-out-countdown.c:523
+#: ../panel-plugin/time-out-countdown.c:529
+#, c-format
+msgid "Time left: %s"
+msgstr "Մնացել է՝ %s"
+
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
+#: ../panel-plugin/time-out-countdown.c:489
+#: ../panel-plugin/time-out-countdown.c:496
+#: ../panel-plugin/time-out-countdown.c:517
+#, c-format
+msgid "Time left: %s %s"
+msgstr "Մնացել է՝ %s %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, c-format
+msgid "Time left: %s %s %s"
+msgstr "Մնացել է՝ %s%s%s"
+
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+msgid "Automatically controlled time outs and breaks"
+msgstr "Ինքնուրոյն կառաւարուող ժամանակի լրացումներ եւ ընդմիջումներ"
