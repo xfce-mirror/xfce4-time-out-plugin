@@ -1,3 +1,11 @@
+1.0.3 (13/9/2019)
+=====
+- make strings translatable (fixes #8716)
+- Left-align labels for time settings (bug #6346)
+- Add option to hide icon - fixes #12084
+- New translations: hy_AM, be, eo
+- Many translation updates
+
 1.0.2 (9/3/2015)
 =====
 - Ditch _xfce_create_framebox() and use xfce_gtk_frame_box_new() instead
