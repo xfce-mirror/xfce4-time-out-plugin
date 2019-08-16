@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2019-08-05 04:25+0000\n"
+"PO-Revision-Date: 2019-08-16 06:02+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/xfce-panel-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -116,22 +116,22 @@ msgstr "Nota: a icona e o tempo non se poden agochar simultaneamente."
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:606
 msgid "Display icon"
-msgstr "Mostrar unha icona"
+msgstr "Amosar unha icona"
 
 #. Create display time check button
 #: ../panel-plugin/time-out.c:613
 msgid "Display remaining time in the panel"
-msgstr "Mostrar o tempo restante no panel"
+msgstr "Amosar o tempo restante no panel"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:620
 msgid "Display hours"
-msgstr "Mostrar as horas"
+msgstr "Amosar as horas"
 
 #. Create display seconds check button
 #: ../panel-plugin/time-out.c:627
 msgid "Display seconds"
-msgstr "Mostrar os segundos"
+msgstr "Amosar os segundos"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:219
