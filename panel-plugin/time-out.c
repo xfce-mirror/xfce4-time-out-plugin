@@ -91,9 +91,9 @@ static void           time_out_free                               (XfcePanelPlug
 static gboolean       time_out_size_changed                       (XfcePanelPlugin   *plugin,
                                                                    gint               size,
                                                                    TimeOutPlugin     *time_out);
-static void           time_out_orientation_changed                (XfcePanelPlugin   *plugin,
-                                                                   GtkOrientation     orientation,
-                                                                   TimeOutPlugin     *time_out);
+static void           time_out_mode_changed                       (XfcePanelPlugin    *plugin,
+                                                                   XfcePanelPluginMode mode,
+                                                                   TimeOutPlugin      *time_out);
 static void           time_out_about                              (XfcePanelPlugin   *plugin);
 static void           time_out_configure                          (XfcePanelPlugin   *plugin,
                                                                    TimeOutPlugin     *time_out);
@@ -189,7 +189,9 @@ time_out_new (XfcePanelPlugin *plugin)
   g_signal_connect (G_OBJECT (time_out->lock_countdown), "finish", G_CALLBACK (time_out_lock_countdown_finish), time_out);
 
   /* Get the current orientation */
-  orientation = xfce_panel_plugin_get_orientation (plugin);
+  if (xfce_panel_plugin_get_mode(plugin) == XFCE_PANEL_PLUGIN_MODE_VERTICAL)
+    orientation = GTK_ORIENTATION_VERTICAL;
+  else orientation = GTK_ORIENTATION_HORIZONTAL;
 
   /* Create event box to catch user events */
   time_out->ebox = gtk_event_box_new ();
@@ -291,7 +293,7 @@ time_out_construct (XfcePanelPlugin *plugin)
   g_signal_connect (G_OBJECT (plugin), "free-data", G_CALLBACK (time_out_free), time_out);
   g_signal_connect (G_OBJECT (plugin), "size-changed", G_CALLBACK (time_out_size_changed), time_out);
   g_signal_connect (G_OBJECT (plugin), "configure-plugin", G_CALLBACK (time_out_configure), time_out);
-  g_signal_connect (G_OBJECT (plugin), "orientation-changed", G_CALLBACK (time_out_orientation_changed), time_out);
+  g_signal_connect (G_OBJECT (plugin), "mode-changed", G_CALLBACK (time_out_mode_changed), time_out);
   g_signal_connect (G_OBJECT (plugin), "about", G_CALLBACK (time_out_about), NULL);
 
   /* Display the configure menu item */
@@ -373,19 +375,19 @@ time_out_size_changed (XfcePanelPlugin *plugin,
                        gint             size,
                        TimeOutPlugin   *time_out)
 {
-  GtkOrientation orientation;
+  XfcePanelPluginMode mode;
 
   g_return_val_if_fail (plugin != NULL, FALSE);
   g_return_val_if_fail (time_out != NULL, FALSE);
 
-  /* Get the orientation of the panel */
-  orientation = xfce_panel_plugin_get_orientation (plugin);
+  /* Get the mode of the panel */
+  mode = xfce_panel_plugin_get_mode (plugin);
 
   /* Update icon size */
   gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), size - 8);
 
   /* Update widget size */
-  if (orientation == GTK_ORIENTATION_HORIZONTAL)
+  if (mode == XFCE_PANEL_PLUGIN_MODE_HORIZONTAL)
     gtk_widget_set_size_request (GTK_WIDGET (plugin), -1, size);
   else
     gtk_widget_set_size_request (GTK_WIDGET (plugin), size, -1);
@@ -397,15 +399,18 @@ time_out_size_changed (XfcePanelPlugin *plugin,
 
 
 static void
-time_out_orientation_changed (XfcePanelPlugin *plugin,
-                              GtkOrientation  orientation,
-                              TimeOutPlugin   *time_out)
+time_out_mode_changed (XfcePanelPlugin    *plugin,
+		       XfcePanelPluginMode mode,
+		       TimeOutPlugin      *time_out)
 {
   g_return_if_fail (plugin != NULL);
   g_return_if_fail (time_out != NULL);
 
   /* Apply orientation to hvbox */
-  xfce_hvbox_set_orientation (XFCE_HVBOX (time_out->hvbox), orientation);
+  xfce_hvbox_set_orientation (XFCE_HVBOX (time_out->hvbox),
+			      mode == XFCE_PANEL_PLUGIN_MODE_VERTICAL
+			      ? GTK_ORIENTATION_VERTICAL
+			      : GTK_ORIENTATION_HORIZONTAL);
 }
 
 static void
