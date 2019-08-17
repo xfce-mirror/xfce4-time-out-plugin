@@ -203,7 +203,7 @@ time_out_new (XfcePanelPlugin *plugin)
 
   /* Create time out icon */
   time_out->panel_icon = gtk_image_new_from_icon_name ("xfce4-time-out-plugin", GTK_ICON_SIZE_DIALOG);
-  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), xfce_panel_plugin_get_size (time_out->plugin) - 8);
+  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), xfce_panel_plugin_get_icon_size (time_out->plugin));
   gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->panel_icon, TRUE, TRUE, 0);
   gtk_widget_show (time_out->panel_icon);
 
@@ -382,7 +382,8 @@ time_out_size_changed (XfcePanelPlugin *plugin,
   orientation = xfce_panel_plugin_get_orientation (plugin);
 
   /* Update icon size */
-  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), size - 8);
+  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon),
+			    xfce_panel_plugin_get_icon_size(time_out->plugin));
 
   /* Update widget size */
   if (orientation == GTK_ORIENTATION_HORIZONTAL)
