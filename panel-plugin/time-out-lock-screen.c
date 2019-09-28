@@ -38,6 +38,8 @@ static void     time_out_lock_screen_postpone   (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
 static void     time_out_lock_screen_resume     (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_grab_seat  (GdkSeat                *seat,
+                                                 GtkWidget              *window);
 
 
 
@@ -82,6 +84,9 @@ struct _TimeOutLockScreen
   GtkWidget      *postpone_button;
   GtkWidget      *resume_button;
   GtkWidget      *progress;
+
+  /* Seat */
+  GdkSeat        *seat;
 
   /* Fade out */
   TimeOutFadeout *fadeout;
@@ -239,6 +244,9 @@ time_out_lock_screen_finalize (GObject *object)
   if (G_UNLIKELY (lock_screen->fadeout != NULL))
     time_out_fadeout_destroy (lock_screen->fadeout);
 
+  /* Release keyboard */
+  gdk_seat_ungrab (lock_screen->seat);
+
   /* Destroy information window */
   gtk_widget_destroy (lock_screen->window);
 }
@@ -284,6 +292,10 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
   /* Display information window */
   gtk_widget_show_now (lock_screen->window);
   gtk_widget_grab_focus (lock_screen->window);
+
+  /* Grab keyboard */
+  lock_screen->seat = gdk_display_get_default_seat (display);
+  time_out_lock_screen_grab_seat (lock_screen->seat, lock_screen->window);
 }
 
 
@@ -296,6 +308,9 @@ time_out_lock_screen_hide (TimeOutLockScreen *lock_screen)
   /* Destroy fadeout */
   time_out_fadeout_destroy (lock_screen->fadeout);
   lock_screen->fadeout = NULL;
+
+  /* Release keyboard */
+  gdk_seat_ungrab (lock_screen->seat);
 
   /* Push out changes */
   gdk_display_flush (gdk_display_get_default ());
@@ -420,4 +435,27 @@ time_out_lock_screen_resume (GtkButton         *button,
 
   /* Emit resume signal */
   g_signal_emit_by_name (lock_screen, "resume", NULL);
+}
+
+static void
+time_out_lock_screen_grab_seat (GdkSeat *seat, GtkWidget *window)
+{
+  GdkGrabStatus status;
+  gint attempts = 0;
+
+  while (TRUE)
+  {
+    status = gdk_seat_grab (seat, gtk_widget_get_window (window),
+                            GDK_SEAT_CAPABILITY_KEYBOARD, FALSE, NULL, NULL,
+                            NULL, NULL);
+
+    if (++attempts > 5 || status == GDK_GRAB_SUCCESS)
+      break;
+
+    /* Wait 100ms before trying again */
+    g_usleep (100000);
+  }
+
+  if (status != GDK_GRAB_SUCCESS)
+    g_warning ("Failed to grab seat");
 }
