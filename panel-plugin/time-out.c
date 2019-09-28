@@ -471,11 +471,17 @@ time_out_configure (XfcePanelPlugin *plugin,
   xfce_panel_plugin_block_menu (plugin);
 
   /* Create properties dialog */
+#if LIBXFCE4UI_CHECK_VERSION (4,14,0)
+  dialog = xfce_titled_dialog_new_with_mixed_buttons (_("Time Out"),
+    NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+    "window-close", _("_Close"), GTK_RESPONSE_OK,
+    NULL);
+#else
   dialog = xfce_titled_dialog_new_with_buttons (_("Time Out"),
-                                                GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (plugin))),
-                                                GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_NO_SEPARATOR,
-                                                GTK_STOCK_CLOSE, GTK_RESPONSE_OK,
-                                                NULL);
+    NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
+    "gtk-close", GTK_RESPONSE_OK,
+    NULL);
+#endif
 
   /* Set dialog property */
   g_object_set_data (G_OBJECT (plugin), "dialog", dialog);
