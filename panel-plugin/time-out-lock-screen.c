@@ -189,7 +189,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   gtk_widget_show (box);
 
   /* Create layout box */
-  vbox = gtk_vbox_new (FALSE, 6);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
   gtk_container_add (GTK_CONTAINER (box), vbox);
   gtk_widget_show (vbox);
@@ -199,7 +199,8 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   image = gtk_image_new_from_pixbuf (pixbuf);
   if (G_LIKELY (pixbuf != NULL))
     g_object_unref (G_OBJECT (pixbuf));
-  gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.5);
+  gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
+  gtk_widget_set_valign (image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (vbox), image);
   gtk_widget_show (image);
 
@@ -256,19 +257,22 @@ void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
   GdkScreen *screen;
+  GdkDisplay *display;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
   /* Handle pending events before locking the screen */
   while (gtk_events_pending())
     gtk_main_iteration ();
-  gdk_flush ();
+
+  display = gdk_display_get_default ();
+  gdk_display_flush (display);
 
   /* Create fadeout */
-  lock_screen->fadeout = time_out_fadeout_new (gdk_display_get_default ());
+  lock_screen->fadeout = time_out_fadeout_new (display);
 
   /* Push out changes */
-  gdk_flush ();
+  gdk_display_flush (display);
 
   /* Center window on target monitor */
   xfce_gtk_window_center_on_active_screen (GTK_WINDOW (lock_screen->window));
@@ -294,7 +298,7 @@ time_out_lock_screen_hide (TimeOutLockScreen *lock_screen)
   lock_screen->fadeout = NULL;
 
   /* Push out changes */
-  gdk_flush ();
+  gdk_display_flush (gdk_display_get_default ());
 
   /* Hide information window */
   gtk_widget_hide (lock_screen->window);

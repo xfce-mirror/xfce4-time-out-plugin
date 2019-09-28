@@ -213,7 +213,8 @@ time_out_new (XfcePanelPlugin *plugin)
 
   /* Create label for displaying the remaining time until the next break */
   time_out->time_label = gtk_label_new (_("Inactive"));
-  gtk_misc_set_alignment (GTK_MISC (time_out->time_label), 0.5, 0.5);
+  gtk_label_set_xalign (GTK_LABEL (time_out->time_label), 0.5);
+  gtk_label_set_yalign (GTK_LABEL (time_out->time_label), 0.5);
   gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->time_label, TRUE, TRUE, 0);
   gtk_widget_show (time_out->time_label);
 
@@ -453,7 +454,7 @@ time_out_configure (XfcePanelPlugin *plugin,
   GtkWidget *timebin;
   GtkWidget *behaviourbin;
   GtkWidget *appearancebin;
-  GtkWidget *table;
+  GtkWidget *grid;
   GtkWidget *vbox;
   GtkWidget *label;
   GtkWidget *spin;
@@ -489,37 +490,38 @@ time_out_configure (XfcePanelPlugin *plugin,
   /* Create time settings section */
   framebox = xfce_gtk_frame_box_new (_("Time settings"), &timebin);
   gtk_container_set_border_width (GTK_CONTAINER (framebox), 6);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
 
-  /* Create time settings table */
-  table = gtk_table_new (3, 3, FALSE);
-  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
-  gtk_table_set_col_spacings (GTK_TABLE (table), 12);
-  gtk_container_add (GTK_CONTAINER (timebin), table);
-  gtk_widget_show (table);
+  /* Create time settings grid */
+  grid = gtk_grid_new ();
+  gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
+  gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+  gtk_container_add (GTK_CONTAINER (timebin), grid);
+  gtk_widget_show (grid);
 
   /* Create the labels for the minutes and seconds spins */
   label = gtk_label_new (_("Minutes"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 0, 1, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_label_set_yalign (GTK_LABEL (label), 0.5);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
   gtk_widget_show (label);
 
   label = gtk_label_new (_("Seconds"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 2, 3, 0, 1, GTK_SHRINK, GTK_FILL, 1.0, 0.5);
+  gtk_label_set_yalign (GTK_LABEL (label), 0.5);
+  gtk_grid_attach (GTK_GRID (grid), label, 2, 0, 1, 1);
   gtk_widget_show (label);
 
   /* Create break countdown time label */
   label = gtk_label_new (_("Time between breaks:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 1.0, 0.5);
+  gtk_label_set_xalign (GTK_LABEL (label), 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
   gtk_widget_show (label);
 
   /* Create break countdown time minute spin */
   spin = gtk_spin_button_new_with_range (1, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->break_countdown_seconds / 60);
-  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_grid_attach (GTK_GRID (grid), spin, 1, 1, 1, 1);
+  gtk_widget_set_hexpand (spin, TRUE);
   gtk_widget_show (spin);
 
   /* Store reference on the spin button in the plugin */
@@ -528,7 +530,8 @@ time_out_configure (XfcePanelPlugin *plugin,
   /* Create break countdown time minute spin */
   spin = gtk_spin_button_new_with_range (0, 59, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->break_countdown_seconds % 60);
-  gtk_table_attach (GTK_TABLE (table), spin, 2, 3, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_grid_attach (GTK_GRID (grid), spin, 2, 1, 1, 1);
+  gtk_widget_set_hexpand (spin, TRUE);
   gtk_widget_show (spin);
 
   /* Store reference on the spin button in the plugin */
@@ -536,48 +539,54 @@ time_out_configure (XfcePanelPlugin *plugin,
 
   /* Create lock countdown time label */
   label = gtk_label_new (_("Break length:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 1.0, 0.5);
+  gtk_label_set_xalign (GTK_LABEL (label), 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 2, 1, 1);
   gtk_widget_show (label);
 
   /* Create lock countdown time spins */
   spin = gtk_spin_button_new_with_range (0, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->lock_countdown_seconds / 60);
   g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_lock_countdown_minutes_changed), time_out);
-  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_grid_attach (GTK_GRID (grid), spin, 1, 2, 1, 1);
+  gtk_widget_set_hexpand (spin, TRUE);
   gtk_widget_show (spin);
+
   spin = gtk_spin_button_new_with_range (0, 59, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->lock_countdown_seconds % 60);
   g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_lock_countdown_seconds_changed), time_out);
-  gtk_table_attach (GTK_TABLE (table), spin, 2, 3, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_grid_attach (GTK_GRID (grid), spin, 2, 2, 1, 1);
+  gtk_widget_set_hexpand (spin, TRUE);
   gtk_widget_show (spin);
 
   /* Create postpone countdown time label */
   label = gtk_label_new (_("Postpone length:"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 3, 4, GTK_FILL, GTK_FILL, 1.0, 0.5);
+  gtk_label_set_xalign (GTK_LABEL (label), 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 3, 1, 1);
   gtk_widget_show (label);
 
   /* Create postpone countdown time spins */
   spin = gtk_spin_button_new_with_range (0, 24 * 60, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->postpone_countdown_seconds / 60);
   g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_postpone_countdown_minutes_changed), time_out);
-  gtk_table_attach (GTK_TABLE (table), spin, 1, 2, 3, 4, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_grid_attach (GTK_GRID (grid), spin, 1, 3, 1, 1);
+  gtk_widget_set_hexpand (spin, TRUE);
   gtk_widget_show (spin);
+
   spin = gtk_spin_button_new_with_range (0, 59, 1);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (spin), time_out->postpone_countdown_seconds % 60);
   g_signal_connect (spin, "value-changed", G_CALLBACK (time_out_postpone_countdown_seconds_changed), time_out);
-  gtk_table_attach (GTK_TABLE (table), spin, 2, 3, 3, 4, GTK_EXPAND | GTK_FILL, GTK_FILL, 0.0, 0.5);
+  gtk_grid_attach (GTK_GRID (grid), spin, 2, 3, 1, 1);
+  gtk_widget_set_hexpand (spin, TRUE);
   gtk_widget_show (spin);
 
   /* Create behaviour section */
   framebox = xfce_gtk_frame_box_new (_("Behaviour"), &behaviourbin);
   gtk_container_set_border_width (GTK_CONTAINER (framebox), 6);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
 
   /* Create behaviour box */
-  vbox = gtk_vbox_new (FALSE, 6);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (behaviourbin), vbox);
   gtk_widget_show (vbox);
 
@@ -598,11 +607,11 @@ time_out_configure (XfcePanelPlugin *plugin,
   /* Create appearance section */
   framebox = xfce_gtk_frame_box_new (_("Appearance"), &appearancebin);
   gtk_container_set_border_width (GTK_CONTAINER (framebox), 6);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), framebox, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), framebox, TRUE, TRUE, 0);
   gtk_widget_show (framebox);
 
   /* Create appearance box */
-  vbox = gtk_vbox_new (FALSE, 6);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
   gtk_container_add (GTK_CONTAINER (appearancebin), vbox);
   gtk_widget_show (vbox);
 
