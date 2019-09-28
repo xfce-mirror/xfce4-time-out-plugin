@@ -36,7 +36,7 @@
 #include "time-out-fadeout.h"
 
 
-#define COLOR "#b6c4d7"
+#define COLOR 0xb6c4d7
 
 
 
@@ -100,7 +100,7 @@ time_out_fadeout_new_window (GdkDisplay *display,
   attr.override_redirect = TRUE;
   mask |= CWOverrideRedirect;
 
-  attr.background_pixel = BlackPixel (xdisplay, gdk_x11_screen_get_screen_number (screen));
+  attr.background_pixel = COLOR;
   mask |= CWBackPixel;
 
   xwindow = XCreateWindow (xdisplay, gdk_x11_window_get_xid (root),
@@ -135,7 +135,7 @@ time_out_fadeout_new_window (GdkDisplay *display,
       g_object_unref (root_pixbuf);
 
       /* draw black transparent layer */
-      cairo_set_source_rgba (cr, 0, 0, 0, 0.5);
+      cairo_set_source_rgba (cr, 182, 196, 215, 0.5);
       cairo_paint (cr);
       cairo_destroy (cr);
       cairo_surface_destroy (surface);
