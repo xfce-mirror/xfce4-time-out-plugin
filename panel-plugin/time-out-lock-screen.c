@@ -174,6 +174,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   /* Create information window */
   lock_screen->window = g_object_new (GTK_TYPE_WINDOW, "type", GTK_WINDOW_POPUP, NULL);
+  gtk_window_set_default_size (GTK_WINDOW (lock_screen->window), 320, 260);
   gtk_widget_realize (lock_screen->window);
 
   /* Create layout box */
