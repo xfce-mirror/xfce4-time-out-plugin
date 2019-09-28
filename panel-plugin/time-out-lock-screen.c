@@ -161,13 +161,10 @@ time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
 static void
 time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 {
-  GdkPixbuf *pixbuf;
-  GtkWidget *border;
-  GtkWidget *box;
-  GtkWidget *vbox;
-  GtkWidget *image;
-  GtkStyleContext *context;
-  GdkRGBA rgba;
+  GdkPixbuf       *pixbuf;
+  GtkWidget       *vbox;
+  GtkWidget       *image;
+  GtkCssProvider  *provider;
 
   lock_screen->display_seconds = TRUE;
   lock_screen->allow_postpone = TRUE;
@@ -179,26 +176,22 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   lock_screen->window = g_object_new (GTK_TYPE_WINDOW, "type", GTK_WINDOW_POPUP, NULL);
   gtk_widget_realize (lock_screen->window);
 
-  /* Draw border around the window */
-  border = gtk_event_box_new ();
-
-  context = gtk_widget_get_style_context (GTK_WIDGET (lock_screen->window));
-  gtk_style_context_get_color(context, GTK_STATE_SELECTED, &rgba);
-
-  gtk_widget_override_background_color (border, GTK_STATE_NORMAL, &rgba);
-  gtk_container_add (GTK_CONTAINER (lock_screen->window), border);
-  gtk_widget_show (border);
-
-  box = gtk_event_box_new ();
-  gtk_container_set_border_width (GTK_CONTAINER (box), 6);
-  gtk_container_add (GTK_CONTAINER (border), box);
-  gtk_widget_show (box);
-
   /* Create layout box */
   vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
-  gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
-  gtk_container_add (GTK_CONTAINER (box), vbox);
+  gtk_container_add (GTK_CONTAINER (lock_screen->window), vbox);
   gtk_widget_show (vbox);
+
+  /* Draw border around the layout box */
+  provider = gtk_css_provider_new ();
+  gtk_css_provider_load_from_data (provider,
+                                   "box { \
+                                      border: 6px solid @theme_selected_bg_color; \
+                                      padding: 6px;}",
+                                    -1, NULL);
+  gtk_style_context_add_provider (gtk_widget_get_style_context (GTK_WIDGET (vbox)),
+                                  GTK_STYLE_PROVIDER (provider),
+                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  g_object_unref (provider);
 
   /* Create image */
   pixbuf = gdk_pixbuf_new_from_file_at_size (DATADIR "/icons/hicolor/scalable/apps/xfce4-time-out-plugin.svg", 128, 128, NULL);
