@@ -166,6 +166,8 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   GtkWidget *box;
   GtkWidget *vbox;
   GtkWidget *image;
+  GtkStyleContext *context;
+  GdkRGBA rgba;
 
   lock_screen->display_seconds = TRUE;
   lock_screen->allow_postpone = TRUE;
@@ -179,7 +181,11 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   /* Draw border around the window */
   border = gtk_event_box_new ();
-  gtk_widget_modify_bg (border, GTK_STATE_NORMAL, &(GTK_WIDGET (lock_screen->window)->style->bg[GTK_STATE_SELECTED]));
+
+  context = gtk_widget_get_style_context (GTK_WIDGET (lock_screen->window));
+  gtk_style_context_get_color(context, GTK_STATE_SELECTED, &rgba);
+
+  gtk_widget_override_background_color (border, GTK_STATE_NORMAL, &rgba);
   gtk_container_add (GTK_CONTAINER (lock_screen->window), border);
   gtk_widget_show (border);
 
