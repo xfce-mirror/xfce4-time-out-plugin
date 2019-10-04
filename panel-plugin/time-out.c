@@ -434,11 +434,7 @@ time_out_about (XfcePanelPlugin *plugin)
                          "comments", _("Xfce Panel plugin for taking a break from computer work every now and then."),
                          "destroy-with-parent", TRUE,
                          "logo-icon-name", "xfce4-time-out-plugin",
-#if GTK_CHECK_VERSION (2,12,0)
                          "program-name", PACKAGE_NAME,
-#else
-                         "name", PACKAGE_NAME,
-#endif
                          "version", PACKAGE_VERSION,
                          "translator-credits", _("translator-credits"),
                          "license", XFCE_LICENSE_GPL,
