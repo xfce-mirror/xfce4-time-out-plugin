@@ -26,7 +26,7 @@
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
 #include <libxfce4ui/libxfce4ui.h>
-#include <libxfce4panel/xfce-panel-plugin.h>
+#include <libxfce4panel/libxfce4panel.h>
 
 #include "time-out.h"
 #include "time-out-countdown.h"
@@ -162,7 +162,7 @@ time_out_new (XfcePanelPlugin *plugin)
   GtkOrientation orientation;
 
   /* Allocate memory for the plugin structure */
-  time_out = panel_slice_new0 (TimeOutPlugin);
+  time_out = g_slice_new0 (TimeOutPlugin);
 
   /* Store pointer to the plugin */
   time_out->plugin = plugin;
@@ -238,7 +238,7 @@ time_out_free (XfcePanelPlugin *plugin,
   gtk_widget_destroy (time_out->hvbox);
 
   /* Free the plugin structure */
-  panel_slice_free (TimeOutPlugin, time_out);
+  g_slice_free (TimeOutPlugin, time_out);
 }
 
 
