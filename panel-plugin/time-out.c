@@ -698,13 +698,14 @@ time_out_end_configure (GtkDialog     *dialog,
   time_out_save_settings (time_out);
 
   /* Restart or resume break countdown */
-  if (G_UNLIKELY (restart && time_out->enabled))
-    {
-      time_out_stop_break_countdown (time_out);
-      time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
-    }
-  else
-    time_out_countdown_resume (time_out->break_countdown);
+  if (time_out->enabled)
+    if (G_UNLIKELY (restart))
+      {
+        time_out_stop_break_countdown (time_out);
+        time_out_start_break_countdown (time_out, time_out->break_countdown_seconds);
+      }
+    else
+      time_out_countdown_resume (time_out->break_countdown);
 
   /* Destroy the properties dialog */
   gtk_widget_destroy (GTK_WIDGET (dialog));
