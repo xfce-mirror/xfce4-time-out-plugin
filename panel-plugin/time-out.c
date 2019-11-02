@@ -412,10 +412,10 @@ time_out_mode_changed (XfcePanelPlugin     *plugin,
   g_return_if_fail (time_out != NULL);
 
   /* Apply orientation to hvbox */
-  xfce_hvbox_set_orientation (XFCE_HVBOX (time_out->hvbox),
-			      mode == XFCE_PANEL_PLUGIN_MODE_VERTICAL
-			      ? GTK_ORIENTATION_VERTICAL
-			      : GTK_ORIENTATION_HORIZONTAL);
+  gtk_orientable_set_orientation (GTK_ORIENTABLE(time_out->hvbox),
+				  mode == XFCE_PANEL_PLUGIN_MODE_VERTICAL
+				  ? GTK_ORIENTATION_VERTICAL
+				  : GTK_ORIENTATION_HORIZONTAL);
 }
 
 static void
