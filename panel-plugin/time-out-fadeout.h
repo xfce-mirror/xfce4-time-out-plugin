@@ -25,7 +25,6 @@
 
 G_BEGIN_DECLS
 
-typedef struct _TimeOutScreen  TimeOutScreen;
 typedef struct _TimeOutFadeout TimeOutFadeout;
 
 TimeOutFadeout *time_out_fadeout_new     (GdkDisplay     *display);

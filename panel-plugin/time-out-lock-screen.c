@@ -38,6 +38,8 @@ static void     time_out_lock_screen_postpone   (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
 static void     time_out_lock_screen_resume     (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_grab_seat  (GdkSeat                *seat,
+                                                 GtkWidget              *window);
 
 
 
@@ -82,6 +84,9 @@ struct _TimeOutLockScreen
   GtkWidget      *postpone_button;
   GtkWidget      *resume_button;
   GtkWidget      *progress;
+
+  /* Seat */
+  GdkSeat        *seat;
 
   /* Fade out */
   TimeOutFadeout *fadeout;
@@ -161,11 +166,10 @@ time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
 static void
 time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 {
-  GdkPixbuf *pixbuf;
-  GtkWidget *border;
-  GtkWidget *box;
-  GtkWidget *vbox;
-  GtkWidget *image;
+  GdkPixbuf       *pixbuf;
+  GtkWidget       *vbox;
+  GtkWidget       *image;
+  GtkCssProvider  *provider;
 
   lock_screen->display_seconds = TRUE;
   lock_screen->allow_postpone = TRUE;
@@ -175,31 +179,33 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   /* Create information window */
   lock_screen->window = g_object_new (GTK_TYPE_WINDOW, "type", GTK_WINDOW_POPUP, NULL);
+  gtk_window_set_default_size (GTK_WINDOW (lock_screen->window), 320, 260);
   gtk_widget_realize (lock_screen->window);
 
-  /* Draw border around the window */
-  border = gtk_event_box_new ();
-  gtk_widget_modify_bg (border, GTK_STATE_NORMAL, &(GTK_WIDGET (lock_screen->window)->style->bg[GTK_STATE_SELECTED]));
-  gtk_container_add (GTK_CONTAINER (lock_screen->window), border);
-  gtk_widget_show (border);
-
-  box = gtk_event_box_new ();
-  gtk_container_set_border_width (GTK_CONTAINER (box), 6);
-  gtk_container_add (GTK_CONTAINER (border), box);
-  gtk_widget_show (box);
-
   /* Create layout box */
-  vbox = gtk_vbox_new (FALSE, 6);
-  gtk_container_set_border_width (GTK_CONTAINER (vbox), 6);
-  gtk_container_add (GTK_CONTAINER (box), vbox);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
+  gtk_container_add (GTK_CONTAINER (lock_screen->window), vbox);
   gtk_widget_show (vbox);
+
+  /* Draw border around the layout box */
+  provider = gtk_css_provider_new ();
+  gtk_css_provider_load_from_data (provider,
+                                   "box { \
+                                      border: 6px solid @theme_selected_bg_color; \
+                                      padding: 6px;}",
+                                    -1, NULL);
+  gtk_style_context_add_provider (gtk_widget_get_style_context (GTK_WIDGET (vbox)),
+                                  GTK_STYLE_PROVIDER (provider),
+                                  GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
+  g_object_unref (provider);
 
   /* Create image */
   pixbuf = gdk_pixbuf_new_from_file_at_size (DATADIR "/icons/hicolor/scalable/apps/xfce4-time-out-plugin.svg", 128, 128, NULL);
   image = gtk_image_new_from_pixbuf (pixbuf);
   if (G_LIKELY (pixbuf != NULL))
     g_object_unref (G_OBJECT (pixbuf));
-  gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.5);
+  gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
+  gtk_widget_set_valign (image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (vbox), image);
   gtk_widget_show (image);
 
@@ -211,7 +217,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 
   /* Create a progress bar to visually display the remaining tme */
   lock_screen->progress = gtk_progress_bar_new ();
-  gtk_progress_bar_set_orientation (GTK_PROGRESS_BAR (lock_screen->progress), GTK_PROGRESS_LEFT_TO_RIGHT);
+  gtk_orientable_set_orientation(GTK_ORIENTABLE(lock_screen->progress),GTK_ORIENTATION_HORIZONTAL);
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->progress, FALSE, FALSE, 0);
   gtk_widget_show (lock_screen->progress);
 
@@ -238,6 +244,9 @@ time_out_lock_screen_finalize (GObject *object)
   if (G_UNLIKELY (lock_screen->fadeout != NULL))
     time_out_fadeout_destroy (lock_screen->fadeout);
 
+  /* Release keyboard */
+  gdk_seat_ungrab (lock_screen->seat);
+
   /* Destroy information window */
   gtk_widget_destroy (lock_screen->window);
 }
@@ -256,19 +265,22 @@ void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
   GdkScreen *screen;
+  GdkDisplay *display;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
   /* Handle pending events before locking the screen */
   while (gtk_events_pending())
     gtk_main_iteration ();
-  gdk_flush ();
+
+  display = gdk_display_get_default ();
+  gdk_display_flush (display);
 
   /* Create fadeout */
-  lock_screen->fadeout = time_out_fadeout_new (gdk_display_get_default ());
+  lock_screen->fadeout = time_out_fadeout_new (display);
 
   /* Push out changes */
-  gdk_flush ();
+  gdk_display_flush (display);
 
   /* Center window on target monitor */
   xfce_gtk_window_center_on_active_screen (GTK_WINDOW (lock_screen->window));
@@ -280,6 +292,10 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
   /* Display information window */
   gtk_widget_show_now (lock_screen->window);
   gtk_widget_grab_focus (lock_screen->window);
+
+  /* Grab keyboard */
+  lock_screen->seat = gdk_display_get_default_seat (display);
+  time_out_lock_screen_grab_seat (lock_screen->seat, lock_screen->window);
 }
 
 
@@ -293,8 +309,11 @@ time_out_lock_screen_hide (TimeOutLockScreen *lock_screen)
   time_out_fadeout_destroy (lock_screen->fadeout);
   lock_screen->fadeout = NULL;
 
+  /* Release keyboard */
+  gdk_seat_ungrab (lock_screen->seat);
+
   /* Push out changes */
-  gdk_flush ();
+  gdk_display_flush (gdk_display_get_default ());
 
   /* Hide information window */
   gtk_widget_hide (lock_screen->window);
@@ -416,4 +435,27 @@ time_out_lock_screen_resume (GtkButton         *button,
 
   /* Emit resume signal */
   g_signal_emit_by_name (lock_screen, "resume", NULL);
+}
+
+static void
+time_out_lock_screen_grab_seat (GdkSeat *seat, GtkWidget *window)
+{
+  GdkGrabStatus status;
+  gint attempts = 0;
+
+  while (TRUE)
+  {
+    status = gdk_seat_grab (seat, gtk_widget_get_window (window),
+                            GDK_SEAT_CAPABILITY_KEYBOARD, FALSE, NULL, NULL,
+                            NULL, NULL);
+
+    if (++attempts > 5 || status == GDK_GRAB_SUCCESS)
+      break;
+
+    /* Wait 100ms before trying again */
+    g_usleep (100000);
+  }
+
+  if (status != GDK_GRAB_SUCCESS)
+    g_warning ("Failed to grab seat");
 }

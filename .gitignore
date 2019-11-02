@@ -3,6 +3,7 @@
 stamp*
 */.deps
 .libs
+*.gmo
 *.orig
 *.o
 *.lo
@@ -24,3 +25,6 @@ depcomp
 aclocal.m4
 autom4te.cache
 *.desktop
+po/POTFILES
+po/*.in.in
+po/.intltool-merge-cache

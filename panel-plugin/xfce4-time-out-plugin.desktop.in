@@ -7,3 +7,4 @@ Icon=xfce4-time-out-plugin
 X-XFCE-Internal=FALSE
 X-XFCE-Module=time-out
 X-XFCE-Unique=true
+X-XFCE-API=2.0
