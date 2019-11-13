@@ -15,12 +15,14 @@ Installation
 
 The file 'INSTALL' contains generic installation instructions. For more
 detailed information, visit the time out plugin website at
-http://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin
-
+https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin
 
 How to report bugs?
 ===================
 
-Bugs should be reported to the Xfce bug tracking system
-(http://bugzilla.xfce.org, product 'Xfce Panel Plugins', Component
-'Time out plugin'). You will need to create an account for yourself.
+You can report bugs and feature requests at http://bugzilla.xfce.org.
+Choose the product Panel Plugins and the component xfce4-time-out-plugin.
+You will need to create an account for yourself.
+
+You can also join the Xfce development mailing-list:
+https://mail.xfce.org/mailman/listinfo/xfce4-dev

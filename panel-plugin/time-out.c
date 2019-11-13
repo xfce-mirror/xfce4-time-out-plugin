@@ -438,7 +438,7 @@ time_out_about (XfcePanelPlugin *plugin)
                          "version", PACKAGE_VERSION,
                          "translator-credits", _("translator-credits"),
                          "license", XFCE_LICENSE_GPL,
-                         "website", "http://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin",
+                         "website", "https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin",
                          NULL);
 }
 
