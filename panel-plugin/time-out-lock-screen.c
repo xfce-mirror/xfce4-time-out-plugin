@@ -36,6 +36,8 @@ static void     time_out_lock_screen_init       (TimeOutLockScreen      *lock_sc
 static void     time_out_lock_screen_finalize   (GObject                *object);
 static void     time_out_lock_screen_postpone   (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_lock       (GtkButton              *button,
+                                                 TimeOutLockScreen      *lock_screen);
 static void     time_out_lock_screen_resume     (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
 static void     time_out_lock_screen_grab_seat  (GdkSeat                *seat,
@@ -49,10 +51,12 @@ struct _TimeOutLockScreenClass
 
   /* Signals */
   void         (*postpone)  (TimeOutLockScreen *lock_screen);
+  void         (*lock)      (TimeOutLockScreen *lock_screen);
   void         (*resume)    (TimeOutLockScreen *lock_screen);
 
   /* Signal identifiers */
   guint        postpone_signal_id;
+  guint        lock_signal_id;
   guint        resume_signal_id;
 };
 
@@ -82,6 +86,7 @@ struct _TimeOutLockScreen
   GtkWidget      *window;
   GtkWidget      *time_label;
   GtkWidget      *postpone_button;
+  GtkWidget      *lock_button;
   GtkWidget      *resume_button;
   GtkWidget      *progress;
 
@@ -149,6 +154,17 @@ time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
                                             G_TYPE_NONE,
                                             0);
 
+  /* Register 'lock' signal */
+  klass->lock_signal_id = g_signal_new ("lock",
+                                        G_TYPE_FROM_CLASS (gobject_class),
+                                        G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                                        G_STRUCT_OFFSET (TimeOutLockScreenClass, lock),
+                                        NULL,
+                                        NULL,
+                                        g_cclosure_marshal_VOID__VOID,
+                                        G_TYPE_NONE,
+                                        0);
+
   /* Register 'resume' signal */
   klass->resume_signal_id = g_signal_new ("resume",
                                           G_TYPE_FROM_CLASS (gobject_class),
@@ -168,6 +184,7 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 {
   GdkPixbuf       *pixbuf;
   GtkWidget       *vbox;
+  GtkWidget       *button_box;
   GtkWidget       *image;
   GtkCssProvider  *provider;
 
@@ -221,15 +238,27 @@ time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
   gtk_box_pack_start (GTK_BOX (vbox), lock_screen->progress, FALSE, FALSE, 0);
   gtk_widget_show (lock_screen->progress);
 
+  /* Create box for buttons */
+  button_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 6);
+  gtk_box_set_homogeneous (GTK_BOX (button_box), TRUE);
+  gtk_box_pack_start (GTK_BOX (vbox), button_box, TRUE, TRUE, 0);
+  gtk_widget_show (button_box);
+
   /* Create postpone button */
   lock_screen->postpone_button = gtk_button_new_with_mnemonic (_("_Postpone"));
-  gtk_box_pack_start (GTK_BOX (vbox), lock_screen->postpone_button, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (button_box), lock_screen->postpone_button, TRUE, TRUE, 0);
   g_signal_connect (G_OBJECT (lock_screen->postpone_button), "clicked", G_CALLBACK (time_out_lock_screen_postpone), lock_screen);
   gtk_widget_show (lock_screen->postpone_button);
 
+  /* Create lock button */
+  lock_screen->lock_button = gtk_button_new_with_mnemonic (_("_Lock"));
+  gtk_box_pack_end (GTK_BOX (button_box), lock_screen->lock_button, TRUE, TRUE, 0);
+  g_signal_connect (G_OBJECT (lock_screen->lock_button), "clicked", G_CALLBACK (time_out_lock_screen_lock), lock_screen);
+  gtk_widget_show (lock_screen->lock_button);
+
   /* Create resume button */
   lock_screen->resume_button = gtk_button_new_with_mnemonic (_("_Resume"));
-  gtk_box_pack_start (GTK_BOX (vbox), lock_screen->resume_button, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (button_box), lock_screen->resume_button, TRUE, TRUE, 0);
   g_signal_connect (G_OBJECT (lock_screen->resume_button), "clicked", G_CALLBACK (time_out_lock_screen_resume), lock_screen);
 }
 
@@ -372,6 +401,18 @@ time_out_lock_screen_set_allow_postpone (TimeOutLockScreen *lock_screen,
 
 
 void
+time_out_lock_screen_set_allow_lock (TimeOutLockScreen *lock_screen,
+                                     gboolean           allow_lock)
+{
+  if (G_LIKELY (allow_lock))
+    gtk_widget_show (lock_screen->lock_button);
+  else
+    gtk_widget_hide (lock_screen->lock_button);
+}
+
+
+
+void
 time_out_lock_screen_show_resume (TimeOutLockScreen *lock_screen,
                                   gboolean           show)
 {
@@ -413,6 +454,22 @@ time_out_lock_screen_set_display_hours (TimeOutLockScreen *lock_screen,
 
 
 
+void
+time_out_lock_screen_grab (TimeOutLockScreen *lock_screen)
+{
+  time_out_lock_screen_grab_seat (lock_screen->seat, lock_screen->window);
+}
+
+
+
+void
+time_out_lock_screen_ungrab (TimeOutLockScreen *lock_screen)
+{
+  gdk_seat_ungrab (lock_screen->seat);
+}
+
+
+
 static void
 time_out_lock_screen_postpone (GtkButton         *button,
                                TimeOutLockScreen *lock_screen)
@@ -424,7 +481,16 @@ time_out_lock_screen_postpone (GtkButton         *button,
   g_signal_emit_by_name (lock_screen, "postpone", NULL);
 }
 
+static void
+time_out_lock_screen_lock (GtkButton         *button,
+                           TimeOutLockScreen *lock_screen)
+{
+  g_return_if_fail (GTK_IS_BUTTON (button));
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
+  /* Emit postpone signal */
+  g_signal_emit_by_name (lock_screen, "lock", NULL);
+}
 
 static void
 time_out_lock_screen_resume (GtkButton         *button,

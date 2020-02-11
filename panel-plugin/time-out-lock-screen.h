@@ -50,8 +50,12 @@ void               time_out_lock_screen_set_display_hours   (TimeOutLockScreen *
                                                              gboolean           display_hours);
 void               time_out_lock_screen_set_allow_postpone  (TimeOutLockScreen *lock_screen,
                                                              gboolean           allow_postpone);
+void               time_out_lock_screen_set_allow_lock      (TimeOutLockScreen *lock_screen,
+                                                             gboolean           allow_lock);
 void               time_out_lock_screen_show_resume         (TimeOutLockScreen *lock_screen,
                                                              gboolean           auto_resume);
+void               time_out_lock_screen_grab                (TimeOutLockScreen *lock_screen);
+void               time_out_lock_screen_ungrab              (TimeOutLockScreen *lock_screen);
 
 G_END_DECLS;
 

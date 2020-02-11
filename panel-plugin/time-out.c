@@ -135,6 +135,8 @@ static void           time_out_start_lock_countdown               (TimeOutPlugin
 static void           time_out_stop_lock_countdown                (TimeOutPlugin     *time_out);
 static void           time_out_postpone                           (TimeOutLockScreen *lock_screen,
                                                                    TimeOutPlugin     *time_out);
+static void           time_out_lock                               (TimeOutLockScreen *lock_screen,
+                                                                   TimeOutPlugin     *time_out);
 static void           time_out_resume                             (TimeOutLockScreen *lock_screen,
                                                                    TimeOutPlugin     *time_out);
 static void           time_out_break_countdown_update             (TimeOutCountdown  *countdown,
@@ -172,6 +174,9 @@ time_out_new (XfcePanelPlugin *plugin)
 
   /* Connect to 'postpone' signal of the lock screen */
   g_signal_connect (G_OBJECT (time_out->lock_screen), "postpone", G_CALLBACK (time_out_postpone), time_out);
+
+  /* Connect to 'lock' signal of the lock screen */
+  g_signal_connect (G_OBJECT (time_out->lock_screen), "lock", G_CALLBACK (time_out_lock), time_out);
 
   /* Connect to 'resume' signal of the lock screen */
   g_signal_connect (G_OBJECT (time_out->lock_screen), "resume", G_CALLBACK (time_out_resume), time_out);
@@ -999,6 +1004,9 @@ time_out_start_lock_countdown (TimeOutPlugin *time_out)
   /* Set whether to allow postpone or not */
   time_out_lock_screen_set_allow_postpone (time_out->lock_screen, time_out->allow_postpone);
 
+  /* Enable button to lock screen */
+  time_out_lock_screen_set_allow_lock (time_out->lock_screen, TRUE);
+
   /* Hide the resume button initially */
   time_out_lock_screen_show_resume (time_out->lock_screen, FALSE);
 
@@ -1047,6 +1055,30 @@ time_out_postpone (TimeOutLockScreen *lock_screen,
 
   /* Start break countdown with postpone time */
   time_out_start_break_countdown (time_out, time_out->postpone_countdown_seconds);
+}
+
+static void
+time_out_lock (TimeOutLockScreen *lock_screen,
+               TimeOutPlugin     *time_out)
+{
+  GError      *error = NULL;
+  gboolean     succeed = FALSE;
+  gint         exit_status;
+
+  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (time_out != NULL);
+
+  /* ungrab seat so lock screen can start */
+  time_out_lock_screen_ungrab (time_out->lock_screen);
+
+  /* Lock screen and check for errors */
+  succeed = g_spawn_command_line_sync ("xflock4", NULL, NULL, &exit_status , &error);
+
+  if (!succeed)
+    xfce_dialog_show_error (NULL, error, _("Failed to lock screen"));
+
+  /* regrab seat */
+  time_out_lock_screen_grab (time_out->lock_screen);
 }
 
 
@@ -1151,5 +1183,6 @@ time_out_lock_countdown_finish (TimeOutCountdown *countdown,
     time_out_lock_screen_set_remaining (time_out->lock_screen, 0);
     time_out_lock_screen_set_allow_postpone (time_out->lock_screen, FALSE);
     time_out_lock_screen_show_resume (time_out->lock_screen, TRUE);
+    time_out_lock_screen_set_allow_lock (time_out->lock_screen, FALSE);
   }
 }
