@@ -4,14 +4,15 @@
 # 
 # Translators:
 # Cheng-Chia Tseng <pswo10680@gmail.com>, 2010
-# Jeff Huang <s8321414@gmail.com>, 2016-2017
+# 黃柏諺 <s8321414@gmail.com>, 2016-2017
+# 黃柏諺 <s8321414@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2017-12-17 01:55+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"POT-Creation-Date: 2020-02-11 06:32+0100\n"
+"PO-Revision-Date: 2020-02-12 02:38+0000\n"
+"Last-Translator: 黃柏諺 <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/xfce-panel-plugins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,126 +21,138 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Create label for displaying the remaining time until the next break
-#: ../panel-plugin/time-out.c:211
+#: ../panel-plugin/time-out.c:223
 msgid "Inactive"
 msgstr "不活躍"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:264
+#: ../panel-plugin/time-out.c:277
 msgid "Take a break"
 msgstr "休息一下"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:272
+#: ../panel-plugin/time-out.c:285
 msgid "Reset timer"
 msgstr "重設計時器"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:280
+#: ../panel-plugin/time-out.c:293
 msgid "Enabled"
 msgstr "啟用"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:344
+#: ../panel-plugin/time-out.c:357
 msgid "Paused"
 msgstr "暫停"
 
-#: ../panel-plugin/time-out.c:423
+#: ../panel-plugin/time-out.c:439
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "偶爾停下電腦工作並休息片刻的 Xfce 面板插件。"
 
-#: ../panel-plugin/time-out.c:432
+#: ../panel-plugin/time-out.c:444
 msgid "translator-credits"
 msgstr "Cheng-Chia Tseng <pswo10680@gmail.com>, 2010."
 
-#. Create properties dialog
-#: ../panel-plugin/time-out.c:464
+#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "逾時"
 
+#: ../panel-plugin/time-out.c:479
+msgid "_Close"
+msgstr "關閉(_C)"
+
 #. Create time settings section
-#: ../panel-plugin/time-out.c:481
+#: ../panel-plugin/time-out.c:499
 msgid "Time settings"
 msgstr "時間設定值"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:494
+#: ../panel-plugin/time-out.c:512
 msgid "Minutes"
 msgstr "分鐘"
 
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:517
 msgid "Seconds"
 msgstr "秒"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:505
+#: ../panel-plugin/time-out.c:523
 msgid "Time between breaks:"
 msgstr "多久休息一次："
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:529
+#: ../panel-plugin/time-out.c:549
 msgid "Break length:"
 msgstr "休息時間："
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:547
+#: ../panel-plugin/time-out.c:570
 msgid "Postpone length:"
 msgstr "延遲長度："
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:565
+#: ../panel-plugin/time-out.c:591
 msgid "Behaviour"
 msgstr "行為"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:576
+#: ../panel-plugin/time-out.c:602
 msgid "Allow postpone"
 msgstr "允許延遲"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:583
+#: ../panel-plugin/time-out.c:609
 msgid "Resume automatically"
 msgstr "自動繼續"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:590
+#: ../panel-plugin/time-out.c:616
 msgid "Appearance"
 msgstr "外觀"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:601
+#: ../panel-plugin/time-out.c:627
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "注意：圖示與時間無法同時隱藏。"
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:606
+#: ../panel-plugin/time-out.c:632
 msgid "Display icon"
 msgstr "顯示圖示"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:613
+#: ../panel-plugin/time-out.c:639
 msgid "Display remaining time in the panel"
 msgstr "於面板內顯示剩餘時間"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:620
+#: ../panel-plugin/time-out.c:646
 msgid "Display hours"
 msgstr "顯示小時數"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:653
 msgid "Display seconds"
 msgstr "顯示秒數"
 
+#: ../panel-plugin/time-out.c:1081
+msgid "Failed to lock screen"
+msgstr "鎖定螢幕失敗"
+
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:219
+#: ../panel-plugin/time-out-lock-screen.c:248
 msgid "_Postpone"
 msgstr "延遲(_P)"
 
+#. Create lock button
+#: ../panel-plugin/time-out-lock-screen.c:254
+msgid "_Lock"
+msgstr "鎖定(_L)"
+
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:225
+#: ../panel-plugin/time-out-lock-screen.c:260
 msgid "_Resume"
 msgstr "繼續(_R)"
 
