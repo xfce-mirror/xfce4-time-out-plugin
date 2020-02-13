@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015-2018
+# Moo, 2015-2018,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-16 18:32+0100\n"
-"PO-Revision-Date: 2018-01-06 22:37+0000\n"
+"POT-Creation-Date: 2020-02-11 06:32+0100\n"
+"PO-Revision-Date: 2020-02-13 23:30+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/xfce-panel-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -20,126 +20,138 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #. Create label for displaying the remaining time until the next break
-#: ../panel-plugin/time-out.c:211
+#: ../panel-plugin/time-out.c:223
 msgid "Inactive"
 msgstr "Neaktyvus"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:264
+#: ../panel-plugin/time-out.c:277
 msgid "Take a break"
 msgstr "Pailsėti"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:272
+#: ../panel-plugin/time-out.c:285
 msgid "Reset timer"
 msgstr "Atstatyti laikmatį"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:280
+#: ../panel-plugin/time-out.c:293
 msgid "Enabled"
 msgstr "Įjungta"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:344
+#: ../panel-plugin/time-out.c:357
 msgid "Paused"
 msgstr "Pristabdyta"
 
-#: ../panel-plugin/time-out.c:423
+#: ../panel-plugin/time-out.c:439
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Xfce skydelio įskiepis, skirtas kas numatytą laiko periodą padaryti darbo kompiuteriu pertrauką."
 
-#: ../panel-plugin/time-out.c:432
+#: ../panel-plugin/time-out.c:444
 msgid "translator-credits"
 msgstr "Algimantas Margevičius <margevicius.algimantas@gmail.com>\nMoo"
 
-#. Create properties dialog
-#: ../panel-plugin/time-out.c:464
+#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Pertrauka"
 
+#: ../panel-plugin/time-out.c:479
+msgid "_Close"
+msgstr "_Užverti"
+
 #. Create time settings section
-#: ../panel-plugin/time-out.c:481
+#: ../panel-plugin/time-out.c:499
 msgid "Time settings"
 msgstr "Laiko nustatymai"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:494
+#: ../panel-plugin/time-out.c:512
 msgid "Minutes"
 msgstr "Minutės"
 
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:517
 msgid "Seconds"
 msgstr "Sekundės"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:505
+#: ../panel-plugin/time-out.c:523
 msgid "Time between breaks:"
 msgstr "Tarpas tarp pertraukų:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:529
+#: ../panel-plugin/time-out.c:549
 msgid "Break length:"
 msgstr "Pertraukos trukmė:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:547
+#: ../panel-plugin/time-out.c:570
 msgid "Postpone length:"
 msgstr "Atidėjimo trukmė:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:565
+#: ../panel-plugin/time-out.c:591
 msgid "Behaviour"
 msgstr "Elgsena"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:576
+#: ../panel-plugin/time-out.c:602
 msgid "Allow postpone"
 msgstr "Leisti atidėti"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:583
+#: ../panel-plugin/time-out.c:609
 msgid "Resume automatically"
 msgstr "Pratęsti automatiškai"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:590
+#: ../panel-plugin/time-out.c:616
 msgid "Appearance"
 msgstr "Išvaizda"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:601
+#: ../panel-plugin/time-out.c:627
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "Pastaba: Negalima tuo pačiu metu paslėpti ir piktogramą, ir laiką."
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:606
+#: ../panel-plugin/time-out.c:632
 msgid "Display icon"
 msgstr "Rodyti piktogramą"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:613
+#: ../panel-plugin/time-out.c:639
 msgid "Display remaining time in the panel"
 msgstr "Skydelyje rodyti likusį laiką"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:620
+#: ../panel-plugin/time-out.c:646
 msgid "Display hours"
 msgstr "Rodyti valandas"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:653
 msgid "Display seconds"
 msgstr "Rodyti sekundes"
 
+#: ../panel-plugin/time-out.c:1081
+msgid "Failed to lock screen"
+msgstr "Nepavyko užrakinti ekrano"
+
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:219
+#: ../panel-plugin/time-out-lock-screen.c:248
 msgid "_Postpone"
 msgstr "_Atidėti"
 
+#. Create lock button
+#: ../panel-plugin/time-out-lock-screen.c:254
+msgid "_Lock"
+msgstr "Už_rakinti"
+
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:225
+#: ../panel-plugin/time-out-lock-screen.c:260
 msgid "_Resume"
 msgstr "P_ratęsti"
 
