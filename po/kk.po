@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-04 06:31+0200\n"
-"PO-Revision-Date: 2020-02-02 14:42+0000\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"POT-Creation-Date: 2020-02-11 06:32+0100\n"
+"PO-Revision-Date: 2020-02-11 05:32+0000\n"
+"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
 "Language-Team: Kazakh (http://www.transifex.com/xfce/xfce-panel-plugins/language/kk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,129 +19,138 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Create label for displaying the remaining time until the next break
-#: ../panel-plugin/time-out.c:218
+#: ../panel-plugin/time-out.c:223
 msgid "Inactive"
 msgstr "Белсенді емес"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:272
+#: ../panel-plugin/time-out.c:277
 msgid "Take a break"
 msgstr "Демалу уақыты"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:280
+#: ../panel-plugin/time-out.c:285
 msgid "Reset timer"
 msgstr "Таймерді нөлдеу"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:288
+#: ../panel-plugin/time-out.c:293
 msgid "Enabled"
 msgstr "Қосулы"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:352
+#: ../panel-plugin/time-out.c:357
 msgid "Paused"
 msgstr "Аялдатылған"
 
-#: ../panel-plugin/time-out.c:434
+#: ../panel-plugin/time-out.c:439
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Компьютерден демалу үшін үзілістерді жасайтын Xfce панелінің плагині."
 
-#: ../panel-plugin/time-out.c:439
+#: ../panel-plugin/time-out.c:444
 msgid "translator-credits"
 msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
-#: ../panel-plugin/time-out.c:472 ../panel-plugin/time-out.c:477
+#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "Үзіліс"
 
-#: ../panel-plugin/time-out.c:474
+#: ../panel-plugin/time-out.c:479
 msgid "_Close"
 msgstr "_Жабу"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:494
+#: ../panel-plugin/time-out.c:499
 msgid "Time settings"
 msgstr "Уақыт баптаулары"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:507
+#: ../panel-plugin/time-out.c:512
 msgid "Minutes"
 msgstr "Минут"
 
-#: ../panel-plugin/time-out.c:512
+#: ../panel-plugin/time-out.c:517
 msgid "Seconds"
 msgstr "Секунд"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:518
+#: ../panel-plugin/time-out.c:523
 msgid "Time between breaks:"
 msgstr "Жұмыс уақытының ұзақтығы:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:544
+#: ../panel-plugin/time-out.c:549
 msgid "Break length:"
 msgstr "Үзіліс ұзақтығы:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:565
+#: ../panel-plugin/time-out.c:570
 msgid "Postpone length:"
 msgstr "Кейінге қалдыру:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:586
+#: ../panel-plugin/time-out.c:591
 msgid "Behaviour"
 msgstr "Мінез-құлығы"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:597
+#: ../panel-plugin/time-out.c:602
 msgid "Allow postpone"
 msgstr "Кейінге қалдыруды рұқсат ету"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:604
+#: ../panel-plugin/time-out.c:609
 msgid "Resume automatically"
 msgstr "Автожалғастыру"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:611
+#: ../panel-plugin/time-out.c:616
 msgid "Appearance"
 msgstr "Сыртқы түрі"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:622
+#: ../panel-plugin/time-out.c:627
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "Ескерту: Бір уақытта таңбаша мен уақытты бірге жасыруға болмайды."
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:632
 msgid "Display icon"
 msgstr "Таңбашаны көрсету"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:634
+#: ../panel-plugin/time-out.c:639
 msgid "Display remaining time in the panel"
 msgstr "Қалған уақытты панельде көрсету"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:641
+#: ../panel-plugin/time-out.c:646
 msgid "Display hours"
 msgstr "Сағаттарды көрсету"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:648
+#: ../panel-plugin/time-out.c:653
 msgid "Display seconds"
 msgstr "Секундтарды көрсету"
 
+#: ../panel-plugin/time-out.c:1081
+msgid "Failed to lock screen"
+msgstr ""
+
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:225
+#: ../panel-plugin/time-out-lock-screen.c:248
 msgid "_Postpone"
 msgstr "_Кейінге қалдыру"
 
+#. Create lock button
+#: ../panel-plugin/time-out-lock-screen.c:254
+msgid "_Lock"
+msgstr ""
+
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:231
+#: ../panel-plugin/time-out-lock-screen.c:260
 msgid "_Resume"
 msgstr "Ж_алғастыру"
 
