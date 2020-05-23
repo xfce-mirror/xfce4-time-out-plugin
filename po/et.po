@@ -1,0 +1,235 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Priit Jõerüüt <transifex@joeruut.com>, 2020
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-11 06:32+0100\n"
+"PO-Revision-Date: 2020-05-23 22:36+0000\n"
+"Last-Translator: Priit Jõerüüt <transifex@joeruut.com>\n"
+"Language-Team: Estonian (http://www.transifex.com/xfce/xfce-panel-plugins/language/et/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: et\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Create label for displaying the remaining time until the next break
+#: ../panel-plugin/time-out.c:223
+msgid "Inactive"
+msgstr "Ei ole kasutusel"
+
+#. Create menu item for taking an instant break
+#: ../panel-plugin/time-out.c:277
+msgid "Take a break"
+msgstr "Tee paus"
+
+#. Create menu item for resetting the timer
+#: ../panel-plugin/time-out.c:285
+msgid "Reset timer"
+msgstr "Lähtesta taimer"
+
+#. Create menu item for enabling/disabling the countdown
+#: ../panel-plugin/time-out.c:293
+msgid "Enabled"
+msgstr "Kasutusel"
+
+#. Update tooltips
+#: ../panel-plugin/time-out.c:357
+msgid "Paused"
+msgstr "Peatatud"
+
+#: ../panel-plugin/time-out.c:439
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "Pistikprogramm Xfce riba jaoks, mis võimaldab soovitud aja järel teha paus töös arvutiga."
+
+#: ../panel-plugin/time-out.c:444
+msgid "translator-credits"
+msgstr "Priit Jõerüüt 2020"
+
+#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+msgid "Time Out"
+msgstr "Aeg maha"
+
+#: ../panel-plugin/time-out.c:479
+msgid "_Close"
+msgstr "_Sulge"
+
+#. Create time settings section
+#: ../panel-plugin/time-out.c:499
+msgid "Time settings"
+msgstr "Kellaaja seadistused"
+
+#. Create the labels for the minutes and seconds spins
+#: ../panel-plugin/time-out.c:512
+msgid "Minutes"
+msgstr "Minutit"
+
+#: ../panel-plugin/time-out.c:517
+msgid "Seconds"
+msgstr "Sekundit"
+
+#. Create break countdown time label
+#: ../panel-plugin/time-out.c:523
+msgid "Time between breaks:"
+msgstr "Aeg pauside vahel:"
+
+#. Create lock countdown time label
+#: ../panel-plugin/time-out.c:549
+msgid "Break length:"
+msgstr "Tööpausi kestus:"
+
+#. Create postpone countdown time label
+#: ../panel-plugin/time-out.c:570
+msgid "Postpone length:"
+msgstr "Edasilükkamise kestus:"
+
+#. Create behaviour section
+#: ../panel-plugin/time-out.c:591
+msgid "Behaviour"
+msgstr "Käitumine"
+
+#. Create postpone check button
+#: ../panel-plugin/time-out.c:602
+msgid "Allow postpone"
+msgstr "Luba edasilükkamist"
+
+#. Create resume check button
+#: ../panel-plugin/time-out.c:609
+msgid "Resume automatically"
+msgstr "Jätka automaatselt"
+
+#. Create appearance section
+#: ../panel-plugin/time-out.c:616
+msgid "Appearance"
+msgstr "Välimus"
+
+#. Create note label
+#: ../panel-plugin/time-out.c:627
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Märkus: ikoon ja aeg ei saa olla samaaegselt peidetud."
+
+#. Create display icon check button
+#: ../panel-plugin/time-out.c:632
+msgid "Display icon"
+msgstr "Kuva ikooni"
+
+#. Create display time check button
+#: ../panel-plugin/time-out.c:639
+msgid "Display remaining time in the panel"
+msgstr "Kuva järelejäänud aeg ribal"
+
+#. Create display hours check button
+#: ../panel-plugin/time-out.c:646
+msgid "Display hours"
+msgstr "Kuva tunde"
+
+#. Create display seconds check button
+#: ../panel-plugin/time-out.c:653
+msgid "Display seconds"
+msgstr "Kuva sekundeid"
+
+#: ../panel-plugin/time-out.c:1081
+msgid "Failed to lock screen"
+msgstr "Ekraani lukustamine ei õnnestunud"
+
+#. Create postpone button
+#: ../panel-plugin/time-out-lock-screen.c:248
+msgid "_Postpone"
+msgstr "Lükka _edasi"
+
+#. Create lock button
+#: ../panel-plugin/time-out-lock-screen.c:254
+msgid "_Lock"
+msgstr "_Lukusta"
+
+#. Create resume button
+#: ../panel-plugin/time-out-lock-screen.c:260
+msgid "_Resume"
+msgstr "_Jätka"
+
+#: ../panel-plugin/time-out-countdown.c:377
+msgid "The break is over."
+msgstr "Paus on läbi."
+
+#. Hours:minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:399
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
+
+#. Hours:minutes
+#. Minutes:seconds
+#: ../panel-plugin/time-out-countdown.c:404
+#: ../panel-plugin/time-out-countdown.c:412
+#, c-format
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
+
+#: ../panel-plugin/time-out-countdown.c:424
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d tund"
+msgstr[1] "%d tundi"
+
+#: ../panel-plugin/time-out-countdown.c:425
+#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:494
+#: ../panel-plugin/time-out-countdown.c:528
+#, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minutit"
+
+#: ../panel-plugin/time-out-countdown.c:426
+#, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekundit"
+
+#. Translators: this is %s seconds/minutes/hours
+#: ../panel-plugin/time-out-countdown.c:437
+#: ../panel-plugin/time-out-countdown.c:442
+#: ../panel-plugin/time-out-countdown.c:453
+#: ../panel-plugin/time-out-countdown.c:476
+#: ../panel-plugin/time-out-countdown.c:482
+#: ../panel-plugin/time-out-countdown.c:509
+#: ../panel-plugin/time-out-countdown.c:514
+#: ../panel-plugin/time-out-countdown.c:523
+#: ../panel-plugin/time-out-countdown.c:529
+#, c-format
+msgid "Time left: %s"
+msgstr "Aega jäänud: %s"
+
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: ../panel-plugin/time-out-countdown.c:445
+#: ../panel-plugin/time-out-countdown.c:457
+#: ../panel-plugin/time-out-countdown.c:464
+#: ../panel-plugin/time-out-countdown.c:489
+#: ../panel-plugin/time-out-countdown.c:496
+#: ../panel-plugin/time-out-countdown.c:517
+#, c-format
+msgid "Time left: %s %s"
+msgstr "Aega jäänud: %s %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: ../panel-plugin/time-out-countdown.c:467
+#, c-format
+msgid "Time left: %s %s %s"
+msgstr "Aega jäänud: %s %s %s"
+
+#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
+msgid "Automatically controlled time outs and breaks"
+msgstr "Automaatselt võta aeg maha ja tee paus töös"
