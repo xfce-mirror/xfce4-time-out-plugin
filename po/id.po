@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2008
+# Triyan W. Nugroho <triyan.wn@gmail.com>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-02-11 05:32+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2020-05-28 14:34+0000\n"
+"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/xfce/xfce-panel-plugins/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. Create label for displaying the remaining time until the next break
 #: ../panel-plugin/time-out.c:223
 msgid "Inactive"
-msgstr ""
+msgstr "Tak aktif"
 
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:277
@@ -113,7 +114,7 @@ msgstr "Tampilan"
 #. Create note label
 #: ../panel-plugin/time-out.c:627
 msgid "Note: Icon and time cannot be hidden simultaneously."
-msgstr ""
+msgstr "Catatan: Ikon dan waktu tak dapat disembunyikan secara bersamaan"
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:632
@@ -137,7 +138,7 @@ msgstr "Tampilkan detik"
 
 #: ../panel-plugin/time-out.c:1081
 msgid "Failed to lock screen"
-msgstr ""
+msgstr "Gagal mengunci layar"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:248
@@ -147,7 +148,7 @@ msgstr "_Penundaan"
 #. Create lock button
 #: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Lock"
-msgstr ""
+msgstr "_Kunci"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:260
