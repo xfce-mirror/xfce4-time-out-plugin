@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Arman Harutyunyan <arman.harut468@gmail.com>, 2020
 # Real School <localization@ehayq.am>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-05-25 08:10+0000\n"
+"PO-Revision-Date: 2020-06-08 19:22+0000\n"
 "Last-Translator: Arman Harutyunyan <arman.harut468@gmail.com>\n"
 "Language-Team: Eastern Armenian (http://www.transifex.com/xfce/xfce-panel-plugins/language/hye/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +56,7 @@ msgstr "թարգմանչական֊վարկեր"
 #: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
-msgstr "Ժամանակն լրացաւ"
+msgstr "Ժամանակը Լրացաւ"
 
 #: ../panel-plugin/time-out.c:479
 msgid "_Close"
@@ -113,7 +114,7 @@ msgstr "Տեսք"
 #. Create note label
 #: ../panel-plugin/time-out.c:627
 msgid "Note: Icon and time cannot be hidden simultaneously."
-msgstr "Նշում․ Պատկերակը եւ ժամը չեն կարող թաքցուել միարժամանակ։"
+msgstr "Նշում․ Պատկերակը եւ ժամը չեն կարող թաքցուել միառժամանակ։"
 
 #. Create display icon check button
 #: ../panel-plugin/time-out.c:632
@@ -137,7 +138,7 @@ msgstr "Ցուցադրել վայրկեանները"
 
 #: ../panel-plugin/time-out.c:1081
 msgid "Failed to lock screen"
-msgstr ""
+msgstr "Չյաջողուեց կողպել էկրանը"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:248
@@ -147,7 +148,7 @@ msgstr "_Յետաձգում"
 #. Create lock button
 #: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Lock"
-msgstr ""
+msgstr "_Կողպել"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:260
@@ -177,7 +178,7 @@ msgstr "%02d:%02d"
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d ժամ"
-msgstr[1] "%d ժամ"
+msgstr[1] "%d ժամեր"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -187,14 +188,14 @@ msgstr[1] "%d ժամ"
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d րոպէ"
-msgstr[1] "%d րոպէ"
+msgstr[1] "%d րոպէներ"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d վայրկեան"
-msgstr[1] "%d վայրկեան"
+msgstr[1] "%d վայրկեաններ"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
