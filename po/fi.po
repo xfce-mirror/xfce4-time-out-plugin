@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Ammuu5, 2018
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-02-11 05:32+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2020-06-10 20:39+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish (http://www.transifex.com/xfce/xfce-panel-plugins/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -137,7 +138,7 @@ msgstr "Näytä sekunnit"
 
 #: ../panel-plugin/time-out.c:1081
 msgid "Failed to lock screen"
-msgstr ""
+msgstr "Näytön lukitseminen epäonnistui"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:248
@@ -147,7 +148,7 @@ msgstr "_Siirrä"
 #. Create lock button
 #: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Lock"
-msgstr ""
+msgstr "_Lukitse"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:260
