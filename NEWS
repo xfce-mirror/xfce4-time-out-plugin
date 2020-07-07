@@ -1,3 +1,18 @@
+1.1.1
+======
+- Do not enable countdown when configuration changes (Bug #16118)
+- Add lock button to break dialog (Bug #16317)
+- Update URLs from goodies.x.o to docs.x.o (Bug #16179)
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, English (Australia), Esperanto, Finnish,
+  French, Galician, German, Greek, Hebrew, Hungarian, Icelandic,
+  Indonesian, Italian, Japanese, Kazakh, Korean, Latvian, Lithuanian,
+  Malay, Norwegian Bokmål, Occitan (post 1500), Polish, Portuguese,
+  Portuguese (Brazil), Russian, Serbian, Slovak, Slovenian, Spanish,
+  Swedish, Turkish, Uighur, Ukrainian, Urdu, Urdu (Pakistan)
+
 1.1.0 (03/11/2019)
 ======
 - GTK3 Port
