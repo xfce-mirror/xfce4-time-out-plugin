@@ -4,14 +4,14 @@
 # 
 # Translators:
 # 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2017
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2016
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2016,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-02-11 05:32+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2020-07-13 10:31+0000\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean (http://www.transifex.com/xfce/xfce-panel-plugins/language/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,7 +138,7 @@ msgstr "초 표시"
 
 #: ../panel-plugin/time-out.c:1081
 msgid "Failed to lock screen"
-msgstr ""
+msgstr "화면 잠금에 실패했습니다"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:248
@@ -148,7 +148,7 @@ msgstr "연기(_P)"
 #. Create lock button
 #: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Lock"
-msgstr ""
+msgstr "잠그기(_L)"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:260
