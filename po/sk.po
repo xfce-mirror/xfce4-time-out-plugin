@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Dušan Kazik <prescott66@gmail.com>, 2015-2017
-# Tomáš Vadina <inactive+kyberdev@transifex.com>, 2011-2012
+# Dušan Kazik <prescott66@gmail.com>, 2015-2017,2020
+# 7dcd6f74323fe8d9c477949ff8fcbb1c_c427b63 <3fcd202e3dfab15fda15b8e88e54d449_7173>, 2011-2012
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-02-11 05:32+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2020-10-02 05:49+0000\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/xfce-panel-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,7 +138,7 @@ msgstr "Zobrazovať sekundy"
 
 #: ../panel-plugin/time-out.c:1081
 msgid "Failed to lock screen"
-msgstr ""
+msgstr "Zlyhalo uzamknutie obrazovky"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:248
@@ -148,7 +148,7 @@ msgstr "_Odložiť"
 #. Create lock button
 #: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Lock"
-msgstr ""
+msgstr "_Uzamknúť"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:260
