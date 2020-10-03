@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Michal Várady <miko.vaji@gmail.com>, 2015-2017
+# Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-02-11 05:32+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
+"PO-Revision-Date: 2020-10-03 17:59+0000\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech (http://www.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -137,7 +137,7 @@ msgstr "Zobrazit sekundy"
 
 #: ../panel-plugin/time-out.c:1081
 msgid "Failed to lock screen"
-msgstr ""
+msgstr "Nepodařilo se uzamknout obrazovku"
 
 #. Create postpone button
 #: ../panel-plugin/time-out-lock-screen.c:248
@@ -147,7 +147,7 @@ msgstr "_Odložit"
 #. Create lock button
 #: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Lock"
-msgstr ""
+msgstr "_Uzamknout"
 
 #. Create resume button
 #: ../panel-plugin/time-out-lock-screen.c:260
