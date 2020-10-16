@@ -5,7 +5,7 @@
 # Translators:
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
 # Hunt Xu <huntxu@live.cn>, 2009-2010
-# Cally Mal <zhouxiaobo.500@gmail.com>, 2018
+# Xiaobo Zhou <zhouxiaobo.500@gmail.com>, 2018
 # 玉堂白鹤 <yjwork@qq.com>, 2016-2017,2020
 msgid ""
 msgstr ""
