@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2020-02-11 06:32+0100\n"
 "PO-Revision-Date: 2020-02-11 05:32+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Uighur (http://www.transifex.com/xfce/xfce-panel-plugins/language/ug/)\n"
+"Language-Team: Uyghur (http://www.transifex.com/xfce/xfce-panel-plugins/language/ug/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ug\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Create label for displaying the remaining time until the next break
 #: ../panel-plugin/time-out.c:223
@@ -175,7 +175,8 @@ msgstr "%02d:%02d"
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
-msgstr[0] "%d سائەت"
+msgstr[0] ""
+msgstr[1] "%d سائەت"
 
 #: ../panel-plugin/time-out-countdown.c:425
 #: ../panel-plugin/time-out-countdown.c:481
@@ -184,13 +185,15 @@ msgstr[0] "%d سائەت"
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
-msgstr[0] "%d مىنۇت"
+msgstr[0] ""
+msgstr[1] "%d مىنۇت"
 
 #: ../panel-plugin/time-out-countdown.c:426
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
-msgstr[0] "%d سېكۇنت"
+msgstr[0] ""
+msgstr[1] "%d سېكۇنت"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:437
