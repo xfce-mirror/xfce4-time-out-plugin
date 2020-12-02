@@ -213,7 +213,7 @@ time_out_countdown_update_cb (gpointer user_data)
 {
   TimeOutCountdown *countdown = user_data;
 
-  return time_out_countdown_update(countdown);
+  return time_out_countdown_update (countdown);
 }
 
 static void
