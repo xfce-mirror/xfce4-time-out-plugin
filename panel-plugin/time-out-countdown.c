@@ -208,6 +208,13 @@ time_out_countdown_class_init (TimeOutCountdownClass *klass)
 }
 
 
+static gboolean 
+time_out_countdown_update_cb (gpointer user_data)
+{
+  TimeOutCountdown *countdown = user_data;
+
+  return time_out_countdown_update (countdown);
+}
 
 static void
 time_out_countdown_init (TimeOutCountdown *countdown)
@@ -215,7 +222,7 @@ time_out_countdown_init (TimeOutCountdown *countdown)
   countdown->timer = g_timer_new ();
   countdown->state = TIME_OUT_COUNTDOWN_STOPPED;
   countdown->seconds = 0;
-  countdown->timeout_id = g_timeout_add (1000, (GSourceFunc) time_out_countdown_update, countdown);
+  countdown->timeout_id = g_timeout_add (1000, time_out_countdown_update_cb, countdown);
 }
 
 
