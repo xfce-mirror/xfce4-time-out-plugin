@@ -40,8 +40,9 @@ static void     time_out_lock_screen_lock       (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
 static void     time_out_lock_screen_resume     (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
-static void     time_out_lock_screen_grab_seat  (GdkSeat                *seat,
+static gint     time_out_lock_screen_grab_seat  (GdkSeat                *seat,
                                                  GtkWidget              *window);
+static gboolean time_out_can_grab_seat          (GdkSeat *seat);
 
 
 
@@ -293,7 +294,6 @@ time_out_lock_screen_new (void)
 void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
-  GdkScreen *screen;
   GdkDisplay *display;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
@@ -304,6 +304,15 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 
   display = gdk_display_get_default ();
   gdk_display_flush (display);
+  lock_screen->seat = gdk_display_get_default_seat (display);
+
+  /* Confirm it is possible to grab keyboard before attempting lock.
+   * If not, we will not be able to lock, and must wait. */
+  if (! time_out_can_grab_seat (lock_screen->seat)) {
+    xfce_dialog_show_info(NULL,
+                        "Time-out could not grab the keyboard at start of break.",
+                        "Time for a break!");
+  }
 
   /* Create fadeout */
   lock_screen->fadeout = time_out_fadeout_new (display);
@@ -323,7 +332,6 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
   gtk_widget_grab_focus (lock_screen->window);
 
   /* Grab keyboard */
-  lock_screen->seat = gdk_display_get_default_seat (display);
   time_out_lock_screen_grab_seat (lock_screen->seat, lock_screen->window);
 }
 
@@ -503,7 +511,7 @@ time_out_lock_screen_resume (GtkButton         *button,
   g_signal_emit_by_name (lock_screen, "resume", NULL);
 }
 
-static void
+static gint
 time_out_lock_screen_grab_seat (GdkSeat *seat, GtkWidget *window)
 {
   GdkGrabStatus status;
@@ -524,4 +532,31 @@ time_out_lock_screen_grab_seat (GdkSeat *seat, GtkWidget *window)
 
   if (status != GDK_GRAB_SUCCESS)
     g_warning ("Failed to grab seat");
+
+  return status;
+}
+
+static gboolean
+time_out_can_grab_seat (GdkSeat *seat)
+{
+  GtkWidget *temp_window;
+  gint grab_status;
+
+  /* Create and show temporary popup window to use for test */
+  temp_window = g_object_new (GTK_TYPE_WINDOW, "type", GTK_WINDOW_POPUP, NULL);
+  gtk_window_set_default_size (GTK_WINDOW (temp_window), 160, 130);
+  gtk_widget_realize (temp_window);
+  gtk_widget_show_now (temp_window);
+
+  /* Attempt to grab keyboard */
+  grab_status = time_out_lock_screen_grab_seat (seat, temp_window);
+
+  /* release grab */
+  gdk_seat_ungrab (seat);
+
+  /* Destroy window */
+  gtk_widget_destroy (temp_window);
+
+  /* return status */
+  return (grab_status == GDK_GRAB_SUCCESS);
 }
