@@ -310,8 +310,8 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
    * If not, we will not be able to lock, and must wait. */
   if (! time_out_can_grab_seat (lock_screen->seat)) {
     xfce_dialog_show_info(NULL,
-                        "Time-out could not grab the keyboard at start of break.",
-                        "Time for a break!");
+                        _("Failed to grab input for Time Out lock screen"),
+                        _("Take a break"));
   }
 
   /* Create fadeout */
