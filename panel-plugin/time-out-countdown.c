@@ -37,10 +37,12 @@ typedef enum
 
 
 
-static void     time_out_countdown_class_init (TimeOutCountdownClass *klass);
-static void     time_out_countdown_init       (TimeOutCountdown      *countdown);
-static void     time_out_countdown_finalize   (GObject               *object);
-static gboolean time_out_countdown_update     (TimeOutCountdown      *countdown);
+static void     time_out_countdown_class_init (gpointer          g_class,
+                                               gpointer          class_data);
+static void     time_out_countdown_init       (GTypeInstance    *instance,
+                                               gpointer          g_class);
+static void     time_out_countdown_finalize   (GObject          *object);
+static gboolean time_out_countdown_update     (TimeOutCountdown *countdown);
 
 
 
@@ -105,12 +107,12 @@ time_out_countdown_get_type (void)
         sizeof (TimeOutCountdownClass),
         NULL,
         NULL,
-        (GClassInitFunc) time_out_countdown_class_init,
+        time_out_countdown_class_init,
         NULL,
         NULL,
         sizeof (TimeOutCountdown),
         0,
-        (GInstanceInitFunc) time_out_countdown_init,
+        time_out_countdown_init,
         NULL,
       };
 
@@ -123,14 +125,15 @@ time_out_countdown_get_type (void)
 
 
 static void
-time_out_countdown_class_init (TimeOutCountdownClass *klass)
+time_out_countdown_class_init (gpointer g_class,
+                               gpointer class_data)
 {
-  GObjectClass *gobject_class;
+  GObjectClass          *gobject_class = g_class;
+  TimeOutCountdownClass *klass = g_class;
 
   /* Peek parent type class */
   time_out_countdown_parent_class = g_type_class_peek_parent (klass);
 
-  gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = time_out_countdown_finalize;
 
   /* Register 'start' signal */
@@ -217,8 +220,11 @@ time_out_countdown_update_cb (gpointer user_data)
 }
 
 static void
-time_out_countdown_init (TimeOutCountdown *countdown)
+time_out_countdown_init (GTypeInstance *instance,
+                         gpointer       g_class)
 {
+  TimeOutCountdown *countdown = TIME_OUT_COUNTDOWN (instance);
+
   countdown->timer = g_timer_new ();
   countdown->state = TIME_OUT_COUNTDOWN_STOPPED;
   countdown->seconds = 0;
@@ -236,10 +242,10 @@ time_out_countdown_finalize (GObject *object)
   g_timer_destroy (countdown->timer);
 
   /* Unregister timeout if necessary */
-  if (G_LIKELY (countdown->timeout_id >= 0)) 
+  if (G_LIKELY (countdown->timeout_id > 0))
     {
       g_source_remove (countdown->timeout_id);
-      countdown->timeout_id = -1;
+      countdown->timeout_id = 0;
     }
 }
 
