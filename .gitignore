@@ -13,6 +13,7 @@ stamp*
 configure
 INSTALL
 config.*
+configure~
 configure.ac
 intltool*
 mkinstalldirs
@@ -27,4 +28,4 @@ autom4te.cache
 *.desktop
 po/POTFILES
 po/*.in.in
-po/.intltool-merge-cache
+po/.intltool-merge-cache*
