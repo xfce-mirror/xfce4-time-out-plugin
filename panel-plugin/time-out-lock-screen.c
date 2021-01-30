@@ -31,8 +31,10 @@
 
 
 
-static void     time_out_lock_screen_class_init (TimeOutLockScreenClass *klass);
-static void     time_out_lock_screen_init       (TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_class_init (gpointer                g_class,
+                                                 gpointer                class_data);
+static void     time_out_lock_screen_init       (GTypeInstance          *instance,
+                                                 gpointer                g_class);
 static void     time_out_lock_screen_finalize   (GObject                *object);
 static void     time_out_lock_screen_postpone   (GtkButton              *button,
                                                  TimeOutLockScreen      *lock_screen);
@@ -115,12 +117,12 @@ time_out_lock_screen_get_type (void)
         sizeof (TimeOutLockScreenClass),
         NULL,
         NULL,
-        (GClassInitFunc) time_out_lock_screen_class_init,
+        time_out_lock_screen_class_init,
         NULL,
         NULL,
         sizeof (TimeOutLockScreen),
         0,
-        (GInstanceInitFunc) time_out_lock_screen_init,
+        time_out_lock_screen_init,
         NULL,
       };
 
@@ -133,14 +135,15 @@ time_out_lock_screen_get_type (void)
 
 
 static void
-time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
+time_out_lock_screen_class_init (gpointer g_class,
+                                 gpointer class_data)
 {
-  GObjectClass *gobject_class;
+  GObjectClass           *gobject_class = g_class;
+  TimeOutLockScreenClass *klass = g_class;
 
   /* Peek parent type class */
   time_out_lock_screen_parent_class = g_type_class_peek_parent (klass);
 
-  gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = time_out_lock_screen_finalize;
 
   /* Register 'postpone' signal */
@@ -180,8 +183,10 @@ time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
 
 
 static void
-time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
+time_out_lock_screen_init (GTypeInstance *instance,
+                           gpointer       g_class)
 {
+  TimeOutLockScreen *lock_screen = TIME_OUT_LOCK_SCREEN (instance);
   GdkPixbuf       *pixbuf;
   GtkWidget       *vbox;
   GtkWidget       *button_box;
@@ -293,7 +298,6 @@ time_out_lock_screen_new (void)
 void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
-  GdkScreen *screen;
   GdkDisplay *display;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
