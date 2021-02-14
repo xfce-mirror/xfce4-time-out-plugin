@@ -549,23 +549,23 @@ time_out_lock_screen_grab_seat (GdkSeat   *seat,
 static gboolean
 time_out_lock_screen_can_grab_seat (GdkSeat *seat)
 {
-  GtkWidget *temp_window;
-  gint grab_status;
+  GdkDisplay *display;
+  GtkWidget  *hidden;
+  gint        grab_status;
 
-  /* Create and show temporary popup window to use for test */
-  temp_window = g_object_new (GTK_TYPE_WINDOW, "type", GTK_WINDOW_POPUP, NULL);
-  gtk_window_set_default_size (GTK_WINDOW (temp_window), 160, 130);
-  gtk_widget_realize (temp_window);
-  gtk_widget_show_now (temp_window);
+  /* Create and show temporary hidden widget to use for test */
+  display = gdk_seat_get_display (seat);
+  hidden = gtk_invisible_new_for_screen (gdk_display_get_default_screen (display));
+  gtk_widget_show (hidden);
 
   /* Attempt to grab keyboard */
-  grab_status = time_out_lock_screen_grab_seat (seat, temp_window);
+  grab_status = time_out_lock_screen_grab_seat (seat, hidden);
 
   /* Release grab */
   gdk_seat_ungrab (seat);
 
-  /* Destroy window */
-  gtk_widget_destroy (temp_window);
+  /* Destroy hidden widget */
+  gtk_widget_destroy (hidden);
 
   /* Return status */
   return (grab_status == GDK_GRAB_SUCCESS);
