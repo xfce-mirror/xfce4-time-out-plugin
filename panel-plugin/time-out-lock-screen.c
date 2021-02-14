@@ -295,6 +295,7 @@ void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
   GdkDisplay *display;
+  GtkWidget  *dialog;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
@@ -310,9 +311,15 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
    * If not, we will not be able to lock, and must wait. */
   if (!time_out_lock_screen_can_grab_seat (lock_screen->seat))
   {
-    xfce_dialog_show_info (NULL,
-                           _("Failed to grab input for Time Out lock screen"),
-                           _("Take a break"));
+    dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL,
+                                     GTK_MESSAGE_WARNING,
+                                     GTK_BUTTONS_CLOSE,
+                                     _("Failed to grab input for Time Out lock screen"));
+    gtk_window_set_title (GTK_WINDOW (dialog), _("Time Out"));
+    gtk_window_set_icon_name (GTK_WINDOW (dialog), "dialog-warning");
+    gtk_window_set_keep_above (GTK_WINDOW (dialog), TRUE);
+    gtk_dialog_run (GTK_DIALOG (dialog));
+    gtk_widget_destroy (dialog);
   }
 
   /* Create fadeout */
