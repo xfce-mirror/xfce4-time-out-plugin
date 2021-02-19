@@ -31,17 +31,18 @@
 
 
 
-static void     time_out_lock_screen_class_init (TimeOutLockScreenClass *klass);
-static void     time_out_lock_screen_init       (TimeOutLockScreen      *lock_screen);
-static void     time_out_lock_screen_finalize   (GObject                *object);
-static void     time_out_lock_screen_postpone   (GtkButton              *button,
-                                                 TimeOutLockScreen      *lock_screen);
-static void     time_out_lock_screen_lock       (GtkButton              *button,
-                                                 TimeOutLockScreen      *lock_screen);
-static void     time_out_lock_screen_resume     (GtkButton              *button,
-                                                 TimeOutLockScreen      *lock_screen);
-static void     time_out_lock_screen_grab_seat  (GdkSeat                *seat,
-                                                 GtkWidget              *window);
+static void     time_out_lock_screen_class_init    (TimeOutLockScreenClass *klass);
+static void     time_out_lock_screen_init          (TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_finalize      (GObject                *object);
+static void     time_out_lock_screen_postpone      (GtkButton              *button,
+                                                    TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_lock          (GtkButton              *button,
+                                                    TimeOutLockScreen      *lock_screen);
+static void     time_out_lock_screen_resume        (GtkButton              *button,
+                                                    TimeOutLockScreen      *lock_screen);
+static gint     time_out_lock_screen_grab_seat     (GdkSeat                *seat,
+                                                    GtkWidget              *window);
+static gboolean time_out_lock_screen_can_grab_seat (GdkSeat                *seat);
 
 
 
@@ -293,8 +294,8 @@ time_out_lock_screen_new (void)
 void
 time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 {
-  GdkScreen *screen;
   GdkDisplay *display;
+  GtkWidget  *dialog;
 
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
@@ -304,6 +305,22 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 
   display = gdk_display_get_default ();
   gdk_display_flush (display);
+  lock_screen->seat = gdk_display_get_default_seat (display);
+
+  /* Confirm it is possible to grab keyboard before attempting lock.
+   * If not, we will not be able to lock, and must wait. */
+  if (!time_out_lock_screen_can_grab_seat (lock_screen->seat))
+  {
+    dialog = gtk_message_dialog_new (NULL, GTK_DIALOG_MODAL,
+                                     GTK_MESSAGE_WARNING,
+                                     GTK_BUTTONS_CLOSE,
+                                     _("Failed to grab input for Time Out lock screen"));
+    gtk_window_set_title (GTK_WINDOW (dialog), _("Time Out"));
+    gtk_window_set_icon_name (GTK_WINDOW (dialog), "dialog-warning");
+    gtk_window_set_keep_above (GTK_WINDOW (dialog), TRUE);
+    gtk_dialog_run (GTK_DIALOG (dialog));
+    gtk_widget_destroy (dialog);
+  }
 
   /* Create fadeout */
   lock_screen->fadeout = time_out_fadeout_new (display);
@@ -323,7 +340,6 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
   gtk_widget_grab_focus (lock_screen->window);
 
   /* Grab keyboard */
-  lock_screen->seat = gdk_display_get_default_seat (display);
   time_out_lock_screen_grab_seat (lock_screen->seat, lock_screen->window);
 }
 
@@ -481,6 +497,8 @@ time_out_lock_screen_postpone (GtkButton         *button,
   g_signal_emit_by_name (lock_screen, "postpone", NULL);
 }
 
+
+
 static void
 time_out_lock_screen_lock (GtkButton         *button,
                            TimeOutLockScreen *lock_screen)
@@ -491,6 +509,8 @@ time_out_lock_screen_lock (GtkButton         *button,
   /* Emit postpone signal */
   g_signal_emit_by_name (lock_screen, "lock", NULL);
 }
+
+
 
 static void
 time_out_lock_screen_resume (GtkButton         *button,
@@ -503,8 +523,11 @@ time_out_lock_screen_resume (GtkButton         *button,
   g_signal_emit_by_name (lock_screen, "resume", NULL);
 }
 
-static void
-time_out_lock_screen_grab_seat (GdkSeat *seat, GtkWidget *window)
+
+
+static gint
+time_out_lock_screen_grab_seat (GdkSeat   *seat,
+                                GtkWidget *window)
 {
   GdkGrabStatus status;
   gint attempts = 0;
@@ -524,4 +547,33 @@ time_out_lock_screen_grab_seat (GdkSeat *seat, GtkWidget *window)
 
   if (status != GDK_GRAB_SUCCESS)
     g_warning ("Failed to grab seat");
+
+  return status;
+}
+
+
+
+static gboolean
+time_out_lock_screen_can_grab_seat (GdkSeat *seat)
+{
+  GdkDisplay *display;
+  GtkWidget  *hidden;
+  gint        grab_status;
+
+  /* Create and show temporary hidden widget to use for test */
+  display = gdk_seat_get_display (seat);
+  hidden = gtk_invisible_new_for_screen (gdk_display_get_default_screen (display));
+  gtk_widget_show (hidden);
+
+  /* Attempt to grab keyboard */
+  grab_status = time_out_lock_screen_grab_seat (seat, hidden);
+
+  /* Release grab */
+  gdk_seat_ungrab (seat);
+
+  /* Destroy hidden widget */
+  gtk_widget_destroy (hidden);
+
+  /* Return status */
+  return (grab_status == GDK_GRAB_SUCCESS);
 }
