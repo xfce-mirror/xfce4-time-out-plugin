@@ -5,13 +5,13 @@
 # Translators:
 # Masato HASHIMOTO <cabezon.hashimoto@gmail.com>, 2012
 # Nobuhiro Iwamatsu <iwamatsu@nigauri.org>, 2008,2016,2018
-# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2020
+# UTUMI Hirosi <utuhiro78@yahoo.co.jp>, 2020-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-11 06:32+0100\n"
-"PO-Revision-Date: 2020-02-11 15:43+0000\n"
+"POT-Creation-Date: 2021-02-19 12:51+0100\n"
+"PO-Revision-Date: 2021-02-21 20:22+0000\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese (http://www.transifex.com/xfce/xfce-panel-plugins/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -55,6 +55,7 @@ msgid "translator-credits"
 msgstr "Nobuhiro Iwamatsu <iwamatsu@nigauri.org>\nMasato Hashimoto <hashimo@xfce.org>"
 
 #: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
+#: ../panel-plugin/time-out-lock-screen.c:323
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
 msgstr "ひと休み"
@@ -142,69 +143,73 @@ msgid "Failed to lock screen"
 msgstr "画面をロックできませんでした"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:248
+#: ../panel-plugin/time-out-lock-screen.c:254
 msgid "_Postpone"
 msgstr "後で休みます(_P)"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:254
+#: ../panel-plugin/time-out-lock-screen.c:260
 msgid "_Lock"
 msgstr "ロック(_L)"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:260
+#: ../panel-plugin/time-out-lock-screen.c:266
 msgid "_Resume"
 msgstr "了解です(_R)"
 
-#: ../panel-plugin/time-out-countdown.c:377
+#: ../panel-plugin/time-out-lock-screen.c:322
+msgid "Failed to grab input for Time Out lock screen"
+msgstr "タイムアウトロック画面の入力を取得できませんでした"
+
+#: ../panel-plugin/time-out-countdown.c:390
 msgid "The break is over."
 msgstr "休憩は終了です。"
 
 #. Hours:minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:399
+#: ../panel-plugin/time-out-countdown.c:412
 #, c-format
 msgid "%02d:%02d:%02d"
 msgstr "%02d:%02d:%02d"
 
 #. Hours:minutes
 #. Minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:404
-#: ../panel-plugin/time-out-countdown.c:412
+#: ../panel-plugin/time-out-countdown.c:417
+#: ../panel-plugin/time-out-countdown.c:425
 #, c-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:424
+#: ../panel-plugin/time-out-countdown.c:437
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d 時間"
 
-#: ../panel-plugin/time-out-countdown.c:425
-#: ../panel-plugin/time-out-countdown.c:481
+#: ../panel-plugin/time-out-countdown.c:438
 #: ../panel-plugin/time-out-countdown.c:494
-#: ../panel-plugin/time-out-countdown.c:528
+#: ../panel-plugin/time-out-countdown.c:507
+#: ../panel-plugin/time-out-countdown.c:541
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d 分"
 
-#: ../panel-plugin/time-out-countdown.c:426
+#: ../panel-plugin/time-out-countdown.c:439
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d 秒"
 
 #. Translators: this is %s seconds/minutes/hours
-#: ../panel-plugin/time-out-countdown.c:437
-#: ../panel-plugin/time-out-countdown.c:442
-#: ../panel-plugin/time-out-countdown.c:453
-#: ../panel-plugin/time-out-countdown.c:476
-#: ../panel-plugin/time-out-countdown.c:482
-#: ../panel-plugin/time-out-countdown.c:509
-#: ../panel-plugin/time-out-countdown.c:514
-#: ../panel-plugin/time-out-countdown.c:523
-#: ../panel-plugin/time-out-countdown.c:529
+#: ../panel-plugin/time-out-countdown.c:450
+#: ../panel-plugin/time-out-countdown.c:455
+#: ../panel-plugin/time-out-countdown.c:466
+#: ../panel-plugin/time-out-countdown.c:489
+#: ../panel-plugin/time-out-countdown.c:495
+#: ../panel-plugin/time-out-countdown.c:522
+#: ../panel-plugin/time-out-countdown.c:527
+#: ../panel-plugin/time-out-countdown.c:536
+#: ../panel-plugin/time-out-countdown.c:542
 #, c-format
 msgid "Time left: %s"
 msgstr "残り時間: %s"
@@ -213,18 +218,18 @@ msgstr "残り時間: %s"
 #. Translators: this is %s hours %s seconds
 #. Translators: this is %s hours, %s minutes
 #. Translators: this is %s minutes %s seconds
-#: ../panel-plugin/time-out-countdown.c:445
-#: ../panel-plugin/time-out-countdown.c:457
-#: ../panel-plugin/time-out-countdown.c:464
-#: ../panel-plugin/time-out-countdown.c:489
-#: ../panel-plugin/time-out-countdown.c:496
-#: ../panel-plugin/time-out-countdown.c:517
+#: ../panel-plugin/time-out-countdown.c:458
+#: ../panel-plugin/time-out-countdown.c:470
+#: ../panel-plugin/time-out-countdown.c:477
+#: ../panel-plugin/time-out-countdown.c:502
+#: ../panel-plugin/time-out-countdown.c:509
+#: ../panel-plugin/time-out-countdown.c:530
 #, c-format
 msgid "Time left: %s %s"
 msgstr "残り時間: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
-#: ../panel-plugin/time-out-countdown.c:467
+#: ../panel-plugin/time-out-countdown.c:480
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "残り時間: %s %s %s"
