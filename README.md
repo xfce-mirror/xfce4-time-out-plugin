@@ -2,7 +2,7 @@
 
 # xfce4-time-out-plugin
 
-Xfce4-time-out-plugin makes it possible to take periodical breaks from the computer every X minutes. During breaks it locks your screen. It optionally allows you to postpone breaks for a certain time.
+Xfce4-time-out-plugin makes it possible to take periodical breaks from the computer at user-configurable intervals. During breaks it locks your screen for a period specified by the user. It optionally allows you to postpone breaks for a certain time.
 
 ----
 
