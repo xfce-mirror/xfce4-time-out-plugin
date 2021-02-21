@@ -276,11 +276,12 @@ time_out_lock_screen_finalize (GObject *object)
   TimeOutLockScreen *lock_screen = TIME_OUT_LOCK_SCREEN (object);
 
   /* Destroy fadeout if necessary */
-  if (G_UNLIKELY (lock_screen->fadeout != NULL))
+  if (lock_screen->fadeout)
     time_out_fadeout_destroy (lock_screen->fadeout);
 
   /* Release keyboard */
-  gdk_seat_ungrab (lock_screen->seat);
+  if (lock_screen->seat)
+    gdk_seat_ungrab (lock_screen->seat);
 
   /* Destroy information window */
   gtk_widget_destroy (lock_screen->window);
