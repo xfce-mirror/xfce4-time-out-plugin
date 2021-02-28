@@ -1,3 +1,18 @@
+1.1.2
+======
+- Check whether the seat exists before ungrabbing it
+- Create README.md. Update configure.ac.in
+- Fix compilation warnings
+- autoconf: Some updates
+- fix for no dialog after screenlock issue (#13)
+- Remove GSourceFunc casts (!2)
+- Translation Updates:
+  Albanian, Basque, Belarusian, Catalan, Chinese (China), Chinese
+  (Taiwan), Czech, English (Canada), French, Galician, Hebrew,
+  Hungarian, Indonesian, Interlingue, Italian, Japanese, Kazakh,
+  Korean, Norwegian Bokmål, Portuguese, Portuguese (Brazil), Serbian,
+  Slovak, Slovenian, Spanish, Turkish, Uyghur
+
 1.1.1
 ======
 - Do not enable countdown when configuration changes (Bug #16118)
