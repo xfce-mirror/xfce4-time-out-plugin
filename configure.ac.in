@@ -12,7 +12,7 @@ m4_define([time_out_version_major], [1])
 m4_define([time_out_version_minor], [1])
 m4_define([time_out_version_micro], [2])
 m4_define([time_out_version_build], [r@REVISION@])
-m4_define([time_out_version_tag], [])
+m4_define([time_out_version_tag], [git])
 m4_define([time_out_version], [time_out_version_major().time_out_version_minor().time_out_version_micro()ifelse(time_out_version_tag(), [git], [time_out_version_tag()-time_out_version_build()], [time_out_version_tag()])])
 
 dnl ***************************
