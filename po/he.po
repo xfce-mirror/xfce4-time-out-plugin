@@ -7,7 +7,7 @@
 # Elishai Eliyahu <elishai@mailfence.com>, 2021
 # GenghisKhan <genghiskhan@gmx.ca>, 2015-2016
 # Hezy Amiel <open@hezyamiel.com>, 2010
-# Omeritzics Games <omeritzicschwartz@gmail.com>, 2020
+# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
 msgid ""
 msgstr ""
