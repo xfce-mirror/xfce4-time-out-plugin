@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-05-08 20:48+0000\n"
+"PO-Revision-Date: 2021-05-15 15:43+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +31,7 @@ msgstr "Inactivo"
 #. Create menu item for taking an instant break
 #: ../panel-plugin/time-out.c:277
 msgid "Take a break"
-msgstr "Tómese un descanso"
+msgstr "Tomarse un descanso"
 
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:285
