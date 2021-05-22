@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-05-15 15:43+0000\n"
+"PO-Revision-Date: 2021-05-22 09:40+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -36,12 +36,12 @@ msgstr "Tomarse un descanso"
 #. Create menu item for resetting the timer
 #: ../panel-plugin/time-out.c:285
 msgid "Reset timer"
-msgstr "Reiniciar el cronómetro"
+msgstr "Reiniciar el temporizdor"
 
 #. Create menu item for enabling/disabling the countdown
 #: ../panel-plugin/time-out.c:293
 msgid "Enabled"
-msgstr "Activado"
+msgstr "Activar"
 
 #. Update tooltips
 #: ../panel-plugin/time-out.c:357
@@ -61,7 +61,7 @@ msgstr "Toni Estevez <toni.estevez@gmail.com>, 2021\nPablo Roberto Francisco Lez
 #: ../panel-plugin/time-out-lock-screen.c:323
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
 msgid "Time Out"
-msgstr "Tiempo de espera"
+msgstr "Tiempos de descanso"
 
 #: ../panel-plugin/time-out.c:479
 msgid "_Close"
@@ -162,7 +162,7 @@ msgstr "_Reanudar"
 
 #: ../panel-plugin/time-out-lock-screen.c:322
 msgid "Failed to grab input for Time Out lock screen"
-msgstr "No se ha podido capturar la entrada para la pantalla de bloqueo del tiempo de espera"
+msgstr "No se ha podido obtener la entrada para el tiempo de descanso de la pantalla de bloqueo"
 
 #: ../panel-plugin/time-out-countdown.c:390
 msgid "The break is over."
@@ -242,4 +242,4 @@ msgstr "Tiempo restante: %s %s %s"
 
 #: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
 msgid "Automatically controlled time outs and breaks"
-msgstr "Tiempos de espera y descansos controlados automáticamente"
+msgstr "Tiempos de descanso controlados automáticamente"
