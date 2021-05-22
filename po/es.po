@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-05-22 09:40+0000\n"
+"PO-Revision-Date: 2021-05-22 13:22+0000\n"
 "Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -51,7 +51,7 @@ msgstr "En pausa"
 #: ../panel-plugin/time-out.c:439
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Complemento del panel de Xfce para tomarse un descanso del trabajo de vez en cuando."
+msgstr "Complemento de Xfce para tomarse un descanso del trabajo de vez en cuando."
 
 #: ../panel-plugin/time-out.c:444
 msgid "translator-credits"
