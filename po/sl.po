@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-02-22 11:50+0000\n"
+"PO-Revision-Date: 2021-05-26 07:47+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/xfce/xfce-panel-plugins/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "Pavzirano"
 #: ../panel-plugin/time-out.c:439
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Xfce Panel vtičnik za jemanje odmora od dela z računalnikom na vsake toliko časa"
+msgstr "Xfce Panel vtičnik za planiranje počitka pri delu z računalnikom"
 
 #: ../panel-plugin/time-out.c:444
 msgid "translator-credits"
@@ -124,7 +124,7 @@ msgstr "Prikaži ikono"
 #. Create display time check button
 #: ../panel-plugin/time-out.c:639
 msgid "Display remaining time in the panel"
-msgstr "Prikaži preostali čas v pultu"
+msgstr "Na panoju prikaži preostali čas"
 
 #. Create display hours check button
 #: ../panel-plugin/time-out.c:646
