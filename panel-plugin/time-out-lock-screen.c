@@ -193,6 +193,8 @@ time_out_lock_screen_init (GTypeInstance *instance,
   GtkWidget       *button_box;
   GtkWidget       *image;
   GtkCssProvider  *provider;
+  cairo_surface_t *surface;
+  gint             scale_factor, size;
 
   lock_screen->display_seconds = TRUE;
   lock_screen->allow_postpone = TRUE;
@@ -223,10 +225,18 @@ time_out_lock_screen_init (GTypeInstance *instance,
   g_object_unref (provider);
 
   /* Create image */
-  pixbuf = gdk_pixbuf_new_from_file_at_size (DATADIR "/icons/hicolor/scalable/apps/xfce4-time-out-plugin.svg", 128, 128, NULL);
-  image = gtk_image_new_from_pixbuf (pixbuf);
+  scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (lock_screen->window));
+RTRACE ("%d", scale_factor);
+  size = 128 * scale_factor;
+  pixbuf = gdk_pixbuf_new_from_file_at_size (DATADIR "/icons/hicolor/scalable/apps/xfce4-time-out-plugin.svg", size, size, NULL);
+  image = gtk_image_new ();
   if (G_LIKELY (pixbuf != NULL))
-    g_object_unref (G_OBJECT (pixbuf));
+    {
+      surface = gdk_cairo_surface_create_from_pixbuf (pixbuf, scale_factor, NULL);
+      gtk_image_set_from_surface (GTK_IMAGE (image), surface);
+      g_object_unref (G_OBJECT (pixbuf));
+      cairo_surface_destroy (surface);
+    }
   gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
   gtk_widget_set_valign (image, GTK_ALIGN_CENTER);
   gtk_container_add (GTK_CONTAINER (vbox), image);
