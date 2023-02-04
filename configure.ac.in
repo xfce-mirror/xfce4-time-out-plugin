@@ -24,6 +24,7 @@ AC_INIT([xfce4-time-out-plugin], [time_out_version], [https://docs.xfce.org/pane
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 AC_REVISION([$Id])
+AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
 dnl *** Initialize automake ***
@@ -37,7 +38,7 @@ dnl ********************************
 dnl *** Check for basic programs ***
 dnl ********************************
 AC_PROG_CC()
-AC_PROG_LD()
+LT_PATH_LD([])
 AC_PROG_INSTALL()
 AC_PROG_CC_C_O()
 AM_PROG_CC_C_O()

@@ -26,6 +26,7 @@ depcomp
 aclocal.m4
 autom4te.cache
 *.desktop
+m4/
 po/POTFILES
 po/*.in.in
 po/.intltool-merge-cache*
