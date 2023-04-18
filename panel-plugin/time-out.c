@@ -444,7 +444,7 @@ time_out_about (XfcePanelPlugin *plugin)
                          "translator-credits", _("translator-credits"),
                          "license", XFCE_LICENSE_GPL,
                          "website", "https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin",
-                         "copyright", "Copyright \302\251 2007-2023 The Xfce development team"
+                         "copyright", "Copyright \302\251 2007-2023 The Xfce development team",
                          NULL);
 }
 
