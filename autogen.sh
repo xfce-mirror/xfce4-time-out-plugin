@@ -4,7 +4,7 @@
 #         The Xfce development team. All rights reserved.
 #
 
-export XDT_AUTOGEN_REQUIRED_VERSION="4.7.0"
+export XDT_AUTOGEN_REQUIRED_VERSION="4.17.0"
 
 (type xdt-autogen) >/dev/null 2>&1 || {
   cat >&2 <<EOF
