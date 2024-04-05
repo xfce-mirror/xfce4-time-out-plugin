@@ -15,7 +15,6 @@ INSTALL
 config.*
 configure~
 configure.ac
-intltool*
 mkinstalldirs
 missing
 compile
@@ -29,4 +28,16 @@ autom4te.cache
 m4/
 po/POTFILES
 po/*.in.in
-po/.intltool-merge-cache*
+ABOUT-NLS
+po/Makevars.template
+po/Rules-quot
+po/boldquot.sed
+po/en@boldquot.header
+po/en@quot.header
+po/insert-header.sin
+po/quot.sed
+po/remove-potcdate.sed
+po/remove-potcdate.sin
+po/xfce4-time-out-plugin.pot
+ChangeLog
+xfce4-time-out-plugin-*.tar.bz2
