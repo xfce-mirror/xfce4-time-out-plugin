@@ -11,10 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-02-20 08:22+0000\n"
-"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>\n"
-"Language-Team: Catalan (http://www.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
+"PO-Revision-Date: 2013-07-03 19:23+0000\n"
+"Last-Translator: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>, 2016-2021\n"
+"Language-Team: Catalan (http://app.transifex.com/xfce/xfce-panel-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -55,110 +55,109 @@ msgstr "Connector per al tauler de Xfce per a prendre's un descans de tant en ta
 msgid "translator-credits"
 msgstr "Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>, 2016-2017."
 
-#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
-#: ../panel-plugin/time-out-lock-screen.c:323
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/time-out.c:478 ../panel-plugin/time-out.c:483
+#: ../panel-plugin/time-out-lock-screen.c:333
 msgid "Time Out"
 msgstr "Període de descans"
 
-#: ../panel-plugin/time-out.c:479
+#: ../panel-plugin/time-out.c:480
 msgid "_Close"
 msgstr "Tan_ca"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:500
 msgid "Time settings"
 msgstr "Ajusts del temps"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:512
+#: ../panel-plugin/time-out.c:513
 msgid "Minutes"
 msgstr "Minuts"
 
-#: ../panel-plugin/time-out.c:517
+#: ../panel-plugin/time-out.c:518
 msgid "Seconds"
 msgstr "Segons"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:523
+#: ../panel-plugin/time-out.c:524
 msgid "Time between breaks:"
 msgstr "Temps entre descansos:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:549
+#: ../panel-plugin/time-out.c:550
 msgid "Break length:"
 msgstr "Durada del descans:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:570
+#: ../panel-plugin/time-out.c:571
 msgid "Postpone length:"
 msgstr "Durada de la posposició:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:591
+#: ../panel-plugin/time-out.c:592
 msgid "Behaviour"
 msgstr "Comportament"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:602
+#: ../panel-plugin/time-out.c:603
 msgid "Allow postpone"
 msgstr "Permet la posposició"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:609
+#: ../panel-plugin/time-out.c:610
 msgid "Resume automatically"
 msgstr "Reprèn automàticament"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:616
+#: ../panel-plugin/time-out.c:617
 msgid "Appearance"
 msgstr "Aparença"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:628
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "Nota: no es poden ocultar simultàniament la icona i el temps."
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:632
+#: ../panel-plugin/time-out.c:633
 msgid "Display icon"
 msgstr "Mostra la icona"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:639
+#: ../panel-plugin/time-out.c:640
 msgid "Display remaining time in the panel"
 msgstr "Mostra el temps restant al tauler"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:646
+#: ../panel-plugin/time-out.c:647
 msgid "Display hours"
 msgstr "Mostra les hores"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:653
+#: ../panel-plugin/time-out.c:654
 msgid "Display seconds"
 msgstr "Mostra els segons"
 
-#: ../panel-plugin/time-out.c:1081
+#: ../panel-plugin/time-out.c:1082
 msgid "Failed to lock screen"
 msgstr "Ha fallat el bloqueig de la pantalla"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:254
+#: ../panel-plugin/time-out-lock-screen.c:263
 msgid "_Postpone"
 msgstr "_Posposa"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:260
+#: ../panel-plugin/time-out-lock-screen.c:269
 msgid "_Lock"
 msgstr "B_loqueja"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:266
+#: ../panel-plugin/time-out-lock-screen.c:275
 msgid "_Resume"
 msgstr "_Reprèn"
 
-#: ../panel-plugin/time-out-lock-screen.c:322
+#: ../panel-plugin/time-out-lock-screen.c:332
 msgid "Failed to grab input for Time Out lock screen"
 msgstr "Ha fallat la captura de l'entrada per a la pantalla de bloqueig de Període de descans"
 
@@ -237,7 +236,3 @@ msgstr "Temps restant: %s %s"
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "Temps restant: %s %s %s"
-
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
-msgid "Automatically controlled time outs and breaks"
-msgstr "Els períodes d'activitat i descans es controlen automàticament"
