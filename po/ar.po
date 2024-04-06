@@ -9,10 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-02-19 11:51+0000\n"
-"Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Arabic (http://www.transifex.com/xfce/xfce-panel-plugins/language/ar/)\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
+"PO-Revision-Date: 2013-07-03 19:23+0000\n"
+"Last-Translator: محمد الحرقان <malham1@gmail.com>, 2012\n"
+"Language-Team: Arabic (http://app.transifex.com/xfce/xfce-panel-plugins/language/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,110 +53,109 @@ msgstr "ملحق شريط إكسفسي لاخذ إستراحة من العمل �
 msgid "translator-credits"
 msgstr "Karim Oulad Chalha محمد الحرقان"
 
-#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
-#: ../panel-plugin/time-out-lock-screen.c:323
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/time-out.c:478 ../panel-plugin/time-out.c:483
+#: ../panel-plugin/time-out-lock-screen.c:333
 msgid "Time Out"
 msgstr "انتهت المهلة"
 
-#: ../panel-plugin/time-out.c:479
+#: ../panel-plugin/time-out.c:480
 msgid "_Close"
 msgstr "_إغلاق"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:500
 msgid "Time settings"
 msgstr "إعدادات الوقت"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:512
+#: ../panel-plugin/time-out.c:513
 msgid "Minutes"
 msgstr "دقائق"
 
-#: ../panel-plugin/time-out.c:517
+#: ../panel-plugin/time-out.c:518
 msgid "Seconds"
 msgstr "ثوانٍ"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:523
+#: ../panel-plugin/time-out.c:524
 msgid "Time between breaks:"
 msgstr "مدة بين الإستراحات:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:549
+#: ../panel-plugin/time-out.c:550
 msgid "Break length:"
 msgstr "مدة الإستراحة:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:570
+#: ../panel-plugin/time-out.c:571
 msgid "Postpone length:"
 msgstr "مدة التأجيل:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:591
+#: ../panel-plugin/time-out.c:592
 msgid "Behaviour"
 msgstr "السلوك"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:602
+#: ../panel-plugin/time-out.c:603
 msgid "Allow postpone"
 msgstr "سماح بالتأجيل"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:609
+#: ../panel-plugin/time-out.c:610
 msgid "Resume automatically"
 msgstr "إستئناف تلقائي"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:616
+#: ../panel-plugin/time-out.c:617
 msgid "Appearance"
 msgstr "مظهر"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:628
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr ""
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:632
+#: ../panel-plugin/time-out.c:633
 msgid "Display icon"
 msgstr "عرض أيقونة"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:639
+#: ../panel-plugin/time-out.c:640
 msgid "Display remaining time in the panel"
 msgstr "عرض الوقت المتبقي في الشريط"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:646
+#: ../panel-plugin/time-out.c:647
 msgid "Display hours"
 msgstr "عرض الساعات"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:653
+#: ../panel-plugin/time-out.c:654
 msgid "Display seconds"
 msgstr "عرض الثواني"
 
-#: ../panel-plugin/time-out.c:1081
+#: ../panel-plugin/time-out.c:1082
 msgid "Failed to lock screen"
 msgstr ""
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:254
+#: ../panel-plugin/time-out-lock-screen.c:263
 msgid "_Postpone"
 msgstr "_تأجيل"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:260
+#: ../panel-plugin/time-out-lock-screen.c:269
 msgid "_Lock"
 msgstr ""
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:266
+#: ../panel-plugin/time-out-lock-screen.c:275
 msgid "_Resume"
 msgstr "_إستئناف"
 
-#: ../panel-plugin/time-out-lock-screen.c:322
+#: ../panel-plugin/time-out-lock-screen.c:332
 msgid "Failed to grab input for Time Out lock screen"
 msgstr ""
 
@@ -247,7 +246,3 @@ msgstr "الوقت المتبقي: %s %s"
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "الوقت المتبقي: %s %s %s"
-
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
-msgid "Automatically controlled time outs and breaks"
-msgstr "التحكم التلقائي في مهلة و مدة الإستراحة"
