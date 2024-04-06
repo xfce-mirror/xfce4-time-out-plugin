@@ -5,23 +5,23 @@
 # Translators:
 # Elishai Eliyahu <elishai@mailfence.com>, 2016-2017,2020
 # Elishai Eliyahu <elishai@mailfence.com>, 2021
-# GenghisKhan <genghiskhan@gmx.ca>, 2015-2016
+# gk <genghiskhan@gmx.ca>, 2015-2016
 # Hezy Amiel <open@hezyamiel.com>, 2010
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2020
+# 63f334ffc0709ba0fc2361b80bf3c0f0_00ffd1e <ab96c93ca0ac55ba7fa06385427e60dd_878890>, 2020
 # Yaron Shahrabani <sh.yaron@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-03-16 19:56+0000\n"
-"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>\n"
-"Language-Team: Hebrew (http://www.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
+"PO-Revision-Date: 2013-07-03 19:23+0000\n"
+"Last-Translator: Elishai Eliyahu <elishai@mailfence.com>, 2021\n"
+"Language-Team: Hebrew (http://app.transifex.com/xfce/xfce-panel-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: he\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: 2;\n"
 
 #. Create label for displaying the remaining time until the next break
 #: ../panel-plugin/time-out.c:223
@@ -57,110 +57,109 @@ msgstr "תוסף לוח Xfce לצורך לקיחת הפסקה מעבודת מח�
 msgid "translator-credits"
 msgstr "שבחים-מתרגמים"
 
-#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
-#: ../panel-plugin/time-out-lock-screen.c:323
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/time-out.c:478 ../panel-plugin/time-out.c:483
+#: ../panel-plugin/time-out-lock-screen.c:333
 msgid "Time Out"
 msgstr "פסק זמן"
 
-#: ../panel-plugin/time-out.c:479
+#: ../panel-plugin/time-out.c:480
 msgid "_Close"
 msgstr "סגור"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:500
 msgid "Time settings"
 msgstr "הגדרות זמן"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:512
+#: ../panel-plugin/time-out.c:513
 msgid "Minutes"
 msgstr "דקות"
 
-#: ../panel-plugin/time-out.c:517
+#: ../panel-plugin/time-out.c:518
 msgid "Seconds"
 msgstr "שניות"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:523
+#: ../panel-plugin/time-out.c:524
 msgid "Time between breaks:"
 msgstr "זמן בין הפסקות:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:549
+#: ../panel-plugin/time-out.c:550
 msgid "Break length:"
 msgstr "אורך הפסקה:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:570
+#: ../panel-plugin/time-out.c:571
 msgid "Postpone length:"
 msgstr "אורך דחייה:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:591
+#: ../panel-plugin/time-out.c:592
 msgid "Behaviour"
 msgstr "התנהגות"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:602
+#: ../panel-plugin/time-out.c:603
 msgid "Allow postpone"
 msgstr "התר דחייה"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:609
+#: ../panel-plugin/time-out.c:610
 msgid "Resume automatically"
 msgstr "המשך אוטומטי"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:616
+#: ../panel-plugin/time-out.c:617
 msgid "Appearance"
 msgstr "מראה"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:628
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "הערה: אייקון וזמן לא ניתנים להסתרה בו זמנית."
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:632
+#: ../panel-plugin/time-out.c:633
 msgid "Display icon"
 msgstr "הצג אייקון"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:639
+#: ../panel-plugin/time-out.c:640
 msgid "Display remaining time in the panel"
 msgstr "הצג זמן נותר בתוך הלוח"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:646
+#: ../panel-plugin/time-out.c:647
 msgid "Display hours"
 msgstr "הצג שעות"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:653
+#: ../panel-plugin/time-out.c:654
 msgid "Display seconds"
 msgstr "הצג שניות"
 
-#: ../panel-plugin/time-out.c:1081
+#: ../panel-plugin/time-out.c:1082
 msgid "Failed to lock screen"
 msgstr "נכשל לנעול מסך"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:254
+#: ../panel-plugin/time-out-lock-screen.c:263
 msgid "_Postpone"
 msgstr "_דחה"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:260
+#: ../panel-plugin/time-out-lock-screen.c:269
 msgid "_Lock"
 msgstr "_נעילה"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:266
+#: ../panel-plugin/time-out-lock-screen.c:275
 msgid "_Resume"
 msgstr "ה_משך"
 
-#: ../panel-plugin/time-out-lock-screen.c:322
+#: ../panel-plugin/time-out-lock-screen.c:332
 msgid "Failed to grab input for Time Out lock screen"
 msgstr "נכשל לתפוס קלט עבור פסק זמן מסך נעילה"
 
@@ -189,7 +188,6 @@ msgid_plural "%d hours"
 msgstr[0] "שעה %d"
 msgstr[1] "%d שעות"
 msgstr[2] "%d שעות"
-msgstr[3] "%d שעות"
 
 #: ../panel-plugin/time-out-countdown.c:438
 #: ../panel-plugin/time-out-countdown.c:494
@@ -201,7 +199,6 @@ msgid_plural "%d minutes"
 msgstr[0] "דקה %d"
 msgstr[1] "%d דקות"
 msgstr[2] "%d דקות"
-msgstr[3] "%d דקות"
 
 #: ../panel-plugin/time-out-countdown.c:439
 #, c-format
@@ -210,7 +207,6 @@ msgid_plural "%d seconds"
 msgstr[0] "שנייה %d"
 msgstr[1] "%d שניות"
 msgstr[2] "%d שניות"
-msgstr[3] "%d שניות"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:450
@@ -245,7 +241,3 @@ msgstr "זמן נותר: %s %s"
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "זמן נותר: %s %s %s"
-
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
-msgid "Automatically controlled time outs and breaks"
-msgstr "פרקי פסק זמן והפסקות מבוקרות אוטומטית"
