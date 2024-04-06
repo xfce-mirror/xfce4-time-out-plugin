@@ -61,7 +61,6 @@ AC_CHECK_FUNCS([])
 dnl ******************************
 dnl *** Check for i18n support ***
 dnl ******************************
-XDT_I18N([@LINGUAS@])
 GETTEXT_PACKAGE="$PACKAGE"
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE], ["$GETTEXT_PACKAGE"], [Name of default gettext domain])
 AC_SUBST([GETTEXT_PACKAGE])
