@@ -5,23 +5,23 @@
 # Translators:
 #  <abel.martin.ruiz@gmail.com>, 2009
 # Ignacio Poggi <ignaciop.3@gmail.com>, 2020
-# prflr88 <prflr88@gmail.com>, 2017
-# prflr88 <prflr88@gmail.com>, 2013,2015
-# prflr88 <prflr88@gmail.com>, 2013,2015
+# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2017
+# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2013,2015
+# Pablo Lezaeta Reyes <prflr88@gmail.com>, 2013,2015
 # Toni Estévez <toni.estevez@gmail.com>, 2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-19 12:51+0100\n"
-"PO-Revision-Date: 2021-05-22 13:22+0000\n"
-"Last-Translator: Toni Estévez <toni.estevez@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
+"POT-Creation-Date: 2024-04-06 12:55+0200\n"
+"PO-Revision-Date: 2013-07-03 19:23+0000\n"
+"Last-Translator: Toni Estévez <toni.estevez@gmail.com>, 2021\n"
+"Language-Team: Spanish (http://app.transifex.com/xfce/xfce-panel-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #. Create label for displaying the remaining time until the next break
 #: ../panel-plugin/time-out.c:223
@@ -57,110 +57,109 @@ msgstr "Complemento de Xfce para tomarse un descanso del trabajo de vez en cuand
 msgid "translator-credits"
 msgstr "Toni Estevez <toni.estevez@gmail.com>, 2021\nPablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>, 2013-2015\nMC <correomc2000-ing@yahoo.es>, 2013\nAbel <abel.martin.ruiz@gmail.com>, 2009"
 
-#: ../panel-plugin/time-out.c:477 ../panel-plugin/time-out.c:482
-#: ../panel-plugin/time-out-lock-screen.c:323
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:1
+#: ../panel-plugin/time-out.c:478 ../panel-plugin/time-out.c:483
+#: ../panel-plugin/time-out-lock-screen.c:333
 msgid "Time Out"
 msgstr "Tiempos de descanso"
 
-#: ../panel-plugin/time-out.c:479
+#: ../panel-plugin/time-out.c:480
 msgid "_Close"
 msgstr "_Cerrar"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:499
+#: ../panel-plugin/time-out.c:500
 msgid "Time settings"
 msgstr "Configuración del tiempo"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:512
+#: ../panel-plugin/time-out.c:513
 msgid "Minutes"
 msgstr "Minutos"
 
-#: ../panel-plugin/time-out.c:517
+#: ../panel-plugin/time-out.c:518
 msgid "Seconds"
 msgstr "Segundos"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:523
+#: ../panel-plugin/time-out.c:524
 msgid "Time between breaks:"
 msgstr "Tiempo entre descansos:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:549
+#: ../panel-plugin/time-out.c:550
 msgid "Break length:"
 msgstr "Duración del descanso:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:570
+#: ../panel-plugin/time-out.c:571
 msgid "Postpone length:"
 msgstr "Duración del aplazamiento:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:591
+#: ../panel-plugin/time-out.c:592
 msgid "Behaviour"
 msgstr "Comportamiento"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:602
+#: ../panel-plugin/time-out.c:603
 msgid "Allow postpone"
 msgstr "Permitir el aplazamiento"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:609
+#: ../panel-plugin/time-out.c:610
 msgid "Resume automatically"
 msgstr "Reanudar automáticamente"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:616
+#: ../panel-plugin/time-out.c:617
 msgid "Appearance"
 msgstr "Apariencia"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:627
+#: ../panel-plugin/time-out.c:628
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "Nota: el icono y la hora no se pueden ocultar simultáneamente."
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:632
+#: ../panel-plugin/time-out.c:633
 msgid "Display icon"
 msgstr "Mostrar el icono"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:639
+#: ../panel-plugin/time-out.c:640
 msgid "Display remaining time in the panel"
 msgstr "Mostrar el tiempo restante en el panel"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:646
+#: ../panel-plugin/time-out.c:647
 msgid "Display hours"
 msgstr "Mostrar las horas"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:653
+#: ../panel-plugin/time-out.c:654
 msgid "Display seconds"
 msgstr "Mostrar los segundos"
 
-#: ../panel-plugin/time-out.c:1081
+#: ../panel-plugin/time-out.c:1082
 msgid "Failed to lock screen"
 msgstr "No se ha podido bloquear la pantalla"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:254
+#: ../panel-plugin/time-out-lock-screen.c:263
 msgid "_Postpone"
 msgstr "_Aplazar"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:260
+#: ../panel-plugin/time-out-lock-screen.c:269
 msgid "_Lock"
 msgstr "_Bloquear"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:266
+#: ../panel-plugin/time-out-lock-screen.c:275
 msgid "_Resume"
 msgstr "_Reanudar"
 
-#: ../panel-plugin/time-out-lock-screen.c:322
+#: ../panel-plugin/time-out-lock-screen.c:332
 msgid "Failed to grab input for Time Out lock screen"
 msgstr "No se ha podido obtener la entrada para el tiempo de descanso de la pantalla de bloqueo"
 
@@ -188,6 +187,7 @@ msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d hora"
 msgstr[1] "%d horas"
+msgstr[2] "%d horas"
 
 #: ../panel-plugin/time-out-countdown.c:438
 #: ../panel-plugin/time-out-countdown.c:494
@@ -198,6 +198,7 @@ msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d minutos"
 msgstr[1] "%d minutos"
+msgstr[2] "%d minutos"
 
 #: ../panel-plugin/time-out-countdown.c:439
 #, c-format
@@ -205,6 +206,7 @@ msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d segundo"
 msgstr[1] "%d segundos"
+msgstr[2] "%d segundos"
 
 #. Translators: this is %s seconds/minutes/hours
 #: ../panel-plugin/time-out-countdown.c:450
@@ -239,7 +241,3 @@ msgstr "Tiempo restante: %s %s"
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "Tiempo restante: %s %s %s"
-
-#: ../panel-plugin/xfce4-time-out-plugin.desktop.in.h:2
-msgid "Automatically controlled time outs and breaks"
-msgstr "Tiempos de descanso controlados automáticamente"
