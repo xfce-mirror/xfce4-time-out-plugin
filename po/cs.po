@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-time-out-plugin package.
 # 
 # Translators:
 # Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020-2021
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-06 12:55+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-04-07 00:56+0200\n"
 "PO-Revision-Date: 2013-07-03 19:23+0000\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020-2021\n"
 "Language-Team: Czech (http://app.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
@@ -19,164 +19,164 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #. Create label for displaying the remaining time until the next break
-#: ../panel-plugin/time-out.c:223
+#: panel-plugin/time-out.c:223
 msgid "Inactive"
 msgstr "Neaktivní"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:277
+#: panel-plugin/time-out.c:277
 msgid "Take a break"
 msgstr "Dejte si přestávku"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:285
+#: panel-plugin/time-out.c:285
 msgid "Reset timer"
 msgstr "Vynulovat časovač"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:293
+#: panel-plugin/time-out.c:293
 msgid "Enabled"
 msgstr "Povoleno"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:357
+#: panel-plugin/time-out.c:357
 msgid "Paused"
 msgstr "Pozastaveno"
 
-#: ../panel-plugin/time-out.c:439
+#: panel-plugin/time-out.c:439
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "Zásuvný modul panelu Xfce k upozornění na občasnou přestávku při práci s počítačem"
 
-#: ../panel-plugin/time-out.c:444
+#: panel-plugin/time-out.c:444
 msgid "translator-credits"
 msgstr "Michal Várady <miko.vaji@gmail.com>"
 
-#: ../panel-plugin/time-out.c:478 ../panel-plugin/time-out.c:483
-#: ../panel-plugin/time-out-lock-screen.c:333
+#: panel-plugin/time-out.c:478 panel-plugin/time-out.c:483
+#: panel-plugin/time-out-lock-screen.c:333
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:5
 msgid "Time Out"
 msgstr "Čas vypršel"
 
-#: ../panel-plugin/time-out.c:480
+#: panel-plugin/time-out.c:480
 msgid "_Close"
 msgstr "_Zavřít"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:500
+#: panel-plugin/time-out.c:500
 msgid "Time settings"
 msgstr "Nastavení času"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:513
+#: panel-plugin/time-out.c:513
 msgid "Minutes"
 msgstr "Minut"
 
-#: ../panel-plugin/time-out.c:518
+#: panel-plugin/time-out.c:518
 msgid "Seconds"
 msgstr "Sekund"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:524
+#: panel-plugin/time-out.c:524
 msgid "Time between breaks:"
 msgstr "Čas mezi přestávkami:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:550
+#: panel-plugin/time-out.c:550
 msgid "Break length:"
 msgstr "Délka přestávky:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:571
+#: panel-plugin/time-out.c:571
 msgid "Postpone length:"
 msgstr "Délka odložení:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:592
+#: panel-plugin/time-out.c:592
 msgid "Behaviour"
 msgstr "Chování"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:603
+#: panel-plugin/time-out.c:603
 msgid "Allow postpone"
 msgstr "Povolit odložení"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:610
+#: panel-plugin/time-out.c:610
 msgid "Resume automatically"
 msgstr "Pokračovat automaticky"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:617
+#: panel-plugin/time-out.c:617
 msgid "Appearance"
 msgstr "Vzhled"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:628
+#: panel-plugin/time-out.c:628
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "Poznámka: Ikonu a čas nelze skrýt současně."
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:633
+#: panel-plugin/time-out.c:633
 msgid "Display icon"
 msgstr "Zobrazit ikonu"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:640
+#: panel-plugin/time-out.c:640
 msgid "Display remaining time in the panel"
 msgstr "Zobrazit zbývající čas v panelu"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:647
+#: panel-plugin/time-out.c:647
 msgid "Display hours"
 msgstr "Zobrazit hodiny"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:654
+#: panel-plugin/time-out.c:654
 msgid "Display seconds"
 msgstr "Zobrazit sekundy"
 
-#: ../panel-plugin/time-out.c:1082
+#: panel-plugin/time-out.c:1082
 msgid "Failed to lock screen"
 msgstr "Nepodařilo se uzamknout obrazovku"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:263
+#: panel-plugin/time-out-lock-screen.c:263
 msgid "_Postpone"
 msgstr "_Odložit"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:269
+#: panel-plugin/time-out-lock-screen.c:269
 msgid "_Lock"
 msgstr "_Uzamknout"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:275
+#: panel-plugin/time-out-lock-screen.c:275
 msgid "_Resume"
 msgstr "_Pokračovat"
 
-#: ../panel-plugin/time-out-lock-screen.c:332
+#: panel-plugin/time-out-lock-screen.c:332
 msgid "Failed to grab input for Time Out lock screen"
 msgstr "Nepodařilo se vybrat vstup pro uzamknutí obrazovky po vypršení času."
 
-#: ../panel-plugin/time-out-countdown.c:390
+#: panel-plugin/time-out-countdown.c:390
 msgid "The break is over."
 msgstr "Přestávka skončila."
 
 #. Hours:minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:412
+#: panel-plugin/time-out-countdown.c:412
 #, c-format
 msgid "%02d:%02d:%02d"
 msgstr "%02d:%02d:%02d"
 
 #. Hours:minutes
 #. Minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:417
-#: ../panel-plugin/time-out-countdown.c:425
+#: panel-plugin/time-out-countdown.c:417 panel-plugin/time-out-countdown.c:425
 #, c-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:437
+#: panel-plugin/time-out-countdown.c:437
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
@@ -185,10 +185,8 @@ msgstr[1] "%d hodiny"
 msgstr[2] "%d hodin"
 msgstr[3] "%d hodin"
 
-#: ../panel-plugin/time-out-countdown.c:438
-#: ../panel-plugin/time-out-countdown.c:494
-#: ../panel-plugin/time-out-countdown.c:507
-#: ../panel-plugin/time-out-countdown.c:541
+#: panel-plugin/time-out-countdown.c:438 panel-plugin/time-out-countdown.c:494
+#: panel-plugin/time-out-countdown.c:507 panel-plugin/time-out-countdown.c:541
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
@@ -197,7 +195,7 @@ msgstr[1] "%d minuty"
 msgstr[2] "%d minut"
 msgstr[3] "%d minut"
 
-#: ../panel-plugin/time-out-countdown.c:439
+#: panel-plugin/time-out-countdown.c:439
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
@@ -207,15 +205,11 @@ msgstr[2] "%d sekund"
 msgstr[3] "%d sekund"
 
 #. Translators: this is %s seconds/minutes/hours
-#: ../panel-plugin/time-out-countdown.c:450
-#: ../panel-plugin/time-out-countdown.c:455
-#: ../panel-plugin/time-out-countdown.c:466
-#: ../panel-plugin/time-out-countdown.c:489
-#: ../panel-plugin/time-out-countdown.c:495
-#: ../panel-plugin/time-out-countdown.c:522
-#: ../panel-plugin/time-out-countdown.c:527
-#: ../panel-plugin/time-out-countdown.c:536
-#: ../panel-plugin/time-out-countdown.c:542
+#: panel-plugin/time-out-countdown.c:450 panel-plugin/time-out-countdown.c:455
+#: panel-plugin/time-out-countdown.c:466 panel-plugin/time-out-countdown.c:489
+#: panel-plugin/time-out-countdown.c:495 panel-plugin/time-out-countdown.c:522
+#: panel-plugin/time-out-countdown.c:527 panel-plugin/time-out-countdown.c:536
+#: panel-plugin/time-out-countdown.c:542
 #, c-format
 msgid "Time left: %s"
 msgstr "Zbývající čas: %s"
@@ -224,18 +218,19 @@ msgstr "Zbývající čas: %s"
 #. Translators: this is %s hours %s seconds
 #. Translators: this is %s hours, %s minutes
 #. Translators: this is %s minutes %s seconds
-#: ../panel-plugin/time-out-countdown.c:458
-#: ../panel-plugin/time-out-countdown.c:470
-#: ../panel-plugin/time-out-countdown.c:477
-#: ../panel-plugin/time-out-countdown.c:502
-#: ../panel-plugin/time-out-countdown.c:509
-#: ../panel-plugin/time-out-countdown.c:530
+#: panel-plugin/time-out-countdown.c:458 panel-plugin/time-out-countdown.c:470
+#: panel-plugin/time-out-countdown.c:477 panel-plugin/time-out-countdown.c:502
+#: panel-plugin/time-out-countdown.c:509 panel-plugin/time-out-countdown.c:530
 #, c-format
 msgid "Time left: %s %s"
 msgstr "Zbývající čas: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
-#: ../panel-plugin/time-out-countdown.c:480
+#: panel-plugin/time-out-countdown.c:480
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "Zbývající čas: %s %s %s"
+
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:6
+msgid "Automatically controlled time outs and breaks"
+msgstr "Automaticky ovládané vypršení času a přestávky"
