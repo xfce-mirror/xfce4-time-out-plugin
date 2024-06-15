@@ -1,3 +1,4 @@
+*~
 *Makefile
 *Makefile.in
 stamp*
@@ -13,8 +14,6 @@ stamp*
 configure
 INSTALL
 config.*
-configure~
-configure.ac
 mkinstalldirs
 missing
 compile

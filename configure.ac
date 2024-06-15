@@ -8,12 +8,7 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([time_out_version_major], [1])
-m4_define([time_out_version_minor], [1])
-m4_define([time_out_version_micro], [3])
-m4_define([time_out_version_build], [r@REVISION@])
-m4_define([time_out_version_tag], [git])
-m4_define([time_out_version], [time_out_version_major().time_out_version_minor().time_out_version_micro()ifelse(time_out_version_tag(), [git], [time_out_version_tag()-time_out_version_build()], [time_out_version_tag()])])
+XDT_VERSION_INIT([1.1.3], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
@@ -21,10 +16,10 @@ dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2007 Jannis Pohlmann <jannis@xfce.org>
               Copyright (c) 2010 Florian Rivoal <frivoal@xfce.org>
               Copyright (c) 2011-2023 The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-time-out-plugin], [time_out_version], [https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin], [xfce4-time-out-plugin])
-AC_PREREQ([2.50])
+AC_INIT([xfce4-time-out-plugin], [xdt_version], [https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin], [xfce4-time-out-plugin])
+AC_PREREQ([2.69])
 AC_CANONICAL_TARGET()
-AC_REVISION([$Id])
+AC_REVISION([xdt_version_build])
 AC_CONFIG_MACRO_DIRS([m4])
 
 dnl ***************************
@@ -83,7 +78,7 @@ XDT_CHECK_PACKAGE([LIBXFCE4PANEL], [libxfce4panel-2.0], [4.12.0])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG()
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***
