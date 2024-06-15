@@ -26,7 +26,7 @@
 #include <gtk/gtk.h>
 #include <libxfce4panel/xfce-panel-plugin.h>
 
-#ifdef GDK_WINDOWING_X11
+#if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
 #include <gdk/gdkx.h>
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
@@ -43,7 +43,7 @@
 
 struct _TimeOutFadeout
 {
-#ifdef GDK_WINDOWING_X11
+#if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
   Display *xdisplay;
   Window  *xwindow;
 #endif
@@ -51,7 +51,7 @@ struct _TimeOutFadeout
 
 
 
-#ifdef GDK_WINDOWING_X11
+#if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
 static Window
 time_out_fadeout_new_window (GdkDisplay *display,
                              GdkScreen  *screen)
@@ -158,10 +158,13 @@ time_out_fadeout_new (GdkDisplay *display)
 
   fadeout = g_slice_new0 (TimeOutFadeout);
 
-#ifdef GDK_WINDOWING_X11
-  fadeout->xdisplay = gdk_x11_display_get_xdisplay (display);
-  screen = gdk_display_get_default_screen (display);
-  fadeout->xwindow = GINT_TO_POINTER (time_out_fadeout_new_window (display, screen));
+#if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
+  if (GDK_IS_X11_DISPLAY (display))
+    {
+      fadeout->xdisplay = gdk_x11_display_get_xdisplay (display);
+      screen = gdk_display_get_default_screen (display);
+      fadeout->xwindow = GINT_TO_POINTER (time_out_fadeout_new_window (display, screen));
+    }
 #endif
 
   return fadeout;
@@ -172,13 +175,16 @@ time_out_fadeout_new (GdkDisplay *display)
 void
 time_out_fadeout_destroy (TimeOutFadeout *fadeout)
 {
-#ifdef GDK_WINDOWING_X11
   GdkDisplay *display = gdk_display_get_default ();
 
-  gdk_x11_display_error_trap_push (display);
-  XDestroyWindow (fadeout->xdisplay, GPOINTER_TO_INT (fadeout->xwindow));
-  gdk_display_flush (display);
-  gdk_x11_display_error_trap_pop_ignored (display);
+#if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
+  if (GDK_IS_X11_DISPLAY (display))
+    {
+      gdk_x11_display_error_trap_push (display);
+      XDestroyWindow (fadeout->xdisplay, GPOINTER_TO_INT (fadeout->xwindow));
+      gdk_display_flush (display);
+      gdk_x11_display_error_trap_pop_ignored (display);
+    }
 #endif
 
   g_slice_free (TimeOutFadeout, fadeout);

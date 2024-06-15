@@ -65,7 +65,7 @@ AM_GNU_GETTEXT_VERSION([0.19.8])
 dnl *******************************
 dnl *** Check for X11 installed ***
 dnl *******************************
-XDT_CHECK_LIBX11_REQUIRE()
+XDT_CHECK_OPTIONAL_PACKAGE([LIBX11], [x11], [1.6.7], [x11], [X11 support])
 
 dnl ***********************************
 dnl *** Check for required packages ***
