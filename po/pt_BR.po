@@ -7,7 +7,7 @@
 # Andre Miranda <andre@andreldm.com>, 2016
 # C. E., 2020
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007
-# Michael Martins <michaelfm21@gmail.com>, 2020
+# Michael Martins, 2020
 # The Cat, 2021
 msgid ""
 msgstr ""
