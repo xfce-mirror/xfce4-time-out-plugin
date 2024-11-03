@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-time-out-plugin package.
 # 
 # Translators:
-# Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020-2021
+# Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020-2021,2024
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
 "Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
 "POT-Creation-Date: 2024-04-07 00:56+0200\n"
 "PO-Revision-Date: 2013-07-03 19:23+0000\n"
-"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020-2021\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2015-2017,2020-2021,2024\n"
 "Language-Team: Czech (http://app.transifex.com/xfce/xfce-panel-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr "Neaktivní"
 #. Create menu item for taking an instant break
 #: panel-plugin/time-out.c:277
 msgid "Take a break"
-msgstr "Dejte si přestávku"
+msgstr "Dát si přestávku"
 
 #. Create menu item for resetting the timer
 #: panel-plugin/time-out.c:285
@@ -56,7 +56,7 @@ msgstr "Michal Várady <miko.vaji@gmail.com>"
 #: panel-plugin/time-out-lock-screen.c:333
 #: panel-plugin/xfce4-time-out-plugin.desktop.in:5
 msgid "Time Out"
-msgstr "Čas vypršel"
+msgstr "Časový limit"
 
 #: panel-plugin/time-out.c:480
 msgid "_Close"
@@ -157,7 +157,7 @@ msgstr "_Pokračovat"
 
 #: panel-plugin/time-out-lock-screen.c:332
 msgid "Failed to grab input for Time Out lock screen"
-msgstr "Nepodařilo se vybrat vstup pro uzamknutí obrazovky po vypršení času."
+msgstr "Nepodařilo se vybrat vstup pro uzamknutí obrazovky Časového limitu."
 
 #: panel-plugin/time-out-countdown.c:390
 msgid "The break is over."
@@ -233,4 +233,4 @@ msgstr "Zbývající čas: %s %s %s"
 
 #: panel-plugin/xfce4-time-out-plugin.desktop.in:6
 msgid "Automatically controlled time outs and breaks"
-msgstr "Automaticky ovládané vypršení času a přestávky"
+msgstr "Automaticky ovládané časové limity a přestávky"
