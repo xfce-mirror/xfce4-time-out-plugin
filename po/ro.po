@@ -1,0 +1,233 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-time-out-plugin package.
+# 
+# Translators:
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2024-04-07 00:56+0200\n"
+"PO-Revision-Date: 2013-07-03 19:23+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
+"Language-Team: Romanian (http://app.transifex.com/xfce/xfce-panel-plugins/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. Create label for displaying the remaining time until the next break
+#: panel-plugin/time-out.c:223
+msgid "Inactive"
+msgstr "Inactiv"
+
+#. Create menu item for taking an instant break
+#: panel-plugin/time-out.c:277
+msgid "Take a break"
+msgstr "Luați o pauză"
+
+#. Create menu item for resetting the timer
+#: panel-plugin/time-out.c:285
+msgid "Reset timer"
+msgstr "Reinițializare temporizator"
+
+#. Create menu item for enabling/disabling the countdown
+#: panel-plugin/time-out.c:293
+msgid "Enabled"
+msgstr "Activată"
+
+#. Update tooltips
+#: panel-plugin/time-out.c:357
+msgid "Paused"
+msgstr "Pusă în pauză"
+
+#: panel-plugin/time-out.c:439
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "Modul al panoului Xfce pentru a lua o pauză de la munca la calculator din când în când."
+
+#: panel-plugin/time-out.c:444
+msgid "translator-credits"
+msgstr "Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024."
+
+#: panel-plugin/time-out.c:478 panel-plugin/time-out.c:483
+#: panel-plugin/time-out-lock-screen.c:333
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:5
+msgid "Time Out"
+msgstr "Timp de odihnă"
+
+#: panel-plugin/time-out.c:480
+msgid "_Close"
+msgstr "În_chide"
+
+#. Create time settings section
+#: panel-plugin/time-out.c:500
+msgid "Time settings"
+msgstr "Opțiuni de timp"
+
+#. Create the labels for the minutes and seconds spins
+#: panel-plugin/time-out.c:513
+msgid "Minutes"
+msgstr "Minute"
+
+#: panel-plugin/time-out.c:518
+msgid "Seconds"
+msgstr "Secunde"
+
+#. Create break countdown time label
+#: panel-plugin/time-out.c:524
+msgid "Time between breaks:"
+msgstr "Timpul dintre pauze:"
+
+#. Create lock countdown time label
+#: panel-plugin/time-out.c:550
+msgid "Break length:"
+msgstr "Lungimea pauzei:"
+
+#. Create postpone countdown time label
+#: panel-plugin/time-out.c:571
+msgid "Postpone length:"
+msgstr "Lungimea amânării:"
+
+#. Create behaviour section
+#: panel-plugin/time-out.c:592
+msgid "Behaviour"
+msgstr "Comportament"
+
+#. Create postpone check button
+#: panel-plugin/time-out.c:603
+msgid "Allow postpone"
+msgstr "Permite amânarea"
+
+#. Create resume check button
+#: panel-plugin/time-out.c:610
+msgid "Resume automatically"
+msgstr "Reluare automată"
+
+#. Create appearance section
+#: panel-plugin/time-out.c:617
+msgid "Appearance"
+msgstr "Aspect"
+
+#. Create note label
+#: panel-plugin/time-out.c:628
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "Notă: Pictograma și cronometrarea nu pot fi ascunse simultan."
+
+#. Create display icon check button
+#: panel-plugin/time-out.c:633
+msgid "Display icon"
+msgstr "Afișează pictogramă"
+
+#. Create display time check button
+#: panel-plugin/time-out.c:640
+msgid "Display remaining time in the panel"
+msgstr "Afișează timpul rămas în panou"
+
+#. Create display hours check button
+#: panel-plugin/time-out.c:647
+msgid "Display hours"
+msgstr "Afișează orele"
+
+#. Create display seconds check button
+#: panel-plugin/time-out.c:654
+msgid "Display seconds"
+msgstr "Afișează secundele"
+
+#: panel-plugin/time-out.c:1082
+msgid "Failed to lock screen"
+msgstr "Blocarea ecranului a eșuat"
+
+#. Create postpone button
+#: panel-plugin/time-out-lock-screen.c:263
+msgid "_Postpone"
+msgstr "A_mână"
+
+#. Create lock button
+#: panel-plugin/time-out-lock-screen.c:269
+msgid "_Lock"
+msgstr "B_locare"
+
+#. Create resume button
+#: panel-plugin/time-out-lock-screen.c:275
+msgid "_Resume"
+msgstr "_Reluare"
+
+#: panel-plugin/time-out-lock-screen.c:332
+msgid "Failed to grab input for Time Out lock screen"
+msgstr "Nu s-a putut prelua intrarea pentru ecranul de blocare a timpului de odihnă"
+
+#: panel-plugin/time-out-countdown.c:390
+msgid "The break is over."
+msgstr "Pauza s-a încheiat."
+
+#. Hours:minutes:seconds
+#: panel-plugin/time-out-countdown.c:412
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
+
+#. Hours:minutes
+#. Minutes:seconds
+#: panel-plugin/time-out-countdown.c:417 panel-plugin/time-out-countdown.c:425
+#, c-format
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
+
+#: panel-plugin/time-out-countdown.c:437
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d oră"
+msgstr[1] "%d ore"
+msgstr[2] "%d de ore"
+
+#: panel-plugin/time-out-countdown.c:438 panel-plugin/time-out-countdown.c:494
+#: panel-plugin/time-out-countdown.c:507 panel-plugin/time-out-countdown.c:541
+#, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minute"
+msgstr[2] "%d de minute"
+
+#: panel-plugin/time-out-countdown.c:439
+#, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d secundă"
+msgstr[1] "%d secunde"
+msgstr[2] "%d de secunde"
+
+#. Translators: this is %s seconds/minutes/hours
+#: panel-plugin/time-out-countdown.c:450 panel-plugin/time-out-countdown.c:455
+#: panel-plugin/time-out-countdown.c:466 panel-plugin/time-out-countdown.c:489
+#: panel-plugin/time-out-countdown.c:495 panel-plugin/time-out-countdown.c:522
+#: panel-plugin/time-out-countdown.c:527 panel-plugin/time-out-countdown.c:536
+#: panel-plugin/time-out-countdown.c:542
+#, c-format
+msgid "Time left: %s"
+msgstr "Timpul rămas: %s"
+
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: panel-plugin/time-out-countdown.c:458 panel-plugin/time-out-countdown.c:470
+#: panel-plugin/time-out-countdown.c:477 panel-plugin/time-out-countdown.c:502
+#: panel-plugin/time-out-countdown.c:509 panel-plugin/time-out-countdown.c:530
+#, c-format
+msgid "Time left: %s %s"
+msgstr "Timpul rămas: %s %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: panel-plugin/time-out-countdown.c:480
+#, c-format
+msgid "Time left: %s %s %s"
+msgstr "Timpul rămas: %s %s %s"
+
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:6
+msgid "Automatically controlled time outs and breaks"
+msgstr "Pauze și perioade de odihnă controlate automat"
