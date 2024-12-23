@@ -211,11 +211,7 @@ time_out_new (XfcePanelPlugin *plugin)
 
   /* Create time out icon */
   time_out->panel_icon = gtk_image_new_from_icon_name ("xfce4-time-out-plugin", GTK_ICON_SIZE_DIALOG);
-#if LIBXFCE4PANEL_CHECK_VERSION(4, 14, 0)
   gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), xfce_panel_plugin_get_icon_size (time_out->plugin));
-#else
-  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), xfce_panel_plugin_get_size (time_out->plugin) - 8);
-#endif
   gtk_box_pack_start (GTK_BOX (time_out->hvbox), time_out->panel_icon, TRUE, TRUE, 0);
   gtk_widget_show (time_out->panel_icon);
 
@@ -390,12 +386,8 @@ time_out_size_changed (XfcePanelPlugin *plugin,
   g_return_val_if_fail (time_out != NULL, FALSE);
 
   /* Update icon size */
-#if LIBXFCE4PANEL_CHECK_VERSION(4, 14, 0)
   gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon),
 			    xfce_panel_plugin_get_icon_size(time_out->plugin));
-#else
-  gtk_image_set_pixel_size (GTK_IMAGE (time_out->panel_icon), size - 8);
-#endif
 
   /* Update widget size */
   if (xfce_panel_plugin_get_mode (plugin) == XFCE_PANEL_PLUGIN_MODE_HORIZONTAL)
@@ -474,17 +466,10 @@ time_out_configure (XfcePanelPlugin *plugin,
   xfce_panel_plugin_block_menu (plugin);
 
   /* Create properties dialog */
-#if LIBXFCE4UI_CHECK_VERSION (4,14,0)
   dialog = xfce_titled_dialog_new_with_mixed_buttons (_("Time Out"),
     NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
     "window-close", _("_Close"), GTK_RESPONSE_OK,
     NULL);
-#else
-  dialog = xfce_titled_dialog_new_with_buttons (_("Time Out"),
-    NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
-    "gtk-close", GTK_RESPONSE_OK,
-    NULL);
-#endif
 
   /* Set dialog property */
   g_object_set_data (G_OBJECT (plugin), "dialog", dialog);
