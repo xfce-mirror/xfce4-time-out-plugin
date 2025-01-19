@@ -24,7 +24,7 @@
 #endif
 
 #include <gtk/gtk.h>
-#include <libxfce4panel/xfce-panel-plugin.h>
+#include <libxfce4panel/libxfce4panel.h>
 
 #if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
 #include <gdk/gdkx.h>
