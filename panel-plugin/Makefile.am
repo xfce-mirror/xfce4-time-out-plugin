@@ -21,14 +21,20 @@ libtime_out_la_CFLAGS =							\
 	-I$(top_builddir)						\
 	-DG_LOG_DOMAIN=\"xfce4-time-out-plugin\"			\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
+	$(GLIB_CFLAGS)							\
+	$(GTK_CFLAGS)							\
 	$(LIBX11_CFLAGS)						\
 	$(LIBXFCE4UI_CFLAGS)						\
+	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(LIBXFCE4PANEL_CFLAGS)						\
 	$(PLATFORM_CFLAGS)
 
 libtime_out_la_LIBADD =							\
-	$(LIBX11_LIBS)						\
+	$(GLIB_LIBS)							\
+	$(GTK_LIBS)							\
+	$(LIBX11_LIBS)							\
 	$(LIBXFCE4UI_LIBS)						\
+	$(LIBXFCE4UTIL_LIBS)						\
 	$(LIBXFCE4PANEL_LIBS)
 
 libtime_out_la_LDFLAGS = \
@@ -51,7 +57,10 @@ desktop_DATA =								\
 $(desktop_DATA): $(desktop_in_files) Makefile
 	$(AM_V_GEN)$(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-EXTRA_DIST = $(desktop_in_files)
+EXTRA_DIST = \
+	$(desktop_in_files) \
+	meson.build \
+	$(NULL)
 
 CLEANFILES = $(desktop_DATA)
 

@@ -22,6 +22,9 @@
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
+#ifdef HAVE_XFCE_REVISION_H
+#include "xfce-revision.h"
+#endif
 
 #include <gtk/gtk.h>
 #include <libxfce4util/libxfce4util.h>
@@ -432,11 +435,11 @@ time_out_about (XfcePanelPlugin *plugin)
                          "destroy-with-parent", TRUE,
                          "logo-icon-name", "xfce4-time-out-plugin",
                          "program-name", PACKAGE_NAME,
-                         "version", PACKAGE_VERSION,
+                         "version", VERSION_FULL,
                          "translator-credits", _("translator-credits"),
                          "license", XFCE_LICENSE_GPL,
                          "website", "https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin",
-                         "copyright", "Copyright \302\251 2007-2024 The Xfce development team",
+                         "copyright", "Copyright \302\251 2007-" COPYRIGHT_YEAR " The Xfce development team",
                          NULL);
 }
 
