@@ -29,17 +29,17 @@ See [NEWS](https://gitlab.xfce.org/panel-plugins/xfce4-time-out-plugin/-/blob/ma
 From source code repository:
 
     % cd xfce4-time-out-plugin
-    % ./autogen.sh
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 From release tarball:
 
-    % tar xf xfce4-time-out-plugin-<version>.tar.bz2
+    % tar xf xfce4-time-out-plugin-<version>.tar.xz
     % cd xfce4-time-out-plugin-<version>
-    % ./configure
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 ### Reporting Bugs
 
