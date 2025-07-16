@@ -52,6 +52,7 @@
 struct _TimeOutPlugin
 {
   XfcePanelPlugin   *plugin;
+  GtkWidget         *settings_dialog;
 
   /* Countdown until a break happens */
   TimeOutCountdown  *break_countdown;
@@ -458,18 +459,22 @@ time_out_configure (XfcePanelPlugin *plugin,
   g_return_if_fail (plugin != NULL);
   g_return_if_fail (time_out != NULL);
 
+  if (time_out->settings_dialog != NULL)
+    {
+      gtk_window_present (GTK_WINDOW (time_out->settings_dialog));
+      return;
+    }
+
   /* Pause break timer for the time we're configuring */
   if (G_LIKELY (time_out_countdown_get_running (time_out->break_countdown)))
     time_out_countdown_pause (time_out->break_countdown);
 
-  /* Block plugin context menu */
-  xfce_panel_plugin_block_menu (plugin);
-
   /* Create properties dialog */
-  dialog = xfce_titled_dialog_new_with_mixed_buttons (_("Time Out"),
+  time_out->settings_dialog = dialog = xfce_titled_dialog_new_with_mixed_buttons (_("Time Out"),
     NULL, GTK_DIALOG_DESTROY_WITH_PARENT,
     "window-close", _("_Close"), GTK_RESPONSE_OK,
     NULL);
+  g_object_add_weak_pointer (G_OBJECT (time_out->settings_dialog), (gpointer *) &time_out->settings_dialog);
 
   /* Set dialog property */
   g_object_set_data (G_OBJECT (plugin), "dialog", dialog);
@@ -659,9 +664,6 @@ time_out_end_configure (GtkDialog     *dialog,
 
   /* Remove the dialog data from the plugin */
   g_object_set_data (G_OBJECT (time_out->plugin), "dialog", NULL);
-
-  /* Unlock the panel menu */
-  xfce_panel_plugin_unblock_menu (time_out->plugin);
 
   /* Get spin button value for the break countdown settings */
   spin = g_object_get_data (G_OBJECT (time_out->plugin), "break-countdown-minutes-spin");
