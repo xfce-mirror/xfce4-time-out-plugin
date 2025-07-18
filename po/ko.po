@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-time-out-plugin package.
 # 
 # Translators:
 # 1763f4a4329a2376c933c5e919a36cbc_341ca53 <1f851310383599d03339229d772e1290_119292>, 2017
@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Xfce Panel Plugins\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-17 12:57+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
 "PO-Revision-Date: 2013-07-03 19:23+0000\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>, 2016,2020-2021\n"
 "Language-Team: Korean (http://app.transifex.com/xfce/xfce-panel-plugins/language/ko/)\n"
@@ -20,194 +20,188 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. Create label for displaying the remaining time until the next break
-#: ../panel-plugin/time-out.c:220
+#: panel-plugin/time-out.c:220
 msgid "Inactive"
 msgstr "사용 안 함"
 
 #. Create menu item for taking an instant break
-#: ../panel-plugin/time-out.c:274
+#: panel-plugin/time-out.c:274
 msgid "Take a break"
 msgstr "휴식"
 
 #. Create menu item for resetting the timer
-#: ../panel-plugin/time-out.c:282
+#: panel-plugin/time-out.c:282
 msgid "Reset timer"
 msgstr "타이머 초기화"
 
 #. Create menu item for enabling/disabling the countdown
-#: ../panel-plugin/time-out.c:290
+#: panel-plugin/time-out.c:290
 msgid "Enabled"
 msgstr "사용함"
 
 #. Update tooltips
-#: ../panel-plugin/time-out.c:354
+#: panel-plugin/time-out.c:354
 msgid "Paused"
 msgstr "일시정지됨"
 
-#: ../panel-plugin/time-out.c:432
+#: panel-plugin/time-out.c:432
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
 msgstr "언제든지 컴퓨터 작업간 휴식을 하기위한 Xfce 패널 플러그인 입니다."
 
-#: ../panel-plugin/time-out.c:437
+#: panel-plugin/time-out.c:437
 msgid "translator-credits"
 msgstr "Seong-ho Cho <darkcircle.0426@gmail.com>"
 
 #. Create properties dialog
-#: ../panel-plugin/time-out.c:473 ../panel-plugin/time-out-lock-screen.c:329
+#: panel-plugin/time-out.c:473 panel-plugin/time-out-lock-screen.c:329
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:5
 msgid "Time Out"
 msgstr "시간 초과"
 
-#: ../panel-plugin/time-out.c:475
+#: panel-plugin/time-out.c:475
 msgid "_Close"
 msgstr "닫기(_C)"
 
 #. Create time settings section
-#: ../panel-plugin/time-out.c:490
+#: panel-plugin/time-out.c:490
 msgid "Time settings"
 msgstr "시간 설정"
 
 #. Create the labels for the minutes and seconds spins
-#: ../panel-plugin/time-out.c:503
+#: panel-plugin/time-out.c:503
 msgid "Minutes"
 msgstr "분"
 
-#: ../panel-plugin/time-out.c:508
+#: panel-plugin/time-out.c:508
 msgid "Seconds"
 msgstr "초"
 
 #. Create break countdown time label
-#: ../panel-plugin/time-out.c:514
+#: panel-plugin/time-out.c:514
 msgid "Time between breaks:"
 msgstr "휴식 간 시간:"
 
 #. Create lock countdown time label
-#: ../panel-plugin/time-out.c:540
+#: panel-plugin/time-out.c:540
 msgid "Break length:"
 msgstr "휴식 시간:"
 
 #. Create postpone countdown time label
-#: ../panel-plugin/time-out.c:561
+#: panel-plugin/time-out.c:561
 msgid "Postpone length:"
 msgstr "연기 시간:"
 
 #. Create behaviour section
-#: ../panel-plugin/time-out.c:582
+#: panel-plugin/time-out.c:582
 msgid "Behaviour"
 msgstr "행동"
 
 #. Create postpone check button
-#: ../panel-plugin/time-out.c:593
+#: panel-plugin/time-out.c:593
 msgid "Allow postpone"
 msgstr "연기 허용"
 
 #. Create resume check button
-#: ../panel-plugin/time-out.c:600
+#: panel-plugin/time-out.c:600
 msgid "Resume automatically"
 msgstr "자동으로 재개"
 
 #. Create appearance section
-#: ../panel-plugin/time-out.c:607
+#: panel-plugin/time-out.c:607
 msgid "Appearance"
 msgstr "모양새"
 
 #. Create note label
-#: ../panel-plugin/time-out.c:618
+#: panel-plugin/time-out.c:618
 msgid "Note: Icon and time cannot be hidden simultaneously."
 msgstr "알림: 아이콘과 시간은 한꺼번에 숨길 수 없습니다"
 
 #. Create display icon check button
-#: ../panel-plugin/time-out.c:623
+#: panel-plugin/time-out.c:623
 msgid "Display icon"
 msgstr "아이콘 표시"
 
 #. Create display time check button
-#: ../panel-plugin/time-out.c:630
+#: panel-plugin/time-out.c:630
 msgid "Display remaining time in the panel"
 msgstr "패널에 남은 시간 표시"
 
 #. Create display hours check button
-#: ../panel-plugin/time-out.c:637
+#: panel-plugin/time-out.c:637
 msgid "Display hours"
 msgstr "시간 표시"
 
 #. Create display seconds check button
-#: ../panel-plugin/time-out.c:644
+#: panel-plugin/time-out.c:644
 msgid "Display seconds"
 msgstr "초 표시"
 
-#: ../panel-plugin/time-out.c:1069
+#: panel-plugin/time-out.c:1069
 msgid "Failed to lock screen"
 msgstr "화면 잠금에 실패했습니다"
 
 #. Create postpone button
-#: ../panel-plugin/time-out-lock-screen.c:259
+#: panel-plugin/time-out-lock-screen.c:259
 msgid "_Postpone"
 msgstr "연기(_P)"
 
 #. Create lock button
-#: ../panel-plugin/time-out-lock-screen.c:265
+#: panel-plugin/time-out-lock-screen.c:265
 msgid "_Lock"
 msgstr "잠그기(_L)"
 
 #. Create resume button
-#: ../panel-plugin/time-out-lock-screen.c:271
+#: panel-plugin/time-out-lock-screen.c:271
 msgid "_Resume"
 msgstr "재개(_R)"
 
-#: ../panel-plugin/time-out-lock-screen.c:328
+#: panel-plugin/time-out-lock-screen.c:328
 msgid "Failed to grab input for Time Out lock screen"
 msgstr "시간 초과 잠금 화면용 입력 잡아내기에 실패했습니다"
 
-#: ../panel-plugin/time-out-countdown.c:386
+#: panel-plugin/time-out-countdown.c:386
 msgid "The break is over."
 msgstr "휴식이 끝났습니다."
 
 #. Hours:minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:408
+#: panel-plugin/time-out-countdown.c:408
 #, c-format
 msgid "%02d:%02d:%02d"
 msgstr "%02d:%02d:%02d"
 
 #. Hours:minutes
 #. Minutes:seconds
-#: ../panel-plugin/time-out-countdown.c:413
-#: ../panel-plugin/time-out-countdown.c:421
+#: panel-plugin/time-out-countdown.c:413 panel-plugin/time-out-countdown.c:421
 #, c-format
 msgid "%02d:%02d"
 msgstr "%02d:%02d"
 
-#: ../panel-plugin/time-out-countdown.c:433
+#: panel-plugin/time-out-countdown.c:433
 #, c-format
 msgid "%d hour"
 msgid_plural "%d hours"
 msgstr[0] "%d 시간"
 
-#: ../panel-plugin/time-out-countdown.c:434
-#: ../panel-plugin/time-out-countdown.c:490
-#: ../panel-plugin/time-out-countdown.c:503
-#: ../panel-plugin/time-out-countdown.c:537
+#: panel-plugin/time-out-countdown.c:434 panel-plugin/time-out-countdown.c:490
+#: panel-plugin/time-out-countdown.c:503 panel-plugin/time-out-countdown.c:537
 #, c-format
 msgid "%d minute"
 msgid_plural "%d minutes"
 msgstr[0] "%d 분"
 
-#: ../panel-plugin/time-out-countdown.c:435
+#: panel-plugin/time-out-countdown.c:435
 #, c-format
 msgid "%d second"
 msgid_plural "%d seconds"
 msgstr[0] "%d 초"
 
 #. Translators: this is %s seconds/minutes/hours
-#: ../panel-plugin/time-out-countdown.c:446
-#: ../panel-plugin/time-out-countdown.c:451
-#: ../panel-plugin/time-out-countdown.c:462
-#: ../panel-plugin/time-out-countdown.c:485
-#: ../panel-plugin/time-out-countdown.c:491
-#: ../panel-plugin/time-out-countdown.c:518
-#: ../panel-plugin/time-out-countdown.c:523
-#: ../panel-plugin/time-out-countdown.c:532
-#: ../panel-plugin/time-out-countdown.c:538
+#: panel-plugin/time-out-countdown.c:446 panel-plugin/time-out-countdown.c:451
+#: panel-plugin/time-out-countdown.c:462 panel-plugin/time-out-countdown.c:485
+#: panel-plugin/time-out-countdown.c:491 panel-plugin/time-out-countdown.c:518
+#: panel-plugin/time-out-countdown.c:523 panel-plugin/time-out-countdown.c:532
+#: panel-plugin/time-out-countdown.c:538
 #, c-format
 msgid "Time left: %s"
 msgstr "남은 시간: %s"
@@ -216,18 +210,19 @@ msgstr "남은 시간: %s"
 #. Translators: this is %s hours %s seconds
 #. Translators: this is %s hours, %s minutes
 #. Translators: this is %s minutes %s seconds
-#: ../panel-plugin/time-out-countdown.c:454
-#: ../panel-plugin/time-out-countdown.c:466
-#: ../panel-plugin/time-out-countdown.c:473
-#: ../panel-plugin/time-out-countdown.c:498
-#: ../panel-plugin/time-out-countdown.c:505
-#: ../panel-plugin/time-out-countdown.c:526
+#: panel-plugin/time-out-countdown.c:454 panel-plugin/time-out-countdown.c:466
+#: panel-plugin/time-out-countdown.c:473 panel-plugin/time-out-countdown.c:498
+#: panel-plugin/time-out-countdown.c:505 panel-plugin/time-out-countdown.c:526
 #, c-format
 msgid "Time left: %s %s"
 msgstr "남은 시간: %s %s"
 
 #. Translators: this is %s hours, %s minutes, %s seconds
-#: ../panel-plugin/time-out-countdown.c:476
+#: panel-plugin/time-out-countdown.c:476
 #, c-format
 msgid "Time left: %s %s %s"
 msgstr "남은 시간: %s %s %s"
+
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:6
+msgid "Automatically controlled time outs and breaks"
+msgstr "휴식과 시간초과 상태를 자동으로 관리합니다"
