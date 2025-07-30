@@ -49,7 +49,7 @@ msgstr "Wstrzymano"
 #: panel-plugin/time-out.c:432
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Zachęca do robienia przerw podczas korzystania z komputera"
+msgstr "Zachęca do robienia przerw podczas korzystania z komputera."
 
 #: panel-plugin/time-out.c:437
 msgid "translator-credits"
