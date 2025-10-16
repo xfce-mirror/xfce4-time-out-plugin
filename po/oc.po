@@ -3,8 +3,9 @@
 # This file is distributed under the same license as the xfce-panel-plugins.xfce4-time-out-plugin package.
 # 
 # Translators:
-# Cédric Valmary <cvalmary@yahoo.fr>, 2016
+# Cédric Valmary <cvalmary@yahoo.fr>, 2013,2016
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
+# Quentin PAGÈS, 2022,2024
 # Quentin PAGÈS, 2022,2024
 msgid ""
 msgstr ""
@@ -28,7 +29,7 @@ msgstr "Inactiu"
 #. Create menu item for taking an instant break
 #: panel-plugin/time-out.c:274
 msgid "Take a break"
-msgstr "Prenètz una pausa"
+msgstr "Fasètz una pausa"
 
 #. Create menu item for resetting the timer
 #: panel-plugin/time-out.c:282
@@ -48,11 +49,11 @@ msgstr "En espèra"
 #: panel-plugin/time-out.c:432
 msgid ""
 "Xfce Panel plugin for taking a break from computer work every now and then."
-msgstr "Empeuton del panèl Xfce per prene una pausa de l'ordenador de temps en temps."
+msgstr "Empeuton del panèl Xfce per prendre una pausa de l'ordenador de temps en temps."
 
 #: panel-plugin/time-out.c:437
 msgid "translator-credits"
-msgstr "Cédric Valmary (totenoc.org)"
+msgstr "Cédric Valmary (totenoc.org) <cvalmary@yahoo.fr>\nQuentin PAGÈS"
 
 #. Create properties dialog
 #: panel-plugin/time-out.c:473 panel-plugin/time-out-lock-screen.c:329
@@ -96,7 +97,7 @@ msgstr "Longor del repòrt :"
 #. Create behaviour section
 #: panel-plugin/time-out.c:582
 msgid "Behaviour"
-msgstr "Comportament"
+msgstr "Compòrtament"
 
 #. Create postpone check button
 #: panel-plugin/time-out.c:593
@@ -106,7 +107,7 @@ msgstr "Permetre lo repòrt"
 #. Create resume check button
 #: panel-plugin/time-out.c:600
 msgid "Resume automatically"
-msgstr "Reprene automaticament"
+msgstr "Reprendre automaticament"
 
 #. Create appearance section
 #: panel-plugin/time-out.c:607
@@ -155,7 +156,7 @@ msgstr "_Verrolhar"
 #. Create resume button
 #: panel-plugin/time-out-lock-screen.c:271
 msgid "_Resume"
-msgstr "_Reprene"
+msgstr "_Reprendre"
 
 #: panel-plugin/time-out-lock-screen.c:328
 msgid "Failed to grab input for Time Out lock screen"
