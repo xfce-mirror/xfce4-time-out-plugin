@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Xfce
+# This file is distributed under the same license as the xfce-panel-plugins.xfce4-time-out-plugin package.
+# 
+# Translators:
+# Warut Bunprasert <warut.b@disroot.org>, 2025
+msgid ""
+msgstr ""
+"Project-Id-Version: Xfce Panel Plugins\n"
+"Report-Msgid-Bugs-To: https://gitlab.xfce.org/\n"
+"POT-Creation-Date: 2025-07-18 11:08+0200\n"
+"PO-Revision-Date: 2013-07-03 19:23+0000\n"
+"Last-Translator: Warut Bunprasert <warut.b@disroot.org>, 2025\n"
+"Language-Team: Thai (http://app.transifex.com/xfce/xfce-panel-plugins/language/th/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Create label for displaying the remaining time until the next break
+#: panel-plugin/time-out.c:220
+msgid "Inactive"
+msgstr "ไม่ได้ใช้งาน"
+
+#. Create menu item for taking an instant break
+#: panel-plugin/time-out.c:274
+msgid "Take a break"
+msgstr "หยุดพักบ้างตอนนี้"
+
+#. Create menu item for resetting the timer
+#: panel-plugin/time-out.c:282
+msgid "Reset timer"
+msgstr "เริ่มจับเวลาใหม่"
+
+#. Create menu item for enabling/disabling the countdown
+#: panel-plugin/time-out.c:290
+msgid "Enabled"
+msgstr "เปิดใช้งาน"
+
+#. Update tooltips
+#: panel-plugin/time-out.c:354
+msgid "Paused"
+msgstr "พัก"
+
+#: panel-plugin/time-out.c:432
+msgid ""
+"Xfce Panel plugin for taking a break from computer work every now and then."
+msgstr "ปลั๊กอินพาเนล Xfce สำหรับการหยุดพักจากคอมพิวเตอร์เป็นครั้งคราว"
+
+#: panel-plugin/time-out.c:437
+msgid "translator-credits"
+msgstr "Theppitak Karoonboonyanan"
+
+#. Create properties dialog
+#: panel-plugin/time-out.c:473 panel-plugin/time-out-lock-screen.c:329
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:5
+msgid "Time Out"
+msgstr "หมดเวลา"
+
+#: panel-plugin/time-out.c:475
+msgid "_Close"
+msgstr "ปิ_ด"
+
+#. Create time settings section
+#: panel-plugin/time-out.c:490
+msgid "Time settings"
+msgstr "การตั้งค่าเวลา"
+
+#. Create the labels for the minutes and seconds spins
+#: panel-plugin/time-out.c:503
+msgid "Minutes"
+msgstr "นาที"
+
+#: panel-plugin/time-out.c:508
+msgid "Seconds"
+msgstr "วินาที"
+
+#. Create break countdown time label
+#: panel-plugin/time-out.c:514
+msgid "Time between breaks:"
+msgstr "ช่วงเวลาพัก:"
+
+#. Create lock countdown time label
+#: panel-plugin/time-out.c:540
+msgid "Break length:"
+msgstr "เวลาพัก:"
+
+#. Create postpone countdown time label
+#: panel-plugin/time-out.c:561
+msgid "Postpone length:"
+msgstr "เวลาเลื่อน:"
+
+#. Create behaviour section
+#: panel-plugin/time-out.c:582
+msgid "Behaviour"
+msgstr "พฤติกรรม"
+
+#. Create postpone check button
+#: panel-plugin/time-out.c:593
+msgid "Allow postpone"
+msgstr "อนุญาตเลื่อนเวลา"
+
+#. Create resume check button
+#: panel-plugin/time-out.c:600
+msgid "Resume automatically"
+msgstr "เริ่มใหม่โดยอัตโนมัติ"
+
+#. Create appearance section
+#: panel-plugin/time-out.c:607
+msgid "Appearance"
+msgstr "รูปลักษณ์"
+
+#. Create note label
+#: panel-plugin/time-out.c:618
+msgid "Note: Icon and time cannot be hidden simultaneously."
+msgstr "หมายเหตุ: ไม่สามารถซ่อนไอคอนและเวลาพร้อมกันได้"
+
+#. Create display icon check button
+#: panel-plugin/time-out.c:623
+msgid "Display icon"
+msgstr "แสดงไอคอน"
+
+#. Create display time check button
+#: panel-plugin/time-out.c:630
+msgid "Display remaining time in the panel"
+msgstr "แสดงเวลาที่เหลืออยู่ในพาเนล"
+
+#. Create display hours check button
+#: panel-plugin/time-out.c:637
+msgid "Display hours"
+msgstr "แสดงชั่วโมง"
+
+#. Create display seconds check button
+#: panel-plugin/time-out.c:644
+msgid "Display seconds"
+msgstr "แสดงวินาที"
+
+#: panel-plugin/time-out.c:1069
+msgid "Failed to lock screen"
+msgstr "ไม่สามารถล็อคหน้าจอได้"
+
+#. Create postpone button
+#: panel-plugin/time-out-lock-screen.c:259
+msgid "_Postpone"
+msgstr "_เลื่อน"
+
+#. Create lock button
+#: panel-plugin/time-out-lock-screen.c:265
+msgid "_Lock"
+msgstr "_ล็อค"
+
+#. Create resume button
+#: panel-plugin/time-out-lock-screen.c:271
+msgid "_Resume"
+msgstr "_กลับไปเริ่มใหม่"
+
+#: panel-plugin/time-out-lock-screen.c:328
+msgid "Failed to grab input for Time Out lock screen"
+msgstr "ไม่สามารถรับอินพุตสำหรับหน้าจอล็อกหมดเวลาได้"
+
+#: panel-plugin/time-out-countdown.c:386
+msgid "The break is over."
+msgstr "พักบ้างก็ดี"
+
+#. Hours:minutes:seconds
+#: panel-plugin/time-out-countdown.c:408
+#, c-format
+msgid "%02d:%02d:%02d"
+msgstr "%02d:%02d:%02d"
+
+#. Hours:minutes
+#. Minutes:seconds
+#: panel-plugin/time-out-countdown.c:413 panel-plugin/time-out-countdown.c:421
+#, c-format
+msgid "%02d:%02d"
+msgstr "%02d:%02d"
+
+#: panel-plugin/time-out-countdown.c:433
+#, c-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ชั่วโมง"
+
+#: panel-plugin/time-out-countdown.c:434 panel-plugin/time-out-countdown.c:490
+#: panel-plugin/time-out-countdown.c:503 panel-plugin/time-out-countdown.c:537
+#, c-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d นาที"
+
+#: panel-plugin/time-out-countdown.c:435
+#, c-format
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d วินาที"
+
+#. Translators: this is %s seconds/minutes/hours
+#: panel-plugin/time-out-countdown.c:446 panel-plugin/time-out-countdown.c:451
+#: panel-plugin/time-out-countdown.c:462 panel-plugin/time-out-countdown.c:485
+#: panel-plugin/time-out-countdown.c:491 panel-plugin/time-out-countdown.c:518
+#: panel-plugin/time-out-countdown.c:523 panel-plugin/time-out-countdown.c:532
+#: panel-plugin/time-out-countdown.c:538
+#, c-format
+msgid "Time left: %s"
+msgstr "เหลือเวลา: %s"
+
+#. Translators: this is %s minutes, %s seconds
+#. Translators: this is %s hours %s seconds
+#. Translators: this is %s hours, %s minutes
+#. Translators: this is %s minutes %s seconds
+#: panel-plugin/time-out-countdown.c:454 panel-plugin/time-out-countdown.c:466
+#: panel-plugin/time-out-countdown.c:473 panel-plugin/time-out-countdown.c:498
+#: panel-plugin/time-out-countdown.c:505 panel-plugin/time-out-countdown.c:526
+#, c-format
+msgid "Time left: %s %s"
+msgstr "เหลือเวลา: %s %s"
+
+#. Translators: this is %s hours, %s minutes, %s seconds
+#: panel-plugin/time-out-countdown.c:476
+#, c-format
+msgid "Time left: %s %s %s"
+msgstr "เหลือเวลา: %s %s %s"
+
+#: panel-plugin/xfce4-time-out-plugin.desktop.in:6
+msgid "Automatically controlled time outs and breaks"
+msgstr "ควบคุมการหมดเวลาและการพักโดยอัตโนมัติ"
