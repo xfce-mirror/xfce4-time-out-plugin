@@ -21,7 +21,7 @@ msgstr ""
 #. Create label for displaying the remaining time until the next break
 #: panel-plugin/time-out.c:220
 msgid "Inactive"
-msgstr "ไม่ได้ใช้งาน"
+msgstr "ปิดใช้งาน"
 
 #. Create menu item for taking an instant break
 #: panel-plugin/time-out.c:274
@@ -79,7 +79,7 @@ msgstr "วินาที"
 #. Create break countdown time label
 #: panel-plugin/time-out.c:514
 msgid "Time between breaks:"
-msgstr "ช่วงเวลาพัก:"
+msgstr "เวลาทำงาน:"
 
 #. Create lock countdown time label
 #: panel-plugin/time-out.c:540
@@ -124,7 +124,7 @@ msgstr "แสดงไอคอน"
 #. Create display time check button
 #: panel-plugin/time-out.c:630
 msgid "Display remaining time in the panel"
-msgstr "แสดงเวลาที่เหลืออยู่ในพาเนล"
+msgstr "แสดงเวลาที่เหลืออยู่บนพาเนล"
 
 #. Create display hours check button
 #: panel-plugin/time-out.c:637
