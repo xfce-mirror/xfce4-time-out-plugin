@@ -290,6 +290,8 @@ time_out_lock_screen_finalize (GObject *object)
 
   /* Destroy information window */
   gtk_widget_destroy (lock_screen->window);
+
+  G_OBJECT_CLASS (time_out_lock_screen_parent_class)->finalize (object);
 }
 
 

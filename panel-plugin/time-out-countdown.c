@@ -243,6 +243,8 @@ time_out_countdown_finalize (GObject *object)
       g_source_remove (countdown->timeout_id);
       countdown->timeout_id = 0;
     }
+
+  G_OBJECT_CLASS (time_out_countdown_parent_class)->finalize (object);
 }
 
 
