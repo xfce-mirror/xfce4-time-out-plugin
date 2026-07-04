@@ -35,7 +35,7 @@ typedef struct _TimeOutCountdown      TimeOutCountdown;
 #define IS_TIME_OUT_COUNTDOWN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_TIME_OUT_COUNTDOWN))
 #define TIME_OUT_COUNTDOWN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_TIME_OUT_COOUNTDOWN, TimeOutCountdownClass))
 
-GType             time_out_countdown_get_type (void) G_GNUC_CONST;
+GType             time_out_countdown_get_type (void);
 
 TimeOutCountdown *time_out_countdown_new               (void) G_GNUC_MALLOC;
 void              time_out_countdown_start             (TimeOutCountdown *countdown,

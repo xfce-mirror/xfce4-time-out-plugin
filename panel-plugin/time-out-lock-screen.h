@@ -36,7 +36,7 @@ typedef struct _TimeOutLockScreen      TimeOutLockScreen;
 #define IS_TIME_OUT_LOCK_SCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_TIME_OUT_LOCK_SCREEN))
 #define TIME_OUT_LOCK_SCREEN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_TIME_OUT_COOUNTDOWN, TimeOutLockScreenClass))
 
-GType              time_out_lock_screen_get_type            (void) G_GNUC_CONST;
+GType              time_out_lock_screen_get_type            (void);
 
 TimeOutLockScreen *time_out_lock_screen_new                 (void) G_GNUC_MALLOC;
 void               time_out_lock_screen_show                (TimeOutLockScreen *lock_screen,
