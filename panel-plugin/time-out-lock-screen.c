@@ -27,10 +27,6 @@
 
 
 
-static void     time_out_lock_screen_class_init    (gpointer                g_class,
-                                                    gpointer                class_data);
-static void     time_out_lock_screen_init          (GTypeInstance          *instance,
-                                                    gpointer                g_class);
 static void     time_out_lock_screen_finalize      (GObject                *object);
 static void     time_out_lock_screen_postpone      (GtkButton              *button,
                                                     TimeOutLockScreen      *lock_screen);
@@ -43,21 +39,6 @@ static gint     time_out_lock_screen_grab_seat     (GdkSeat                *seat
 static gboolean time_out_lock_screen_can_grab_seat (GdkSeat                *seat);
 
 
-
-struct _TimeOutLockScreenClass
-{
-  GObjectClass __parent__;
-
-  /* Signals */
-  void         (*postpone)  (TimeOutLockScreen *lock_screen);
-  void         (*lock)      (TimeOutLockScreen *lock_screen);
-  void         (*resume)    (TimeOutLockScreen *lock_screen);
-
-  /* Signal identifiers */
-  guint        postpone_signal_id;
-  guint        lock_signal_id;
-  guint        resume_signal_id;
-};
 
 struct _TimeOutLockScreen
 {
@@ -98,92 +79,56 @@ struct _TimeOutLockScreen
 
 
 
-static GObjectClass *time_out_lock_screen_parent_class;
-
-
-
-GType
-time_out_lock_screen_get_type (void)
-{
-  static GType type = G_TYPE_INVALID;
-
-  if (G_UNLIKELY (type == G_TYPE_INVALID))
-    {
-      static const GTypeInfo info = 
-      {
-        sizeof (TimeOutLockScreenClass),
-        NULL,
-        NULL,
-        time_out_lock_screen_class_init,
-        NULL,
-        NULL,
-        sizeof (TimeOutLockScreen),
-        0,
-        time_out_lock_screen_init,
-        NULL,
-      };
-
-      type = g_type_register_static (G_TYPE_OBJECT, "TimeOutLockScreen", &info, 0);
-    }
-
-  return type;
-}
+G_DEFINE_TYPE (TimeOutLockScreen, time_out_lock_screen, G_TYPE_OBJECT)
 
 
 
 static void
-time_out_lock_screen_class_init (gpointer g_class,
-                                 gpointer class_data)
+time_out_lock_screen_class_init (TimeOutLockScreenClass *klass)
 {
-  GObjectClass           *gobject_class = g_class;
-  TimeOutLockScreenClass *klass = g_class;
-
-  /* Peek parent type class */
-  time_out_lock_screen_parent_class = g_type_class_peek_parent (klass);
+  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
   gobject_class->finalize = time_out_lock_screen_finalize;
 
   /* Register 'postpone' signal */
-  klass->postpone_signal_id = g_signal_new ("postpone",
-                                            G_TYPE_FROM_CLASS (gobject_class),
-                                            G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                            G_STRUCT_OFFSET (TimeOutLockScreenClass, postpone),
-                                            NULL,
-                                            NULL,
-                                            g_cclosure_marshal_VOID__VOID,
-                                            G_TYPE_NONE,
-                                            0);
+  g_signal_new ("postpone",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__VOID,
+                G_TYPE_NONE,
+                0);
 
   /* Register 'lock' signal */
-  klass->lock_signal_id = g_signal_new ("lock",
-                                        G_TYPE_FROM_CLASS (gobject_class),
-                                        G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                        G_STRUCT_OFFSET (TimeOutLockScreenClass, lock),
-                                        NULL,
-                                        NULL,
-                                        g_cclosure_marshal_VOID__VOID,
-                                        G_TYPE_NONE,
-                                        0);
+  g_signal_new ("lock",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__VOID,
+                G_TYPE_NONE,
+                0);
 
   /* Register 'resume' signal */
-  klass->resume_signal_id = g_signal_new ("resume",
-                                          G_TYPE_FROM_CLASS (gobject_class),
-                                          G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                          G_STRUCT_OFFSET (TimeOutLockScreenClass, resume),
-                                          NULL,
-                                          NULL,
-                                          g_cclosure_marshal_VOID__VOID,
-                                          G_TYPE_NONE,
-                                          0);
+  g_signal_new ("resume",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__VOID,
+                G_TYPE_NONE,
+                0);
 }
 
 
 
 static void
-time_out_lock_screen_init (GTypeInstance *instance,
-                           gpointer       g_class)
+time_out_lock_screen_init (TimeOutLockScreen *lock_screen)
 {
-  TimeOutLockScreen *lock_screen = TIME_OUT_LOCK_SCREEN (instance);
   GdkPixbuf       *pixbuf;
   GtkWidget       *vbox;
   GtkWidget       *button_box;
@@ -299,7 +244,7 @@ time_out_lock_screen_finalize (GObject *object)
 TimeOutLockScreen*
 time_out_lock_screen_new (void)
 {
-  return g_object_new (TYPE_TIME_OUT_LOCK_SCREEN, NULL);
+  return g_object_new (TIME_OUT_TYPE_LOCK_SCREEN, NULL);
 }
 
 
@@ -310,7 +255,7 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
   GdkDisplay *display;
   GtkWidget  *dialog;
 
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Handle pending events before locking the screen */
   while (gtk_events_pending())
@@ -361,11 +306,10 @@ time_out_lock_screen_show (TimeOutLockScreen *lock_screen, gint max_sec)
 void
 time_out_lock_screen_hide (TimeOutLockScreen *lock_screen)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Destroy fadeout */
-  time_out_fadeout_destroy (lock_screen->fadeout);
-  lock_screen->fadeout = NULL;
+  g_clear_pointer (&lock_screen->fadeout, time_out_fadeout_destroy);
 
   /* Release keyboard */
   gdk_seat_ungrab (lock_screen->seat);
@@ -385,7 +329,7 @@ time_out_lock_screen_set_remaining (TimeOutLockScreen *lock_screen,
 {
   GString *time_string;
 
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Set remaining seconds attribute */
   lock_screen->remaining_seconds = seconds;
@@ -415,7 +359,7 @@ void
 time_out_lock_screen_set_allow_postpone (TimeOutLockScreen *lock_screen,
                                          gboolean           allow_postpone)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Set allow postpone attribute */
   lock_screen->allow_postpone = allow_postpone;
@@ -445,7 +389,7 @@ void
 time_out_lock_screen_show_resume (TimeOutLockScreen *lock_screen,
                                   gboolean           show)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Set auto resume attribute */
   lock_screen->show_resume = show;
@@ -463,7 +407,7 @@ void
 time_out_lock_screen_set_display_seconds (TimeOutLockScreen *lock_screen,
                                           gboolean           display_seconds)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Set display seconds attribute */
   lock_screen->display_seconds = display_seconds;
@@ -475,7 +419,7 @@ void
 time_out_lock_screen_set_display_hours (TimeOutLockScreen *lock_screen,
                                         gboolean           display_hours)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Set display hours attribute */
   lock_screen->display_hours = display_hours;
@@ -504,7 +448,7 @@ time_out_lock_screen_postpone (GtkButton         *button,
                                TimeOutLockScreen *lock_screen)
 {
   g_return_if_fail (GTK_IS_BUTTON (button));
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Emit postpone signal */
   g_signal_emit_by_name (lock_screen, "postpone", NULL);
@@ -517,7 +461,7 @@ time_out_lock_screen_lock (GtkButton         *button,
                            TimeOutLockScreen *lock_screen)
 {
   g_return_if_fail (GTK_IS_BUTTON (button));
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Emit postpone signal */
   g_signal_emit_by_name (lock_screen, "lock", NULL);
@@ -530,7 +474,7 @@ time_out_lock_screen_resume (GtkButton         *button,
                              TimeOutLockScreen *lock_screen)
 {
   g_return_if_fail (GTK_IS_BUTTON (button));
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
 
   /* Emit resume signal */
   g_signal_emit_by_name (lock_screen, "resume", NULL);

@@ -1038,7 +1038,7 @@ static void
 time_out_postpone (TimeOutLockScreen *lock_screen,
                    TimeOutPlugin     *time_out)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
   g_return_if_fail (time_out != NULL);
 
   /* Stop lock countdown */
@@ -1056,7 +1056,7 @@ time_out_lock (TimeOutLockScreen *lock_screen,
   gboolean     succeed = FALSE;
   gint         exit_status;
 
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
   g_return_if_fail (time_out != NULL);
 
   /* ungrab seat so lock screen can start */
@@ -1078,7 +1078,7 @@ static void
 time_out_resume   (TimeOutLockScreen *lock_screen,
                    TimeOutPlugin     *time_out)
 {
-  g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
+  g_return_if_fail (TIME_OUT_IS_LOCK_SCREEN (lock_screen));
   g_return_if_fail (time_out != NULL);
 
   /* Stop lock countdown */
@@ -1098,7 +1098,7 @@ time_out_break_countdown_update (TimeOutCountdown *countdown,
   GString *short_time_string;
   GString *long_time_string;
 
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
 
   /* Get time strings */
@@ -1123,7 +1123,7 @@ static void
 time_out_break_countdown_finish (TimeOutCountdown *countdown,
                                  TimeOutPlugin    *time_out)
 {
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
 
   /* Lock the screen and start the lock countdown */
@@ -1137,7 +1137,7 @@ time_out_lock_countdown_update (TimeOutCountdown *countdown,
                                 TimeOutPlugin    *time_out)
 {
   GString *long_time_string;
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
 
 
@@ -1158,7 +1158,7 @@ static void
 time_out_lock_countdown_finish (TimeOutCountdown *countdown,
                                 TimeOutPlugin    *time_out)
 {
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
   g_return_if_fail (time_out != NULL);
 
   if (time_out->auto_resume)

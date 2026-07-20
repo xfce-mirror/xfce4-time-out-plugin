@@ -23,19 +23,10 @@
 
 #include <glib-object.h>
 
-G_BEGIN_DECLS;
+G_BEGIN_DECLS
 
-typedef struct _TimeOutCountdownClass TimeOutCountdownClass;
-typedef struct _TimeOutCountdown      TimeOutCountdown;
-
-#define TYPE_TIME_OUT_COUNTDOWN            (time_out_countdown_get_type())
-#define TIME_OUT_COUNTDOWN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_TIME_OUT_COUNTDOWN, TimeOutCountdown))
-#define TIME_OUT_COUNTDOWN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), TYPE_TIME_OUT_COUNTDOWN, TimeOutCountdownClass))
-#define IS_TIME_OUT_COUNTDOWN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_TIME_OUT_COUNTDOWN))
-#define IS_TIME_OUT_COUNTDOWN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_TIME_OUT_COUNTDOWN))
-#define TIME_OUT_COUNTDOWN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_TIME_OUT_COOUNTDOWN, TimeOutCountdownClass))
-
-GType             time_out_countdown_get_type (void);
+#define TIME_OUT_TYPE_COUNTDOWN (time_out_countdown_get_type())
+G_DECLARE_FINAL_TYPE (TimeOutCountdown, time_out_countdown, TIME_OUT, COUNTDOWN, GObject)
 
 TimeOutCountdown *time_out_countdown_new               (void) G_GNUC_MALLOC;
 void              time_out_countdown_start             (TimeOutCountdown *countdown,
@@ -52,6 +43,6 @@ GString          *time_out_countdown_seconds_to_string (gint              second
                                                         gboolean          display_hours,
                                                         gboolean          compressed);
 
-G_END_DECLS;
+G_END_DECLS
 
 #endif /* !__TIME_OUT_COUNTDOWN_H__ */

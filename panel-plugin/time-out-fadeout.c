@@ -149,16 +149,13 @@ time_out_fadeout_new_window (GdkDisplay *display,
 TimeOutFadeout*
 time_out_fadeout_new (GdkDisplay *display)
 {
-  TimeOutFadeout  *fadeout;
-  GdkScreen       *screen;
-
-  fadeout = g_slice_new0 (TimeOutFadeout);
+  TimeOutFadeout  *fadeout = g_slice_new0 (TimeOutFadeout);
 
 #if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
   if (GDK_IS_X11_DISPLAY (display))
     {
       fadeout->xdisplay = gdk_x11_display_get_xdisplay (display);
-      screen = gdk_display_get_default_screen (display);
+      GdkScreen *screen = gdk_display_get_default_screen (display);
       fadeout->xwindow = GINT_TO_POINTER (time_out_fadeout_new_window (display, screen));
     }
 #endif
@@ -171,9 +168,8 @@ time_out_fadeout_new (GdkDisplay *display)
 void
 time_out_fadeout_destroy (TimeOutFadeout *fadeout)
 {
-  GdkDisplay *display = gdk_display_get_default ();
-
 #if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
+  GdkDisplay *display = gdk_display_get_default ();
   if (GDK_IS_X11_DISPLAY (display))
     {
       gdk_x11_display_error_trap_push (display);

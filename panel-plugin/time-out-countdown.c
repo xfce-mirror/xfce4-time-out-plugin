@@ -33,40 +33,10 @@ typedef enum
 
 
 
-static void     time_out_countdown_class_init (gpointer          g_class,
-                                               gpointer          class_data);
-static void     time_out_countdown_init       (GTypeInstance    *instance,
-                                               gpointer          g_class);
 static void     time_out_countdown_finalize   (GObject          *object);
 static gboolean time_out_countdown_update     (TimeOutCountdown *countdown);
 
 
-
-struct _TimeOutCountdownClass
-{
-  GObjectClass __parent__;
-
-  /* Signals */
-  void         (*start)  (TimeOutCountdown *countdown, 
-                          gint              seconds_left);
-  void         (*stop)   (TimeOutCountdown *countdown, 
-                          gint              seconds_left);
-  void         (*pause)  (TimeOutCountdown *countdown, 
-                          gint              seconds_left);
-  void         (*resume) (TimeOutCountdown *countdown, 
-                          gint              seconds_left);
-  void         (*update) (TimeOutCountdown *countdown,
-                          gint              seconds_left);
-  void         (*finish) (TimeOutCountdown *countdown);
-
-  /* Signal identifiers */
-  guint        start_signal_id;
-  guint        stop_signal_id;
-  guint        pause_signal_id;
-  guint        resume_signal_id;
-  guint        update_signal_id;
-  guint        finish_signal_id;
-};
 
 struct _TimeOutCountdown
 {
@@ -87,122 +57,88 @@ struct _TimeOutCountdown
 
 
 
-static GObjectClass *time_out_countdown_parent_class;
-
-
-
-GType
-time_out_countdown_get_type (void)
-{
-  static GType type = G_TYPE_INVALID;
-
-  if (G_UNLIKELY (type == G_TYPE_INVALID))
-    {
-      static const GTypeInfo info = 
-      {
-        sizeof (TimeOutCountdownClass),
-        NULL,
-        NULL,
-        time_out_countdown_class_init,
-        NULL,
-        NULL,
-        sizeof (TimeOutCountdown),
-        0,
-        time_out_countdown_init,
-        NULL,
-      };
-
-      type = g_type_register_static (G_TYPE_OBJECT, "TimeOutCountdown", &info, 0);
-    }
-
-  return type;
-}
+G_DEFINE_TYPE (TimeOutCountdown, time_out_countdown, G_TYPE_OBJECT)
 
 
 
 static void
-time_out_countdown_class_init (gpointer g_class,
-                               gpointer class_data)
+time_out_countdown_class_init (TimeOutCountdownClass *klass)
 {
-  GObjectClass          *gobject_class = g_class;
-  TimeOutCountdownClass *klass = g_class;
-
-  /* Peek parent type class */
-  time_out_countdown_parent_class = g_type_class_peek_parent (klass);
+  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
   gobject_class->finalize = time_out_countdown_finalize;
 
   /* Register 'start' signal */
-  klass->start_signal_id = g_signal_new ("start",
-                                         G_TYPE_FROM_CLASS (gobject_class),
-                                         G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                         G_STRUCT_OFFSET (TimeOutCountdownClass, start),
-                                         NULL,
-                                         NULL,
-                                         g_cclosure_marshal_VOID__INT,
-                                         G_TYPE_NONE,
-                                         1,
-                                         G_TYPE_INT);
+  g_signal_new ("start",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__INT,
+                G_TYPE_NONE,
+                1,
+                G_TYPE_INT);
 
   /* Register 'pause' signal */
-  klass->pause_signal_id = g_signal_new ("pause",
-                                         G_TYPE_FROM_CLASS (gobject_class),
-                                         G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                         G_STRUCT_OFFSET (TimeOutCountdownClass, pause),
-                                         NULL,
-                                         NULL,
-                                         g_cclosure_marshal_VOID__INT,
-                                         G_TYPE_NONE,
-                                         1,
-                                         G_TYPE_INT);
+  g_signal_new ("pause",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__INT,
+                G_TYPE_NONE,
+                1,
+                G_TYPE_INT);
 
   /* Register 'stop' signal */
-  klass->stop_signal_id = g_signal_new ("stop",
-                                         G_TYPE_FROM_CLASS (gobject_class),
-                                         G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                         G_STRUCT_OFFSET (TimeOutCountdownClass, stop),
-                                         NULL,
-                                         NULL,
-                                         g_cclosure_marshal_VOID__INT,
-                                         G_TYPE_NONE,
-                                         1,
-                                         G_TYPE_INT);
+  g_signal_new ("stop",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__INT,
+                G_TYPE_NONE,
+                1,
+                G_TYPE_INT);
 
   /* Register 'resume' signal */
-  klass->resume_signal_id = g_signal_new ("resume",
-                                          G_TYPE_FROM_CLASS (gobject_class),
-                                          G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                          G_STRUCT_OFFSET (TimeOutCountdownClass, resume),
-                                          NULL,
-                                          NULL,
-                                          g_cclosure_marshal_VOID__INT,
-                                          G_TYPE_NONE,
-                                          1,
-                                          G_TYPE_INT);
+  g_signal_new ("resume",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__INT,
+                G_TYPE_NONE,
+                1,
+                G_TYPE_INT);
 
   /* Register 'finish' signal */
-  klass->finish_signal_id = g_signal_new ("finish",
-                                          G_TYPE_FROM_CLASS (gobject_class),
-                                          G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                          G_STRUCT_OFFSET (TimeOutCountdownClass, finish),
-                                          NULL,
-                                          NULL,
-                                          g_cclosure_marshal_VOID__VOID,
-                                          G_TYPE_NONE,
-                                          0,
-                                          NULL);
+  g_signal_new ("finish",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__VOID,
+                G_TYPE_NONE,
+                0,
+                NULL);
 
   /* Register 'update' signal */
-  klass->update_signal_id = g_signal_new ("update",
-                                          G_TYPE_FROM_CLASS (gobject_class),
-                                          G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
-                                          G_STRUCT_OFFSET (TimeOutCountdownClass, update),
-                                          NULL,
-                                          NULL,
-                                          g_cclosure_marshal_VOID__INT,
-                                          G_TYPE_NONE,
-                                          1,
-                                          G_TYPE_INT);
+  g_signal_new ("update",
+                G_TYPE_FROM_CLASS (gobject_class),
+                G_SIGNAL_RUN_LAST | G_SIGNAL_NO_RECURSE | G_SIGNAL_NO_HOOKS,
+                0,
+                NULL,
+                NULL,
+                g_cclosure_marshal_VOID__INT,
+                G_TYPE_NONE,
+                1,
+                G_TYPE_INT);
 
 }
 
@@ -216,11 +152,8 @@ time_out_countdown_update_cb (gpointer user_data)
 }
 
 static void
-time_out_countdown_init (GTypeInstance *instance,
-                         gpointer       g_class)
+time_out_countdown_init (TimeOutCountdown *countdown)
 {
-  TimeOutCountdown *countdown = TIME_OUT_COUNTDOWN (instance);
-
   countdown->timer = g_timer_new ();
   countdown->state = TIME_OUT_COUNTDOWN_STOPPED;
   countdown->seconds = 0;
@@ -238,11 +171,7 @@ time_out_countdown_finalize (GObject *object)
   g_timer_destroy (countdown->timer);
 
   /* Unregister timeout if necessary */
-  if (G_LIKELY (countdown->timeout_id > 0))
-    {
-      g_source_remove (countdown->timeout_id);
-      countdown->timeout_id = 0;
-    }
+  g_clear_handle_id (&countdown->timeout_id, g_source_remove);
 
   G_OBJECT_CLASS (time_out_countdown_parent_class)->finalize (object);
 }
@@ -252,7 +181,7 @@ time_out_countdown_finalize (GObject *object)
 TimeOutCountdown*
 time_out_countdown_new (void)
 {
-  return g_object_new (TYPE_TIME_OUT_COUNTDOWN, NULL);
+  return g_object_new (TIME_OUT_TYPE_COUNTDOWN, NULL);
 }
 
 
@@ -261,7 +190,7 @@ void
 time_out_countdown_start (TimeOutCountdown *countdown,
                           gint              seconds)
 {
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
 
   /* Start the timer only if at least one second is requested */
   if (G_LIKELY (seconds > 0))
@@ -285,7 +214,7 @@ time_out_countdown_start (TimeOutCountdown *countdown,
 gboolean
 time_out_countdown_get_running (TimeOutCountdown *countdown)
 {
-  g_return_val_if_fail (IS_TIME_OUT_COUNTDOWN (countdown), FALSE);
+  g_return_val_if_fail (TIME_OUT_IS_COUNTDOWN (countdown), FALSE);
   return countdown->state == TIME_OUT_COUNTDOWN_RUNNING;
 }
 
@@ -294,7 +223,7 @@ time_out_countdown_get_running (TimeOutCountdown *countdown)
 void
 time_out_countdown_pause (TimeOutCountdown *countdown)
 {
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
 
   /* Only allow pausing if the countdown is running */
   if (G_LIKELY (time_out_countdown_get_running (countdown)))
@@ -312,7 +241,7 @@ time_out_countdown_pause (TimeOutCountdown *countdown)
 gboolean
 time_out_countdown_get_paused (TimeOutCountdown *countdown)
 {
-  g_return_val_if_fail (IS_TIME_OUT_COUNTDOWN (countdown), FALSE);
+  g_return_val_if_fail (TIME_OUT_IS_COUNTDOWN (countdown), FALSE);
   return countdown->state == TIME_OUT_COUNTDOWN_PAUSED;
 }
 
@@ -321,7 +250,7 @@ time_out_countdown_get_paused (TimeOutCountdown *countdown)
 void
 time_out_countdown_resume (TimeOutCountdown *countdown)
 {
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
 
   /* Only allow resuming if the countdown is paused at the moment */
   if (G_LIKELY (time_out_countdown_get_paused (countdown)))
@@ -342,7 +271,7 @@ time_out_countdown_resume (TimeOutCountdown *countdown)
 void
 time_out_countdown_stop (TimeOutCountdown *countdown)
 {
-  g_return_if_fail (IS_TIME_OUT_COUNTDOWN (countdown));
+  g_return_if_fail (TIME_OUT_IS_COUNTDOWN (countdown));
 
   /* Stop timer */
   g_timer_stop (countdown->timer);
@@ -356,7 +285,7 @@ time_out_countdown_stop (TimeOutCountdown *countdown)
 gboolean
 time_out_countdown_get_stopped (TimeOutCountdown *countdown)
 {
-  g_return_val_if_fail (IS_TIME_OUT_COUNTDOWN (countdown), FALSE);
+  g_return_val_if_fail (TIME_OUT_IS_COUNTDOWN (countdown), FALSE);
   return countdown->state = TIME_OUT_COUNTDOWN_STOPPED;
 }
 
@@ -365,7 +294,7 @@ time_out_countdown_get_stopped (TimeOutCountdown *countdown)
 gint
 time_out_countdown_get_remaining (TimeOutCountdown *countdown)
 {
-  g_return_val_if_fail (IS_TIME_OUT_COUNTDOWN (countdown), 0);
+  g_return_val_if_fail (TIME_OUT_IS_COUNTDOWN (countdown), 0);
 
   /* Calculate remaining time */
   return countdown->seconds - (gint) g_timer_elapsed (countdown->timer, NULL);
@@ -552,7 +481,7 @@ time_out_countdown_seconds_to_string (gint     seconds,
 static gboolean 
 time_out_countdown_update (TimeOutCountdown *countdown)
 {
-  g_return_val_if_fail (IS_TIME_OUT_COUNTDOWN (countdown), FALSE);
+  g_return_val_if_fail (TIME_OUT_IS_COUNTDOWN (countdown), FALSE);
 
   if (time_out_countdown_get_running (countdown))
     {
