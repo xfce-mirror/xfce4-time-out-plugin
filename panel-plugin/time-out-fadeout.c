@@ -171,9 +171,8 @@ time_out_fadeout_new (GdkDisplay *display)
 void
 time_out_fadeout_destroy (TimeOutFadeout *fadeout)
 {
-  GdkDisplay *display = gdk_display_get_default ();
-
 #if defined (GDK_WINDOWING_X11) && defined (HAVE_LIBX11)
+  GdkDisplay *display = gdk_display_get_default ();
   if (GDK_IS_X11_DISPLAY (display))
     {
       gdk_x11_display_error_trap_push (display);
