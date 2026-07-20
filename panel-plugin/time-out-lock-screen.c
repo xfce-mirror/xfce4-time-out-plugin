@@ -364,8 +364,7 @@ time_out_lock_screen_hide (TimeOutLockScreen *lock_screen)
   g_return_if_fail (IS_TIME_OUT_LOCK_SCREEN (lock_screen));
 
   /* Destroy fadeout */
-  time_out_fadeout_destroy (lock_screen->fadeout);
-  lock_screen->fadeout = NULL;
+  g_clear_pointer (&lock_screen->fadeout, time_out_fadeout_destroy);
 
   /* Release keyboard */
   gdk_seat_ungrab (lock_screen->seat);

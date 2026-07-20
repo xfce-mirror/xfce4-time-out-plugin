@@ -238,11 +238,7 @@ time_out_countdown_finalize (GObject *object)
   g_timer_destroy (countdown->timer);
 
   /* Unregister timeout if necessary */
-  if (G_LIKELY (countdown->timeout_id > 0))
-    {
-      g_source_remove (countdown->timeout_id);
-      countdown->timeout_id = 0;
-    }
+  g_clear_handle_id (&countdown->timeout_id, g_source_remove);
 
   G_OBJECT_CLASS (time_out_countdown_parent_class)->finalize (object);
 }
