@@ -24,19 +24,10 @@
 
 #include <glib-object.h>
 
-G_BEGIN_DECLS;
+G_BEGIN_DECLS
 
-typedef struct _TimeOutLockScreenClass TimeOutLockScreenClass;
-typedef struct _TimeOutLockScreen      TimeOutLockScreen;
-
-#define TYPE_TIME_OUT_LOCK_SCREEN            (time_out_lock_screen_get_type())
-#define TIME_OUT_LOCK_SCREEN(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_TIME_OUT_LOCK_SCREEN, TimeOutLockScreen))
-#define TIME_OUT_LOCK_SCREEN_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), TYPE_TIME_OUT_LOCK_SCREEN, TimeOutLockScreenClass))
-#define IS_TIME_OUT_LOCK_SCREEN(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_TIME_OUT_LOCK_SCREEN))
-#define IS_TIME_OUT_LOCK_SCREEN_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TYPE_TIME_OUT_LOCK_SCREEN))
-#define TIME_OUT_LOCK_SCREEN_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_TIME_OUT_COOUNTDOWN, TimeOutLockScreenClass))
-
-GType              time_out_lock_screen_get_type            (void);
+#define TIME_OUT_TYPE_LOCK_SCREEN (time_out_lock_screen_get_type())
+G_DECLARE_FINAL_TYPE (TimeOutLockScreen, time_out_lock_screen, TIME_OUT, LOCK_SCREEN, GObject)
 
 TimeOutLockScreen *time_out_lock_screen_new                 (void) G_GNUC_MALLOC;
 void               time_out_lock_screen_show                (TimeOutLockScreen *lock_screen,
@@ -57,6 +48,6 @@ void               time_out_lock_screen_show_resume         (TimeOutLockScreen *
 void               time_out_lock_screen_grab                (TimeOutLockScreen *lock_screen);
 void               time_out_lock_screen_ungrab              (TimeOutLockScreen *lock_screen);
 
-G_END_DECLS;
+G_END_DECLS
 
 #endif /* !__TIME_OUT_LOCK_SCREEN_H__ */
